@@ -116,165 +116,64 @@
 	</view>
 </template>
 
-<script setup>
-	import {
-		ref,
-	} from 'vue'
+<script>
+	const db = uniCloud.database()
 
-	const tabsList = ref([{
-			name: '自取订单'
+	export default {
+		data() {
+			return {
+				current: 0,
+				tabsList: [
+					{ name: '自取订单' },
+					{ name: '外卖订单' },
+					{ name: '劵码订单' }
+				],
+				pickupList: [],
+				takeoutList: [],
+				couponList: [],
+				loading: false
+			}
 		},
-		{
-			name: '外卖订单'
+		onShow() {
+			this.loadOrders()
 		},
-		{
-			name: '劵码订单'
+		methods: {
+			change(index) {
+				this.current = index;
+			},
+			async loadOrders() {
+				this.loading = true
+				uni.showLoading({ title: '加载中...' })
+				try {
+					// 仅演示，实际项目可能需要根据用户ID (user_id) 过滤
+					const res = await db.collection('order').orderBy('createTime', 'desc').get()
+					const allOrders = res.result.data || []
+					
+					this.pickupList = allOrders.filter(o => o.type === 'takein')
+					this.takeoutList = allOrders.filter(o => o.type === 'takeout')
+					this.couponList = [] // 优惠券订单逻辑如果有可在此处理
+					
+				} catch (e) {
+					console.error(e)
+					uni.showToast({ title: '加载失败', icon: 'none' })
+				} finally {
+					this.loading = false
+					uni.hideLoading()
+				}
+			},
+			orderDetail(item) {
+				const type = this.current == 0 ? 'takein' : 'takeout'
+				// 跳转到订单详情页面
+				uni.navigateTo({
+					url: `/subpackageOrder/order/order-detail?id=${item._id}&type=${type}`
+				})
+			},
+			checkCoupon(param) {
+				uni.navigateTo({
+					url: `/subpackageOrder/order/coupon-detail?id=${param.id}`
+				})
+			}
 		}
-	])
-
-	const pickupList = ref([{
-		"status": '0',
-		"commodity_list": [{
-			"name": "招牌酱肉包",
-			"price": 5.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 1,
-		"price": 5.99
-	}, {
-		"status": '1',
-		"commodity_list": [{
-			"id": 12,
-			"name": "火腿包",
-			"price": 3.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}, {
-			"name": "招牌酱肉包",
-			"price": 5.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 2,
-		"price": 9.98
-	}, {
-		"status": '2',
-		"commodity_list": [{
-			"id": 13,
-			"name": "酸菜油滋啦包",
-			"price": 4.59,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}, {
-			"name": "火腿包",
-			"price": 3.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}, {
-			"name": "招牌酱肉包",
-			"price": 5.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 3,
-		"price": 14.57
-	}]);
-	const takeoutList = ref([{
-		"commodity_list": [{
-			"name": "招牌酱肉包",
-			"price": 5.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 1,
-		"price": 5.99,
-		"orderstatus": 0,
-		"delivery_status": 0
-	}, {
-		"commodity_list": [{
-			"name": "火腿包",
-			"price": 3.99,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 1,
-		"price": 3.99,
-		"orderstatus": 0,
-		"delivery_status": 1
-	}, {
-		"commodity_list": [{
-			"name": "酸菜油滋啦包",
-			"price": 4.59,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 1,
-		"price": 4.59,
-		"orderstatus": 0,
-		"delivery_status": 2
-	}, {
-		"commodity_list": [{
-			"name": "透汁鲜肉+透汁牛肉+小米粥+小菜",
-			"price": 16.66,
-			"number": 1,
-			"image": "/static/img/home/icon-1.jpg",
-			"is_single": false,
-			"materials_text": ""
-		}],
-		"shop_num": 1,
-		"price": 16.66,
-		"orderstatus": 2,
-		"delivery_status": 0
-	}]);
-	const couponList = ref([{
-		"image": "/static/img/home/icon-1.jpg",
-		"name": "精品富硒鸡蛋",
-		"price": 0,
-		"shop_num": 1,
-		"status": '0'
-	}, {
-		"image": "/static/img/home/icon-1.jpg",
-		"name": "精品富硒鸡蛋",
-		"price": 0,
-		"shop_num": 1,
-		"status": '1'
-	}]);
-	const current = ref(0);
-
-	const change = (index) => {
-		current.value = index;
-	}
-
-	const orderDetail = (param) => {
-		const type = current.value == 0 ? 'takein' : 'takeout'
-		uni.navigateTo({
-			url: `/subpackageOrder/order/order-detail?type=${type}`
-		})
-	}
-
-	const checkCoupon = (param) => {
-		uni.navigateTo({
-			url: `/subpackageOrder/order/coupon-detail?id=${param.id}`
-		})
 	}
 </script>
 
