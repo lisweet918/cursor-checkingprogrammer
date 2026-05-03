@@ -5,6 +5,7 @@
     "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon",
     "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image",
     "list-cell": "/components/list-cell/list-cell",
-    "u-input": "/uni_modules/vk-uview-ui/components/u-input/u-input"
+    "u-input": "/uni_modules/vk-uview-ui/components/u-input/u-input",
+    "time-picker": "/uni_modules/hbxw-timepicker/components/hbxw-timepicker/hbxw-timepicker"
   }
 }

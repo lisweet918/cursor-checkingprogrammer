@@ -16,5 +16,5 @@
 	/*每个页面公共css */
 	@import "./uni_modules/vk-uview-ui/index.scss";
 	/*menu scss */
-	@import '~@/static/styles/app.scss';
+	@import '~@/common/styles/app.scss';
 </style>
