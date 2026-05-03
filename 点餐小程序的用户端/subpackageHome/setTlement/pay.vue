@@ -108,7 +108,7 @@
 				<text>￥</text>
 				<text>{{ cartAmount }}</text>
 			</view>
-			<button type="primary">支付</button>
+			<button type="primary" @click="handlePay">支付</button>
 		</view>
 	</view>
 </template>
@@ -196,6 +196,71 @@
 				uni.navigateTo({
 					url: `/subpackageMy/myAddress/address-manage?methods=pay`
 				})
+			},
+			async handlePay() {
+				if (this.orderType === 'takeout' && !this.hasAddress) {
+					uni.showToast({ title: '请选择收货地址', icon: 'none' })
+					return
+				}
+				if (!this.cart || this.cart.length === 0) {
+					uni.showToast({ title: '购物车为空', icon: 'none' })
+					return
+				}
+
+				uni.showLoading({ title: '正在处理支付...' })
+
+				try {
+					const db = uniCloud.database()
+					const orderData = {
+						createTime: Date.now(),
+						out_trade_no: 'WX' + Date.now() + Math.floor(Math.random() * 1000),
+						type: this.orderType,
+						status: 0, // 0=待接单
+						torder: 'T' + Math.floor(Math.random() * 100),
+						tableNumber: '', 
+						shop_num: this.cartNum,
+						price: this.cartAmount,
+						remark: this.remark || '',
+						payment_time_text: new Date().toLocaleString(),
+						commodity_list: this.cart.map(item => ({
+							id: item.id,
+							name: item.name,
+							price: item.price,
+							number: item.number,
+							image: item.image,
+							is_single: item.is_single !== false,
+							materials_text: item.materials_text || ''
+						}))
+					}
+
+					if (this.orderType === 'takeout') {
+						orderData.name = this.addressInfo.name
+						orderData.phone = this.addressInfo.phone
+						orderData.address = this.addressInfo.address
+						orderData.house_number = this.addressInfo.house_number || ''
+						orderData.orderstatus = 0
+						orderData.delivery_status = 0
+					}
+
+					await db.collection('order').add(orderData)
+					
+					// 支付成功，清空购物车
+					uni.removeStorageSync('cart')
+					this.$store.commit('SET_REMARK', '')
+					this.cart = []
+
+					uni.hideLoading()
+					uni.showToast({ title: '支付成功！', icon: 'success' })
+					
+					setTimeout(() => {
+						uni.switchTab({
+							url: '/pages/order/order'
+						})
+					}, 1500)
+				} catch (e) {
+					uni.hideLoading()
+					uni.showModal({ title: '支付失败', content: e.message || '网络错误，请重试', showCancel: false })
+				}
 			}
 		}
 	}

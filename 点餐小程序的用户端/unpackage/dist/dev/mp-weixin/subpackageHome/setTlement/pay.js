@@ -171,13 +171,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 var _vuex = __webpack_require__(/*! vuex */ 79);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -275,11 +277,112 @@ var _default = {
       uni.navigateTo({
         url: "/subpackageMy/myAddress/address-manage?methods=pay"
       });
+    },
+    handlePay: function handlePay() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var db, orderData;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!(_this.orderType === 'takeout' && !_this.hasAddress)) {
+                  _context.next = 3;
+                  break;
+                }
+                uni.showToast({
+                  title: '请选择收货地址',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 3:
+                if (!(!_this.cart || _this.cart.length === 0)) {
+                  _context.next = 6;
+                  break;
+                }
+                uni.showToast({
+                  title: '购物车为空',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 6:
+                uni.showLoading({
+                  title: '正在处理支付...'
+                });
+                _context.prev = 7;
+                db = uniCloud.database();
+                orderData = {
+                  createTime: Date.now(),
+                  out_trade_no: 'WX' + Date.now() + Math.floor(Math.random() * 1000),
+                  type: _this.orderType,
+                  status: 0,
+                  // 0=待接单
+                  torder: 'T' + Math.floor(Math.random() * 100),
+                  tableNumber: '',
+                  shop_num: _this.cartNum,
+                  price: _this.cartAmount,
+                  remark: _this.remark || '',
+                  payment_time_text: new Date().toLocaleString(),
+                  commodity_list: _this.cart.map(function (item) {
+                    return {
+                      id: item.id,
+                      name: item.name,
+                      price: item.price,
+                      number: item.number,
+                      image: item.image,
+                      is_single: item.is_single !== false,
+                      materials_text: item.materials_text || ''
+                    };
+                  })
+                };
+                if (_this.orderType === 'takeout') {
+                  orderData.name = _this.addressInfo.name;
+                  orderData.phone = _this.addressInfo.phone;
+                  orderData.address = _this.addressInfo.address;
+                  orderData.house_number = _this.addressInfo.house_number || '';
+                  orderData.orderstatus = 0;
+                  orderData.delivery_status = 0;
+                }
+                _context.next = 13;
+                return db.collection('order').add(orderData);
+              case 13:
+                // 支付成功，清空购物车
+                uni.removeStorageSync('cart');
+                _this.$store.commit('SET_REMARK', '');
+                _this.cart = [];
+                uni.hideLoading();
+                uni.showToast({
+                  title: '支付成功！',
+                  icon: 'success'
+                });
+                setTimeout(function () {
+                  uni.switchTab({
+                    url: '/pages/order/order'
+                  });
+                }, 1500);
+                _context.next = 25;
+                break;
+              case 21:
+                _context.prev = 21;
+                _context.t0 = _context["catch"](7);
+                uni.hideLoading();
+                uni.showModal({
+                  title: '支付失败',
+                  content: _context.t0.message || '网络错误，请重试',
+                  showCancel: false
+                });
+              case 25:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[7, 21]]);
+      }))();
     }
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 

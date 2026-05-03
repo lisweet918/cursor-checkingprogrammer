@@ -56,7 +56,6 @@
 				"bsonType": "object",
 				"properties": {
 					"id": {
-						"bsonType": "int",
 						"description": "商品ID"
 					},
 					"name": {
