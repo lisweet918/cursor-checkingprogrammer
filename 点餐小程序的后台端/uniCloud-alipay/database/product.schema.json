@@ -1,0 +1,94 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["name", "price", "category_id"],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"name": {
+			"bsonType": "string",
+			"title": "菜品名称",
+			"description": "菜品名称"
+		},
+		"description": {
+			"bsonType": "string",
+			"title": "描述",
+			"description": "菜品详细描述"
+		},
+		"price": {
+			"bsonType": "double",
+			"title": "价格",
+			"description": "菜品售价，单位元"
+		},
+		"category_id": {
+			"bsonType": "string",
+			"title": "分类ID",
+			"description": "关联的分类 _id"
+		},
+		"images": {
+			"bsonType": "array",
+			"title": "图片列表",
+			"description": "菜品图片，第一张为主图",
+			"items": {
+				"bsonType": "object",
+				"properties": {
+					"url": {
+						"bsonType": "string",
+						"description": "图片URL（云存储路径或本地路径）"
+					}
+				}
+			}
+		},
+		"is_single": {
+			"bsonType": "bool",
+			"title": "是否单品",
+			"description": "true=单品无规格，false=有规格选项"
+		},
+		"is_pickup": {
+			"bsonType": "int",
+			"title": "支持堂食",
+			"description": "1=支持堂食，0=不支持"
+		},
+		"is_takeout": {
+			"bsonType": "int",
+			"title": "支持外卖",
+			"description": "1=支持外卖，0=不支持"
+		},
+		"is_show": {
+			"bsonType": "bool",
+			"title": "是否上架",
+			"description": "true=上架，false=下架"
+		},
+		"sold": {
+			"bsonType": "string",
+			"title": "已售",
+			"description": "已售数量文本，如 600+"
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "排序权重，数值越小越靠前"
+		},
+		"labels": {
+			"bsonType": "array",
+			"title": "标签",
+			"description": "菜品标签列表"
+		},
+		"materials": {
+			"bsonType": "array",
+			"title": "规格配料",
+			"description": "菜品规格/配料选项"
+		},
+		"createTime": {
+			"bsonType": "timestamp",
+			"description": "创建时间"
+		}
+	}
+}

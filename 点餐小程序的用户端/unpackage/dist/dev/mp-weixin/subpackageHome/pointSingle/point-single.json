@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "/uni_modules/vk-uview-ui/components/u-navbar/u-navbar",
+    "u-search": "/uni_modules/vk-uview-ui/components/u-search/u-search",
+    "actions": "/components/actions/actions",
+    "product-modal": "/components/product-modal/product-modal",
+    "search": "/components/search/search",
+    "cart-bar": "/components/cartbar/cartbar",
+    "cart-popup": "/components/cart-popup/cart-popup"
+  }
+}

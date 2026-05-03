@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/**
+ * 这里是app内置的常用样式变量
+ *
+ * app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.wrap.data-v-761313a7 {
+  background-color: #F8F8F8;
+  min-height: 100vh;
+}
+.wrap__riderInfo.data-v-761313a7 {
+  display: flex;
+  background-color: white;
+  padding: 30rpx;
+  align-items: center;
+}
+.wrap__riderInfo__user.data-v-761313a7 {
+  flex: 1;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap__riderInfo__user__left.data-v-761313a7 {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.wrap__riderInfo__user__right.data-v-761313a7 {
+  font-size: 24rpx;
+  color: #909399;
+}
+.wrap__ordervolume.data-v-761313a7 {
+  background-color: white;
+  padding-bottom: 20rpx;
+}
+.wrap__ordervolume__number.data-v-761313a7 {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.wrap__ordervolume__title.data-v-761313a7 {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #909399;
+}
+.wrap__orderlist.data-v-761313a7 {
+  background-color: white;
+  border-radius: 18rpx;
+  margin: 20rpx;
+  padding: 30rpx;
+}
+.wrap__orderlist__ordertime.data-v-761313a7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.wrap__orderlist__ordertime__status view.data-v-761313a7:nth-child(1) {
+  color: #333;
+}
+.wrap__orderlist__ordertime__status view.data-v-761313a7:nth-child(2) {
+  margin-top: 5rpx;
+  color: #909399;
+  font-size: 20rpx;
+}
+.wrap__orderlist__ordertime__time.data-v-761313a7 {
+  font-weight: bold;
+  color: #FF362D;
+}
+.wrap__orderlist__address.data-v-761313a7 {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.wrap__orderlist__remark.data-v-761313a7 {
+  border: 1px solid #FF362D;
+  color: #FF362D;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 30rpx;
+  padding: 8rpx 16rpx;
+}
+.wrap__orderlist__btn.data-v-761313a7 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.wrap__orderlist__btn__right.data-v-761313a7 {
+  display: flex;
+  align-items: center;
+}
+.wrap__orderlist__completed.data-v-761313a7 {
+  margin-top: 30rpx;
+}
+.wrap__orderlist__completed__section.data-v-761313a7 {
+  margin-top: 30rpx;
+}
+.wrap__orderlist__completed__section.data-v-761313a7:first-child {
+  margin-top: 0;
+}
+.wrap__orderlist__completed__images.data-v-761313a7 {
+  display: flex;
+  gap: 20rpx;
+  flex-wrap: wrap;
+}
+.wrap__orderlist__completed__remark.data-v-761313a7 {
+  font-size: 24rpx;
+  color: #666;
+  font-weight: bold;
+  padding: 24rpx;
+  background-color: #F8F8F8;
+  border-radius: 8rpx;
+}
+.wrap__popup.data-v-761313a7 {
+  background-color: #F8F8F8;
+  padding: 20rpx;
+}
+.wrap__popup__shoplist.data-v-761313a7 {
+  background-color: white;
+  border-radius: 18rpx 18rpx 0 0;
+  padding: 30rpx;
+}
+.wrap__popup__header.data-v-761313a7 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #F5F5F5;
+}
+.wrap__popup__header__title.data-v-761313a7 {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+.wrap__popup__header__price.data-v-761313a7 {
+  display: flex;
+  align-items: baseline;
+  font-size: 24rpx;
+}
+.wrap__popup__header__price text.data-v-761313a7:nth-child(1) {
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+.wrap__popup__header__price text.data-v-761313a7:nth-child(2),
+.wrap__popup__header__price text.data-v-761313a7:nth-child(3) {
+  color: #FF362D;
+  font-weight: bold;
+}
+.wrap__popup__header__price text.data-v-761313a7:nth-child(2) {
+  font-size: 24rpx;
+}
+.wrap__popup__header__price text.data-v-761313a7:nth-child(3) {
+  font-size: 32rpx;
+}
+.wrap__list__shopinfo.data-v-761313a7 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30rpx;
+}
+.wrap__list__shopinfo__left.data-v-761313a7 {
+  display: flex;
+  flex: 1;
+}
+.wrap__list__shopinfo__left__image.data-v-761313a7 {
+  margin-right: 20rpx;
+}
+.wrap__list__shopinfo__left__desc.data-v-761313a7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.wrap__list__shopinfo__left__desc__shopname.data-v-761313a7 {
+  font-weight: bold;
+  color: #333;
+  font-size: 28rpx;
+}
+.wrap__list__shopinfo__left__desc__content.data-v-761313a7 {
+  font-size: 20rpx;
+  color: #909399;
+  margin-top: 8rpx;
+}
+.wrap__list__shopinfo__left__desc__price.data-v-761313a7 {
+  display: flex;
+  align-items: baseline;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20rpx;
+}
+.wrap__list__shopinfo__left__desc__price text.data-v-761313a7:nth-child(1) {
+  font-size: 20rpx;
+  margin-right: 5rpx;
+}
+.wrap__list__shopinfo__left__desc__price text.data-v-761313a7:nth-child(2) {
+  font-size: 30rpx;
+}
+.wrap__list__shopinfo__right.data-v-761313a7 {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+.wrap__deliveryPopup.data-v-761313a7 {
+  margin: 30rpx;
+}
+.wrap__deliveryPopup view.data-v-761313a7:nth-child(2) {
+  margin-top: 30rpx;
+}
+.wrap__deliveryPopup view.data-v-761313a7:nth-child(3) {
+  margin-top: 30rpx;
+}
+.wrap__deliveryPopup view.data-v-761313a7:nth-child(4) {
+  color: white;
+  background-color: #0A3D28;
+  width: 100%;
+  margin-top: 50rpx;
+  text-align: center;
+  padding: 30rpx 0;
+  border-radius: 8rpx;
+  letter-spacing: 4rpx;
+}
+.wrap__deliveryPopup view:nth-child(4).btn-disabled.data-v-761313a7 {
+  background-color: #cccccc;
+  pointer-events: none;
+}

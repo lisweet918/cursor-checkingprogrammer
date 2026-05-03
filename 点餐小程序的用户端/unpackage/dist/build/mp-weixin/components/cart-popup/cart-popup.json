@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon",
+    "actions": "/components/actions/actions"
+  }
+}

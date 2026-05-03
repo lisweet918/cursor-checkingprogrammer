@@ -1,0 +1,1 @@
+.wrap__title{font-size:36rpx;color:#333;text-align:center;font-weight:700;margin-top:30%}.wrap__image{display:flex;justify-content:center;margin:80rpx 0 30rpx 0}.wrap__tips{font-size:24rpx;color:#909399;text-align:center}

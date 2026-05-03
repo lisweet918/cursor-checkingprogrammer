@@ -1,0 +1,140 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"createTime": {
+			"bsonType": "timestamp",
+			"description": "下单时间（时间戳）"
+		},
+		"out_trade_no": {
+			"bsonType": "string",
+			"title": "订单号",
+			"description": "商户侧订单号"
+		},
+		"transaction_id": {
+			"bsonType": "string",
+			"title": "交易单号",
+			"description": "支付平台侧交易单号"
+		},
+		"type": {
+			"bsonType": "string",
+			"title": "订单类型",
+			"description": "takein=堂食，takeout=外卖",
+			"enum": ["takein", "takeout"]
+		},
+		"status": {
+			"bsonType": "int",
+			"title": "订单状态",
+			"description": "0=待接单，1=已接单，2=已退款，3=已完成",
+			"enum": [0, 1, 2, 3]
+		},
+		"torder": {
+			"bsonType": "string",
+			"title": "取餐号",
+			"description": "堂食取餐号，如 T1、T2"
+		},
+		"tableNumber": {
+			"bsonType": "string",
+			"title": "桌号",
+			"description": "堂食对应的桌号"
+		},
+		"commodity_list": {
+			"bsonType": "array",
+			"title": "商品列表",
+			"description": "顾客点的菜品列表",
+			"items": {
+				"bsonType": "object",
+				"properties": {
+					"id": {
+						"bsonType": "int",
+						"description": "商品ID"
+					},
+					"name": {
+						"bsonType": "string",
+						"description": "商品名称"
+					},
+					"price": {
+						"bsonType": "double",
+						"description": "商品单价"
+					},
+					"number": {
+						"bsonType": "int",
+						"description": "购买数量"
+					},
+					"image": {
+						"bsonType": "string",
+						"description": "商品图片"
+					},
+					"is_single": {
+						"bsonType": "bool",
+						"description": "是否单品"
+					},
+					"materials_text": {
+						"bsonType": "string",
+						"description": "规格/配料描述文字"
+					}
+				}
+			}
+		},
+		"shop_num": {
+			"bsonType": "int",
+			"title": "商品总件数",
+			"description": "所有商品数量合计"
+		},
+		"price": {
+			"bsonType": "double",
+			"title": "订单总金额",
+			"description": "单位：元"
+		},
+		"remark": {
+			"bsonType": "string",
+			"title": "备注",
+			"description": "顾客下单备注"
+		},
+		"name": {
+			"bsonType": "string",
+			"title": "收货人姓名",
+			"description": "外卖收货人姓名"
+		},
+		"phone": {
+			"bsonType": "string",
+			"title": "联系电话",
+			"description": "外卖收货人联系电话"
+		},
+		"address": {
+			"bsonType": "string",
+			"title": "收货地址",
+			"description": "外卖配送街道地址"
+		},
+		"house_number": {
+			"bsonType": "string",
+			"title": "门牌号",
+			"description": "外卖配送门牌号"
+		},
+		"orderstatus": {
+			"bsonType": "int",
+			"title": "外卖订单状态",
+			"description": "0=商家已接单，1=配送中，2=已退款，3=已完成"
+		},
+		"delivery_status": {
+			"bsonType": "int",
+			"title": "配送状态",
+			"description": "0=商家已接单，1=配送中，2=已完成"
+		},
+		"payment_time_text": {
+			"bsonType": "string",
+			"title": "支付时间",
+			"description": "格式化后的支付时间文本"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/uni-menu-sidebar/uni-menu-sidebar"],{"0138":function(n,e,u){"use strict";u.r(e);var t=u("6f79"),r=u("6084");for(var i in r)["default"].indexOf(i)<0&&function(n){u.d(e,n,(function(){return r[n]}))}(i);u("5381");var o=u("828b"),a=Object(o["a"])(r["default"],t["b"],t["c"],!1,null,null,null,!1,t["a"],void 0);e["default"]=a.exports},5381:function(n,e,u){"use strict";var t=u("7507"),r=u.n(t);r.a},6084:function(n,e,u){"use strict";u.r(e);var t=u("eb29"),r=u.n(t);for(var i in t)["default"].indexOf(i)<0&&function(n){u.d(e,n,(function(){return t[n]}))}(i);e["default"]=r.a},"6f79":function(n,e,u){"use strict";u.d(e,"b",(function(){return r})),u.d(e,"c",(function(){return i})),u.d(e,"a",(function(){return t}));var t={uniMenuItem:function(){return Promise.all([u.e("common/vendor"),u.e("components/uni-menu-item/uni-menu-item")]).then(u.bind(null,"87f7"))},uniSubMenu:function(){return Promise.all([u.e("common/vendor"),u.e("components/uni-sub-menu/uni-sub-menu")]).then(u.bind(null,"869d"))},uniMenuSidebar:function(){return Promise.resolve().then(u.bind(null,"0138"))}},r=function(){var n=this,e=n.$createElement,u=(n._self._c,n.__map(n.data,(function(e,u){var t=n.__get_orig(e),r=!e.children||!e.children.length;return{$orig:t,g0:r}})));n.$mp.data=Object.assign({},{$root:{l0:u}})},i=[]},7507:function(n,e,u){},eb29:function(n,e,u){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var t={name:"uniMenuSidebar",props:{data:{type:Array,default:function(){return[]}}},data:function(){return{}},computed:{},methods:{}};e.default=t}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/uni-menu-sidebar/uni-menu-sidebar-create-component',
+    {
+        'components/uni-menu-sidebar/uni-menu-sidebar-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('df3c')['createComponent'](__webpack_require__("0138"))
+        })
+    },
+    [['components/uni-menu-sidebar/uni-menu-sidebar-create-component']]
+]);

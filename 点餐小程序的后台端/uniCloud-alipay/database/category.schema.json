@@ -1,0 +1,40 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["name"],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"name": {
+			"bsonType": "string",
+			"title": "分类名称",
+			"description": "菜品分类名称，如招牌必吃、甄选套餐等"
+		},
+		"category_image_url": {
+			"bsonType": "string",
+			"title": "分类图片",
+			"description": "分类图标URL"
+		},
+		"sort": {
+			"bsonType": "int",
+			"title": "排序",
+			"description": "分类排序权重，数值越小越靠前"
+		},
+		"is_show": {
+			"bsonType": "bool",
+			"title": "是否显示",
+			"description": "是否在用户端展示该分类"
+		},
+		"createTime": {
+			"bsonType": "timestamp",
+			"description": "创建时间"
+		}
+	}
+}

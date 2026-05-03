@@ -1,0 +1,38 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [
+		"createTime",
+		"tableNumber",
+		"orderQrCode"
+	],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"createTime": {
+			"bsonType": "timestamp",
+			"description": "创建时间"
+		},
+		"tableNumber": {
+			"bsonType": "string",
+			"title": "桌号",
+			"description": "桌号"
+		},
+		"orderQrCode": {
+			"bsonType": "string",
+			"title": "点餐二维码",
+			"description": "桌号对应的小程序码文件地址"
+		},
+		"scene": {
+			"bsonType": "string",
+			"description": "小程序码场景值"
+		}
+	}
+}

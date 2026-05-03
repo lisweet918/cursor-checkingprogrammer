@@ -1,0 +1,1 @@
+<view class="wrap"><view class="wrap__title">请将二维码出示给核销员</view><view class="wrap__image"><u-image vue-id="75462a34-1" src="{{ImageData}}" width="400" height="400" border-radius="200" bind:__l="__l"></u-image></view><view class="wrap__tips"> 请勿出示给陌生人，以防泄露！ </view></view>
