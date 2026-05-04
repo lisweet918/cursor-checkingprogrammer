@@ -295,6 +295,12 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 var db = uniCloud.database();
 var _default = {

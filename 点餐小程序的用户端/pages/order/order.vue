@@ -8,7 +8,10 @@
 		<view v-if="current === 0">
 			<view v-for="(item,index) in pickupList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 				<view class="wrap__list__top">
-					<view>{{ storeName }}</view>
+					<view style="display: flex; flex-direction: column;">
+						<text>{{ storeName }}</text>
+						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
+					</view>
 					<view>{{item.status == '0' ? '待付款' : item.status == '1' ? '已付款' : '已退款'}}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
@@ -48,7 +51,10 @@
 		<view v-else-if="current === 1">
 			<view v-for="(item,index) in takeoutList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 				<view class="wrap__list__top">
-					<view>{{ storeName }}</view>
+					<view style="display: flex; flex-direction: column;">
+						<text>{{ storeName }}</text>
+						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
+					</view>
 					<view>
 						{{item.orderstatus == 2 ? '已退款' : item.delivery_status == 0 ? '商家已接单' : item.delivery_status == 1 ? '配送中' : '已完成'}}
 					</view>

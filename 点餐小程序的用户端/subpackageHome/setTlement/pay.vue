@@ -1,12 +1,5 @@
 <template>
 	<view class="container">
-		<view class="u-m-l-20 u-m-r-20 u-m-t-20">
-			<u-alert-tips type="warning" description="如果觉得还不错的话，麻烦免费插件给个五星好评，您的鼓励是我更新的动力，感谢🙏！"></u-alert-tips>
-		</view>
-		<view class="u-m-l-20 u-m-r-20 u-m-t-20">
-			<u-alert-tips type="error" title="合作请备注" description="QQ：2234207170，VX：Kaiyuan_Q"></u-alert-tips>
-		</view>
-
 		<view v-if="orderType == 'takeout'" class="container__addressbox">
 			<view v-if="hasAddress" class="container__addressbox__addressinfo" @click="addressManage">
 				<view class="container__addressbox__addressinfo__info">
@@ -75,11 +68,19 @@
 					<text>{{ item.price }}</text>
 				</view>
 			</view>
-			<list-cell arrow last>
+			<list-cell arrow>
 				<view class="w-100 d-flex align-items-center justify-content-between overflow-hidden">
 					<view class="flex-shrink-0">备注</view>
 					<view>
 						<u-input placeholder="请填写您的要求" disabled v-model="remark" @click="addRemark" input-align="right"></u-input>
+					</view>
+				</view>
+			</list-cell>
+			<list-cell v-if="orderType == 'takein'">
+				<view class="w-100 d-flex align-items-center justify-content-between overflow-hidden">
+					<view class="flex-shrink-0">联系人/桌号</view>
+					<view>
+						<u-input placeholder="请输入怎么称呼您或您的桌号" v-model="contactName" input-align="right"></u-input>
 					</view>
 				</view>
 			</list-cell>
@@ -127,7 +128,8 @@
 				cart: [],
 				deliveryType: 'immediately',
 				reservationTime: '',
-				showReservationPicker: false
+				showReservationPicker: false,
+				contactName: ''
 			}
 		},
 		computed: {
@@ -239,6 +241,9 @@
 						orderData.house_number = this.addressInfo.house_number || ''
 						orderData.orderstatus = 0
 						orderData.delivery_status = 0
+					} else {
+						// 堂食/自取 时保存用户填写的联系人/桌号
+						orderData.name = this.contactName || '顾客'
 					}
 
 					await db.collection('order').add(orderData)

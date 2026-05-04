@@ -101,9 +101,6 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uAlertTips: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-alert-tips/u-alert-tips */ "uni_modules/vk-uview-ui/components/u-alert-tips/u-alert-tips").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-alert-tips/u-alert-tips.vue */ 323))
-    },
     uIcon: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-icon/u-icon */ "uni_modules/vk-uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-icon/u-icon.vue */ 239))
     },
@@ -204,7 +201,8 @@ var _default = {
       cart: [],
       deliveryType: 'immediately',
       reservationTime: '',
-      showReservationPicker: false
+      showReservationPicker: false,
+      contactName: ''
     };
   },
   computed: _objectSpread(_objectSpread({}, (0, _vuex.mapState)(['orderType', 'addressInfo', 'remark'])), {}, {
@@ -342,6 +340,9 @@ var _default = {
                   orderData.house_number = _this.addressInfo.house_number || '';
                   orderData.orderstatus = 0;
                   orderData.delivery_status = 0;
+                } else {
+                  // 堂食/自取 时保存用户填写的联系人/桌号
+                  orderData.name = _this.contactName || '顾客';
                 }
                 _context.next = 13;
                 return db.collection('order').add(orderData);
