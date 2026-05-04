@@ -12,7 +12,7 @@
 						<text>{{ storeName }}</text>
 						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
 					</view>
-					<view>{{item.status == '0' ? '待付款' : item.status == '1' ? '已付款' : '已退款'}}</view>
+					<view>{{ getStatusText(item.status) }}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
 					<view class="wrap__list__shopinfo__left">
@@ -55,9 +55,7 @@
 						<text>{{ storeName }}</text>
 						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
 					</view>
-					<view>
-						{{item.orderstatus == 2 ? '已退款' : item.delivery_status == 0 ? '商家已接单' : item.delivery_status == 1 ? '配送中' : '已完成'}}
-					</view>
+					<view>{{ getStatusText(item.status) }}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
 					<view class="wrap__list__shopinfo__left">
@@ -152,6 +150,16 @@
 			this.loadOrders()
 		},
 		methods: {
+			getStatusText(status) {
+				const s = parseInt(status);
+				switch (s) {
+					case 0: return '待接单';
+					case 1: return '已接单';
+					case 2: return '已退款';
+					case 3: return '已完成';
+					default: return '已支付';
+				}
+			},
 			async loadStoreSettings() {
 				try {
 					const db = uniCloud.database()

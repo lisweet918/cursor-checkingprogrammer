@@ -129,6 +129,37 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 =
+    _vm.current === 0
+      ? _vm.__map(_vm.pickupList, function (item, index) {
+          var $orig = _vm.__get_orig(item)
+          var m0 = _vm.getStatusText(item.status)
+          return {
+            $orig: $orig,
+            m0: m0,
+          }
+        })
+      : null
+  var l1 =
+    !(_vm.current === 0) && _vm.current === 1
+      ? _vm.__map(_vm.takeoutList, function (item, index) {
+          var $orig = _vm.__get_orig(item)
+          var m1 = _vm.getStatusText(item.status)
+          return {
+            $orig: $orig,
+            m1: m1,
+          }
+        })
+      : null
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0,
+        l1: l1,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -299,8 +330,6 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
-//
-//
 
 var db = uniCloud.database();
 var _default = {
@@ -326,6 +355,21 @@ var _default = {
     this.loadOrders();
   },
   methods: {
+    getStatusText: function getStatusText(status) {
+      var s = parseInt(status);
+      switch (s) {
+        case 0:
+          return '待接单';
+        case 1:
+          return '已接单';
+        case 2:
+          return '已退款';
+        case 3:
+          return '已完成';
+        default:
+          return '已支付';
+      }
+    },
     loadStoreSettings: function loadStoreSettings() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {

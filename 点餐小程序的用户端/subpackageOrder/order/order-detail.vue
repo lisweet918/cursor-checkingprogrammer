@@ -1,26 +1,15 @@
 <template>
 	<view class="wrap">
 		<view v-if="type && orderData._id">
-			<view v-if="type == 'takein'">
-				<view class="wrap__takein">
-					<view>{{orderData.status != '2' ? orderData.torder : '订单已退款'}}</view>
-					<view v-if="orderData.status != '2'">取餐号</view>
+			<view class="order-status-section" style="padding: 40rpx; background: #fff; margin-bottom: 20rpx; border-radius: 0 0 30rpx 30rpx; text-align: center;">
+				<view class="status-title" style="font-size: 40rpx; font-weight: bold; color: #0A3D28; margin-bottom: 10rpx;">
+					{{ getStatusText(orderData.status) }}
 				</view>
-			</view>
-
-			<view v-else class="wrap__takeout">
-				<view class="wrap__takeout__title">
-					{{orderData.orderstatus == 2 ? '订单已退款' : orderData.delivery_status == 0 ? '商家已接单' : orderData.delivery_status == 1 ? '订单配送中' : '订单已完成'}}
+				<view class="status-subtitle" style="font-size: 24rpx; color: #999;" v-if="orderData.type == 'takein' && orderData.status != 2">
+					{{ orderData.status == 3 ? '订单已送达，祝您用餐愉快' : '取餐号：' + orderData.torder }}
 				</view>
-				<view class="wrap__takeout__person">
-					<view>配送员 Kaiyaun_Q</view>
-					<view>联系Ta</view>
-				</view>
-				<view class="wrap__takeout__liveshooting">
-					<view>送达实拍</view>
-					<view>
-						<u-image src="/static/logo.jpg" width="100" height="100" border-radius="18rpx"></u-image>
-					</view>
+				<view class="status-subtitle" style="font-size: 24rpx; color: #999;" v-else-if="orderData.type == 'takeout'">
+					{{ orderData.status == 0 ? '商家正在快马加鞭为您准备' : orderData.status == 1 ? '配送员 Kaiyuan_Q 正在赶路' : orderData.status == 2 ? '期待您的再次光临' : '订单已送达' }}
 				</view>
 			</view>
 
@@ -120,6 +109,16 @@
 			}
 		},
 		methods: {
+			getStatusText(status) {
+				const s = parseInt(status);
+				switch (s) {
+					case 0: return '待接单';
+					case 1: return '已接单';
+					case 2: return '已退款';
+					case 3: return '已完成';
+					default: return '已支付';
+				}
+			},
 			async loadOrderDetail() {
 				uni.showLoading({ title: '加载中...' })
 				try {
