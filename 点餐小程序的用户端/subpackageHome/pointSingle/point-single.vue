@@ -9,7 +9,7 @@
 				<view class="store">
 					<view class="title">
 						<view class="address">{{ storeName }}</view>
-						<view class="business">营业时间：早5:00 - 晚18:00</view>
+						<view class="business">营业时间：{{ businessHours }}</view>
 					</view>
 					<view class="buttons">
 						<button type="default" class="button" :class="{active: orderType == 'takein'}" plain
@@ -115,6 +115,7 @@
 		data() {
 			return {
 				storeName: '',
+				businessHours: '',
 				util,
 				categories: [],
 				cart: [],
@@ -211,6 +212,7 @@
 					const res = await db.collection('store_settings').get();
 					if (res.result.data && res.result.data.length > 0) {
 						this.storeName = res.result.data[0].store_name || '七香嫂包子铺';
+						this.businessHours = res.result.data[0].business_hours || '早5:00 - 晚18:00';
 					}
 				} catch (e) {
 					console.error('Failed to load store settings:', e);

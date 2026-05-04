@@ -269,6 +269,7 @@ var _default = {
   data: function data() {
     return {
       storeName: '',
+      businessHours: '',
       util: _util.default,
       categories: [],
       cart: [],
@@ -463,6 +464,7 @@ var _default = {
                 res = _context5.sent;
                 if (res.result.data && res.result.data.length > 0) {
                   _this6.storeName = res.result.data[0].store_name || '七香嫂包子铺';
+                  _this6.businessHours = res.result.data[0].business_hours || '早5:00 - 晚18:00';
                 }
                 _context5.next = 11;
                 break;

@@ -15,6 +15,11 @@
 			"bsonType": "string",
 			"description": "店铺名称",
 			"title": "店铺名称"
+		},
+		"business_hours": {
+			"bsonType": "string",
+			"description": "营业时间",
+			"title": "营业时间"
 		}
 	}
 }

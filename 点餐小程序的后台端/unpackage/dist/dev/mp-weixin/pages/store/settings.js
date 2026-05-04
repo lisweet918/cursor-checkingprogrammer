@@ -167,6 +167,11 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
+//
+//
+//
+//
+//
 
 var db = uniCloud.database();
 var _default = {
@@ -175,7 +180,8 @@ var _default = {
       recordId: '',
       loading: false,
       formData: {
-        store_name: '七香嫂包子铺' // 默认名字
+        store_name: '七香嫂包子铺',
+        business_hours: '早5:00 - 晚18:00'
       }
     };
   },
@@ -203,6 +209,7 @@ var _default = {
                   setting = res.result.data[0];
                   _this.recordId = setting._id;
                   _this.formData.store_name = setting.store_name || '七香嫂包子铺';
+                  _this.formData.business_hours = setting.business_hours || '早5:00 - 晚18:00';
                 }
                 _context.next = 11;
                 break;
@@ -248,7 +255,8 @@ var _default = {
                 }
                 _context2.next = 8;
                 return db.collection('store_settings').doc(_this2.recordId).update({
-                  store_name: _this2.formData.store_name.trim()
+                  store_name: _this2.formData.store_name.trim(),
+                  business_hours: _this2.formData.business_hours.trim()
                 });
               case 8:
                 _context2.next = 14;
@@ -256,7 +264,8 @@ var _default = {
               case 10:
                 _context2.next = 12;
                 return db.collection('store_settings').add({
-                  store_name: _this2.formData.store_name.trim()
+                  store_name: _this2.formData.store_name.trim(),
+                  business_hours: _this2.formData.business_hours.trim()
                 });
               case 12:
                 res = _context2.sent;

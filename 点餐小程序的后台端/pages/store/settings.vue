@@ -12,6 +12,11 @@
         <text class="field-label">店铺名称</text>
         <input class="field-input" v-model="formData.store_name" type="text" placeholder="请输入店铺名称" />
       </view>
+
+      <view class="field-row">
+        <text class="field-label">营业时间</text>
+        <input class="field-input" v-model="formData.business_hours" type="text" placeholder="例：早5:00 - 晚18:00" />
+      </view>
       
       <view class="field-row actions">
         <button class="uni-button" type="primary" :loading="loading" @click="submit">保存修改</button>
@@ -29,7 +34,8 @@ export default {
       recordId: '',
       loading: false,
       formData: {
-        store_name: '七香嫂包子铺' // 默认名字
+        store_name: '七香嫂包子铺',
+        business_hours: '早5:00 - 晚18:00'
       }
     }
   },
@@ -45,6 +51,7 @@ export default {
           const setting = res.result.data[0]
           this.recordId = setting._id
           this.formData.store_name = setting.store_name || '七香嫂包子铺'
+          this.formData.business_hours = setting.business_hours || '早5:00 - 晚18:00'
         }
       } catch (e) {
         console.error('Failed to load settings:', e)
@@ -63,12 +70,14 @@ export default {
         if (this.recordId) {
           // 更新
           await db.collection('store_settings').doc(this.recordId).update({
-            store_name: this.formData.store_name.trim()
+            store_name: this.formData.store_name.trim(),
+            business_hours: this.formData.business_hours.trim()
           })
         } else {
           // 新增
           const res = await db.collection('store_settings').add({
-            store_name: this.formData.store_name.trim()
+            store_name: this.formData.store_name.trim(),
+            business_hours: this.formData.business_hours.trim()
           })
           this.recordId = res.result.id
         }
