@@ -162,12 +162,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 //
 //
 //
@@ -264,49 +267,86 @@ exports.default = void 0;
 //
 //
 //
+//
+
+var db = uniCloud.database();
 var _default = {
   data: function data() {
     return {
       type: '',
-      orderData: {
-        "torder": 'T1',
-        'status': '1',
-        "orderstatus": 0,
-        "delivery_status": 1,
-        "commodity_list": [{
-          "id": 12,
-          "name": "火腿包",
-          "price": 3.99,
-          "number": 1,
-          "image": "/static/img/home/icon-1.jpg",
-          "is_single": false,
-          "materials_text": ""
-        }, {
-          "name": "招牌酱肉包",
-          "price": 5.99,
-          "number": 1,
-          "image": "/static/img/home/icon-1.jpg",
-          "is_single": false,
-          "materials_text": ""
-        }],
-        "shop_num": 2,
-        "price": 9.98,
-        "name": 'Kaiyuan_Q',
-        "phone": '18888888888',
-        "address": '北京市东城区王府井大街',
-        "house_number": "88号",
-        "remark": '放门口，不要打电话',
-        "out_trade_no": '38fhfhs9048ujv0sjv',
-        "transaction_id": '3gfr324r32r32fd23',
-        "payment_time_text": '2026-03-03 17:40'
-      }
+      orderId: '',
+      orderData: {}
     };
   },
   onLoad: function onLoad(param) {
     this.type = param.type;
+    this.orderId = param.id;
+    if (this.orderId) {
+      this.loadOrderDetail();
+    }
+  },
+  onShareAppMessage: function onShareAppMessage() {
+    return {
+      title: '我的点餐订单',
+      path: "/subpackageOrder/order/order-detail?id=".concat(this.orderId, "&type=").concat(this.type)
+    };
+  },
+  methods: {
+    loadOrderDetail: function loadOrderDetail() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var res;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                uni.showLoading({
+                  title: '加载中...'
+                });
+                _context.prev = 1;
+                _context.next = 4;
+                return db.collection('order').doc(_this.orderId).get();
+              case 4:
+                res = _context.sent;
+                if (res.result.data && res.result.data.length > 0) {
+                  _this.orderData = res.result.data[0];
+                } else {
+                  uni.showToast({
+                    title: '订单不存在',
+                    icon: 'none'
+                  });
+                }
+                _context.next = 12;
+                break;
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](1);
+                console.error('Failed to load order:', _context.t0);
+                uni.showToast({
+                  title: '加载失败',
+                  icon: 'none'
+                });
+              case 12:
+                _context.prev = 12;
+                uni.hideLoading();
+                return _context.finish(12);
+              case 15:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[1, 8, 12, 15]]);
+      }))();
+    },
+    moreOrder: function moreOrder() {
+      uni.switchTab({
+        url: '/pages/home/home'
+      });
+    }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

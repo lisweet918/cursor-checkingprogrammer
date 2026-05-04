@@ -1,6 +1,6 @@
 <template>
 	<view class="wrap">
-		<view v-if="type">
+		<view v-if="type && orderData._id">
 			<view v-if="type == 'takein'">
 				<view class="wrap__takein">
 					<view>{{orderData.status != '2' ? orderData.torder : '订单已退款'}}</view>
@@ -85,6 +85,7 @@
 
 			<!-- 底部按钮 -->
 			<view class="wrap__bottom">
+				<button class="share-btn" open-type="share">分享订单</button>
 				<view @click="moreOrder">再来一单</view>
 			</view>
 
@@ -95,46 +96,51 @@
 </template>
 
 <script>
+	const db = uniCloud.database()
+
 	export default {
 		data() {
 			return {
 				type: '',
-				orderData: {
-					"torder": 'T1',
-					'status': '1',
-					"orderstatus": 0,
-					"delivery_status": 1,
-					"commodity_list": [{
-						"id": 12,
-						"name": "火腿包",
-						"price": 3.99,
-						"number": 1,
-						"image": "/static/img/home/icon-1.jpg",
-						"is_single": false,
-						"materials_text": ""
-					}, {
-						"name": "招牌酱肉包",
-						"price": 5.99,
-						"number": 1,
-						"image": "/static/img/home/icon-1.jpg",
-						"is_single": false,
-						"materials_text": ""
-					}],
-					"shop_num": 2,
-					"price": 9.98,
-					"name": 'Kaiyuan_Q',
-					"phone": '18888888888',
-					"address": '北京市东城区王府井大街',
-					"house_number": "88号",
-					"remark": '放门口，不要打电话',
-					"out_trade_no": '38fhfhs9048ujv0sjv',
-					"transaction_id": '3gfr324r32r32fd23',
-					"payment_time_text": '2026-03-03 17:40'
-				}
+				orderId: '',
+				orderData: {}
 			}
 		},
 		onLoad(param) {
 			this.type = param.type;
+			this.orderId = param.id;
+			if (this.orderId) {
+				this.loadOrderDetail()
+			}
+		},
+		onShareAppMessage() {
+			return {
+				title: '我的点餐订单',
+				path: `/subpackageOrder/order/order-detail?id=${this.orderId}&type=${this.type}`,
+			}
+		},
+		methods: {
+			async loadOrderDetail() {
+				uni.showLoading({ title: '加载中...' })
+				try {
+					const res = await db.collection('order').doc(this.orderId).get()
+					if (res.result.data && res.result.data.length > 0) {
+						this.orderData = res.result.data[0]
+					} else {
+						uni.showToast({ title: '订单不存在', icon: 'none' })
+					}
+				} catch (e) {
+					console.error('Failed to load order:', e)
+					uni.showToast({ title: '加载失败', icon: 'none' })
+				} finally {
+					uni.hideLoading()
+				}
+			},
+			moreOrder() {
+				uni.switchTab({
+					url: '/pages/home/home'
+				})
+			}
 		}
 	}
 </script>
@@ -334,11 +340,13 @@
 			background-color: white;
 			display: flex;
 			justify-content: flex-end;
-			padding: 30rpx 0;
+			align-items: center;
+			padding: 20rpx 20rpx;
 			position: fixed;
 			bottom: 0;
 			left: 0;
 			width: 100%;
+			box-shadow: 0 -2rpx 10rpx rgba(0,0,0,0.05);
 
 			view {
 				width: 160rpx;
@@ -346,9 +354,25 @@
 				border: 1px solid $u-type-info;
 				color: $u-type-info;
 				border-radius: 30rpx;
-				padding: 8rpx 0;
-				font-size: 24rpx;
+				padding: 10rpx 0;
+				font-size: 26rpx;
 				margin-right: 20rpx;
+			}
+			.share-btn {
+				background-color: transparent;
+				border: 1px solid #0A3D28;
+				color: #0A3D28;
+				border-radius: 30rpx;
+				padding: 0;
+				margin: 0;
+				margin-right: 20rpx;
+				font-size: 26rpx;
+				width: 160rpx;
+				height: 56rpx;
+				line-height: 54rpx;
+			}
+			.share-btn::after {
+				border: none;
 			}
 		}
 	}

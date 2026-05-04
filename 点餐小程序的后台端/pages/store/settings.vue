@@ -17,6 +17,11 @@
         <text class="field-label">营业时间</text>
         <input class="field-input" v-model="formData.business_hours" type="text" placeholder="例：早5:00 - 晚18:00" />
       </view>
+
+      <view class="field-row">
+        <text class="field-label">微信接单通知</text>
+        <input class="field-input" v-model="formData.pushplus_token" type="text" placeholder="请输入PushPlus的Token，为空则不通知" />
+      </view>
       
       <view class="field-row actions">
         <button class="uni-button" type="primary" :loading="loading" @click="submit">保存修改</button>
@@ -35,7 +40,8 @@ export default {
       loading: false,
       formData: {
         store_name: '七香嫂包子铺',
-        business_hours: '早5:00 - 晚18:00'
+        business_hours: '早5:00 - 晚18:00',
+        pushplus_token: ''
       }
     }
   },
@@ -52,6 +58,7 @@ export default {
           this.recordId = setting._id
           this.formData.store_name = setting.store_name || '七香嫂包子铺'
           this.formData.business_hours = setting.business_hours || '早5:00 - 晚18:00'
+          this.formData.pushplus_token = setting.pushplus_token || ''
         }
       } catch (e) {
         console.error('Failed to load settings:', e)
@@ -71,13 +78,15 @@ export default {
           // 更新
           await db.collection('store_settings').doc(this.recordId).update({
             store_name: this.formData.store_name.trim(),
-            business_hours: this.formData.business_hours.trim()
+            business_hours: this.formData.business_hours.trim(),
+            pushplus_token: this.formData.pushplus_token.trim()
           })
         } else {
           // 新增
           const res = await db.collection('store_settings').add({
             store_name: this.formData.store_name.trim(),
-            business_hours: this.formData.business_hours.trim()
+            business_hours: this.formData.business_hours.trim(),
+            pushplus_token: this.formData.pushplus_token.trim()
           })
           this.recordId = res.result.id
         }

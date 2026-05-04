@@ -307,7 +307,7 @@ var _default = {
                 return _context.abrupt("return");
               case 6:
                 uni.showLoading({
-                  title: '正在处理支付...'
+                  title: '正在提交订单...'
                 });
                 _context.prev = 7;
                 db = uniCloud.database();
@@ -346,13 +346,23 @@ var _default = {
                 _context.next = 13;
                 return db.collection('order').add(orderData);
               case 13:
-                // 支付成功，清空购物车
+                // 调用云函数发送老板接单提醒
+                uniCloud.callFunction({
+                  name: 'push-order-notification',
+                  data: {
+                    orderData: orderData
+                  }
+                }).catch(function (err) {
+                  return console.error('Push notification failed:', err);
+                });
+
+                // 清空购物车
                 uni.removeStorageSync('cart');
                 _this.$store.commit('SET_REMARK', '');
                 _this.cart = [];
                 uni.hideLoading();
                 uni.showToast({
-                  title: '支付成功！',
+                  title: '下单成功！',
                   icon: 'success'
                 });
                 setTimeout(function () {
@@ -360,23 +370,23 @@ var _default = {
                     url: '/pages/order/order'
                   });
                 }, 1500);
-                _context.next = 25;
+                _context.next = 26;
                 break;
-              case 21:
-                _context.prev = 21;
+              case 22:
+                _context.prev = 22;
                 _context.t0 = _context["catch"](7);
                 uni.hideLoading();
                 uni.showModal({
-                  title: '支付失败',
+                  title: '下单失败',
                   content: _context.t0.message || '网络错误，请重试',
                   showCancel: false
                 });
-              case 25:
+              case 26:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[7, 21]]);
+        }, _callee, null, [[7, 22]]);
       }))();
     }
   }

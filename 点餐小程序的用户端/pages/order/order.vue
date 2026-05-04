@@ -6,7 +6,7 @@
 		</view>
 
 		<view v-if="current === 0">
-			<view v-for="(item,index) in pickupList" :key="item.id" class="wrap__list" @click="orderDetail(item)">
+			<view v-for="(item,index) in pickupList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 				<view class="wrap__list__top">
 					<view>{{ storeName }}</view>
 					<view>{{item.status == '0' ? '待付款' : item.status == '1' ? '已付款' : '已退款'}}</view>
@@ -36,6 +36,9 @@
 					<text>￥</text>
 					<text>{{item.price}}</text>
 				</view>
+				<view class="wrap__list__remark" v-if="item.remark" style="margin-bottom: 20rpx; font-size: 24rpx; color: #999; display: flex; justify-content: flex-end;">
+					<text>备注：{{item.remark}}</text>
+				</view>
 				<view class='wrap__list__bottom'>
 					<view>再来一单</view>
 				</view>
@@ -43,7 +46,7 @@
 		</view>
 
 		<view v-else-if="current === 1">
-			<view v-for="(item,index) in takeoutList" :key="item.id" class="wrap__list" @click="orderDetail(item)">
+			<view v-for="(item,index) in takeoutList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 				<view class="wrap__list__top">
 					<view>{{ storeName }}</view>
 					<view>
@@ -75,6 +78,9 @@
 					<text>￥</text>
 					<text>{{item.price}}</text>
 				</view>
+				<view class="wrap__list__remark" v-if="item.remark" style="margin-bottom: 20rpx; font-size: 24rpx; color: #999; display: flex; justify-content: flex-end;">
+					<text>备注：{{item.remark}}</text>
+				</view>
 				<view class='wrap__list__bottom'>
 					<view>再来一单</view>
 				</view>
@@ -82,7 +88,7 @@
 		</view>
 
 		<view v-else>
-			<view v-for="(item,index) in couponList" :key="item.id" class="wrap__list">
+			<view v-for="(item,index) in couponList" :key="item._id" class="wrap__list">
 				<view class="wrap__list__top">
 					<view>{{ storeName }}</view>
 					<view>{{item.status == '0' ? '待核销' : '已核销'}}</view>

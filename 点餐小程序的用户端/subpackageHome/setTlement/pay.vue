@@ -95,10 +95,9 @@
 		</view>
 		<list-cell last>
 			<view class="w-100 d-flex align-items-center justify-content-between">
-				<view>支付方式</view>
+				<view>下单方式</view>
 				<view class="d-flex align-items-center">
-					<image src="/static/img/home/weixin-pay.png" class="wx-pay-icon"></image>
-					<view>微信</view>
+					<view>一键下单</view>
 				</view>
 			</view>
 		</list-cell>
@@ -108,7 +107,7 @@
 				<text>￥</text>
 				<text>{{ cartAmount }}</text>
 			</view>
-			<button type="primary" @click="handlePay">支付</button>
+			<button type="primary" @click="handlePay">确认下单</button>
 		</view>
 	</view>
 </template>
@@ -207,7 +206,7 @@
 					return
 				}
 
-				uni.showLoading({ title: '正在处理支付...' })
+				uni.showLoading({ title: '正在提交订单...' })
 
 				try {
 					const db = uniCloud.database()
@@ -244,13 +243,19 @@
 
 					await db.collection('order').add(orderData)
 					
-					// 支付成功，清空购物车
+					// 调用云函数发送老板接单提醒
+					uniCloud.callFunction({
+						name: 'push-order-notification',
+						data: { orderData }
+					}).catch(err => console.error('Push notification failed:', err))
+
+					// 清空购物车
 					uni.removeStorageSync('cart')
 					this.$store.commit('SET_REMARK', '')
 					this.cart = []
 
 					uni.hideLoading()
-					uni.showToast({ title: '支付成功！', icon: 'success' })
+					uni.showToast({ title: '下单成功！', icon: 'success' })
 					
 					setTimeout(() => {
 						uni.switchTab({
@@ -259,7 +264,7 @@
 					}, 1500)
 				} catch (e) {
 					uni.hideLoading()
-					uni.showModal({ title: '支付失败', content: e.message || '网络错误，请重试', showCancel: false })
+					uni.showModal({ title: '下单失败', content: e.message || '网络错误，请重试', showCancel: false })
 				}
 			}
 		}
