@@ -77,3 +77,26 @@
   margin: 20rpx auto 0 auto;
   letter-spacing: 2rpx;
 }
+.avatar-wrapper.data-v-b237504c {
+  padding: 0;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 500rpx;
+  border: none;
+  background: none;
+}
+.avatar-wrapper.data-v-b237504c::after {
+  border: none;
+}
+.wrap__input.data-v-b237504c {
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.nickname-input.data-v-b237504c {
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  padding: 10rpx;
+  width: 60%;
+  font-size: 32rpx;
+}

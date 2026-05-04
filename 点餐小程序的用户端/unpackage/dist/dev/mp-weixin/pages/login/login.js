@@ -159,12 +159,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+//
+//
+//
+//
 //
 //
 //
@@ -178,10 +185,107 @@ exports.default = void 0;
 //
 var _default = {
   data: function data() {
-    return {};
+    return {
+      avatarUrl: '/static/logo.jpg',
+      nickname: ''
+    };
+  },
+  methods: {
+    onChooseAvatar: function onChooseAvatar(e) {
+      this.avatarUrl = e.detail.avatarUrl;
+    },
+    onNicknameBlur: function onNicknameBlur(e) {
+      this.nickname = e.detail.value;
+    },
+    signup: function signup() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var loginRes, res;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (_this.nickname) {
+                  _context.next = 3;
+                  break;
+                }
+                uni.showToast({
+                  title: '请输入昵称',
+                  icon: 'none'
+                });
+                return _context.abrupt("return");
+              case 3:
+                uni.showLoading({
+                  title: '登录中...'
+                });
+                _context.prev = 4;
+                _context.next = 7;
+                return new Promise(function (resolve, reject) {
+                  uni.login({
+                    provider: 'weixin',
+                    success: function success(res) {
+                      return resolve(res);
+                    },
+                    fail: function fail(err) {
+                      return reject(err);
+                    }
+                  });
+                });
+              case 7:
+                loginRes = _context.sent;
+                _context.next = 10;
+                return uniCloud.callFunction({
+                  name: 'wx-login',
+                  data: {
+                    code: loginRes.code,
+                    nickname: _this.nickname,
+                    avatar: _this.avatarUrl
+                  }
+                });
+              case 10:
+                res = _context.sent;
+                if (!(res.result && res.result.success)) {
+                  _context.next = 17;
+                  break;
+                }
+                uni.setStorageSync('userInfo', res.result.user);
+                uni.showToast({
+                  title: '登录成功'
+                });
+                setTimeout(function () {
+                  uni.navigateBack();
+                }, 1000);
+                _context.next = 18;
+                break;
+              case 17:
+                throw new Error(res.result.msg || '登录失败');
+              case 18:
+                _context.next = 24;
+                break;
+              case 20:
+                _context.prev = 20;
+                _context.t0 = _context["catch"](4);
+                console.error(_context.t0);
+                uni.showToast({
+                  title: _context.t0.message || '登录异常',
+                  icon: 'none'
+                });
+              case 24:
+                _context.prev = 24;
+                uni.hideLoading();
+                return _context.finish(24);
+              case 27:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[4, 20, 24, 27]]);
+      }))();
+    }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 

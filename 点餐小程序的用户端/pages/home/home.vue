@@ -8,13 +8,13 @@
 		<view class="wrap__userinfo" @click="handleLogin">
 			<view class="wrap__userinfo__left">
 				<view>
-					<u-image src="/static/logo.jpg" width="60" height="60" border-radius="50%" lazy-load></u-image>
+					<u-image :src="userinfo.avatar || '/static/logo.jpg'" width="60" height="60" border-radius="50%" lazy-load></u-image>
 				</view>
 				<view class="wrap__userinfo__left__nickname">
-					尊敬的用户
+					{{userinfo.nickname || '尊敬的用户'}}
 				</view>
 			</view>
-			<view class="wrap__userinfo__right">
+			<view class="wrap__userinfo__right" v-if="!userinfo.nickname">
 				<view>注册/登录</view>
 			</view>
 		</view>
@@ -116,6 +116,10 @@
 		},
 		onShow() {
 			this.loadBanners();
+			const userInfo = uni.getStorageSync('userInfo');
+			if (userInfo) {
+				this.userinfo = userInfo;
+			}
 		},
 		methods: {
 			...mapMutations(['SET_ORDER_TYPE', 'SET_TABLE_INFO']),
@@ -142,9 +146,11 @@
 				}
 			},
 			handleLogin() {
-				uni.navigateTo({
-					url: `/pages/login/login`
-				});
+				if (!this.userinfo.nickname) {
+					uni.navigateTo({
+						url: `/pages/login/login`
+					});
+				}
 			},
 			handlePointSingle(type) {
 				if (type === ORDER_TYPE.TAKE_IN && this.tableInfo.tableNumber && !this.tableInfo.diningCount) {

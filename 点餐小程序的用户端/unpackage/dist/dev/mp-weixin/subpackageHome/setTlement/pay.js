@@ -108,10 +108,10 @@ try {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-image/u-image */ "uni_modules/vk-uview-ui/components/u-image/u-image").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-image/u-image.vue */ 232))
     },
     listCell: function () {
-      return __webpack_require__.e(/*! import() | components/list-cell/list-cell */ "components/list-cell/list-cell").then(__webpack_require__.bind(null, /*! @/components/list-cell/list-cell.vue */ 330))
+      return __webpack_require__.e(/*! import() | components/list-cell/list-cell */ "components/list-cell/list-cell").then(__webpack_require__.bind(null, /*! @/components/list-cell/list-cell.vue */ 323))
     },
     uInput: function () {
-      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-input/u-input.vue */ 337))
+      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-input/u-input.vue */ 330))
     },
   }
 } catch (e) {
@@ -183,12 +183,12 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var ListCell = function ListCell() {
   __webpack_require__.e(/*! require.ensure | components/list-cell/list-cell */ "components/list-cell/list-cell").then((function () {
-    return resolve(__webpack_require__(/*! @/components/list-cell/list-cell.vue */ 330));
+    return resolve(__webpack_require__(/*! @/components/list-cell/list-cell.vue */ 323));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var TimePicker = function TimePicker() {
   Promise.all(/*! require.ensure | uni_modules/hbxw-timepicker/components/hbxw-timepicker/hbxw-timepicker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/hbxw-timepicker/components/hbxw-timepicker/hbxw-timepicker")]).then((function () {
-    return resolve(__webpack_require__(/*! @/uni_modules/hbxw-timepicker/components/hbxw-timepicker/hbxw-timepicker.vue */ 345));
+    return resolve(__webpack_require__(/*! @/uni_modules/hbxw-timepicker/components/hbxw-timepicker/hbxw-timepicker.vue */ 338));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -224,6 +224,10 @@ var _default = {
   onShow: function onShow() {
     // 每次页面展示时重新读取购物车（含从备注页返回）
     this.loadCart();
+    var userInfo = uni.getStorageSync('userInfo');
+    if (userInfo && !this.contactName) {
+      this.contactName = userInfo.nickname;
+    }
   },
   onUnload: function onUnload() {
     this.$store.commit('SET_REMARK', '');
@@ -279,7 +283,7 @@ var _default = {
     handlePay: function handlePay() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var db, orderData;
+        var db, orderData, userInfo;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -344,9 +348,13 @@ var _default = {
                   // 堂食/自取 时保存用户填写的联系人/桌号
                   orderData.name = _this.contactName || '顾客';
                 }
-                _context.next = 13;
+                userInfo = uni.getStorageSync('userInfo');
+                if (userInfo && userInfo.openid) {
+                  orderData.user_id = userInfo.openid;
+                }
+                _context.next = 15;
                 return db.collection('order').add(orderData);
-              case 13:
+              case 15:
                 // 调用云函数发送老板接单提醒
                 uniCloud.callFunction({
                   name: 'push-order-notification',
@@ -371,10 +379,10 @@ var _default = {
                     url: '/pages/order/order'
                   });
                 }, 1500);
-                _context.next = 26;
+                _context.next = 28;
                 break;
-              case 22:
-                _context.prev = 22;
+              case 24:
+                _context.prev = 24;
                 _context.t0 = _context["catch"](7);
                 uni.hideLoading();
                 uni.showModal({
@@ -382,12 +390,12 @@ var _default = {
                   content: _context.t0.message || '网络错误，请重试',
                   showCancel: false
                 });
-              case 26:
+              case 28:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[7, 22]]);
+        }, _callee, null, [[7, 24]]);
       }))();
     }
   }

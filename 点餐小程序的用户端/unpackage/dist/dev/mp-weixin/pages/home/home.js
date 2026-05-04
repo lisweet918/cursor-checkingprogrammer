@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -208,6 +208,10 @@ var _default = {
   },
   onShow: function onShow() {
     this.loadBanners();
+    var userInfo = uni.getStorageSync('userInfo');
+    if (userInfo) {
+      this.userinfo = userInfo;
+    }
   },
   methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)(['SET_ORDER_TYPE', 'SET_TABLE_INFO'])), {}, {
     loadBanners: function loadBanners() {
@@ -269,9 +273,11 @@ var _default = {
       }))();
     },
     handleLogin: function handleLogin() {
-      uni.navigateTo({
-        url: "/pages/login/login"
-      });
+      if (!this.userinfo.nickname) {
+        uni.navigateTo({
+          url: "/pages/login/login"
+        });
+      }
     },
     handlePointSingle: function handlePointSingle(type) {
       if (type === ORDER_TYPE.TAKE_IN && this.tableInfo.tableNumber && !this.tableInfo.diningCount) {
@@ -344,7 +350,7 @@ var _default = {
   })
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 

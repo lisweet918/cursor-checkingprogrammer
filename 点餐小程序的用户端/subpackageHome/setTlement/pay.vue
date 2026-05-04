@@ -148,6 +148,10 @@
 		onShow() {
 			// 每次页面展示时重新读取购物车（含从备注页返回）
 			this.loadCart()
+			const userInfo = uni.getStorageSync('userInfo')
+			if (userInfo && !this.contactName) {
+				this.contactName = userInfo.nickname
+			}
 		},
 		onUnload() {
 			this.$store.commit('SET_REMARK', '')
@@ -244,6 +248,11 @@
 					} else {
 						// 堂食/自取 时保存用户填写的联系人/桌号
 						orderData.name = this.contactName || '顾客'
+					}
+
+					const userInfo = uni.getStorageSync('userInfo')
+					if (userInfo && userInfo.openid) {
+						orderData.user_id = userInfo.openid
 					}
 
 					await db.collection('order').add(orderData)

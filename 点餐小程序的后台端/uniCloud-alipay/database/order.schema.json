@@ -3,10 +3,10 @@
 	"bsonType": "object",
 	"required": [],
 	"permission": {
-		"read": false,
-		"create": false,
-		"update": false,
-		"delete": false
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
 	},
 	"properties": {
 		"_id": {
@@ -135,6 +135,11 @@
 			"bsonType": "string",
 			"title": "支付时间",
 			"description": "格式化后的支付时间文本"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"title": "下单用户ID",
+			"description": "关联的用户openid"
 		}
 	}
 }
