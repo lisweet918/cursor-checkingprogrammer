@@ -114,15 +114,13 @@
 		},
 		data() {
 			return {
-				storeName: '七香嫂包子铺',
+				storeName: '',
 				util,
 				categories: [],
 				cart: [],
 				product: {},
 				currentCategoryId: 0,
-				ads1: [
-					"/static/img/home/ads.jpg"
-				],
+				ads1: [],
 				productModalVisible: false,
 				cartPopupShow: false,
 				productsScrollTop: 0,

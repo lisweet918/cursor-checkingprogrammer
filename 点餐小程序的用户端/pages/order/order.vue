@@ -123,7 +123,7 @@
 		data() {
 			return {
 				current: 0,
-				storeName: '七香嫂包子铺',
+				storeName: '',
 				tabsList: [
 					{ name: '自取订单' },
 					{ name: '外卖订单' },

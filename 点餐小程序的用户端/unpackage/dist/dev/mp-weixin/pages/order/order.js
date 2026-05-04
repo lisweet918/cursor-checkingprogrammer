@@ -295,7 +295,7 @@ var _default = {
   data: function data() {
     return {
       current: 0,
-      storeName: '七香嫂包子铺',
+      storeName: '',
       tabsList: [{
         name: '自取订单'
       }, {

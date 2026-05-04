@@ -101,9 +101,7 @@
 		data() {
 			return {
 				userinfo: {},
-				swiperList: [{
-					image: '/static/img/home/banner.jpg'
-				}],
+				swiperList: [],
 				tablePopupVisible: false,
 				currentTableNumber: '',
 				selectedDiningCount: 0,
