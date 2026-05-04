@@ -23,6 +23,12 @@
 			"bsonType": "string",
 			"description": "用户头像"
 		},
+		"points": {
+			"bsonType": "int",
+			"description": "会员积分",
+			"title": "积分",
+			"defaultValue": 0
+		},
 		"lastLoginTime": {
 			"bsonType": "timestamp",
 			"description": "最后登录时间"

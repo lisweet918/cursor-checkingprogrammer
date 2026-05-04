@@ -283,7 +283,7 @@ var _default = {
     handlePay: function handlePay() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var db, orderData, userInfo;
+        var db, orderData, userInfo, userRes, currentPoints, newPoints;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -355,6 +355,36 @@ var _default = {
                 _context.next = 15;
                 return db.collection('order').add(orderData);
               case 15:
+                if (!(userInfo && userInfo._id)) {
+                  _context.next = 32;
+                  break;
+                }
+                _context.prev = 16;
+                _context.next = 19;
+                return db.collection('wx_users').doc(userInfo._id).get();
+              case 19:
+                userRes = _context.sent;
+                if (!(userRes.result.data && userRes.result.data.length > 0)) {
+                  _context.next = 27;
+                  break;
+                }
+                currentPoints = userRes.result.data[0].points || 0;
+                newPoints = currentPoints + 10;
+                _context.next = 25;
+                return db.collection('wx_users').doc(userInfo._id).update({
+                  points: newPoints
+                });
+              case 25:
+                userInfo.points = newPoints;
+                uni.setStorageSync('userInfo', userInfo);
+              case 27:
+                _context.next = 32;
+                break;
+              case 29:
+                _context.prev = 29;
+                _context.t0 = _context["catch"](16);
+                console.error('积分更新失败', _context.t0);
+              case 32:
                 // 调用云函数发送老板接单提醒
                 uniCloud.callFunction({
                   name: 'push-order-notification',
@@ -379,23 +409,23 @@ var _default = {
                     url: '/pages/order/order'
                   });
                 }, 1500);
-                _context.next = 28;
+                _context.next = 45;
                 break;
-              case 24:
-                _context.prev = 24;
-                _context.t0 = _context["catch"](7);
+              case 41:
+                _context.prev = 41;
+                _context.t1 = _context["catch"](7);
                 uni.hideLoading();
                 uni.showModal({
                   title: '下单失败',
-                  content: _context.t0.message || '网络错误，请重试',
+                  content: _context.t1.message || '网络错误，请重试',
                   showCancel: false
                 });
-              case 28:
+              case 45:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[7, 24]]);
+        }, _callee, null, [[7, 41], [16, 29]]);
       }))();
     }
   }

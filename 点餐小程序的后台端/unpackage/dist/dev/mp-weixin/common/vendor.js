@@ -29035,6 +29035,21 @@ var _default = {
     "style": {
       "navigationBarTitleText": "店铺设置"
     }
+  }, {
+    "path": "pages/my_menus/list",
+    "style": {
+      "navigationBarTitleText": "我的页面菜单管理"
+    }
+  }, {
+    "path": "pages/my_menus/edit",
+    "style": {
+      "navigationBarTitleText": "编辑菜单"
+    }
+  }, {
+    "path": "pages/wx_users/list",
+    "style": {
+      "navigationBarTitleText": "会员管理"
+    }
   }],
   "subPackages": [{
     "root": "pages/system",
@@ -31190,6 +31205,16 @@ var _default = {
         text: '店铺设置',
         icon: 'admin-icons-gear',
         value: '/pages/store/settings'
+      }, {
+        menu_id: "my-menus",
+        text: '我的页面功能',
+        icon: 'admin-icons-list',
+        value: '/pages/my_menus/list'
+      }, {
+        menu_id: "wx-users",
+        text: '会员管理',
+        icon: 'admin-icons-staff',
+        value: '/pages/wx_users/list'
       }]
     }, {
       menu_id: "demo",

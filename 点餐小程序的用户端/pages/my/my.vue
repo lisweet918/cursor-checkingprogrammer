@@ -7,20 +7,20 @@
 		<view class="wrap__userinfo">
 			<view class="wrap__userinfo__login" @click="handleUserInfo">
 				<view>尊敬的顾客，</view>
-				<view>QXS_4vjsk4f</view>
+				<view>{{ userinfo.nickname || '点击这里授权登录' }}</view>
 			</view>
 
 			<view @click="handleUserInfo">
-				<u-avatar src="/static/logo.jpg" size="77"></u-avatar>
+				<u-avatar :src="userinfo.avatar || '/static/logo.jpg'" size="77"></u-avatar>
 			</view>
 		</view>
 
 		<view class="wrap__myasset">
-			<view class="wrap__myasset__points" @click="handleMyBalance">
-				<view>余额</view>
+			<view class="wrap__myasset__points">
+				<view>会员积分</view>
 				<view>
-					<text>0</text>
-					<text>元</text>
+					<text>{{ userinfo.points || 0 }}</text>
+					<text>分</text>
 				</view>
 			</view>
 			<view class="wrap__myasset__group"></view>
@@ -35,16 +35,13 @@
 
 		<view class="wrap__cell">
 			<u-cell-group :border="false">
-				<u-cell-item title="骑手中心" hover-class="none" :title-style="titleStyle" :border-bottom="false"
-					@click="handleRiderCenter"></u-cell-item>
-				<u-cell-item title="收货地址" hover-class="none" :title-style="titleStyle" :border-bottom="false"
-					@click="handleAddress"></u-cell-item>
-				<u-cell-item title="问题反馈" hover-class="none" :title-style="titleStyle" :border-bottom="false">
+				<u-cell-item v-for="(item, index) in dynamicMenus" :key="index"
+					:title="item.title" hover-class="none" :title-style="titleStyle" :border-bottom="false"
+					@click="handleDynamicMenu(item.page_path)">
 				</u-cell-item>
-				<u-cell-item title="我的客服" hover-class="none" :title-style="titleStyle" :border-bottom="false">
-				</u-cell-item>
-				<u-cell-item title="我的推广" hover-class="none" :title-style="titleStyle" :border-bottom="false"
-					@click="handlePromotion"></u-cell-item>
+				
+				<u-cell-item v-if="userinfo.nickname" title="退出登录" hover-class="none" :title-style="titleStyle" :border-bottom="false"
+					@click="logout"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>
@@ -63,6 +60,8 @@
 	export default {
 		data() {
 			return {
+				userinfo: {},
+				dynamicMenus: [],
 				background: {
 					backgroundColor: '#F5F5F5'
 				},
@@ -72,7 +71,47 @@
 				}
 			}
 		},
+		onShow() {
+			const userInfo = uni.getStorageSync('userInfo');
+			if (userInfo) {
+				this.userinfo = userInfo;
+				this.syncLatestPoints();
+			} else {
+				this.userinfo = {};
+			}
+			this.loadDynamicMenus();
+		},
 		methods: {
+			async syncLatestPoints() {
+				if (!this.userinfo._id) return;
+				try {
+					const db = uniCloud.database();
+					const res = await db.collection('wx_users').doc(this.userinfo._id).get();
+					if (res.result.data && res.result.data.length > 0) {
+						this.userinfo.points = res.result.data[0].points || 0;
+						// 更新本地缓存
+						uni.setStorageSync('userInfo', this.userinfo);
+					}
+				} catch (e) {
+					// 静默失败即可
+				}
+			},
+			async loadDynamicMenus() {
+				try {
+					const db = uniCloud.database();
+					const res = await db.collection('my_menus').where({ is_show: true }).orderBy('sort', 'asc').get();
+					this.dynamicMenus = res.result.data || [];
+				} catch (e) {
+					console.error('加载菜单失败', e);
+				}
+			},
+			handleDynamicMenu(path) {
+				if (path) {
+					uni.navigateTo({ url: path });
+				} else {
+					uni.showToast({ title: '敬请期待', icon: 'none' });
+				}
+			},
 			handleAddress() {
 				uni.navigateTo({
 					url: `/subpackageMy/myAddress/address-manage?methods=my`
@@ -80,32 +119,29 @@
 			},
 
 			handleUserInfo() {
-				uni.navigateTo({
-					url: `/subpackageMy/infoSet/set`
-				});
+				if (!this.userinfo.nickname) {
+					uni.navigateTo({
+						url: `/pages/login/login`
+					});
+				} else {
+					// 已登录时可以跳转到个人资料设置页
+					uni.navigateTo({
+						url: `/subpackageMy/infoSet/set`
+					});
+				}
 			},
 
-			handleMyBalance() {
-				uni.navigateTo({
-					url: `/subpackageMy/myBalance/balance-topup`
-				});
-			},
-
-			handleMyCoupon() {
-				uni.navigateTo({
-					url: `/subpackageMy/myCoupon/coupon-topup`
-				});
-			},
-
-			handlePromotion() {
-				uni.navigateTo({
-					url: `/subpackageHome/pointsMall/points-mall`
-				});
-			},
-
-			handleRiderCenter() {
-				uni.navigateTo({
-					url: `/subpackageMy/riderCenter/rider-center`
+			logout() {
+				uni.showModal({
+					title: '提示',
+					content: '确定要退出登录吗？',
+					success: (res) => {
+						if (res.confirm) {
+							uni.removeStorageSync('userInfo');
+							this.userinfo = {};
+							uni.showToast({ title: '已退出登录', icon: 'none' });
+						}
+					}
 				});
 			},
 

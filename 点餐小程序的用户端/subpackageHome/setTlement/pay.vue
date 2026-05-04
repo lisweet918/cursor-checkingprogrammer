@@ -256,6 +256,24 @@
 					}
 
 					await db.collection('order').add(orderData)
+
+					// 增加会员积分
+					if (userInfo && userInfo._id) {
+						try {
+							const userRes = await db.collection('wx_users').doc(userInfo._id).get()
+							if (userRes.result.data && userRes.result.data.length > 0) {
+								const currentPoints = userRes.result.data[0].points || 0
+								const newPoints = currentPoints + 10
+								await db.collection('wx_users').doc(userInfo._id).update({
+									points: newPoints
+								})
+								userInfo.points = newPoints
+								uni.setStorageSync('userInfo', userInfo)
+							}
+						} catch(err) {
+							console.error('积分更新失败', err)
+						}
+					}
 					
 					// 调用云函数发送老板接单提醒
 					uniCloud.callFunction({

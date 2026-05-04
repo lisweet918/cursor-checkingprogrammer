@@ -83,15 +83,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
-//
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 //
 //
 //
@@ -153,6 +153,8 @@ var ORDER_STATUS = {
 var _default = {
   data: function data() {
     return {
+      userinfo: {},
+      dynamicMenus: [],
       background: {
         backgroundColor: '#F5F5F5'
       },
@@ -162,35 +164,130 @@ var _default = {
       }
     };
   },
+  onShow: function onShow() {
+    var userInfo = uni.getStorageSync('userInfo');
+    if (userInfo) {
+      this.userinfo = userInfo;
+      this.syncLatestPoints();
+    } else {
+      this.userinfo = {};
+    }
+    this.loadDynamicMenus();
+  },
   methods: {
+    syncLatestPoints: function syncLatestPoints() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var db, res;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (_this.userinfo._id) {
+                  _context.next = 2;
+                  break;
+                }
+                return _context.abrupt("return");
+              case 2:
+                _context.prev = 2;
+                db = uniCloud.database();
+                _context.next = 6;
+                return db.collection('wx_users').doc(_this.userinfo._id).get();
+              case 6:
+                res = _context.sent;
+                if (res.result.data && res.result.data.length > 0) {
+                  _this.userinfo.points = res.result.data[0].points || 0;
+                  // 更新本地缓存
+                  uni.setStorageSync('userInfo', _this.userinfo);
+                }
+                _context.next = 12;
+                break;
+              case 10:
+                _context.prev = 10;
+                _context.t0 = _context["catch"](2);
+              case 12:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[2, 10]]);
+      }))();
+    },
+    loadDynamicMenus: function loadDynamicMenus() {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var db, res;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                db = uniCloud.database();
+                _context2.next = 4;
+                return db.collection('my_menus').where({
+                  is_show: true
+                }).orderBy('sort', 'asc').get();
+              case 4:
+                res = _context2.sent;
+                _this2.dynamicMenus = res.result.data || [];
+                _context2.next = 11;
+                break;
+              case 8:
+                _context2.prev = 8;
+                _context2.t0 = _context2["catch"](0);
+                console.error('加载菜单失败', _context2.t0);
+              case 11:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[0, 8]]);
+      }))();
+    },
+    handleDynamicMenu: function handleDynamicMenu(path) {
+      if (path) {
+        uni.navigateTo({
+          url: path
+        });
+      } else {
+        uni.showToast({
+          title: '敬请期待',
+          icon: 'none'
+        });
+      }
+    },
     handleAddress: function handleAddress() {
       uni.navigateTo({
         url: "/subpackageMy/myAddress/address-manage?methods=my"
       });
     },
     handleUserInfo: function handleUserInfo() {
-      uni.navigateTo({
-        url: "/subpackageMy/infoSet/set"
-      });
+      if (!this.userinfo.nickname) {
+        uni.navigateTo({
+          url: "/pages/login/login"
+        });
+      } else {
+        // 已登录时可以跳转到个人资料设置页
+        uni.navigateTo({
+          url: "/subpackageMy/infoSet/set"
+        });
+      }
     },
-    handleMyBalance: function handleMyBalance() {
-      uni.navigateTo({
-        url: "/subpackageMy/myBalance/balance-topup"
-      });
-    },
-    handleMyCoupon: function handleMyCoupon() {
-      uni.navigateTo({
-        url: "/subpackageMy/myCoupon/coupon-topup"
-      });
-    },
-    handlePromotion: function handlePromotion() {
-      uni.navigateTo({
-        url: "/subpackageHome/pointsMall/points-mall"
-      });
-    },
-    handleRiderCenter: function handleRiderCenter() {
-      uni.navigateTo({
-        url: "/subpackageMy/riderCenter/rider-center"
+    logout: function logout() {
+      var _this3 = this;
+      uni.showModal({
+        title: '提示',
+        content: '确定要退出登录吗？',
+        success: function success(res) {
+          if (res.confirm) {
+            uni.removeStorageSync('userInfo');
+            _this3.userinfo = {};
+            uni.showToast({
+              title: '已退出登录',
+              icon: 'none'
+            });
+          }
+        }
       });
     },
     handleMyOrder: function handleMyOrder(status) {
@@ -201,7 +298,7 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 

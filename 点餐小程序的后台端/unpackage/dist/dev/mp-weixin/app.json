@@ -32,7 +32,10 @@
     "pages/menu/category/list",
     "pages/banner/list",
     "pages/menu_banner/list",
-    "pages/store/settings"
+    "pages/store/settings",
+    "pages/my_menus/list",
+    "pages/my_menus/edit",
+    "pages/wx_users/list"
   ],
   "subPackages": [
     {

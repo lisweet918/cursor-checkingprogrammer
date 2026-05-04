@@ -25,7 +25,14 @@
     "uni_modules/uni-id-pages/pages/userinfo/realname-verify/realname-verify",
     "pages/zhuohao/add",
     "pages/zhuohao/edit",
-    "pages/zhuohao/list"
+    "pages/zhuohao/list",
+    "pages/order/list",
+    "pages/menu/product/list",
+    "pages/menu/product/form",
+    "pages/menu/category/list",
+    "pages/banner/list",
+    "pages/menu_banner/list",
+    "pages/store/settings"
   ],
   "subPackages": [
     {

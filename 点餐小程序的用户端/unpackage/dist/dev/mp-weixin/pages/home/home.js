@@ -209,9 +209,7 @@ var _default = {
   onShow: function onShow() {
     this.loadBanners();
     var userInfo = uni.getStorageSync('userInfo');
-    if (userInfo) {
-      this.userinfo = userInfo;
-    }
+    this.userinfo = userInfo || {};
   },
   methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)(['SET_ORDER_TYPE', 'SET_TABLE_INFO'])), {}, {
     loadBanners: function loadBanners() {

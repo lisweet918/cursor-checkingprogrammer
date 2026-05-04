@@ -98,6 +98,16 @@ export default {
 				text: '店铺设置',
 				icon: 'admin-icons-gear',
 				value: '/pages/store/settings',
+			},{
+				menu_id: "my-menus",
+				text: '我的页面功能',
+				icon: 'admin-icons-list',
+				value: '/pages/my_menus/list',
+			},{
+				menu_id: "wx-users",
+				text: '会员管理',
+				icon: 'admin-icons-staff',
+				value: '/pages/wx_users/list',
 			}]
 		}, {
 			menu_id: "demo",

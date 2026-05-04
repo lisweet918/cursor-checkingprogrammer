@@ -117,9 +117,7 @@
 		onShow() {
 			this.loadBanners();
 			const userInfo = uni.getStorageSync('userInfo');
-			if (userInfo) {
-				this.userinfo = userInfo;
-			}
+			this.userinfo = userInfo || {};
 		},
 		methods: {
 			...mapMutations(['SET_ORDER_TYPE', 'SET_TABLE_INFO']),

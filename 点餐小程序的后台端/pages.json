@@ -212,6 +212,21 @@
     "style": {
         "navigationBarTitleText": "店铺设置"
     }
+},{
+    "path": "pages/my_menus/list",
+    "style": {
+        "navigationBarTitleText": "我的页面菜单管理"
+    }
+},{
+    "path": "pages/my_menus/edit",
+    "style": {
+        "navigationBarTitleText": "编辑菜单"
+    }
+},{
+    "path": "pages/wx_users/list",
+    "style": {
+        "navigationBarTitleText": "会员管理"
+    }
 }
 ],
 	"subPackages": [{
