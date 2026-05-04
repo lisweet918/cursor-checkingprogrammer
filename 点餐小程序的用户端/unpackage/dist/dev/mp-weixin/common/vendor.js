@@ -20455,6 +20455,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _promotion = _interopRequireDefault(__webpack_require__(/*! ./promotion.js */ 46));
 var _order = _interopRequireDefault(__webpack_require__(/*! ./order.js */ 47));
@@ -20472,6 +20473,10 @@ var _default = /*#__PURE__*/function () {
       db,
       catRes,
       prodRes,
+      allFileIds,
+      urlMap,
+      uniqueFileIds,
+      urlRes,
       categories,
       _args = arguments;
     return _regenerator.default.wrap(function _callee$(_context) {
@@ -20483,7 +20488,7 @@ var _default = /*#__PURE__*/function () {
               uni.showLoading();
             }
             if (!(name === 'menu')) {
-              _context.next = 23;
+              _context.next = 33;
               break;
             }
             _context.prev = 3;
@@ -20500,6 +20505,34 @@ var _default = /*#__PURE__*/function () {
             }).orderBy('sort', 'asc').get();
           case 10:
             prodRes = _context.sent;
+            // 提取所有的 fileID (包含分类图片和产品图片)
+            allFileIds = [];
+            catRes.result.data.forEach(function (c) {
+              if (c.category_image_url) allFileIds.push(c.category_image_url);
+            });
+            prodRes.result.data.forEach(function (p) {
+              if (p.images && p.images.length > 0) {
+                p.images.forEach(function (img) {
+                  if (img.url) allFileIds.push(img.url);
+                });
+              }
+            });
+            urlMap = {};
+            if (!(allFileIds.length > 0)) {
+              _context.next = 21;
+              break;
+            }
+            uniqueFileIds = (0, _toConsumableArray2.default)(new Set(allFileIds)); // 阿里云/支付宝云在有大量图片时可能需要分批处理，但通常够用
+            _context.next = 19;
+            return uniCloud.getTempFileURL({
+              fileList: uniqueFileIds
+            });
+          case 19:
+            urlRes = _context.sent;
+            urlRes.fileList.forEach(function (f) {
+              urlMap[f.fileID] = f.tempFileURL || f.download_url || f.fileID;
+            });
+          case 21:
             categories = catRes.result.data.map(function (cat) {
               var products = prodRes.result.data.filter(function (p) {
                 return p.category_id === cat._id;
@@ -20509,6 +20542,12 @@ var _default = /*#__PURE__*/function () {
                 var safeImages = p.images && p.images.length > 0 ? p.images : [{
                   url: ''
                 }];
+                // 转换真实地址
+                safeImages = safeImages.map(function (img) {
+                  return _objectSpread(_objectSpread({}, img), {}, {
+                    url: urlMap[img.url] || img.url
+                  });
+                });
                 return _objectSpread(_objectSpread({}, p), {}, {
                   id: p._id,
                   labels: p.labels || [],
@@ -20520,7 +20559,7 @@ var _default = /*#__PURE__*/function () {
               return {
                 id: cat._id,
                 name: cat.name,
-                category_image_url: cat.category_image_url || "",
+                category_image_url: urlMap[cat.category_image_url] || cat.category_image_url || "",
                 products: products
               };
             }).filter(function (cat) {
@@ -20530,31 +20569,31 @@ var _default = /*#__PURE__*/function () {
 
             // 如果数据库是空的，使用默认静态数据兜底
             if (!(categories.length === 0)) {
-              _context.next = 15;
+              _context.next = 25;
               break;
             }
             return _context.abrupt("return", json[name]);
-          case 15:
+          case 25:
             return _context.abrupt("return", categories);
-          case 18:
-            _context.prev = 18;
+          case 28:
+            _context.prev = 28;
             _context.t0 = _context["catch"](3);
             console.error('Fetch menu failed', _context.t0);
             uni.hideLoading();
             return _context.abrupt("return", json[name]);
-          case 23:
+          case 33:
             return _context.abrupt("return", new Promise(function (resolve) {
               setTimeout(function () {
                 uni.hideLoading();
                 resolve(json[name]);
               }, 500);
             }));
-          case 24:
+          case 34:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[3, 18]]);
+    }, _callee, null, [[3, 28]]);
   }));
   return function (_x) {
     return _ref.apply(this, arguments);

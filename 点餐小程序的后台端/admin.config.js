@@ -73,6 +73,17 @@ export default {
 				value: '/pages/menu/product/form',
 			}]
 		}, {
+			menu_id: "banner-manage",
+			text: '轮播图管理',
+			icon: 'admin-icons-image',
+			url: "",
+			children: [{
+				menu_id: "banner-list",
+				text: '轮播图列表',
+				icon: 'admin-icons-image',
+				value: '/pages/banner/list',
+			}]
+		}, {
 			menu_id: "demo",
 			text: '静态功能演示',
 			icon: 'admin-icons-kaifashili',

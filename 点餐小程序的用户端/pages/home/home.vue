@@ -116,8 +116,33 @@
 		onLoad(options) {
 			this.initTableScene(options);
 		},
+		onShow() {
+			this.loadBanners();
+		},
 		methods: {
 			...mapMutations(['SET_ORDER_TYPE', 'SET_TABLE_INFO']),
+			async loadBanners() {
+				try {
+					const db = uniCloud.database();
+					const res = await db.collection('banner').where({ is_show: true }).orderBy('sort', 'asc').get();
+					if (res.result.data && res.result.data.length > 0) {
+						// 提取所有的 fileID
+						const fileList = res.result.data.map(item => item.image).filter(Boolean);
+						if (fileList.length > 0) {
+							// 将 fileID 统一转换为真实的 https 网络图片地址
+							const urlRes = await uniCloud.getTempFileURL({ fileList });
+							
+							this.swiperList = res.result.data.map((item, index) => {
+								const fileInfo = urlRes.fileList.find(f => f.fileID === item.image) || {};
+								const realUrl = fileInfo.tempFileURL || fileInfo.download_url || item.image;
+								return { image: realUrl };
+							});
+						}
+					}
+				} catch (e) {
+					console.error('Failed to load banners:', e);
+				}
+			},
 			handleLogin() {
 				uni.navigateTo({
 					url: `/pages/login/login`

@@ -197,6 +197,12 @@
         "navigationBarTitleText": "分类管理"
     }
 }
+,{
+    "path": "pages/banner/list",
+    "style": {
+        "navigationBarTitleText": "轮播图管理"
+    }
+}
 ],
 	"subPackages": [{
 			"root": "pages/system",

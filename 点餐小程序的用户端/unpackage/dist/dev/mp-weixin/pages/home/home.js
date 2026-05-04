@@ -174,13 +174,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 var _vuex = __webpack_require__(/*! vuex */ 79);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -206,7 +208,68 @@ var _default = {
   onLoad: function onLoad(options) {
     this.initTableScene(options);
   },
+  onShow: function onShow() {
+    this.loadBanners();
+  },
   methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)(['SET_ORDER_TYPE', 'SET_TABLE_INFO'])), {}, {
+    loadBanners: function loadBanners() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var db, res, fileList, urlRes;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+                db = uniCloud.database();
+                _context.next = 4;
+                return db.collection('banner').where({
+                  is_show: true
+                }).orderBy('sort', 'asc').get();
+              case 4:
+                res = _context.sent;
+                if (!(res.result.data && res.result.data.length > 0)) {
+                  _context.next = 12;
+                  break;
+                }
+                // 提取所有的 fileID
+                fileList = res.result.data.map(function (item) {
+                  return item.image;
+                }).filter(Boolean);
+                if (!(fileList.length > 0)) {
+                  _context.next = 12;
+                  break;
+                }
+                _context.next = 10;
+                return uniCloud.getTempFileURL({
+                  fileList: fileList
+                });
+              case 10:
+                urlRes = _context.sent;
+                _this.swiperList = res.result.data.map(function (item, index) {
+                  var fileInfo = urlRes.fileList.find(function (f) {
+                    return f.fileID === item.image;
+                  }) || {};
+                  var realUrl = fileInfo.tempFileURL || fileInfo.download_url || item.image;
+                  return {
+                    image: realUrl
+                  };
+                });
+              case 12:
+                _context.next = 17;
+                break;
+              case 14:
+                _context.prev = 14;
+                _context.t0 = _context["catch"](0);
+                console.error('Failed to load banners:', _context.t0);
+              case 17:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 14]]);
+      }))();
+    },
     handleLogin: function handleLogin() {
       uni.navigateTo({
         url: "/pages/login/login"
@@ -283,7 +346,7 @@ var _default = {
   })
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
