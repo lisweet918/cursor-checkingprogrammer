@@ -17,16 +17,16 @@ var components
 try {
   components = {
     uNavbar: function () {
-      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-navbar/u-navbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-navbar/u-navbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-navbar/u-navbar.vue */ 253))
+      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-navbar/u-navbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-navbar/u-navbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-navbar/u-navbar.vue */ 246))
     },
     uAvatar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 260))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 253))
     },
     uCellGroup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 267))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 260))
     },
     uCellItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 274))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 267))
     },
   }
 } catch (e) {
@@ -154,6 +154,7 @@ var _default = {
   data: function data() {
     return {
       userinfo: {},
+      displayAvatar: '/static/logo.jpg',
       dynamicMenus: [],
       background: {
         backgroundColor: '#F5F5F5'
@@ -168,52 +169,57 @@ var _default = {
     var userInfo = uni.getStorageSync('userInfo');
     if (userInfo) {
       this.userinfo = userInfo;
+      this.resolveAvatar();
       this.syncLatestPoints();
     } else {
       this.userinfo = {};
+      this.displayAvatar = '/static/logo.jpg';
     }
     this.loadDynamicMenus();
   },
   methods: {
-    syncLatestPoints: function syncLatestPoints() {
+    resolveAvatar: function resolveAvatar() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var db, res;
+        var res;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (_this.userinfo._id) {
-                  _context.next = 2;
+                if (!(_this.userinfo.avatar && _this.userinfo.avatar.startsWith('cloud://'))) {
+                  _context.next = 13;
                   break;
                 }
-                return _context.abrupt("return");
-              case 2:
-                _context.prev = 2;
-                db = uniCloud.database();
-                _context.next = 6;
-                return db.collection('wx_users').doc(_this.userinfo._id).get();
-              case 6:
+                _context.prev = 1;
+                _context.next = 4;
+                return uniCloud.getTempFileURL({
+                  fileList: [_this.userinfo.avatar]
+                });
+              case 4:
                 res = _context.sent;
-                if (res.result.data && res.result.data.length > 0) {
-                  _this.userinfo.points = res.result.data[0].points || 0;
-                  // 更新本地缓存
-                  uni.setStorageSync('userInfo', _this.userinfo);
+                if (res.fileList && res.fileList[0] && (res.fileList[0].tempFileURL || res.fileList[0].download_url)) {
+                  _this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
                 }
-                _context.next = 12;
+                _context.next = 11;
                 break;
-              case 10:
-                _context.prev = 10;
-                _context.t0 = _context["catch"](2);
-              case 12:
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](1);
+                _this.displayAvatar = '/static/logo.jpg';
+              case 11:
+                _context.next = 14;
+                break;
+              case 13:
+                _this.displayAvatar = _this.userinfo.avatar || '/static/logo.jpg';
+              case 14:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[2, 10]]);
+        }, _callee, null, [[1, 8]]);
       }))();
     },
-    loadDynamicMenus: function loadDynamicMenus() {
+    syncLatestPoints: function syncLatestPoints() {
       var _this2 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
         var db, res;
@@ -221,27 +227,65 @@ var _default = {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.prev = 0;
+                if (_this2.userinfo._id) {
+                  _context2.next = 2;
+                  break;
+                }
+                return _context2.abrupt("return");
+              case 2:
+                _context2.prev = 2;
                 db = uniCloud.database();
-                _context2.next = 4;
-                return db.collection('my_menus').where({
-                  is_show: true
-                }).orderBy('sort', 'asc').get();
-              case 4:
+                _context2.next = 6;
+                return db.collection('wx_users').doc(_this2.userinfo._id).get();
+              case 6:
                 res = _context2.sent;
-                _this2.dynamicMenus = res.result.data || [];
-                _context2.next = 11;
+                if (res.result.data && res.result.data.length > 0) {
+                  _this2.userinfo.points = res.result.data[0].points || 0;
+                  // 更新本地缓存
+                  uni.setStorageSync('userInfo', _this2.userinfo);
+                }
+                _context2.next = 12;
                 break;
-              case 8:
-                _context2.prev = 8;
-                _context2.t0 = _context2["catch"](0);
-                console.error('加载菜单失败', _context2.t0);
-              case 11:
+              case 10:
+                _context2.prev = 10;
+                _context2.t0 = _context2["catch"](2);
+              case 12:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, null, [[0, 8]]);
+        }, _callee2, null, [[2, 10]]);
+      }))();
+    },
+    loadDynamicMenus: function loadDynamicMenus() {
+      var _this3 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+        var db, res;
+        return _regenerator.default.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.prev = 0;
+                db = uniCloud.database();
+                _context3.next = 4;
+                return db.collection('my_menus').where({
+                  is_show: true
+                }).orderBy('sort', 'asc').get();
+              case 4:
+                res = _context3.sent;
+                _this3.dynamicMenus = res.result.data || [];
+                _context3.next = 11;
+                break;
+              case 8:
+                _context3.prev = 8;
+                _context3.t0 = _context3["catch"](0);
+                console.error('加载菜单失败', _context3.t0);
+              case 11:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, null, [[0, 8]]);
       }))();
     },
     handleDynamicMenu: function handleDynamicMenu(path) {
@@ -274,14 +318,14 @@ var _default = {
       }
     },
     logout: function logout() {
-      var _this3 = this;
+      var _this4 = this;
       uni.showModal({
         title: '提示',
         content: '确定要退出登录吗？',
         success: function success(res) {
           if (res.confirm) {
             uni.removeStorageSync('userInfo');
-            _this3.userinfo = {};
+            _this4.userinfo = {};
             uni.showToast({
               title: '已退出登录',
               icon: 'none'

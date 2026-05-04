@@ -193,6 +193,7 @@ var _default = {
     return {
       userinfo: {},
       swiperList: [],
+      displayAvatar: '/static/logo.jpg',
       tablePopupVisible: false,
       currentTableNumber: '',
       selectedDiningCount: 0,
@@ -207,26 +208,69 @@ var _default = {
     this.loadBanners();
     var userInfo = uni.getStorageSync('userInfo');
     this.userinfo = userInfo || {};
+    this.resolveAvatar();
   },
-  methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)(['SET_ORDER_TYPE', 'SET_TABLE_INFO'])), {}, {
-    loadBanners: function loadBanners() {
+  methods: _objectSpread(_objectSpread({
+    resolveAvatar: function resolveAvatar() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var db, res, fileList, urlRes;
+        var res;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.prev = 0;
-                db = uniCloud.database();
+                if (!(_this.userinfo.avatar && _this.userinfo.avatar.startsWith('cloud://'))) {
+                  _context.next = 13;
+                  break;
+                }
+                _context.prev = 1;
                 _context.next = 4;
+                return uniCloud.getTempFileURL({
+                  fileList: [_this.userinfo.avatar]
+                });
+              case 4:
+                res = _context.sent;
+                if (res.fileList && res.fileList[0] && (res.fileList[0].tempFileURL || res.fileList[0].download_url)) {
+                  _this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
+                }
+                _context.next = 11;
+                break;
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](1);
+                _this.displayAvatar = '/static/logo.jpg';
+              case 11:
+                _context.next = 14;
+                break;
+              case 13:
+                _this.displayAvatar = _this.userinfo.avatar || '/static/logo.jpg';
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[1, 8]]);
+      }))();
+    }
+  }, (0, _vuex.mapMutations)(['SET_ORDER_TYPE', 'SET_TABLE_INFO'])), {}, {
+    loadBanners: function loadBanners() {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var db, res, fileList, urlRes;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                db = uniCloud.database();
+                _context2.next = 4;
                 return db.collection('banner').where({
                   is_show: true
                 }).orderBy('sort', 'asc').get();
               case 4:
-                res = _context.sent;
+                res = _context2.sent;
                 if (!(res.result.data && res.result.data.length > 0)) {
-                  _context.next = 12;
+                  _context2.next = 12;
                   break;
                 }
                 // 提取所有的 fileID
@@ -234,16 +278,16 @@ var _default = {
                   return item.image;
                 }).filter(Boolean);
                 if (!(fileList.length > 0)) {
-                  _context.next = 12;
+                  _context2.next = 12;
                   break;
                 }
-                _context.next = 10;
+                _context2.next = 10;
                 return uniCloud.getTempFileURL({
                   fileList: fileList
                 });
               case 10:
-                urlRes = _context.sent;
-                _this.swiperList = res.result.data.map(function (item, index) {
+                urlRes = _context2.sent;
+                _this2.swiperList = res.result.data.map(function (item, index) {
                   var fileInfo = urlRes.fileList.find(function (f) {
                     return f.fileID === item.image;
                   }) || {};
@@ -253,18 +297,18 @@ var _default = {
                   };
                 });
               case 12:
-                _context.next = 17;
+                _context2.next = 17;
                 break;
               case 14:
-                _context.prev = 14;
-                _context.t0 = _context["catch"](0);
-                console.error('Failed to load banners:', _context.t0);
+                _context2.prev = 14;
+                _context2.t0 = _context2["catch"](0);
+                console.error('Failed to load banners:', _context2.t0);
               case 17:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee, null, [[0, 14]]);
+        }, _callee2, null, [[0, 14]]);
       }))();
     },
     handleLogin: function handleLogin() {

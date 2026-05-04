@@ -102,19 +102,19 @@ var components
 try {
   components = {
     uNavbar: function () {
-      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-navbar/u-navbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-navbar/u-navbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-navbar/u-navbar.vue */ 253))
+      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-navbar/u-navbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-navbar/u-navbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-navbar/u-navbar.vue */ 246))
     },
     uSearch: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-search/u-search */ "uni_modules/vk-uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-search/u-search.vue */ 281))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-search/u-search */ "uni_modules/vk-uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-search/u-search.vue */ 274))
     },
     actions: function () {
-      return __webpack_require__.e(/*! import() | components/actions/actions */ "components/actions/actions").then(__webpack_require__.bind(null, /*! @/components/actions/actions.vue */ 288))
+      return __webpack_require__.e(/*! import() | components/actions/actions */ "components/actions/actions").then(__webpack_require__.bind(null, /*! @/components/actions/actions.vue */ 281))
     },
     productModal: function () {
-      return __webpack_require__.e(/*! import() | components/product-modal/product-modal */ "components/product-modal/product-modal").then(__webpack_require__.bind(null, /*! @/components/product-modal/product-modal.vue */ 295))
+      return __webpack_require__.e(/*! import() | components/product-modal/product-modal */ "components/product-modal/product-modal").then(__webpack_require__.bind(null, /*! @/components/product-modal/product-modal.vue */ 288))
     },
     search: function () {
-      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 302))
+      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 295))
     },
   }
 } catch (e) {
@@ -235,27 +235,27 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var Actions = function Actions() {
   __webpack_require__.e(/*! require.ensure | components/actions/actions */ "components/actions/actions").then((function () {
-    return resolve(__webpack_require__(/*! @/components/actions/actions.vue */ 288));
+    return resolve(__webpack_require__(/*! @/components/actions/actions.vue */ 281));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var CartBar = function CartBar() {
   __webpack_require__.e(/*! require.ensure | components/cartbar/cartbar */ "components/cartbar/cartbar").then((function () {
-    return resolve(__webpack_require__(/*! @/components/cartbar/cartbar.vue */ 309));
+    return resolve(__webpack_require__(/*! @/components/cartbar/cartbar.vue */ 302));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var ProductModal = function ProductModal() {
   __webpack_require__.e(/*! require.ensure | components/product-modal/product-modal */ "components/product-modal/product-modal").then((function () {
-    return resolve(__webpack_require__(/*! @/components/product-modal/product-modal.vue */ 295));
+    return resolve(__webpack_require__(/*! @/components/product-modal/product-modal.vue */ 288));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var cartPopup = function cartPopup() {
   __webpack_require__.e(/*! require.ensure | components/cart-popup/cart-popup */ "components/cart-popup/cart-popup").then((function () {
-    return resolve(__webpack_require__(/*! @/components/cart-popup/cart-popup.vue */ 316));
+    return resolve(__webpack_require__(/*! @/components/cart-popup/cart-popup.vue */ 309));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var Search = function Search() {
   __webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {
-    return resolve(__webpack_require__(/*! @/components/search/search.vue */ 302));
+    return resolve(__webpack_require__(/*! @/components/search/search.vue */ 295));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

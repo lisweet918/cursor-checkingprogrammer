@@ -102,7 +102,7 @@ var components
 try {
   components = {
     uAvatar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 260))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 253))
     },
     uTag: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tag/u-tag */ "uni_modules/vk-uview-ui/components/u-tag/u-tag").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tag/u-tag.vue */ 385))
@@ -114,7 +114,7 @@ try {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item */ "uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item.vue */ 354))
     },
     uTabs: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 246))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 239))
     },
     uButton: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-button/u-button */ "uni_modules/vk-uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-button/u-button.vue */ 392))

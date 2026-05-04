@@ -102,7 +102,7 @@ var components
 try {
   components = {
     uTabs: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 246))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 239))
     },
     uImage: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-image/u-image */ "uni_modules/vk-uview-ui/components/u-image/u-image").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-image/u-image.vue */ 232))

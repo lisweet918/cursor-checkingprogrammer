@@ -11,7 +11,7 @@
 			</view>
 
 			<view @click="handleUserInfo">
-				<u-avatar :src="userinfo.avatar || '/static/logo.jpg'" size="77"></u-avatar>
+				<u-avatar :src="displayAvatar" size="77"></u-avatar>
 			</view>
 		</view>
 
@@ -61,6 +61,7 @@
 		data() {
 			return {
 				userinfo: {},
+				displayAvatar: '/static/logo.jpg',
 				dynamicMenus: [],
 				background: {
 					backgroundColor: '#F5F5F5'
@@ -75,13 +76,31 @@
 			const userInfo = uni.getStorageSync('userInfo');
 			if (userInfo) {
 				this.userinfo = userInfo;
+				this.resolveAvatar();
 				this.syncLatestPoints();
 			} else {
 				this.userinfo = {};
+				this.displayAvatar = '/static/logo.jpg';
 			}
 			this.loadDynamicMenus();
 		},
 		methods: {
+			async resolveAvatar() {
+				if (this.userinfo.avatar && this.userinfo.avatar.startsWith('cloud://')) {
+					try {
+						const res = await uniCloud.getTempFileURL({
+							fileList: [this.userinfo.avatar]
+						});
+						if (res.fileList && res.fileList[0] && (res.fileList[0].tempFileURL || res.fileList[0].download_url)) {
+							this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
+						}
+					} catch (e) {
+						this.displayAvatar = '/static/logo.jpg';
+					}
+				} else {
+					this.displayAvatar = this.userinfo.avatar || '/static/logo.jpg';
+				}
+			},
 			async syncLatestPoints() {
 				if (!this.userinfo._id) return;
 				try {

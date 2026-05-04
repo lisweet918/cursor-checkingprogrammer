@@ -102,13 +102,13 @@ var components
 try {
   components = {
     uAvatar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 260))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 253))
     },
     uCellGroup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 267))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 260))
     },
     uCellItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 274))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 267))
     },
   }
 } catch (e) {
@@ -132,6 +132,30 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.formatDate(_vm.userInfo.createTime)
+  var g0 = _vm.orders.length
+  var l0 = !(g0 === 0)
+    ? _vm.__map(_vm.orders, function (order, __i0__) {
+        var $orig = _vm.__get_orig(order)
+        var m1 = _vm.formatTime(order.createTime)
+        var m2 = _vm.getStatusText(order.status)
+        return {
+          $orig: $orig,
+          m1: m1,
+          m2: m2,
+        }
+      })
+    : null
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        g0: g0,
+        l0: l0,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -165,14 +189,231 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _default = {};
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      userInfo: {},
+      orders: [],
+      displayAvatar: '/static/logo.jpg'
+    };
+  },
+  onShow: function onShow() {
+    this.userInfo = uni.getStorageSync('userInfo') || {};
+    this.resolveAvatar();
+    if (this.userInfo && this.userInfo.openid) {
+      this.loadOrders();
+    }
+  },
+  methods: {
+    resolveAvatar: function resolveAvatar() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var res;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!(_this.userInfo.avatar && _this.userInfo.avatar.startsWith('cloud://'))) {
+                  _context.next = 13;
+                  break;
+                }
+                _context.prev = 1;
+                _context.next = 4;
+                return uniCloud.getTempFileURL({
+                  fileList: [_this.userInfo.avatar]
+                });
+              case 4:
+                res = _context.sent;
+                if (res.fileList && res.fileList[0] && (res.fileList[0].tempFileURL || res.fileList[0].download_url)) {
+                  _this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
+                }
+                _context.next = 11;
+                break;
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](1);
+                _this.displayAvatar = '/static/logo.jpg';
+              case 11:
+                _context.next = 14;
+                break;
+              case 13:
+                _this.displayAvatar = _this.userInfo.avatar || '/static/logo.jpg';
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[1, 8]]);
+      }))();
+    },
+    onChooseAvatar: function onChooseAvatar(e) {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var avatarUrl, uploadRes, newAvatar, db;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                avatarUrl = e.detail.avatarUrl;
+                uni.showLoading({
+                  title: '上传中...'
+                });
+                _context2.prev = 2;
+                _context2.next = 5;
+                return uniCloud.uploadFile({
+                  filePath: avatarUrl,
+                  cloudPath: "avatar/".concat(_this2.userInfo.openid, "_").concat(Date.now(), ".jpg")
+                });
+              case 5:
+                uploadRes = _context2.sent;
+                newAvatar = uploadRes.fileID; // 2. 更新数据库
+                db = uniCloud.database();
+                _context2.next = 10;
+                return db.collection('wx_users').doc(_this2.userInfo._id).update({
+                  avatar: newAvatar
+                });
+              case 10:
+                // 3. 更新本地缓存
+                _this2.userInfo.avatar = newAvatar;
+                uni.setStorageSync('userInfo', _this2.userInfo);
+                _this2.resolveAvatar();
+                uni.showToast({
+                  title: '修改成功'
+                });
+                _context2.next = 20;
+                break;
+              case 16:
+                _context2.prev = 16;
+                _context2.t0 = _context2["catch"](2);
+                console.error('上传失败', _context2.t0);
+                uni.showToast({
+                  title: '上传失败',
+                  icon: 'none'
+                });
+              case 20:
+                _context2.prev = 20;
+                uni.hideLoading();
+                return _context2.finish(20);
+              case 23:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[2, 16, 20, 23]]);
+      }))();
+    },
+    loadOrders: function loadOrders() {
+      var _this3 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+        var db, res;
+        return _regenerator.default.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.prev = 0;
+                db = uniCloud.database();
+                _context3.next = 4;
+                return db.collection('order').where({
+                  user_id: _this3.userInfo.openid
+                }).orderBy('createTime', 'desc').limit(50).get();
+              case 4:
+                res = _context3.sent;
+                _this3.orders = res.result.data || [];
+                _context3.next = 11;
+                break;
+              case 8:
+                _context3.prev = 8;
+                _context3.t0 = _context3["catch"](0);
+                console.error('Failed to load orders', _context3.t0);
+              case 11:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, null, [[0, 8]]);
+      }))();
+    },
+    formatDate: function formatDate(timestamp) {
+      if (!timestamp) return '-';
+      var d = new Date(timestamp);
+      return "".concat(d.getFullYear(), "-").concat((d.getMonth() + 1).toString().padStart(2, '0'), "-").concat(d.getDate().toString().padStart(2, '0'));
+    },
+    formatTime: function formatTime(timestamp) {
+      if (!timestamp) return '-';
+      var d = new Date(timestamp);
+      return "".concat(d.getFullYear(), "-").concat((d.getMonth() + 1).toString().padStart(2, '0'), "-").concat(d.getDate().toString().padStart(2, '0'), " ").concat(d.getHours().toString().padStart(2, '0'), ":").concat(d.getMinutes().toString().padStart(2, '0'));
+    },
+    getStatusText: function getStatusText(status) {
+      switch (status) {
+        case 0:
+          return '待接单';
+        case 1:
+          return '已接单';
+        case 2:
+          return '已退款';
+        case 3:
+          return '已完成';
+        default:
+          return '已支付';
+      }
+    }
+  }
+};
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 

@@ -8,7 +8,7 @@
 		<view class="wrap__userinfo" @click="handleLogin">
 			<view class="wrap__userinfo__left">
 				<view>
-					<u-image :src="userinfo.avatar || '/static/logo.jpg'" width="60" height="60" border-radius="50%" lazy-load></u-image>
+					<u-image :src="displayAvatar" width="60" height="60" border-radius="50%" lazy-load></u-image>
 				</view>
 				<view class="wrap__userinfo__left__nickname">
 					{{userinfo.nickname || '尊敬的用户'}}
@@ -90,6 +90,7 @@
 			return {
 				userinfo: {},
 				swiperList: [],
+				displayAvatar: '/static/logo.jpg',
 				tablePopupVisible: false,
 				currentTableNumber: '',
 				selectedDiningCount: 0,
@@ -106,8 +107,25 @@
 			this.loadBanners();
 			const userInfo = uni.getStorageSync('userInfo');
 			this.userinfo = userInfo || {};
+			this.resolveAvatar();
 		},
 		methods: {
+			async resolveAvatar() {
+				if (this.userinfo.avatar && this.userinfo.avatar.startsWith('cloud://')) {
+					try {
+						const res = await uniCloud.getTempFileURL({
+							fileList: [this.userinfo.avatar]
+						});
+						if (res.fileList && res.fileList[0] && (res.fileList[0].tempFileURL || res.fileList[0].download_url)) {
+							this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
+						}
+					} catch (e) {
+						this.displayAvatar = '/static/logo.jpg';
+					}
+				} else {
+					this.displayAvatar = this.userinfo.avatar || '/static/logo.jpg';
+				}
+			},
 			...mapMutations(['SET_ORDER_TYPE', 'SET_TABLE_INFO']),
 			async loadBanners() {
 				try {

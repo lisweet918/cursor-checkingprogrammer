@@ -22,26 +22,28 @@
 	</view>
 </template>
 
-<script setup>
-	import {
-		ref
-	} from 'vue'
-
-	const dataList = ref([{
-		address: '北京市东城区王府井大街',
-		house_number: '88号',
-		name: 'Kaiyuan_Q',
-		phone: '18888888888'
-	}]);
-
-	const add = () => {
-		uni.navigateTo({
-			url: `/subpackageMy/myAddress/add-address`
-		})
-	}
-
-	const chooseAddress = () => {
-		uni.navigateBack();
+<script>
+	export default {
+		data() {
+			return {
+				dataList: [{
+					address: '北京市东城区王府井大街',
+					house_number: '88号',
+					name: 'Kaiyuan_Q',
+					phone: '18888888888'
+				}]
+			}
+		},
+		methods: {
+			add() {
+				uni.navigateTo({
+					url: `/subpackageMy/myAddress/add-address`
+				})
+			},
+			chooseAddress() {
+				uni.navigateBack();
+			}
+		}
 	}
 </script>
 
