@@ -216,7 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -268,6 +268,7 @@ var _default = {
   },
   data: function data() {
     return {
+      storeName: '七香嫂包子铺',
       util: _util.default,
       categories: [],
       cart: [],
@@ -381,7 +382,9 @@ var _default = {
               })));
             case 6:
               _this4.currentCategoryId = _this4.filterCategories.length && _this4.filterCategories[0].id;
-            case 7:
+              _this4.loadAds();
+              _this4.loadStoreSettings();
+            case 9:
             case "end":
               return _context3.stop();
           }
@@ -390,20 +393,105 @@ var _default = {
     }))();
   },
   methods: _objectSpread(_objectSpread({}, (0, _vuex.mapMutations)(['SET_ORDER_TYPE'])), {}, {
-    switchOrderType: function switchOrderType() {
+    loadAds: function loadAds() {
       var _this5 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4() {
+        var db, res, fileList, urlRes;
+        return _regenerator.default.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.prev = 0;
+                db = uniCloud.database();
+                _context4.next = 4;
+                return db.collection('menu_banner').where({
+                  is_show: true
+                }).orderBy('sort', 'asc').get();
+              case 4:
+                res = _context4.sent;
+                if (!(res.result.data && res.result.data.length > 0)) {
+                  _context4.next = 12;
+                  break;
+                }
+                fileList = res.result.data.map(function (item) {
+                  return item.image;
+                }).filter(Boolean);
+                if (!(fileList.length > 0)) {
+                  _context4.next = 12;
+                  break;
+                }
+                _context4.next = 10;
+                return uniCloud.getTempFileURL({
+                  fileList: fileList
+                });
+              case 10:
+                urlRes = _context4.sent;
+                _this5.ads1 = res.result.data.map(function (item) {
+                  var fileInfo = urlRes.fileList.find(function (f) {
+                    return f.fileID === item.image;
+                  }) || {};
+                  return fileInfo.tempFileURL || fileInfo.download_url || item.image;
+                });
+              case 12:
+                _context4.next = 17;
+                break;
+              case 14:
+                _context4.prev = 14;
+                _context4.t0 = _context4["catch"](0);
+                console.error('Failed to load menu banners:', _context4.t0);
+              case 17:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, null, [[0, 14]]);
+      }))();
+    },
+    loadStoreSettings: function loadStoreSettings() {
+      var _this6 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5() {
+        var db, res;
+        return _regenerator.default.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                _context5.prev = 0;
+                db = uniCloud.database();
+                _context5.next = 4;
+                return db.collection('store_settings').get();
+              case 4:
+                res = _context5.sent;
+                if (res.result.data && res.result.data.length > 0) {
+                  _this6.storeName = res.result.data[0].store_name || '七香嫂包子铺';
+                }
+                _context5.next = 11;
+                break;
+              case 8:
+                _context5.prev = 8;
+                _context5.t0 = _context5["catch"](0);
+                console.error('Failed to load store settings:', _context5.t0);
+              case 11:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5, null, [[0, 8]]);
+      }))();
+    },
+    switchOrderType: function switchOrderType() {
+      var _this7 = this;
       if (this.cart.length != 0) {
         uni.showModal({
           title: '温馨提示',
           content: '切换购买方式后，购物车中的商品将被清空，是否确认继续操作？',
           success: function success(res) {
             if (res.confirm) {
-              _this5.cart = [];
-              if (_this5.cart.length == 0) {
-                _this5.switchOrderChange();
+              _this7.cart = [];
+              if (_this7.cart.length == 0) {
+                _this7.switchOrderChange();
                 return;
               }
-              _this5.$u.toast('切换失败');
+              _this7.$u.toast('切换失败');
             }
           }
         });
@@ -412,27 +500,27 @@ var _default = {
       this.switchOrderChange();
     },
     switchOrderChange: function switchOrderChange() {
-      var _this6 = this;
+      var _this8 = this;
       if (this.orderType === 'takein') {
         this.SET_ORDER_TYPE('takeout');
       } else {
         this.SET_ORDER_TYPE('takein');
       }
-      this.$nextTick( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4() {
-        return _regenerator.default.wrap(function _callee4$(_context4) {
+      this.$nextTick( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee6() {
+        return _regenerator.default.wrap(function _callee6$(_context6) {
           while (1) {
-            switch (_context4.prev = _context4.next) {
+            switch (_context6.prev = _context6.next) {
               case 0:
-                _context4.next = 2;
-                return _this6.calcSize();
+                _context6.next = 2;
+                return _this8.calcSize();
               case 2:
-                return _context4.abrupt("return", _context4.sent);
+                return _context6.abrupt("return", _context6.sent);
               case 3:
               case "end":
-                return _context4.stop();
+                return _context6.stop();
             }
           }
-        }, _callee4);
+        }, _callee6);
       })));
     },
     handleAddToCart: function handleAddToCart(product) {
@@ -511,15 +599,15 @@ var _default = {
       this.cart = [];
     },
     handleMenuSelected: function handleMenuSelected(id) {
-      var _this7 = this;
+      var _this9 = this;
       this.$nextTick(function () {
-        var targetCategory = _this7.categories.find(function (item) {
+        var targetCategory = _this9.categories.find(function (item) {
           return item.id === id;
         });
         if (targetCategory && targetCategory.top !== undefined) {
-          _this7.productsScrollTop = targetCategory.top;
+          _this9.productsScrollTop = targetCategory.top;
         }
-        _this7.currentCategoryId = id;
+        _this9.currentCategoryId = id;
       });
     },
     productsScroll: function productsScroll(_ref4) {
@@ -533,61 +621,61 @@ var _default = {
       }
     },
     calcSize: function calcSize() {
-      var _this8 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5() {
+      var _this10 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee7() {
         var h, adsData, _iterator, _step, _loop, _ret;
-        return _regenerator.default.wrap(function _callee5$(_context6) {
+        return _regenerator.default.wrap(function _callee7$(_context8) {
           while (1) {
-            switch (_context6.prev = _context6.next) {
+            switch (_context8.prev = _context8.next) {
               case 0:
-                if (!(_this8.filterCategories.length === 0)) {
-                  _context6.next = 2;
+                if (!(_this10.filterCategories.length === 0)) {
+                  _context8.next = 2;
                   break;
                 }
-                return _context6.abrupt("return");
+                return _context8.abrupt("return");
               case 2:
                 h = 0;
-                _context6.next = 5;
+                _context8.next = 5;
                 return new Promise(function (resolve) {
-                  uni.createSelectorQuery().in(_this8).select('#ads').fields({
+                  uni.createSelectorQuery().in(_this10).select('#ads').fields({
                     size: true
                   }, function (data) {
                     return resolve(data);
                   }).exec();
                 });
               case 5:
-                adsData = _context6.sent;
+                adsData = _context8.sent;
                 if (adsData) {
                   h += Math.floor(adsData.height);
                 }
-                _iterator = _createForOfIteratorHelper(_this8.filterCategories);
-                _context6.prev = 8;
+                _iterator = _createForOfIteratorHelper(_this10.filterCategories);
+                _context8.prev = 8;
                 _loop = /*#__PURE__*/_regenerator.default.mark(function _loop() {
                   var filterItem, originalItem, productData;
-                  return _regenerator.default.wrap(function _loop$(_context5) {
+                  return _regenerator.default.wrap(function _loop$(_context7) {
                     while (1) {
-                      switch (_context5.prev = _context5.next) {
+                      switch (_context7.prev = _context7.next) {
                         case 0:
                           filterItem = _step.value;
-                          originalItem = _this8.categories.find(function (item) {
+                          originalItem = _this10.categories.find(function (item) {
                             return item.id === filterItem.id;
                           });
                           if (originalItem) {
-                            _context5.next = 4;
+                            _context7.next = 4;
                             break;
                           }
-                          return _context5.abrupt("return", "continue");
+                          return _context7.abrupt("return", "continue");
                         case 4:
-                          _context5.next = 6;
+                          _context7.next = 6;
                           return new Promise(function (resolve) {
-                            uni.createSelectorQuery().in(_this8).select("#products-".concat(filterItem.id)).fields({
+                            uni.createSelectorQuery().in(_this10).select("#products-".concat(filterItem.id)).fields({
                               size: true
                             }, function (data) {
                               return resolve(data);
                             }).exec();
                           });
                         case 6:
-                          productData = _context5.sent;
+                          productData = _context7.sent;
                           if (productData) {
                             originalItem.top = h;
                             h += Math.floor(productData.height);
@@ -595,7 +683,7 @@ var _default = {
                           }
                         case 8:
                         case "end":
-                          return _context5.stop();
+                          return _context7.stop();
                       }
                     }
                   }, _loop);
@@ -603,37 +691,37 @@ var _default = {
                 _iterator.s();
               case 11:
                 if ((_step = _iterator.n()).done) {
-                  _context6.next = 18;
+                  _context8.next = 18;
                   break;
                 }
-                return _context6.delegateYield(_loop(), "t0", 13);
+                return _context8.delegateYield(_loop(), "t0", 13);
               case 13:
-                _ret = _context6.t0;
+                _ret = _context8.t0;
                 if (!(_ret === "continue")) {
-                  _context6.next = 16;
+                  _context8.next = 16;
                   break;
                 }
-                return _context6.abrupt("continue", 16);
+                return _context8.abrupt("continue", 16);
               case 16:
-                _context6.next = 11;
+                _context8.next = 11;
                 break;
               case 18:
-                _context6.next = 23;
+                _context8.next = 23;
                 break;
               case 20:
-                _context6.prev = 20;
-                _context6.t1 = _context6["catch"](8);
-                _iterator.e(_context6.t1);
+                _context8.prev = 20;
+                _context8.t1 = _context8["catch"](8);
+                _iterator.e(_context8.t1);
               case 23:
-                _context6.prev = 23;
+                _context8.prev = 23;
                 _iterator.f();
-                return _context6.finish(23);
+                return _context8.finish(23);
               case 26:
               case "end":
-                return _context6.stop();
+                return _context8.stop();
             }
           }
-        }, _callee5, null, [[8, 20, 23, 26]]);
+        }, _callee7, null, [[8, 20, 23, 26]]);
       }))();
     },
     pay: function pay() {
@@ -645,7 +733,7 @@ var _default = {
   })
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

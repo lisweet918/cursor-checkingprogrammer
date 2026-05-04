@@ -30,7 +30,9 @@
     "pages/menu/product/list",
     "pages/menu/product/form",
     "pages/menu/category/list",
-    "pages/banner/list"
+    "pages/banner/list",
+    "pages/menu_banner/list",
+    "pages/store/settings"
   ],
   "subPackages": [
     {

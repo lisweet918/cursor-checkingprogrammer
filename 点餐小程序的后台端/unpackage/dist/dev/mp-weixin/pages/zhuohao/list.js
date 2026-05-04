@@ -102,28 +102,28 @@ var components
 try {
   components = {
     downloadExcel: function () {
-      return Promise.all(/*! import() | components/download-excel/download-excel */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/download-excel/download-excel")]).then(__webpack_require__.bind(null, /*! @/components/download-excel/download-excel.vue */ 957))
+      return Promise.all(/*! import() | components/download-excel/download-excel */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/download-excel/download-excel")]).then(__webpack_require__.bind(null, /*! @/components/download-excel/download-excel.vue */ 965))
     },
     unicloudDb: function () {
-      return Promise.all(/*! import() | node-modules/@dcloudio/uni-cli-shared/components/unicloud-db */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-cli-shared/components/unicloud-db")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-cli-shared/components/unicloud-db.vue */ 815))
+      return Promise.all(/*! import() | node-modules/@dcloudio/uni-cli-shared/components/unicloud-db */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-cli-shared/components/unicloud-db")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-cli-shared/components/unicloud-db.vue */ 823))
     },
     uniTable: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-table/uni-table */ "uni_modules/uni-table/components/uni-table/uni-table").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-table/uni-table.vue */ 738))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-table/uni-table */ "uni_modules/uni-table/components/uni-table/uni-table").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-table/uni-table.vue */ 746))
     },
     uniTr: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-tr/uni-tr */ "uni_modules/uni-table/components/uni-tr/uni-tr").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-tr/uni-tr.vue */ 745))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-tr/uni-tr */ "uni_modules/uni-table/components/uni-tr/uni-tr").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-tr/uni-tr.vue */ 753))
     },
     uniTh: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-th/uni-th */ "uni_modules/uni-table/components/uni-th/uni-th").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-th/uni-th.vue */ 752))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-th/uni-th */ "uni_modules/uni-table/components/uni-th/uni-th").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-th/uni-th.vue */ 760))
     },
     uniTd: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-td/uni-td */ "uni_modules/uni-table/components/uni-td/uni-td").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-td/uni-td.vue */ 759))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-td/uni-td */ "uni_modules/uni-table/components/uni-td/uni-td").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-td/uni-td.vue */ 767))
     },
     uniDateformat: function () {
-      return Promise.all(/*! import() | uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.vue */ 834))
+      return Promise.all(/*! import() | uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.vue */ 842))
     },
     uniPagination: function () {
-      return Promise.all(/*! import() | uni_modules/uni-pagination/components/uni-pagination/uni-pagination */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-pagination/components/uni-pagination/uni-pagination")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-pagination/components/uni-pagination/uni-pagination.vue */ 773))
+      return Promise.all(/*! import() | uni_modules/uni-pagination/components/uni-pagination/uni-pagination */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-pagination/components/uni-pagination/uni-pagination")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-pagination/components/uni-pagination/uni-pagination.vue */ 781))
     },
   }
 } catch (e) {

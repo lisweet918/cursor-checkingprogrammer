@@ -8,7 +8,7 @@
 			<view class="center">
 				<view class="store">
 					<view class="title">
-						<view class="address">七香嫂包子铺</view>
+						<view class="address">{{ storeName }}</view>
 						<view class="business">营业时间：早5:00 - 晚18:00</view>
 					</view>
 					<view class="buttons">
@@ -114,6 +114,7 @@
 		},
 		data() {
 			return {
+				storeName: '七香嫂包子铺',
 				util,
 				categories: [],
 				cart: [],
@@ -183,9 +184,40 @@
 			this.categories = res;
 			await this.$nextTick(async () => await this.calcSize())
 			this.currentCategoryId = this.filterCategories.length && this.filterCategories[0].id
+			this.loadAds();
+			this.loadStoreSettings();
 		},
 		methods: {
 			...mapMutations(['SET_ORDER_TYPE']),
+			async loadAds() {
+				try {
+					const db = uniCloud.database();
+					const res = await db.collection('menu_banner').where({ is_show: true }).orderBy('sort', 'asc').get();
+					if (res.result.data && res.result.data.length > 0) {
+						const fileList = res.result.data.map(item => item.image).filter(Boolean);
+						if (fileList.length > 0) {
+							const urlRes = await uniCloud.getTempFileURL({ fileList });
+							this.ads1 = res.result.data.map(item => {
+								const fileInfo = urlRes.fileList.find(f => f.fileID === item.image) || {};
+								return fileInfo.tempFileURL || fileInfo.download_url || item.image;
+							});
+						}
+					}
+				} catch (e) {
+					console.error('Failed to load menu banners:', e);
+				}
+			},
+			async loadStoreSettings() {
+				try {
+					const db = uniCloud.database();
+					const res = await db.collection('store_settings').get();
+					if (res.result.data && res.result.data.length > 0) {
+						this.storeName = res.result.data[0].store_name || '七香嫂包子铺';
+					}
+				} catch (e) {
+					console.error('Failed to load store settings:', e);
+				}
+			},
 			switchOrderType() {
 				if (this.cart.length != 0) {
 					uni.showModal({

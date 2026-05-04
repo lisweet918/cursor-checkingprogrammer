@@ -295,6 +295,7 @@ var _default = {
   data: function data() {
     return {
       current: 0,
+      storeName: '七香嫂包子铺',
       tabsList: [{
         name: '自取订单'
       }, {
@@ -309,58 +310,90 @@ var _default = {
     };
   },
   onShow: function onShow() {
+    this.loadStoreSettings();
     this.loadOrders();
   },
   methods: {
-    change: function change(index) {
-      this.current = index;
-    },
-    loadOrders: function loadOrders() {
+    loadStoreSettings: function loadStoreSettings() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var res, allOrders;
+        var _db, res;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _this.loading = true;
+                _context.prev = 0;
+                _db = uniCloud.database();
+                _context.next = 4;
+                return _db.collection('store_settings').get();
+              case 4:
+                res = _context.sent;
+                if (res.result.data && res.result.data.length > 0) {
+                  _this.storeName = res.result.data[0].store_name || '七香嫂包子铺';
+                }
+                _context.next = 11;
+                break;
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+                console.error('Failed to load store settings:', _context.t0);
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 8]]);
+      }))();
+    },
+    change: function change(index) {
+      this.current = index;
+    },
+    loadOrders: function loadOrders() {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var res, allOrders;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _this2.loading = true;
                 uni.showLoading({
                   title: '加载中...'
                 });
-                _context.prev = 2;
-                _context.next = 5;
+                _context2.prev = 2;
+                _context2.next = 5;
                 return db.collection('order').orderBy('createTime', 'desc').get();
               case 5:
-                res = _context.sent;
+                res = _context2.sent;
                 allOrders = res.result.data || [];
-                _this.pickupList = allOrders.filter(function (o) {
+                _this2.pickupList = allOrders.filter(function (o) {
                   return o.type === 'takein';
                 });
-                _this.takeoutList = allOrders.filter(function (o) {
+                _this2.takeoutList = allOrders.filter(function (o) {
                   return o.type === 'takeout';
                 });
-                _this.couponList = []; // 优惠券订单逻辑如果有可在此处理
-                _context.next = 16;
+                _this2.couponList = []; // 优惠券订单逻辑如果有可在此处理
+                _context2.next = 16;
                 break;
               case 12:
-                _context.prev = 12;
-                _context.t0 = _context["catch"](2);
-                console.error(_context.t0);
+                _context2.prev = 12;
+                _context2.t0 = _context2["catch"](2);
+                console.error(_context2.t0);
                 uni.showToast({
                   title: '加载失败',
                   icon: 'none'
                 });
               case 16:
-                _context.prev = 16;
-                _this.loading = false;
+                _context2.prev = 16;
+                _this2.loading = false;
                 uni.hideLoading();
-                return _context.finish(16);
+                return _context2.finish(16);
               case 20:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee, null, [[2, 12, 16, 20]]);
+        }, _callee2, null, [[2, 12, 16, 20]]);
       }))();
     },
     orderDetail: function orderDetail(item) {

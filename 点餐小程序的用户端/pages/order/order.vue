@@ -8,7 +8,7 @@
 		<view v-if="current === 0">
 			<view v-for="(item,index) in pickupList" :key="item.id" class="wrap__list" @click="orderDetail(item)">
 				<view class="wrap__list__top">
-					<view>七香嫂包子铺</view>
+					<view>{{ storeName }}</view>
 					<view>{{item.status == '0' ? '待付款' : item.status == '1' ? '已付款' : '已退款'}}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
@@ -45,7 +45,7 @@
 		<view v-else-if="current === 1">
 			<view v-for="(item,index) in takeoutList" :key="item.id" class="wrap__list" @click="orderDetail(item)">
 				<view class="wrap__list__top">
-					<view>七香嫂包子铺</view>
+					<view>{{ storeName }}</view>
 					<view>
 						{{item.orderstatus == 2 ? '已退款' : item.delivery_status == 0 ? '商家已接单' : item.delivery_status == 1 ? '配送中' : '已完成'}}
 					</view>
@@ -84,7 +84,7 @@
 		<view v-else>
 			<view v-for="(item,index) in couponList" :key="item.id" class="wrap__list">
 				<view class="wrap__list__top">
-					<view>七香嫂包子铺</view>
+					<view>{{ storeName }}</view>
 					<view>{{item.status == '0' ? '待核销' : '已核销'}}</view>
 				</view>
 				<view class="wrap__list__shopinfo">
@@ -123,6 +123,7 @@
 		data() {
 			return {
 				current: 0,
+				storeName: '七香嫂包子铺',
 				tabsList: [
 					{ name: '自取订单' },
 					{ name: '外卖订单' },
@@ -135,9 +136,21 @@
 			}
 		},
 		onShow() {
+			this.loadStoreSettings()
 			this.loadOrders()
 		},
 		methods: {
+			async loadStoreSettings() {
+				try {
+					const db = uniCloud.database()
+					const res = await db.collection('store_settings').get()
+					if (res.result.data && res.result.data.length > 0) {
+						this.storeName = res.result.data[0].store_name || '七香嫂包子铺'
+					}
+				} catch (e) {
+					console.error('Failed to load store settings:', e)
+				}
+			},
 			change(index) {
 				this.current = index;
 			},

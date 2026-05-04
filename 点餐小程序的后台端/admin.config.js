@@ -79,9 +79,25 @@ export default {
 			url: "",
 			children: [{
 				menu_id: "banner-list",
-				text: '轮播图列表',
+				text: '首页轮播图',
 				icon: 'admin-icons-image',
 				value: '/pages/banner/list',
+			},{
+				menu_id: "menu-banner-list",
+				text: '点餐页轮播图',
+				icon: 'admin-icons-image',
+				value: '/pages/menu_banner/list',
+			}]
+		}, {
+			menu_id: "store-manage",
+			text: '店铺管理',
+			icon: 'admin-icons-shop',
+			url: "",
+			children: [{
+				menu_id: "store-settings",
+				text: '店铺设置',
+				icon: 'admin-icons-gear',
+				value: '/pages/store/settings',
 			}]
 		}, {
 			menu_id: "demo",

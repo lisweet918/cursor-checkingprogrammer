@@ -202,6 +202,16 @@
     "style": {
         "navigationBarTitleText": "轮播图管理"
     }
+},{
+    "path": "pages/menu_banner/list",
+    "style": {
+        "navigationBarTitleText": "点餐页轮播图"
+    }
+},{
+    "path": "pages/store/settings",
+    "style": {
+        "navigationBarTitleText": "店铺设置"
+    }
 }
 ],
 	"subPackages": [{

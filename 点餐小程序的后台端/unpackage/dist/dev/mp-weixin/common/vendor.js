@@ -67,7 +67,7 @@ module.exports = _nonIterableRest, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
-/***/ 1003:
+/***/ 1011:
 /*!********************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/qiun-data-charts/js_sdk/u-charts/u-charts.js ***!
   \********************************************************************************************************/
@@ -7728,7 +7728,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1004:
+/***/ 1012:
 /*!**************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/qiun-data-charts/js_sdk/u-charts/config-ucharts.js ***!
   \**************************************************************************************************************/
@@ -8350,7 +8350,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1019:
+/***/ 1027:
 /*!**********************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/pay-order/overview/fieldsMap.js ***!
   \**********************************************************************************************/
@@ -8579,7 +8579,7 @@ exports.statPanelTodayFieldsMap = statPanelTodayFieldsMap;
 
 /***/ }),
 
-/***/ 1041:
+/***/ 1049:
 /*!********************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/pay-order/funnel/fieldsMap.js ***!
   \********************************************************************************************/
@@ -8748,7 +8748,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1089:
+/***/ 1097:
 /*!****************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/index.js ***!
   \****************************************************************************************************************/
@@ -8763,9 +8763,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 1090));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 1091));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1092));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 1098));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 1099));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1100));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -8775,7 +8775,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1090:
+/***/ 1098:
 /*!***************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/en.json ***!
   \***************************************************************************************************************/
@@ -8786,7 +8786,7 @@ module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"Pull up to show mo
 
 /***/ }),
 
-/***/ 1091:
+/***/ 1099:
 /*!********************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hans.json ***!
   \********************************************************************************************************************/
@@ -8794,17 +8794,6 @@ module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"Pull up to show mo
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉显示更多\",\"uni-load-more.contentrefresh\":\"正在加载...\",\"uni-load-more.contentnomore\":\"没有更多数据了\"}");
-
-/***/ }),
-
-/***/ 1092:
-/*!********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hant.json ***!
-  \********************************************************************************************************************/
-/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉顯示更多\",\"uni-load-more.contentrefresh\":\"正在加載...\",\"uni-load-more.contentnomore\":\"沒有更多數據了\"}");
 
 /***/ }),
 
@@ -8834,7 +8823,18 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 1126:
+/***/ 1100:
+/*!********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hant.json ***!
+  \********************************************************************************************************************/
+/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉顯示更多\",\"uni-load-more.contentrefresh\":\"正在加載...\",\"uni-load-more.contentnomore\":\"沒有更多數據了\"}");
+
+/***/ }),
+
+/***/ 1134:
 /*!***********************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \***********************************************************************************************************************/
@@ -9083,7 +9083,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1233:
+/***/ 1241:
 /*!********************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/uni-nav-menu/mixins/rootParent.js ***!
   \********************************************************************************************/
@@ -28546,7 +28546,24 @@ module.exports = _possibleConstructorReturn, module.exports.__esModule = true, m
 
 /***/ }),
 
-/***/ 337:
+/***/ 34:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _getPrototypeOf(o);
+}
+module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 345:
 /*!********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/uni-data-menu/util.js ***!
   \********************************************************************************/
@@ -28639,7 +28656,7 @@ function buildMenus(menuList) {
 
 /***/ }),
 
-/***/ 338:
+/***/ 346:
 /*!***************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/system/menu/originalMenuList.json ***!
   \***************************************************************************************/
@@ -28650,7 +28667,7 @@ module.exports = JSON.parse("[{\"menu_id\":\"index\",\"name\":\"首页\",\"icon\
 
 /***/ }),
 
-/***/ 339:
+/***/ 347:
 /*!*****************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端 sync nonrecursive -menu.json$ ***!
   \*****************************************************************************/
@@ -28665,28 +28682,11 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 339;
+webpackEmptyContext.id = 347;
 
 /***/ }),
 
-/***/ 34:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _getPrototypeOf(o);
-}
-module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 340:
+/***/ 348:
 /*!***************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules sync menu.json$ ***!
   \***************************************************************************/
@@ -28701,11 +28701,52 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 340;
+webpackEmptyContext.id = 348;
 
 /***/ }),
 
-/***/ 349:
+/***/ 35:
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ 34);
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
+var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ 36);
+var construct = __webpack_require__(/*! ./construct.js */ 15);
+function _wrapNativeSuper(Class) {
+  var _cache = typeof Map === "function" ? new Map() : undefined;
+  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
+    if (Class === null || !isNativeFunction(Class)) return Class;
+    if (typeof Class !== "function") {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    if (typeof _cache !== "undefined") {
+      if (_cache.has(Class)) return _cache.get(Class);
+      _cache.set(Class, Wrapper);
+    }
+    function Wrapper() {
+      return construct(Class, arguments, getPrototypeOf(this).constructor);
+    }
+    Wrapper.prototype = Object.create(Class.prototype, {
+      constructor: {
+        value: Wrapper,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    return setPrototypeOf(Wrapper, Class);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _wrapNativeSuper(Class);
+}
+module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 357:
 /*!**************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-admin-menus.js ***!
   \**************************************************************************************/
@@ -28778,47 +28819,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 35:
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ 34);
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
-var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ 36);
-var construct = __webpack_require__(/*! ./construct.js */ 15);
-function _wrapNativeSuper(Class) {
-  var _cache = typeof Map === "function" ? new Map() : undefined;
-  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
-    if (Class === null || !isNativeFunction(Class)) return Class;
-    if (typeof Class !== "function") {
-      throw new TypeError("Super expression must either be null or a function");
-    }
-    if (typeof _cache !== "undefined") {
-      if (_cache.has(Class)) return _cache.get(Class);
-      _cache.set(Class, Wrapper);
-    }
-    function Wrapper() {
-      return construct(Class, arguments, getPrototypeOf(this).constructor);
-    }
-    Wrapper.prototype = Object.create(Class.prototype, {
-      constructor: {
-        value: Wrapper,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    return setPrototypeOf(Wrapper, Class);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _wrapNativeSuper(Class);
-}
-module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
 /***/ 36:
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
@@ -28834,118 +28834,6 @@ function _isNativeFunction(fn) {
   }
 }
 module.exports = _isNativeFunction, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 366:
-/*!**************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-permissions.js ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.enumConverter = void 0;
-exports.filterToWhere = filterToWhere;
-exports.validator = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
-
-var validator = {
-  "permission_id": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }],
-    "label": "权限标识"
-  },
-  "permission_name": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }],
-    "label": "权限名称"
-  },
-  "comment": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "备注"
-  }
-};
-exports.validator = validator;
-var enumConverter = {};
-exports.enumConverter = enumConverter;
-function filterToWhere(filter, command) {
-  var where = {};
-  for (var field in filter) {
-    var _filter$field = filter[field],
-      type = _filter$field.type,
-      value = _filter$field.value;
-    switch (type) {
-      case "search":
-        if (typeof value === 'string' && value.length) {
-          where[field] = new RegExp(value);
-        }
-        break;
-      case "select":
-        if (value.length) {
-          var selectValue = [];
-          var _iterator = _createForOfIteratorHelper(value),
-            _step;
-          try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-              var s = _step.value;
-              selectValue.push(command.eq(s));
-            }
-          } catch (err) {
-            _iterator.e(err);
-          } finally {
-            _iterator.f();
-          }
-          where[field] = command.or(selectValue);
-        }
-        break;
-      case "range":
-        if (value.length) {
-          var gt = value[0];
-          var lt = value[1];
-          where[field] = command.and([command.gte(gt), command.lte(lt)]);
-        }
-        break;
-      case "date":
-        if (value.length) {
-          var _value = (0, _slicedToArray2.default)(value, 2),
-            _s = _value[0],
-            e = _value[1];
-          var startDate = new Date(_s);
-          var endDate = new Date(e);
-          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
-        }
-        break;
-      case "timestamp":
-        if (value.length) {
-          var _value2 = (0, _slicedToArray2.default)(value, 2),
-            _startDate = _value2[0],
-            _endDate = _value2[1];
-          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
-        }
-        break;
-    }
-  }
-  return where;
-}
 
 /***/ }),
 
@@ -29136,6 +29024,16 @@ var _default = {
     "path": "pages/banner/list",
     "style": {
       "navigationBarTitleText": "轮播图管理"
+    }
+  }, {
+    "path": "pages/menu_banner/list",
+    "style": {
+      "navigationBarTitleText": "点餐页轮播图"
+    }
+  }, {
+    "path": "pages/store/settings",
+    "style": {
+      "navigationBarTitleText": "店铺设置"
     }
   }],
   "subPackages": [{
@@ -29435,6 +29333,118 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ 374:
+/*!**************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-permissions.js ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enumConverter = void 0;
+exports.filterToWhere = filterToWhere;
+exports.validator = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
+
+var validator = {
+  "permission_id": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }],
+    "label": "权限标识"
+  },
+  "permission_name": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }],
+    "label": "权限名称"
+  },
+  "comment": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "备注"
+  }
+};
+exports.validator = validator;
+var enumConverter = {};
+exports.enumConverter = enumConverter;
+function filterToWhere(filter, command) {
+  var where = {};
+  for (var field in filter) {
+    var _filter$field = filter[field],
+      type = _filter$field.type,
+      value = _filter$field.value;
+    switch (type) {
+      case "search":
+        if (typeof value === 'string' && value.length) {
+          where[field] = new RegExp(value);
+        }
+        break;
+      case "select":
+        if (value.length) {
+          var selectValue = [];
+          var _iterator = _createForOfIteratorHelper(value),
+            _step;
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var s = _step.value;
+              selectValue.push(command.eq(s));
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+          where[field] = command.or(selectValue);
+        }
+        break;
+      case "range":
+        if (value.length) {
+          var gt = value[0];
+          var lt = value[1];
+          where[field] = command.and([command.gte(gt), command.lte(lt)]);
+        }
+        break;
+      case "date":
+        if (value.length) {
+          var _value = (0, _slicedToArray2.default)(value, 2),
+            _s = _value[0],
+            e = _value[1];
+          var startDate = new Date(_s);
+          var endDate = new Date(e);
+          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
+        }
+        break;
+      case "timestamp":
+        if (value.length) {
+          var _value2 = (0, _slicedToArray2.default)(value, 2),
+            _startDate = _value2[0],
+            _endDate = _value2[1];
+          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
+        }
+        break;
+    }
+  }
+  return where;
+}
+
+/***/ }),
+
 /***/ 38:
 /*!**************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json?{"type":"stat"} ***!
@@ -29456,7 +29466,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 389:
+/***/ 397:
 /*!********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-roles.js ***!
   \********************************************************************************/
@@ -29592,212 +29602,6 @@ function _interopRequireDefault(obj) {
   };
 }
 module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 412:
-/*!********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-users.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.enumConverter = void 0;
-exports.filterToWhere = filterToWhere;
-exports.validator = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
-
-var validator = {
-  "username": {
-    "rules": [{
-      "required": true,
-      "errorMessage": '请输入用户名'
-    }, {
-      "minLength": 3,
-      "maxLength": 32,
-      "errorMessage": '用户名长度在 {minLength} 到 {maxLength} 个字符'
-    }, {
-      validateFunction: function validateFunction(rule, value, data, callback) {
-        // console.log(value);
-        if (/^1\d{10}$/.test(value) || /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(value)) {
-          callback('用户名不能是：手机号或邮箱');
-        }
-        ;
-        if (/^\d+$/.test(value)) {
-          callback('用户名不能为纯数字');
-        }
-        ;
-        if (/[\u4E00-\u9FA5\uF900-\uFA2D]{1,}/.test(value)) {
-          callback('用户名不能包含中文');
-        }
-        return true;
-      }
-    }],
-    "label": "用户名"
-  },
-  "nickname": {
-    "rules": [{
-      minLength: 3,
-      maxLength: 32,
-      errorMessage: '昵称长度在 {minLength} 到 {maxLength} 个字符'
-    }, {
-      validateFunction: function validateFunction(rule, value, data, callback) {
-        // console.log(value);
-        if (/^1\d{10}$/.test(value) || /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(value)) {
-          callback('昵称不能是：手机号或邮箱');
-        }
-        ;
-        if (/^\d+$/.test(value)) {
-          callback('昵称不能为纯数字');
-        }
-        ;
-        // if(/[\u4E00-\u9FA5\uF900-\uFA2D]{1,}/.test(value)){
-        // 	callback('昵称不能包含中文')
-        // }
-        return true;
-      }
-    }],
-    "label": "昵称"
-  },
-  "password": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "password"
-    }, {
-      "minLength": 6
-    }],
-    "label": "密码"
-  },
-  "mobile": {
-    "rules": [{
-      "format": "string"
-    }, {
-      "pattern": "^\\+?[0-9-]{3,20}$"
-    }],
-    "label": "手机号码"
-  },
-  "status": {
-    "rules": [{
-      "format": "int"
-    }, {
-      "range": [{
-        "text": "正常",
-        "value": 0
-      }, {
-        "text": "禁用",
-        "value": 1
-      }, {
-        "text": "审核中",
-        "value": 2
-      }, {
-        "text": "审核拒绝",
-        "value": 3
-      }]
-    }],
-    "defaultValue": 0,
-    "label": "用户状态"
-  },
-  "email": {
-    "rules": [{
-      "format": "string"
-    }, {
-      "format": "email"
-    }],
-    "label": "邮箱"
-  },
-  "role": {
-    "rules": [{
-      "format": "array"
-    }],
-    "label": "角色"
-  },
-  "last_login_date": {
-    "rules": [{
-      "format": "timestamp"
-    }]
-  }
-};
-exports.validator = validator;
-var enumConverter = {
-  "status_valuetotext": {
-    "0": "正常",
-    "1": "禁用",
-    "2": "审核中",
-    "3": "审核拒绝"
-  }
-};
-exports.enumConverter = enumConverter;
-function filterToWhere(filter, command) {
-  var where = {};
-  for (var field in filter) {
-    var _filter$field = filter[field],
-      type = _filter$field.type,
-      value = _filter$field.value;
-    switch (type) {
-      case "search":
-        if (typeof value === 'string' && value.length) {
-          where[field] = new RegExp(value);
-        }
-        break;
-      case "select":
-        if (value.length) {
-          var selectValue = [];
-          var _iterator = _createForOfIteratorHelper(value),
-            _step;
-          try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-              var s = _step.value;
-              selectValue.push(command.eq(s));
-            }
-          } catch (err) {
-            _iterator.e(err);
-          } finally {
-            _iterator.f();
-          }
-          where[field] = command.or(selectValue);
-        }
-        break;
-      case "range":
-        if (value.length) {
-          var gt = value[0];
-          var lt = value[1];
-          where[field] = command.and([command.gte(gt), command.lte(lt)]);
-        }
-        break;
-      case "date":
-        if (value.length) {
-          var _value = (0, _slicedToArray2.default)(value, 2),
-            _s = _value[0],
-            e = _value[1];
-          var startDate = new Date(_s);
-          var endDate = new Date(e);
-          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
-        }
-        break;
-      case "timestamp":
-        if (value.length) {
-          var _value2 = (0, _slicedToArray2.default)(value, 2),
-            _startDate = _value2[0],
-            _endDate = _value2[1];
-          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
-        }
-        break;
-    }
-  }
-  return where;
-}
 
 /***/ }),
 
@@ -31058,6 +30862,212 @@ module.exports = index_cjs;
 
 /***/ }),
 
+/***/ 420:
+/*!********************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-users.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enumConverter = void 0;
+exports.filterToWhere = filterToWhere;
+exports.validator = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
+
+var validator = {
+  "username": {
+    "rules": [{
+      "required": true,
+      "errorMessage": '请输入用户名'
+    }, {
+      "minLength": 3,
+      "maxLength": 32,
+      "errorMessage": '用户名长度在 {minLength} 到 {maxLength} 个字符'
+    }, {
+      validateFunction: function validateFunction(rule, value, data, callback) {
+        // console.log(value);
+        if (/^1\d{10}$/.test(value) || /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(value)) {
+          callback('用户名不能是：手机号或邮箱');
+        }
+        ;
+        if (/^\d+$/.test(value)) {
+          callback('用户名不能为纯数字');
+        }
+        ;
+        if (/[\u4E00-\u9FA5\uF900-\uFA2D]{1,}/.test(value)) {
+          callback('用户名不能包含中文');
+        }
+        return true;
+      }
+    }],
+    "label": "用户名"
+  },
+  "nickname": {
+    "rules": [{
+      minLength: 3,
+      maxLength: 32,
+      errorMessage: '昵称长度在 {minLength} 到 {maxLength} 个字符'
+    }, {
+      validateFunction: function validateFunction(rule, value, data, callback) {
+        // console.log(value);
+        if (/^1\d{10}$/.test(value) || /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(value)) {
+          callback('昵称不能是：手机号或邮箱');
+        }
+        ;
+        if (/^\d+$/.test(value)) {
+          callback('昵称不能为纯数字');
+        }
+        ;
+        // if(/[\u4E00-\u9FA5\uF900-\uFA2D]{1,}/.test(value)){
+        // 	callback('昵称不能包含中文')
+        // }
+        return true;
+      }
+    }],
+    "label": "昵称"
+  },
+  "password": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "password"
+    }, {
+      "minLength": 6
+    }],
+    "label": "密码"
+  },
+  "mobile": {
+    "rules": [{
+      "format": "string"
+    }, {
+      "pattern": "^\\+?[0-9-]{3,20}$"
+    }],
+    "label": "手机号码"
+  },
+  "status": {
+    "rules": [{
+      "format": "int"
+    }, {
+      "range": [{
+        "text": "正常",
+        "value": 0
+      }, {
+        "text": "禁用",
+        "value": 1
+      }, {
+        "text": "审核中",
+        "value": 2
+      }, {
+        "text": "审核拒绝",
+        "value": 3
+      }]
+    }],
+    "defaultValue": 0,
+    "label": "用户状态"
+  },
+  "email": {
+    "rules": [{
+      "format": "string"
+    }, {
+      "format": "email"
+    }],
+    "label": "邮箱"
+  },
+  "role": {
+    "rules": [{
+      "format": "array"
+    }],
+    "label": "角色"
+  },
+  "last_login_date": {
+    "rules": [{
+      "format": "timestamp"
+    }]
+  }
+};
+exports.validator = validator;
+var enumConverter = {
+  "status_valuetotext": {
+    "0": "正常",
+    "1": "禁用",
+    "2": "审核中",
+    "3": "审核拒绝"
+  }
+};
+exports.enumConverter = enumConverter;
+function filterToWhere(filter, command) {
+  var where = {};
+  for (var field in filter) {
+    var _filter$field = filter[field],
+      type = _filter$field.type,
+      value = _filter$field.value;
+    switch (type) {
+      case "search":
+        if (typeof value === 'string' && value.length) {
+          where[field] = new RegExp(value);
+        }
+        break;
+      case "select":
+        if (value.length) {
+          var selectValue = [];
+          var _iterator = _createForOfIteratorHelper(value),
+            _step;
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var s = _step.value;
+              selectValue.push(command.eq(s));
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+          where[field] = command.or(selectValue);
+        }
+        break;
+      case "range":
+        if (value.length) {
+          var gt = value[0];
+          var lt = value[1];
+          where[field] = command.and([command.gte(gt), command.lte(lt)]);
+        }
+        break;
+      case "date":
+        if (value.length) {
+          var _value = (0, _slicedToArray2.default)(value, 2),
+            _s = _value[0],
+            e = _value[1];
+          var startDate = new Date(_s);
+          var endDate = new Date(e);
+          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
+        }
+        break;
+      case "timestamp":
+        if (value.length) {
+          var _value2 = (0, _slicedToArray2.default)(value, 2),
+            _startDate = _value2[0],
+            _endDate = _value2[1];
+          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
+        }
+        break;
+    }
+  }
+  return where;
+}
+
+/***/ }),
+
 /***/ 43:
 /*!***************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/admin.config.js ***!
@@ -31161,9 +31171,25 @@ var _default = {
       url: "",
       children: [{
         menu_id: "banner-list",
-        text: '轮播图列表',
+        text: '首页轮播图',
         icon: 'admin-icons-image',
         value: '/pages/banner/list'
+      }, {
+        menu_id: "menu-banner-list",
+        text: '点餐页轮播图',
+        icon: 'admin-icons-image',
+        value: '/pages/menu_banner/list'
+      }]
+    }, {
+      menu_id: "store-manage",
+      text: '店铺管理',
+      icon: 'admin-icons-shop',
+      url: "",
+      children: [{
+        menu_id: "store-settings",
+        text: '店铺设置',
+        icon: 'admin-icons-gear',
+        value: '/pages/store/settings'
       }]
     }, {
       menu_id: "demo",
@@ -31210,7 +31236,18 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 434:
+/***/ 44:
+/*!************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/package.json ***!
+  \************************************************************/
+/*! exports provided: name, id, displayName, version, description, main, scripts, repository, keywords, engines, author, license, bugs, homepage, dcloudext, uni_modules, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"uni-admin 基础框架（原名 uniCloud admin）\",\"id\":\"uni-template-admin\",\"displayName\":\"uni-admin 基础框架\",\"version\":\"2.5.13\",\"description\":\"基于uni-app & uniCloud的后台管理项目模板（管理后台开发必备神器）\",\"main\":\"main.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"repository\":\"https://github.com/dcloudio/uni-admin.git\",\"keywords\":[\"admin\",\"uniCloud\",\"管理后台\",\"云后台\",\"uni-admin\"],\"engines\":{\"HBuilderX\":\"^3.6.0\",\"uni-app\":\"^4.36\",\"uni-app-x\":\"\"},\"author\":\"\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/dcloudio/uni-admin/issues\"},\"homepage\":\"https://github.com/dcloudio/uni-admin#readme\",\"dcloudext\":{\"sale\":{\"regular\":{\"price\":\"0.00\"},\"sourcecode\":{\"price\":\"0.00\"}},\"contact\":{\"qq\":\"\"},\"declaration\":{\"ads\":\"无\",\"data\":\"无\",\"permissions\":\"无\"},\"npmurl\":\"\",\"type\":\"unicloud-template-project\",\"darkmode\":\"x\",\"i18n\":\"√\",\"widescreen\":\"√\"},\"uni_modules\":{\"dependencies\":[],\"encrypt\":[],\"platforms\":{\"cloud\":{\"tcb\":\"√\",\"aliyun\":\"√\",\"alipay\":\"√\"},\"client\":{\"uni-app\":{\"vue\":{\"vue2\":\"√\",\"vue3\":\"√\"},\"web\":{\"safari\":\"√\",\"chrome\":\"√\"},\"app\":{\"vue\":\"√\",\"nvue\":\"x\",\"android\":\"√\",\"ios\":\"√\",\"harmony\":\"√\"},\"mp\":{\"weixin\":\"√\",\"alipay\":\"√\",\"toutiao\":\"-\",\"baidu\":\"-\",\"kuaishou\":\"-\",\"jd\":\"-\",\"harmony\":\"-\",\"qq\":\"-\",\"lark\":\"-\"},\"quickapp\":{\"huawei\":\"-\",\"union\":\"-\"}},\"uni-app-x\":{\"web\":{\"safari\":\"-\",\"chrome\":\"-\"},\"app\":{\"android\":\"-\",\"ios\":\"-\",\"harmony\":\"-\"},\"mp\":{\"weixin\":\"-\"}},\"App\":{\"app-harmony\":\"u\",\"app-nvue\":\"u\",\"app-uvue\":\"u\",\"app-vue\":\"u\"}}}}}");
+
+/***/ }),
+
+/***/ 442:
 /*!******************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-forms/components/uni-forms/validate.js ***!
   \******************************************************************************************************/
@@ -31902,7 +31939,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 435:
+/***/ 443:
 /*!***************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-forms/components/uni-forms/utils.js ***!
   \***************************************************************************************************/
@@ -32238,17 +32275,6 @@ exports.isEqual = isEqual;
 
 /***/ }),
 
-/***/ 44:
-/*!************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/package.json ***!
-  \************************************************************/
-/*! exports provided: name, id, displayName, version, description, main, scripts, repository, keywords, engines, author, license, bugs, homepage, dcloudext, uni_modules, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"name\":\"uni-admin 基础框架（原名 uniCloud admin）\",\"id\":\"uni-template-admin\",\"displayName\":\"uni-admin 基础框架\",\"version\":\"2.5.13\",\"description\":\"基于uni-app & uniCloud的后台管理项目模板（管理后台开发必备神器）\",\"main\":\"main.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"repository\":\"https://github.com/dcloudio/uni-admin.git\",\"keywords\":[\"admin\",\"uniCloud\",\"管理后台\",\"云后台\",\"uni-admin\"],\"engines\":{\"HBuilderX\":\"^3.6.0\",\"uni-app\":\"^4.36\",\"uni-app-x\":\"\"},\"author\":\"\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/dcloudio/uni-admin/issues\"},\"homepage\":\"https://github.com/dcloudio/uni-admin#readme\",\"dcloudext\":{\"sale\":{\"regular\":{\"price\":\"0.00\"},\"sourcecode\":{\"price\":\"0.00\"}},\"contact\":{\"qq\":\"\"},\"declaration\":{\"ads\":\"无\",\"data\":\"无\",\"permissions\":\"无\"},\"npmurl\":\"\",\"type\":\"unicloud-template-project\",\"darkmode\":\"x\",\"i18n\":\"√\",\"widescreen\":\"√\"},\"uni_modules\":{\"dependencies\":[],\"encrypt\":[],\"platforms\":{\"cloud\":{\"tcb\":\"√\",\"aliyun\":\"√\",\"alipay\":\"√\"},\"client\":{\"uni-app\":{\"vue\":{\"vue2\":\"√\",\"vue3\":\"√\"},\"web\":{\"safari\":\"√\",\"chrome\":\"√\"},\"app\":{\"vue\":\"√\",\"nvue\":\"x\",\"android\":\"√\",\"ios\":\"√\",\"harmony\":\"√\"},\"mp\":{\"weixin\":\"√\",\"alipay\":\"√\",\"toutiao\":\"-\",\"baidu\":\"-\",\"kuaishou\":\"-\",\"jd\":\"-\",\"harmony\":\"-\",\"qq\":\"-\",\"lark\":\"-\"},\"quickapp\":{\"huawei\":\"-\",\"union\":\"-\"}},\"uni-app-x\":{\"web\":{\"safari\":\"-\",\"chrome\":\"-\"},\"app\":{\"android\":\"-\",\"ios\":\"-\",\"harmony\":\"-\"},\"mp\":{\"weixin\":\"-\"}},\"App\":{\"app-harmony\":\"u\",\"app-nvue\":\"u\",\"app-uvue\":\"u\",\"app-vue\":\"u\"}}}}}");
-
-/***/ }),
-
 /***/ 45:
 /*!******************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/constants.js ***!
@@ -32518,7 +32544,7 @@ function getCloudPath(cloudPath) {
 
 /***/ }),
 
-/***/ 460:
+/***/ 468:
 /*!**************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/system/app/mixin/publish_add_detail_mixin.js ***!
   \**************************************************************************************************/
@@ -32536,7 +32562,7 @@ exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _opendbAppList = __webpack_require__(/*! @/js_sdk/validator/opendb-app-list.js */ 461);
+var _opendbAppList = __webpack_require__(/*! @/js_sdk/validator/opendb-app-list.js */ 469);
 var formatFilePickerValue = function formatFilePickerValue(url) {
   return url ? {
     "name": "",
@@ -32828,7 +32854,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 461:
+/***/ 469:
 /*!***********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-app-list.js ***!
   \***********************************************************************************/
@@ -32985,118 +33011,6 @@ exports.mpPlatform = mpPlatform;
 
 /***/ }),
 
-/***/ 484:
-/*!******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-tag.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.enumConverter = void 0;
-exports.filterToWhere = filterToWhere;
-exports.validator = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
-
-var validator = {
-  "tagid": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }],
-    "label": "标签的tagid"
-  },
-  "name": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }],
-    "label": "标签名称"
-  },
-  "description": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "标签描述"
-  }
-};
-exports.validator = validator;
-var enumConverter = {};
-exports.enumConverter = enumConverter;
-function filterToWhere(filter, command) {
-  var where = {};
-  for (var field in filter) {
-    var _filter$field = filter[field],
-      type = _filter$field.type,
-      value = _filter$field.value;
-    switch (type) {
-      case "search":
-        if (typeof value === 'string' && value.length) {
-          where[field] = new RegExp(value);
-        }
-        break;
-      case "select":
-        if (value.length) {
-          var selectValue = [];
-          var _iterator = _createForOfIteratorHelper(value),
-            _step;
-          try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-              var s = _step.value;
-              selectValue.push(command.eq(s));
-            }
-          } catch (err) {
-            _iterator.e(err);
-          } finally {
-            _iterator.f();
-          }
-          where[field] = command.or(selectValue);
-        }
-        break;
-      case "range":
-        if (value.length) {
-          var gt = value[0];
-          var lt = value[1];
-          where[field] = command.and([command.gte(gt), command.lte(lt)]);
-        }
-        break;
-      case "date":
-        if (value.length) {
-          var _value = (0, _slicedToArray2.default)(value, 2),
-            _s = _value[0],
-            e = _value[1];
-          var startDate = new Date(_s);
-          var endDate = new Date(e);
-          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
-        }
-        break;
-      case "timestamp":
-        if (value.length) {
-          var _value2 = (0, _slicedToArray2.default)(value, 2),
-            _startDate = _value2[0],
-            _endDate = _value2[1];
-          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
-        }
-        break;
-    }
-  }
-  return where;
-}
-
-/***/ }),
-
 /***/ 49:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -33229,6 +33143,118 @@ function normalizeComponent (
 
 /***/ }),
 
+/***/ 492:
+/*!******************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-tag.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enumConverter = void 0;
+exports.filterToWhere = filterToWhere;
+exports.validator = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
+
+var validator = {
+  "tagid": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }],
+    "label": "标签的tagid"
+  },
+  "name": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }],
+    "label": "标签名称"
+  },
+  "description": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "标签描述"
+  }
+};
+exports.validator = validator;
+var enumConverter = {};
+exports.enumConverter = enumConverter;
+function filterToWhere(filter, command) {
+  var where = {};
+  for (var field in filter) {
+    var _filter$field = filter[field],
+      type = _filter$field.type,
+      value = _filter$field.value;
+    switch (type) {
+      case "search":
+        if (typeof value === 'string' && value.length) {
+          where[field] = new RegExp(value);
+        }
+        break;
+      case "select":
+        if (value.length) {
+          var selectValue = [];
+          var _iterator = _createForOfIteratorHelper(value),
+            _step;
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var s = _step.value;
+              selectValue.push(command.eq(s));
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+          where[field] = command.or(selectValue);
+        }
+        break;
+      case "range":
+        if (value.length) {
+          var gt = value[0];
+          var lt = value[1];
+          where[field] = command.and([command.gte(gt), command.lte(lt)]);
+        }
+        break;
+      case "date":
+        if (value.length) {
+          var _value = (0, _slicedToArray2.default)(value, 2),
+            _s = _value[0],
+            e = _value[1];
+          var startDate = new Date(_s);
+          var endDate = new Date(e);
+          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
+        }
+        break;
+      case "timestamp":
+        if (value.length) {
+          var _value2 = (0, _slicedToArray2.default)(value, 2),
+            _startDate = _value2[0],
+            _endDate = _value2[1];
+          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
+        }
+        break;
+    }
+  }
+  return where;
+}
+
+/***/ }),
+
 /***/ 5:
 /*!**************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
@@ -33354,7 +33380,56 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 513:
+/***/ 52:
+/*!**********************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/error.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  namespaced: true,
+  state: {
+    logs: []
+  },
+  mutations: {
+    ADD_ERROR_LOG: function ADD_ERROR_LOG(state, log) {
+      state.logs.unshift(log);
+    },
+    CLEAR_ERROR_LOG: function CLEAR_ERROR_LOG(state) {
+      state.logs.splice(0);
+    }
+  },
+  actions: {
+    add: function add(_ref, log) {
+      var commit = _ref.commit;
+      if (!log.route) {
+        var pages = getCurrentPages();
+        if (pages.length) {
+          log.route = pages[pages.length - 1].route;
+        }
+      }
+      log.route = '/' + (log.route || '');
+      commit('ADD_ERROR_LOG', log);
+    },
+    clear: function clear(_ref2) {
+      var commit = _ref2.commit;
+      commit('CLEAR_ERROR_LOG');
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 521:
 /*!************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-res/fieldsMap.js ***!
   \************************************************************************************/
@@ -33443,56 +33518,50 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 52:
-/*!**********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/error.js ***!
-  \**********************************************************************/
+/***/ 53:
+/*!*********************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/user.js ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uniCloud) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+var uniIdPagesStore = _interopRequireWildcard(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/store */ 54));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 var _default = {
   namespaced: true,
-  state: {
-    logs: []
-  },
-  mutations: {
-    ADD_ERROR_LOG: function ADD_ERROR_LOG(state, log) {
-      state.logs.unshift(log);
-    },
-    CLEAR_ERROR_LOG: function CLEAR_ERROR_LOG(state) {
-      state.logs.splice(0);
-    }
-  },
+  state: {},
+  mutations: {},
   actions: {
-    add: function add(_ref, log) {
+    getUserInfo: function getUserInfo(_ref) {
       var commit = _ref.commit;
-      if (!log.route) {
-        var pages = getCurrentPages();
-        if (pages.length) {
-          log.route = pages[pages.length - 1].route;
-        }
-      }
-      log.route = '/' + (log.route || '');
-      commit('ADD_ERROR_LOG', log);
-    },
-    clear: function clear(_ref2) {
-      var commit = _ref2.commit;
-      commit('CLEAR_ERROR_LOG');
+      var db = uniCloud.database();
+      return db.collection('uni-id-users').where('_id==$cloudEnv_uid').field('username,nickname,mobile,email,role,permission').get().then(function (_ref2) {
+        var result = _ref2.result;
+        var _result$data = (0, _slicedToArray2.default)(result.data, 1),
+          userInfo = _result$data[0];
+        uniIdPagesStore.mutations.setUserInfo(userInfo, true);
+        return Promise.resolve(userInfo);
+      });
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 
-/***/ 522:
+/***/ 530:
 /*!************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-ent/fieldsMap.js ***!
   \************************************************************************************/
@@ -33573,50 +33642,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 53:
-/*!*********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/user.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-var uniIdPagesStore = _interopRequireWildcard(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/store */ 54));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-var _default = {
-  namespaced: true,
-  state: {},
-  mutations: {},
-  actions: {
-    getUserInfo: function getUserInfo(_ref) {
-      var commit = _ref.commit;
-      var db = uniCloud.database();
-      return db.collection('uni-id-users').where('_id==$cloudEnv_uid').field('username,nickname,mobile,email,role,permission').get().then(function (_ref2) {
-        var result = _ref2.result;
-        var _result$data = (0, _slicedToArray2.default)(result.data, 1),
-          userInfo = _result$data[0];
-        uniIdPagesStore.mutations.setUserInfo(userInfo, true);
-        return Promise.resolve(userInfo);
-      });
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
-
-/***/ }),
-
-/***/ 531:
+/***/ 539:
 /*!****************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-content/fieldsMap.js ***!
   \****************************************************************************************/
@@ -33941,7 +33967,7 @@ exports.store = store;
 
 /***/ }),
 
-/***/ 540:
+/***/ 548:
 /*!**********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-stat-pages.js ***!
   \**********************************************************************************/
@@ -34041,7 +34067,78 @@ function filterToWhere(filter, command) {
 
 /***/ }),
 
-/***/ 549:
+/***/ 55:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/config.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  //调试模式
+  "debug": false,
+  /*
+  	登录类型 未列举到的或运行环境不支持的，将被自动隐藏。
+  	如果需要在不同平台有不同的配置，直接用条件编译即可
+  */
+  "isAdmin": true,
+  // 区分管理端与用户端
+  "loginTypes": [
+  // "qq",
+  // "xiaomi",
+  // "sinaweibo",
+  // "taobao",
+  // "facebook",
+  // "google",
+  // "alipay",
+  // "douyin",
+
+  // "weixin",
+  "username"
+
+  // "smsCode"
+  ],
+
+  //政策协议
+  // "agreements": {
+  // 	"serviceUrl": "https://xxx", //用户服务协议链接
+  // 	"privacyUrl": "https://xxx", //隐私政策条款链接
+  // 	// 哪些场景下显示，1.注册（包括登录并注册，如：微信登录、苹果登录、短信验证码登录）、2.登录（如：用户名密码登录）
+  // 	"scope": [
+  // 		'register', 'login'
+  // 	]
+  // },
+  // 提供各类服务接入（如微信登录服务）的应用id
+  "appid": {
+    "weixin": {
+      // 微信公众号的appid，来源:登录微信公众号（https://mp.weixin.qq.com）-> 设置与开发 -> 基本配置 -> 公众号开发信息 -> AppID
+      "h5": "xxxxxx",
+      // 微信开放平台的appid，来源:登录微信开放平台（https://open.weixin.qq.com） -> 管理中心 -> 网站应用 -> 选择对应的应用名称，点击查看 -> AppID
+      "web": "xxxxxx"
+    }
+  },
+  /**
+   * 密码强度
+   * super（超强：密码必须包含大小写字母、数字和特殊符号，长度范围：8-16位之间）
+   * strong（强: 密密码必须包含字母、数字和特殊符号，长度范围：8-16位之间）
+   * medium (中：密码必须为字母、数字和特殊符号任意两种的组合，长度范围：8-16位之间)
+   * weak（弱：密码必须包含字母和数字，长度范围：6-16位之间）
+   * 为空或false则不验证密码强度
+   */
+  "passwordStrength": "medium"
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 557:
 /*!*********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/scene/fieldsMap.js ***!
   \*********************************************************************************/
@@ -34144,10 +34241,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 55:
-/*!**********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/config.js ***!
-  \**********************************************************************************/
+/***/ 56:
+/*!**************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/plugin.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34158,64 +34255,29 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _util = __webpack_require__(/*! ./util.js */ 57);
+var _error = __webpack_require__(/*! ./error.js */ 59);
+var _request = __webpack_require__(/*! ./request.js */ 60);
+var _fetchMock = __webpack_require__(/*! ./fetchMock.js */ 63);
+var _permission = __webpack_require__(/*! ./permission.js */ 64);
+var _interceptor = __webpack_require__(/*! ./interceptor.js */ 65);
+var _store = __webpack_require__(/*! ../uni-id-pages/store */ 66);
 var _default = {
-  //调试模式
-  "debug": false,
-  /*
-  	登录类型 未列举到的或运行环境不支持的，将被自动隐藏。
-  	如果需要在不同平台有不同的配置，直接用条件编译即可
-  */
-  "isAdmin": true,
-  // 区分管理端与用户端
-  "loginTypes": [
-  // "qq",
-  // "xiaomi",
-  // "sinaweibo",
-  // "taobao",
-  // "facebook",
-  // "google",
-  // "alipay",
-  // "douyin",
-
-  // "weixin",
-  "username"
-
-  // "smsCode"
-  ],
-
-  //政策协议
-  // "agreements": {
-  // 	"serviceUrl": "https://xxx", //用户服务协议链接
-  // 	"privacyUrl": "https://xxx", //隐私政策条款链接
-  // 	// 哪些场景下显示，1.注册（包括登录并注册，如：微信登录、苹果登录、短信验证码登录）、2.登录（如：用户名密码登录）
-  // 	"scope": [
-  // 		'register', 'login'
-  // 	]
-  // },
-  // 提供各类服务接入（如微信登录服务）的应用id
-  "appid": {
-    "weixin": {
-      // 微信公众号的appid，来源:登录微信公众号（https://mp.weixin.qq.com）-> 设置与开发 -> 基本配置 -> 公众号开发信息 -> AppID
-      "h5": "xxxxxx",
-      // 微信开放平台的appid，来源:登录微信开放平台（https://open.weixin.qq.com） -> 管理中心 -> 网站应用 -> 选择对应的应用名称，点击查看 -> AppID
-      "web": "xxxxxx"
-    }
-  },
-  /**
-   * 密码强度
-   * super（超强：密码必须包含大小写字母、数字和特殊符号，长度范围：8-16位之间）
-   * strong（强: 密密码必须包含字母、数字和特殊符号，长度范围：8-16位之间）
-   * medium (中：密码必须为字母、数字和特殊符号任意两种的组合，长度范围：8-16位之间)
-   * weak（弱：密码必须包含字母和数字，长度范围：6-16位之间）
-   * 为空或false则不验证密码强度
-   */
-  "passwordStrength": "medium"
+  install: function install(Vue) {
+    (0, _util.initUtil)(Vue);
+    (0, _error.initError)(Vue);
+    (0, _store.initUniIdPageStore)(Vue);
+    (0, _request.initRequest)(Vue);
+    (0, _fetchMock.initFetch)(Vue);
+    (0, _permission.initPermission)(Vue);
+    (0, _interceptor.initInterceptor)();
+  }
 };
 exports.default = _default;
 
 /***/ }),
 
-/***/ 558:
+/***/ 566:
 /*!***********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/channel/fieldsMap.js ***!
   \***********************************************************************************/
@@ -34308,10 +34370,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 56:
-/*!**************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/plugin.js ***!
-  \**************************************************************************/
+/***/ 57:
+/*!************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/util.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34321,30 +34383,27 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var _util = __webpack_require__(/*! ./util.js */ 57);
-var _error = __webpack_require__(/*! ./error.js */ 59);
-var _request = __webpack_require__(/*! ./request.js */ 60);
-var _fetchMock = __webpack_require__(/*! ./fetchMock.js */ 63);
-var _permission = __webpack_require__(/*! ./permission.js */ 64);
-var _interceptor = __webpack_require__(/*! ./interceptor.js */ 65);
-var _store = __webpack_require__(/*! ../uni-id-pages/store */ 66);
-var _default = {
-  install: function install(Vue) {
-    (0, _util.initUtil)(Vue);
-    (0, _error.initError)(Vue);
-    (0, _store.initUniIdPageStore)(Vue);
-    (0, _request.initRequest)(Vue);
-    (0, _fetchMock.initFetch)(Vue);
-    (0, _permission.initPermission)(Vue);
-    (0, _interceptor.initInterceptor)();
+exports.initUtil = initUtil;
+var _dateFormat = __webpack_require__(/*! @/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js */ 58);
+function formatBytes(bytes) {
+  var sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+  if (bytes == 0) {
+    return 'n/a';
   }
-};
-exports.default = _default;
+  var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+  if (i == 0) {
+    return bytes + ' ' + sizes[i];
+  }
+  return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+}
+function initUtil(Vue) {
+  Vue.prototype.$formatDate = _dateFormat.formatDate;
+  Vue.prototype.$formatBytes = formatBytes;
+}
 
 /***/ }),
 
-/***/ 567:
+/***/ 575:
 /*!************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/error/js/fieldsMap.js ***!
   \************************************************************************************/
@@ -34426,40 +34485,225 @@ exports.popupFieldsMap = popupFieldsMap;
 
 /***/ }),
 
-/***/ 57:
-/*!************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/util.js ***!
-  \************************************************************************/
+/***/ 58:
+/*!*******************************************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initUtil = initUtil;
-var _dateFormat = __webpack_require__(/*! @/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js */ 58);
-function formatBytes(bytes) {
-  var sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
-  if (bytes == 0) {
-    return 'n/a';
+exports.formatDate = formatDate;
+exports.friendlyDate = friendlyDate;
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+// yyyy-MM-dd hh:mm:ss.SSS 所有支持的类型
+function pad(str) {
+  var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  str += '';
+  while (str.length < length) {
+    str = '0' + str;
   }
-  var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-  if (i == 0) {
-    return bytes + ' ' + sizes[i];
-  }
-  return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+  return str.slice(-length);
 }
-function initUtil(Vue) {
-  Vue.prototype.$formatDate = _dateFormat.formatDate;
-  Vue.prototype.$formatBytes = formatBytes;
+var parser = {
+  yyyy: function yyyy(dateObj) {
+    return pad(dateObj.year, 4);
+  },
+  yy: function yy(dateObj) {
+    return pad(dateObj.year);
+  },
+  MM: function MM(dateObj) {
+    return pad(dateObj.month);
+  },
+  M: function M(dateObj) {
+    return dateObj.month;
+  },
+  dd: function dd(dateObj) {
+    return pad(dateObj.day);
+  },
+  d: function d(dateObj) {
+    return dateObj.day;
+  },
+  hh: function hh(dateObj) {
+    return pad(dateObj.hour);
+  },
+  h: function h(dateObj) {
+    return dateObj.hour;
+  },
+  mm: function mm(dateObj) {
+    return pad(dateObj.minute);
+  },
+  m: function m(dateObj) {
+    return dateObj.minute;
+  },
+  ss: function ss(dateObj) {
+    return pad(dateObj.second);
+  },
+  s: function s(dateObj) {
+    return dateObj.second;
+  },
+  SSS: function SSS(dateObj) {
+    return pad(dateObj.millisecond, 3);
+  },
+  S: function S(dateObj) {
+    return dateObj.millisecond;
+  }
+};
+
+// 这都n年了iOS依然不认识2020-12-12，需要转换为2020/12/12
+function getDate(time) {
+  if (time instanceof Date) {
+    return time;
+  }
+  switch ((0, _typeof2.default)(time)) {
+    case 'string':
+      {
+        // 2020-12-12T12:12:12.000Z、2020-12-12T12:12:12.000
+        if (time.indexOf('T') > -1) {
+          return new Date(time);
+        }
+        return new Date(time.replace(/-/g, '/'));
+      }
+    default:
+      return new Date(time);
+  }
+}
+function formatDate(date) {
+  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy/MM/dd hh:mm:ss';
+  if (!date && date !== 0) {
+    return '';
+  }
+  date = getDate(date);
+  var dateObj = {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
+    millisecond: date.getMilliseconds()
+  };
+  var tokenRegExp = /yyyy|yy|MM|M|dd|d|hh|h|mm|m|ss|s|SSS|SS|S/;
+  var flag = true;
+  var result = format;
+  while (flag) {
+    flag = false;
+    result = result.replace(tokenRegExp, function (matched) {
+      flag = true;
+      return parser[matched](dateObj);
+    });
+  }
+  return result;
+}
+function friendlyDate(time, _ref) {
+  var _ref$locale = _ref.locale,
+    locale = _ref$locale === void 0 ? 'zh' : _ref$locale,
+    _ref$threshold = _ref.threshold,
+    threshold = _ref$threshold === void 0 ? [60000, 3600000] : _ref$threshold,
+    _ref$format = _ref.format,
+    format = _ref$format === void 0 ? 'yyyy/MM/dd hh:mm:ss' : _ref$format;
+  if (time === '-') {
+    return time;
+  }
+  if (!time && time !== 0) {
+    return '';
+  }
+  var localeText = {
+    zh: {
+      year: '年',
+      month: '月',
+      day: '天',
+      hour: '小时',
+      minute: '分钟',
+      second: '秒',
+      ago: '前',
+      later: '后',
+      justNow: '刚刚',
+      soon: '马上',
+      template: '{num}{unit}{suffix}'
+    },
+    en: {
+      year: 'year',
+      month: 'month',
+      day: 'day',
+      hour: 'hour',
+      minute: 'minute',
+      second: 'second',
+      ago: 'ago',
+      later: 'later',
+      justNow: 'just now',
+      soon: 'soon',
+      template: '{num} {unit} {suffix}'
+    }
+  };
+  var text = localeText[locale] || localeText.zh;
+  var date = getDate(time);
+  var ms = date.getTime() - Date.now();
+  var absMs = Math.abs(ms);
+  if (absMs < threshold[0]) {
+    return ms < 0 ? text.justNow : text.soon;
+  }
+  if (absMs >= threshold[1]) {
+    return formatDate(date, format);
+  }
+  var num;
+  var unit;
+  var suffix = text.later;
+  if (ms < 0) {
+    suffix = text.ago;
+    ms = -ms;
+  }
+  var seconds = Math.floor(ms / 1000);
+  var minutes = Math.floor(seconds / 60);
+  var hours = Math.floor(minutes / 60);
+  var days = Math.floor(hours / 24);
+  var months = Math.floor(days / 30);
+  var years = Math.floor(months / 12);
+  switch (true) {
+    case years > 0:
+      num = years;
+      unit = text.year;
+      break;
+    case months > 0:
+      num = months;
+      unit = text.month;
+      break;
+    case days > 0:
+      num = days;
+      unit = text.day;
+      break;
+    case hours > 0:
+      num = hours;
+      unit = text.hour;
+      break;
+    case minutes > 0:
+      num = minutes;
+      unit = text.minute;
+      break;
+    default:
+      num = seconds;
+      unit = text.second;
+      break;
+  }
+  if (locale === 'en') {
+    if (num === 1) {
+      num = 'a';
+    } else {
+      unit += 's';
+    }
+  }
+  return text.template.replace(/{\s*num\s*}/g, num + '').replace(/{\s*unit\s*}/g, unit).replace(/{\s*suffix\s*}/g, suffix);
 }
 
 /***/ }),
 
-/***/ 576:
+/***/ 584:
 /*!*************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/error/app/fieldsMap.js ***!
   \*************************************************************************************/
@@ -34683,7 +34927,7 @@ exports.fieldsMap = fieldsMap;
 
 /***/ }),
 
-/***/ 577:
+/***/ 585:
 /*!*******************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-stat-app-crash-logs.js ***!
   \*******************************************************************************************/
@@ -34923,10 +35167,10 @@ function filterToWhere(filter, command) {
 
 /***/ }),
 
-/***/ 58:
-/*!*******************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js ***!
-  \*******************************************************************************************************************/
+/***/ 59:
+/*!*************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/error.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34937,211 +35181,30 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.formatDate = formatDate;
-exports.friendlyDate = friendlyDate;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-// yyyy-MM-dd hh:mm:ss.SSS 所有支持的类型
-function pad(str) {
-  var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-  str += '';
-  while (str.length < length) {
-    str = '0' + str;
+exports.initError = initError;
+var _store = _interopRequireDefault(__webpack_require__(/*! @/store */ 50));
+var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
+function initError(Vue) {
+  var debugOptions = _adminConfig.default.navBar.debug;
+  if (debugOptions && debugOptions.enable === true) {
+    var oldErrorHandler = Vue.config.errorHandler;
+    Vue.config.errorHandler = function errorHandler(err, vm, info) {
+      console.error(err);
+      var route = vm.$page && vm.$page.route;
+      _store.default.dispatch('error/add', {
+        err: err.toString(),
+        info: info,
+        route: route,
+        time: new Date().toLocaleTimeString()
+      });
+      return oldErrorHandler(err, vm, info);
+    };
   }
-  return str.slice(-length);
-}
-var parser = {
-  yyyy: function yyyy(dateObj) {
-    return pad(dateObj.year, 4);
-  },
-  yy: function yy(dateObj) {
-    return pad(dateObj.year);
-  },
-  MM: function MM(dateObj) {
-    return pad(dateObj.month);
-  },
-  M: function M(dateObj) {
-    return dateObj.month;
-  },
-  dd: function dd(dateObj) {
-    return pad(dateObj.day);
-  },
-  d: function d(dateObj) {
-    return dateObj.day;
-  },
-  hh: function hh(dateObj) {
-    return pad(dateObj.hour);
-  },
-  h: function h(dateObj) {
-    return dateObj.hour;
-  },
-  mm: function mm(dateObj) {
-    return pad(dateObj.minute);
-  },
-  m: function m(dateObj) {
-    return dateObj.minute;
-  },
-  ss: function ss(dateObj) {
-    return pad(dateObj.second);
-  },
-  s: function s(dateObj) {
-    return dateObj.second;
-  },
-  SSS: function SSS(dateObj) {
-    return pad(dateObj.millisecond, 3);
-  },
-  S: function S(dateObj) {
-    return dateObj.millisecond;
-  }
-};
-
-// 这都n年了iOS依然不认识2020-12-12，需要转换为2020/12/12
-function getDate(time) {
-  if (time instanceof Date) {
-    return time;
-  }
-  switch ((0, _typeof2.default)(time)) {
-    case 'string':
-      {
-        // 2020-12-12T12:12:12.000Z、2020-12-12T12:12:12.000
-        if (time.indexOf('T') > -1) {
-          return new Date(time);
-        }
-        return new Date(time.replace(/-/g, '/'));
-      }
-    default:
-      return new Date(time);
-  }
-}
-function formatDate(date) {
-  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy/MM/dd hh:mm:ss';
-  if (!date && date !== 0) {
-    return '';
-  }
-  date = getDate(date);
-  var dateObj = {
-    year: date.getFullYear(),
-    month: date.getMonth() + 1,
-    day: date.getDate(),
-    hour: date.getHours(),
-    minute: date.getMinutes(),
-    second: date.getSeconds(),
-    millisecond: date.getMilliseconds()
-  };
-  var tokenRegExp = /yyyy|yy|MM|M|dd|d|hh|h|mm|m|ss|s|SSS|SS|S/;
-  var flag = true;
-  var result = format;
-  while (flag) {
-    flag = false;
-    result = result.replace(tokenRegExp, function (matched) {
-      flag = true;
-      return parser[matched](dateObj);
-    });
-  }
-  return result;
-}
-function friendlyDate(time, _ref) {
-  var _ref$locale = _ref.locale,
-    locale = _ref$locale === void 0 ? 'zh' : _ref$locale,
-    _ref$threshold = _ref.threshold,
-    threshold = _ref$threshold === void 0 ? [60000, 3600000] : _ref$threshold,
-    _ref$format = _ref.format,
-    format = _ref$format === void 0 ? 'yyyy/MM/dd hh:mm:ss' : _ref$format;
-  if (time === '-') {
-    return time;
-  }
-  if (!time && time !== 0) {
-    return '';
-  }
-  var localeText = {
-    zh: {
-      year: '年',
-      month: '月',
-      day: '天',
-      hour: '小时',
-      minute: '分钟',
-      second: '秒',
-      ago: '前',
-      later: '后',
-      justNow: '刚刚',
-      soon: '马上',
-      template: '{num}{unit}{suffix}'
-    },
-    en: {
-      year: 'year',
-      month: 'month',
-      day: 'day',
-      hour: 'hour',
-      minute: 'minute',
-      second: 'second',
-      ago: 'ago',
-      later: 'later',
-      justNow: 'just now',
-      soon: 'soon',
-      template: '{num} {unit} {suffix}'
-    }
-  };
-  var text = localeText[locale] || localeText.zh;
-  var date = getDate(time);
-  var ms = date.getTime() - Date.now();
-  var absMs = Math.abs(ms);
-  if (absMs < threshold[0]) {
-    return ms < 0 ? text.justNow : text.soon;
-  }
-  if (absMs >= threshold[1]) {
-    return formatDate(date, format);
-  }
-  var num;
-  var unit;
-  var suffix = text.later;
-  if (ms < 0) {
-    suffix = text.ago;
-    ms = -ms;
-  }
-  var seconds = Math.floor(ms / 1000);
-  var minutes = Math.floor(seconds / 60);
-  var hours = Math.floor(minutes / 60);
-  var days = Math.floor(hours / 24);
-  var months = Math.floor(days / 30);
-  var years = Math.floor(months / 12);
-  switch (true) {
-    case years > 0:
-      num = years;
-      unit = text.year;
-      break;
-    case months > 0:
-      num = months;
-      unit = text.month;
-      break;
-    case days > 0:
-      num = days;
-      unit = text.day;
-      break;
-    case hours > 0:
-      num = hours;
-      unit = text.hour;
-      break;
-    case minutes > 0:
-      num = minutes;
-      unit = text.minute;
-      break;
-    default:
-      num = seconds;
-      unit = text.second;
-      break;
-  }
-  if (locale === 'en') {
-    if (num === 1) {
-      num = 'a';
-    } else {
-      unit += 's';
-    }
-  }
-  return text.template.replace(/{\s*num\s*}/g, num + '').replace(/{\s*unit\s*}/g, unit).replace(/{\s*suffix\s*}/g, suffix);
 }
 
 /***/ }),
 
-/***/ 586:
+/***/ 594:
 /*!*********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/event/fieldsMap.js ***!
   \*********************************************************************************/
@@ -35201,44 +35264,96 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 59:
-/*!*************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/error.js ***!
-  \*************************************************************************/
+/***/ 6:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 60:
+/*!***************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/request.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initError = initError;
-var _store = _interopRequireDefault(__webpack_require__(/*! @/store */ 50));
+exports.initRequest = initRequest;
+exports.request = request;
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ 61));
+var _index = _interopRequireDefault(__webpack_require__(/*! @/store/index.js */ 50));
 var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
-function initError(Vue) {
-  var debugOptions = _adminConfig.default.navBar.debug;
-  if (debugOptions && debugOptions.enable === true) {
-    var oldErrorHandler = Vue.config.errorHandler;
-    Vue.config.errorHandler = function errorHandler(err, vm, info) {
-      console.error(err);
-      var route = vm.$page && vm.$page.route;
-      _store.default.dispatch('error/add', {
-        err: err.toString(),
-        info: info,
-        route: route,
-        time: new Date().toLocaleTimeString()
-      });
-      return oldErrorHandler(err, vm, info);
-    };
+var _excluded = ["objectName", "functionName", "showModal"];
+var debugOptions = _adminConfig.default.navBar.debug;
+var db = uniCloud.database();
+function request(action, params, options) {
+  var _Object$assign = Object.assign({
+      objectName: 'uni-id-co',
+      functionName: '',
+      showModal: false,
+      customUI: true,
+      loadingOptions: {
+        title: 'xxx'
+      }
+    }, options),
+    objectName = _Object$assign.objectName,
+    functionName = _Object$assign.functionName,
+    showModal = _Object$assign.showModal,
+    objectOptions = (0, _objectWithoutProperties2.default)(_Object$assign, _excluded);
+
+  // 兼容 云函数 与 云对象 请求，默认为云对象
+  var call;
+  if (functionName) {
+    call = uniCloud.callFunction({
+      name: functionName,
+      data: {
+        action: action,
+        params: params
+      }
+    });
+  } else {
+    var uniCloudObject = uniCloud.importObject(objectName, objectOptions);
+    call = uniCloudObject[action](params);
   }
+  return call.then(function (result) {
+    result = functionName ? result.result : result;
+    if (!result) {
+      return Promise.resolve(result);
+    }
+    if (result.errCode) {
+      return Promise.reject(result);
+    }
+    return Promise.resolve(result);
+  }).catch(function (err) {
+    showModal && uni.showModal({
+      content: err.errMsg || '请求服务失败',
+      showCancel: false
+    });
+    return Promise.reject(err);
+  });
 }
+function initRequest(Vue) {
+  Vue.prototype.$request = request;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 595:
+/***/ 603:
 /*!*******************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/overview/fieldsMap.js ***!
   \*******************************************************************************************/
@@ -35373,96 +35488,34 @@ exports.entFieldsMap = entFieldsMap;
 
 /***/ }),
 
-/***/ 6:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 60:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/request.js ***!
-  \***************************************************************************/
+/***/ 61:
+/*!************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initRequest = initRequest;
-exports.request = request;
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ 61));
-var _index = _interopRequireDefault(__webpack_require__(/*! @/store/index.js */ 50));
-var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
-var _excluded = ["objectName", "functionName", "showModal"];
-var debugOptions = _adminConfig.default.navBar.debug;
-var db = uniCloud.database();
-function request(action, params, options) {
-  var _Object$assign = Object.assign({
-      objectName: 'uni-id-co',
-      functionName: '',
-      showModal: false,
-      customUI: true,
-      loadingOptions: {
-        title: 'xxx'
-      }
-    }, options),
-    objectName = _Object$assign.objectName,
-    functionName = _Object$assign.functionName,
-    showModal = _Object$assign.showModal,
-    objectOptions = (0, _objectWithoutProperties2.default)(_Object$assign, _excluded);
-
-  // 兼容 云函数 与 云对象 请求，默认为云对象
-  var call;
-  if (functionName) {
-    call = uniCloud.callFunction({
-      name: functionName,
-      data: {
-        action: action,
-        params: params
-      }
-    });
-  } else {
-    var uniCloudObject = uniCloud.importObject(objectName, objectOptions);
-    call = uniCloudObject[action](params);
+var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ 62);
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
   }
-  return call.then(function (result) {
-    result = functionName ? result.result : result;
-    if (!result) {
-      return Promise.resolve(result);
-    }
-    if (result.errCode) {
-      return Promise.reject(result);
-    }
-    return Promise.resolve(result);
-  }).catch(function (err) {
-    showModal && uni.showModal({
-      content: err.errMsg || '请求服务失败',
-      showCancel: false
-    });
-    return Promise.reject(err);
-  });
+  return target;
 }
-function initRequest(Vue) {
-  Vue.prototype.$request = request;
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+module.exports = _objectWithoutProperties, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
-/***/ 604:
+/***/ 612:
 /*!*******************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/activity/fieldsMap.js ***!
   \*******************************************************************************************/
@@ -35526,34 +35579,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 61:
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ 62);
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-  return target;
-}
-module.exports = _objectWithoutProperties, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 611:
+/***/ 619:
 /*!****************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/trend/fieldsMap.js ***!
   \****************************************************************************************/
@@ -35651,7 +35677,30 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 618:
+/***/ 62:
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 626:
 /*!********************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/retention/fieldsMap.js ***!
   \********************************************************************************************/
@@ -35723,29 +35772,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 62:
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-  return target;
-}
-module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
 /***/ 63:
 /*!*****************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/fetchMock.js ***!
@@ -35777,7 +35803,35 @@ function initFetch(Vue) {
 
 /***/ }),
 
-/***/ 635:
+/***/ 64:
+/*!******************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/permission.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initPermission = initPermission;
+function initPermission(Vue) {
+  Vue.prototype.$hasPermission = function hasPermission(name) {
+    var permission = this.$uniIdPagesStore.store.userInfo.permission || [];
+    var role = this.$uniIdPagesStore.store.userInfo.role || [];
+    return role.indexOf('admin') > -1 || permission.indexOf(name) > -1;
+  };
+  Vue.prototype.$hasRole = function hasRole(name) {
+    var role = this.$uniIdPagesStore.store.userInfo.role || [];
+    return role.indexOf(name) > -1;
+  };
+}
+
+/***/ }),
+
+/***/ 643:
 /*!*********************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/stickiness/fieldsMap.js ***!
   \*********************************************************************************************/
@@ -35842,35 +35896,47 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 64:
-/*!******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/permission.js ***!
-  \******************************************************************************/
+/***/ 65:
+/*!*******************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/interceptor.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initPermission = initPermission;
-function initPermission(Vue) {
-  Vue.prototype.$hasPermission = function hasPermission(name) {
-    var permission = this.$uniIdPagesStore.store.userInfo.permission || [];
-    var role = this.$uniIdPagesStore.store.userInfo.role || [];
-    return role.indexOf('admin') > -1 || permission.indexOf(name) > -1;
-  };
-  Vue.prototype.$hasRole = function hasRole(name) {
-    var role = this.$uniIdPagesStore.store.userInfo.role || [];
-    return role.indexOf(name) > -1;
-  };
+exports.initInterceptor = initInterceptor;
+var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
+function initInterceptor() {
+  var isNavigatingToError = false;
+  uni.addInterceptor('navigateTo', {
+    invoke: function invoke(_ref) {
+      var url = _ref.url;
+      isNavigatingToError = url && url.startsWith(_adminConfig.default.error.url) ? true : false;
+    },
+    fail: function fail(_ref2) {
+      var errMsg = _ref2.errMsg;
+      if (errMsg.indexOf('is not found') !== -1) {
+        // 避免错误页面本身不存在时产生死循环
+        if (!isNavigatingToError) {
+          uni.navigateTo({
+            url: _adminConfig.default.error.url + '?errMsg=' + errMsg
+          });
+        }
+      }
+    }
+  });
 }
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 644:
+/***/ 652:
 /*!*****************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/overview/fieldsMap.js ***!
   \*****************************************************************************************/
@@ -35985,47 +36051,31 @@ exports.entFieldsMap = entFieldsMap;
 
 /***/ }),
 
-/***/ 65:
-/*!*******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/interceptor.js ***!
-  \*******************************************************************************/
+/***/ 66:
+/*!****************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-id-pages/store.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initInterceptor = initInterceptor;
-var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
-function initInterceptor() {
-  var isNavigatingToError = false;
-  uni.addInterceptor('navigateTo', {
-    invoke: function invoke(_ref) {
-      var url = _ref.url;
-      isNavigatingToError = url && url.startsWith(_adminConfig.default.error.url) ? true : false;
-    },
-    fail: function fail(_ref2) {
-      var errMsg = _ref2.errMsg;
-      if (errMsg.indexOf('is not found') !== -1) {
-        // 避免错误页面本身不存在时产生死循环
-        if (!isNavigatingToError) {
-          uni.navigateTo({
-            url: _adminConfig.default.error.url + '?errMsg=' + errMsg
-          });
-        }
-      }
-    }
-  });
+exports.initUniIdPageStore = initUniIdPageStore;
+var uniIdPagesStore = _interopRequireWildcard(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/store */ 54));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function initUniIdPageStore(Vue) {
+  Vue.prototype.$uniIdPagesStore = uniIdPagesStore;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 653:
+/***/ 661:
 /*!*****************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/activity/fieldsMap.js ***!
   \*****************************************************************************************/
@@ -36093,31 +36143,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 66:
-/*!****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-id-pages/store.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initUniIdPageStore = initUniIdPageStore;
-var uniIdPagesStore = _interopRequireWildcard(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/store */ 54));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function initUniIdPageStore(Vue) {
-  Vue.prototype.$uniIdPagesStore = uniIdPagesStore;
-}
-
-/***/ }),
-
-/***/ 660:
+/***/ 668:
 /*!**************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/trend/fieldsMap.js ***!
   \**************************************************************************************/
@@ -36191,7 +36217,34 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 667:
+/***/ 67:
+/*!*************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/index.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 68));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 69));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 70));
+var _default = {
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 675:
 /*!******************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/retention/fieldsMap.js ***!
   \******************************************************************************************/
@@ -36262,33 +36315,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 67:
-/*!*************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/index.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 68));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 69));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 70));
-var _default = {
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
-};
-exports.default = _default;
-
-/***/ }),
-
 /***/ 68:
 /*!************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/en.json ***!
@@ -36300,7 +36326,18 @@ module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"System Login\",\"
 
 /***/ }),
 
-/***/ 684:
+/***/ 69:
+/*!*****************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hans.json ***!
+  \*****************************************************************/
+/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系统登录\",\"prompt\":\"如无管理员账号，请先创建管理员\"},\"field\":{\"username\":\"账号\",\"password\":\"密码\",\"captcha\":\"验证码\"},\"button\":{\"login\":\"登录\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文档\",\"plugin\":\"浏览更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密码\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"内容主体，可自定义内容及样式\",\"vesion\":\"可在控制台和 package.json 中查看当前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密码\"},\"field\":{\"oldPassword\":\"旧密码\",\"newPassword\":\"新密码\",\"passwordConfirmation\":\"确认新密码\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"请输入搜索内容\"},\"button\":{\"search\":\"搜索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"删除\",\"batchDelete\":\"批量删除\",\"exportExcel\":\"导出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"标签管理\",\"publish\":\"发布页管理\",\"version\":\"版本管理\",\"sendSMS\":\"群发短信\"},\"empty\":\"没有更多数据\",\"piecePerPage\":\"条/页\"},\"user\":{\"text\":{\"userManager\":\"用户管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"权限管理\"}},\"app\":{\"text\":{\"appManager\":\"应用管理\",\"describle\":\"管理用户可登录的应用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜单列表\",\"additiveMenu\":\"待添加菜单\"},\"button\":{\"addFirstLevelMenu\":\"新增一级菜单\",\"addChildMenu\":\"子菜单\",\"updateBuiltInMenu\":\"更新内置菜单\"}},\"demo\":{\"icons\":{\"title\":\"图标\",\"describle\":\"点击图标即可复制图标代码\"},\"table\":{\"title\":\"表格\"}}}");
+
+/***/ }),
+
+/***/ 692:
 /*!*******************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/stickiness/fieldsMap.js ***!
   \*******************************************************************************************/
@@ -36365,18 +36402,58 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 69:
+/***/ 7:
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _iterableToArrayLimit(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = !0,
+      o = !1;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0) {
+        ;
+      }
+    } catch (r) {
+      o = !0, n = r;
+    } finally {
+      try {
+        if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 70:
 /*!*****************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hans.json ***!
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hant.json ***!
   \*****************************************************************/
 /*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系统登录\",\"prompt\":\"如无管理员账号，请先创建管理员\"},\"field\":{\"username\":\"账号\",\"password\":\"密码\",\"captcha\":\"验证码\"},\"button\":{\"login\":\"登录\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文档\",\"plugin\":\"浏览更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密码\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"内容主体，可自定义内容及样式\",\"vesion\":\"可在控制台和 package.json 中查看当前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密码\"},\"field\":{\"oldPassword\":\"旧密码\",\"newPassword\":\"新密码\",\"passwordConfirmation\":\"确认新密码\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"请输入搜索内容\"},\"button\":{\"search\":\"搜索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"删除\",\"batchDelete\":\"批量删除\",\"exportExcel\":\"导出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"标签管理\",\"publish\":\"发布页管理\",\"version\":\"版本管理\",\"sendSMS\":\"群发短信\"},\"empty\":\"没有更多数据\",\"piecePerPage\":\"条/页\"},\"user\":{\"text\":{\"userManager\":\"用户管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"权限管理\"}},\"app\":{\"text\":{\"appManager\":\"应用管理\",\"describle\":\"管理用户可登录的应用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜单列表\",\"additiveMenu\":\"待添加菜单\"},\"button\":{\"addFirstLevelMenu\":\"新增一级菜单\",\"addChildMenu\":\"子菜单\",\"updateBuiltInMenu\":\"更新内置菜单\"}},\"demo\":{\"icons\":{\"title\":\"图标\",\"describle\":\"点击图标即可复制图标代码\"},\"table\":{\"title\":\"表格\"}}}");
+module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系統登錄\",\"prompt\":\"如無管理員賬號，請先創建管理員...\"},\"field\":{\"username\":\"賬號\",\"password\":\"密碼\",\"captcha\":\"驗證碼\"},\"button\":{\"login\":\"登錄\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文檔\",\"plugin\":\"瀏覽更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密碼\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"內容主體，可自定義內容及樣式\",\"vesion\":\"可在控制台和 package.json 中查看當前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密碼\"},\"field\":{\"oldPassword\":\"舊密碼\",\"newPassword\":\"新密碼\",\"passwordConfirmation\":\"確認新密碼\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"請輸入搜索內容\"},\"button\":{\"search\":\"檢索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"刪除\",\"batchDelete\":\"批量刪除\",\"exportExcel\":\"導出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"標簽管理\",\"publish\":\"發布頁管理\",\"version\":\"版本管理\",\"sendSMS\":\"群發短信\"},\"empty\":\"沒有更多數據\",\"piecePerPage\":\"條/頁\"},\"user\":{\"text\":{\"userManager\":\"用戶管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"權限管理\"}},\"app\":{\"text\":{\"appManager\":\"應用管理\",\"describle\":\"管理用戶可登錄的應用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜單列表\",\"additiveMenu\":\"待添加菜單\"},\"button\":{\"addFirstLevelMenu\":\"新增一級菜單\",\"addChildMenu\":\"子菜單\",\"updateBuiltInMenu\":\"更新內寘選單\"}},\"demo\":{\"icons\":{\"title\":\"圖標\",\"describle\":\"點擊圖標即可複製圖標代碼\"},\"table\":{\"title\":\"表格\"}}}");
 
 /***/ }),
 
-/***/ 699:
+/***/ 707:
 /*!**********************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-pay-orders.js ***!
   \**********************************************************************************/
@@ -36657,275 +36734,6 @@ function filterToWhere(filter, command) {
   }
   return where;
 }
-
-/***/ }),
-
-/***/ 7:
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = !0,
-      o = !1;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) {
-        if (Object(t) !== t) return;
-        f = !1;
-      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0) {
-        ;
-      }
-    } catch (r) {
-      o = !0, n = r;
-    } finally {
-      try {
-        if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
-module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 70:
-/*!*****************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hant.json ***!
-  \*****************************************************************/
-/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系統登錄\",\"prompt\":\"如無管理員賬號，請先創建管理員...\"},\"field\":{\"username\":\"賬號\",\"password\":\"密碼\",\"captcha\":\"驗證碼\"},\"button\":{\"login\":\"登錄\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文檔\",\"plugin\":\"瀏覽更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密碼\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"內容主體，可自定義內容及樣式\",\"vesion\":\"可在控制台和 package.json 中查看當前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密碼\"},\"field\":{\"oldPassword\":\"舊密碼\",\"newPassword\":\"新密碼\",\"passwordConfirmation\":\"確認新密碼\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"請輸入搜索內容\"},\"button\":{\"search\":\"檢索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"刪除\",\"batchDelete\":\"批量刪除\",\"exportExcel\":\"導出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"標簽管理\",\"publish\":\"發布頁管理\",\"version\":\"版本管理\",\"sendSMS\":\"群發短信\"},\"empty\":\"沒有更多數據\",\"piecePerPage\":\"條/頁\"},\"user\":{\"text\":{\"userManager\":\"用戶管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"權限管理\"}},\"app\":{\"text\":{\"appManager\":\"應用管理\",\"describle\":\"管理用戶可登錄的應用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜單列表\",\"additiveMenu\":\"待添加菜單\"},\"button\":{\"addFirstLevelMenu\":\"新增一級菜單\",\"addChildMenu\":\"子菜單\",\"updateBuiltInMenu\":\"更新內寘選單\"}},\"demo\":{\"icons\":{\"title\":\"圖標\",\"describle\":\"點擊圖標即可複製圖標代碼\"},\"table\":{\"title\":\"表格\"}}}");
-
-/***/ }),
-
-/***/ 708:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-stat/timeUtil.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-/**
- * 时间工具类
- */
-var timeUtil = {};
-
-// 尽可能的将参数转成正确的时间对象
-timeUtil.getDateObject = function (date) {
-  if (!date) return "";
-  var nowDate;
-  // 如果是字符串，且纯数字，则强制转数值
-  if (typeof date === "string" && !isNaN(date)) date = Number(date);
-  if (typeof date === "number") {
-    if (date.toString().length === 10) date *= 1000;
-    nowDate = new Date(date); // 转时间对象
-  } else if ((0, _typeof2.default)(date) === "object") {
-    nowDate = new Date(date.getTime()); // 新建一个时间对象
-  }
-
-  return nowDate;
-};
-
-/**
- * 日期格式化
- * @param {Date || Number} date 需要格式化的时间
- * timeUtil.timeFormat(new Date(),"yyyy-MM-dd hh:mm:ss");
- */
-timeUtil.timeFormat = function (date) {
-  var fmt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-MM-dd hh:mm:ss';
-  try {
-    if (!date) return "";
-    var nowDate = timeUtil.getDateObject(date);
-    var opt = {
-      "M+": nowDate.getMonth() + 1,
-      //月份
-      "d+": nowDate.getDate(),
-      //日
-      "h+": nowDate.getHours(),
-      //小时
-      "m+": nowDate.getMinutes(),
-      //分
-      "s+": nowDate.getSeconds(),
-      //秒
-      //"w+": nowDate.getDay(), //周
-      "q+": Math.floor((nowDate.getMonth() + 3) / 3),
-      //季度
-      "S": nowDate.getMilliseconds() //毫秒
-    };
-
-    if (/(y+)/.test(fmt)) {
-      fmt = fmt.replace(RegExp.$1, (nowDate.getFullYear() + "").substr(4 - RegExp.$1.length));
-    }
-    for (var k in opt) {
-      if (new RegExp("(" + k + ")").test(fmt)) {
-        fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ? opt[k] : ("00" + opt[k]).substr(("" + opt[k]).length));
-      }
-    }
-    return fmt;
-  } catch (err) {
-    // 若格式错误,则原值显示
-    return time;
-  }
-};
-
-/**
- * 解析日期对象属性
- * @param {Date || Number} date 需要转换的时间
- * timeUtil.getDateInfo(new Date());
- */
-timeUtil.getDateInfo = function () {
-  var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Date();
-  var nowDate = timeUtil.getDateObject(date);
-  var year = nowDate.getFullYear() + '';
-  var month = nowDate.getMonth() + 1 < 10 ? '0' + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
-  var day = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
-  var hour = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
-  var minute = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
-  var second = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
-  var millisecond = nowDate.getMilliseconds(); //毫秒
-  var week = nowDate.getDay(); // 周
-  var quarter = Math.floor((nowDate.getMonth() + 3) / 3); //季度
-  return {
-    year: Number(year),
-    month: Number(month),
-    day: Number(day),
-    hour: Number(hour),
-    minute: Number(minute),
-    second: Number(second),
-    millisecond: Number(millisecond),
-    week: Number(week),
-    quarter: Number(quarter)
-  };
-};
-
-/**
- * 获得相对当前时间的偏移 count 小时、天、周、月、季度、年的起止日期（开始和结束时间戳）
- * @param {Number} count 偏移量
- * @param {Date || Number} date 指定从哪个时间节点开始计算
- * timeUtil.getOffsetStartAndEnd("hour", 0);
- * timeUtil.getOffsetStartAndEnd("day", 0);
- * timeUtil.getOffsetStartAndEnd("week", 0);
- * timeUtil.getOffsetStartAndEnd("month", 0);
- * timeUtil.getOffsetStartAndEnd("quarter", 0);
- * timeUtil.getOffsetStartAndEnd("year", 0);
- */
-timeUtil.getOffsetStartAndEnd = function () {
-  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "day";
-  var count = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Date();
-  var startTime, endTime;
-  var nowDate = timeUtil.getDateObject(date);
-  if (type === "hour") {
-    // 小时
-    // 一小时毫秒数
-    var offsetMillisecond = 1000 * 60 * 60;
-    // 相对于当前日期count个天的日期
-    var dateInfo = timeUtil.getDateInfo(new Date(nowDate.getTime() + offsetMillisecond * 1 * count));
-    // 获得当天的起始时间
-    startTime = new Date("".concat(dateInfo.year, "/").concat(dateInfo.month, "/").concat(dateInfo.day, " ").concat(dateInfo.hour, ":00:00")).getTime();
-    // 获得当天的结束时间
-    endTime = new Date("".concat(dateInfo.year, "/").concat(dateInfo.month, "/").concat(dateInfo.day, " ").concat(dateInfo.hour, ":00:00")).getTime() + (offsetMillisecond - 1);
-  } else if (type === "day") {
-    // 天
-    // 一天的毫秒数
-    var _offsetMillisecond = 1000 * 60 * 60 * 24;
-    // 相对于当前日期count个天的日期
-    var _dateInfo = timeUtil.getDateInfo(new Date(nowDate.getTime() + _offsetMillisecond * 1 * count));
-    // 获得当天的起始时间
-    startTime = new Date("".concat(_dateInfo.year, "/").concat(_dateInfo.month, "/").concat(_dateInfo.day)).getTime();
-    // 获得当天的结束时间
-    endTime = new Date("".concat(_dateInfo.year, "/").concat(_dateInfo.month, "/").concat(_dateInfo.day)).getTime() + (_offsetMillisecond - 1);
-  } else if (type === "week") {
-    // 周
-    nowDate.setDate(nowDate.getDate() - nowDate.getDay() + 1 + count * 7);
-    var dateInfo1 = timeUtil.getDateInfo(nowDate);
-    nowDate.setDate(nowDate.getDate() + 7);
-    var dateInfo2 = timeUtil.getDateInfo(nowDate);
-    // 开始时间
-    startTime = new Date("".concat(dateInfo1.year, "/").concat(dateInfo1.month, "/").concat(dateInfo1.day)).getTime();
-    // 结束时间
-    endTime = new Date("".concat(dateInfo2.year, "/").concat(dateInfo2.month, "/").concat(dateInfo2.day)).getTime() - 1;
-  } else if (type === "month") {
-    // 月
-    var _dateInfo2 = timeUtil.getDateInfo(nowDate);
-    var month = _dateInfo2.month + count;
-    var year = _dateInfo2.year;
-    if (month > 12) {
-      year = year + Math.floor(month / 12);
-      month = Math.abs(month) % 12;
-    } else if (month <= 0) {
-      year = year - 1 - Math.floor(Math.abs(month) / 12);
-      month = 12 - Math.abs(month) % 12;
-    }
-    var month_last_day = new Date(year, month, 0).getDate();
-    // 开始时间
-    startTime = new Date("".concat(year, "/").concat(month, "/1")).getTime();
-    // 结束时间
-    endTime = new Date("".concat(year, "/").concat(month, "/").concat(month_last_day)).getTime() + (24 * 60 * 60 * 1000 - 1);
-  } else if (type === "quarter") {
-    // 季度
-    nowDate.setMonth(nowDate.getMonth() + count * 3);
-    var _dateInfo3 = timeUtil.getDateInfo(nowDate);
-    var _month = _dateInfo3.month;
-    if ([1, 2, 3].indexOf(_month) > -1) {
-      // 第1季度
-      _month = 1;
-    } else if ([4, 5, 6].indexOf(_month) > -1) {
-      // 第2季度
-      _month = 4;
-    } else if ([7, 8, 9].indexOf(_month) > -1) {
-      // 第3季度
-      _month = 7;
-    } else if ([10, 11, 12].indexOf(_month) > -1) {
-      // 第4季度
-      _month = 10;
-    }
-    nowDate.setMonth(_month - 1); // 因为0代表1月，所以这里要减1
-    var _dateInfo4 = timeUtil.getDateInfo(nowDate);
-    nowDate.setMonth(nowDate.getMonth() + 3);
-    var _dateInfo5 = timeUtil.getDateInfo(nowDate);
-    // 开始时间
-    startTime = new Date("".concat(_dateInfo4.year, "/").concat(_dateInfo4.month, "/1")).getTime();
-    // 结束时间
-    endTime = new Date("".concat(_dateInfo5.year, "/").concat(_dateInfo5.month, "/1")).getTime() - 1;
-  } else if (type === "year") {
-    // 年
-    var _dateInfo6 = timeUtil.getDateInfo(nowDate);
-    var _year = _dateInfo6.year + count;
-    // 开始时间
-    startTime = new Date("".concat(_year, "/1/1")).getTime();
-    // 结束时间
-    endTime = new Date("".concat(_year, "/12/31")).getTime() + (24 * 60 * 60 * 1000 - 1);
-  }
-  return {
-    startTime: startTime,
-    endTime: endTime
-  };
-};
-var _default = timeUtil;
-exports.default = _default;
 
 /***/ }),
 
@@ -39246,10 +39054,10 @@ VueI18n.version = '8.28.2';
 
 /***/ }),
 
-/***/ 778:
-/*!******************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/index.js ***!
-  \******************************************************************************************************************/
+/***/ 716:
+/*!***************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-stat/timeUtil.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39261,30 +39069,206 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 779));
-var _es = _interopRequireDefault(__webpack_require__(/*! ./es.json */ 780));
-var _fr = _interopRequireDefault(__webpack_require__(/*! ./fr.json */ 781));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 782));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 783));
-var _default = {
-  en: _en.default,
-  es: _es.default,
-  fr: _fr.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
+/**
+ * 时间工具类
+ */
+var timeUtil = {};
+
+// 尽可能的将参数转成正确的时间对象
+timeUtil.getDateObject = function (date) {
+  if (!date) return "";
+  var nowDate;
+  // 如果是字符串，且纯数字，则强制转数值
+  if (typeof date === "string" && !isNaN(date)) date = Number(date);
+  if (typeof date === "number") {
+    if (date.toString().length === 10) date *= 1000;
+    nowDate = new Date(date); // 转时间对象
+  } else if ((0, _typeof2.default)(date) === "object") {
+    nowDate = new Date(date.getTime()); // 新建一个时间对象
+  }
+
+  return nowDate;
 };
+
+/**
+ * 日期格式化
+ * @param {Date || Number} date 需要格式化的时间
+ * timeUtil.timeFormat(new Date(),"yyyy-MM-dd hh:mm:ss");
+ */
+timeUtil.timeFormat = function (date) {
+  var fmt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-MM-dd hh:mm:ss';
+  try {
+    if (!date) return "";
+    var nowDate = timeUtil.getDateObject(date);
+    var opt = {
+      "M+": nowDate.getMonth() + 1,
+      //月份
+      "d+": nowDate.getDate(),
+      //日
+      "h+": nowDate.getHours(),
+      //小时
+      "m+": nowDate.getMinutes(),
+      //分
+      "s+": nowDate.getSeconds(),
+      //秒
+      //"w+": nowDate.getDay(), //周
+      "q+": Math.floor((nowDate.getMonth() + 3) / 3),
+      //季度
+      "S": nowDate.getMilliseconds() //毫秒
+    };
+
+    if (/(y+)/.test(fmt)) {
+      fmt = fmt.replace(RegExp.$1, (nowDate.getFullYear() + "").substr(4 - RegExp.$1.length));
+    }
+    for (var k in opt) {
+      if (new RegExp("(" + k + ")").test(fmt)) {
+        fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ? opt[k] : ("00" + opt[k]).substr(("" + opt[k]).length));
+      }
+    }
+    return fmt;
+  } catch (err) {
+    // 若格式错误,则原值显示
+    return time;
+  }
+};
+
+/**
+ * 解析日期对象属性
+ * @param {Date || Number} date 需要转换的时间
+ * timeUtil.getDateInfo(new Date());
+ */
+timeUtil.getDateInfo = function () {
+  var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Date();
+  var nowDate = timeUtil.getDateObject(date);
+  var year = nowDate.getFullYear() + '';
+  var month = nowDate.getMonth() + 1 < 10 ? '0' + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
+  var day = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
+  var hour = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
+  var minute = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
+  var second = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
+  var millisecond = nowDate.getMilliseconds(); //毫秒
+  var week = nowDate.getDay(); // 周
+  var quarter = Math.floor((nowDate.getMonth() + 3) / 3); //季度
+  return {
+    year: Number(year),
+    month: Number(month),
+    day: Number(day),
+    hour: Number(hour),
+    minute: Number(minute),
+    second: Number(second),
+    millisecond: Number(millisecond),
+    week: Number(week),
+    quarter: Number(quarter)
+  };
+};
+
+/**
+ * 获得相对当前时间的偏移 count 小时、天、周、月、季度、年的起止日期（开始和结束时间戳）
+ * @param {Number} count 偏移量
+ * @param {Date || Number} date 指定从哪个时间节点开始计算
+ * timeUtil.getOffsetStartAndEnd("hour", 0);
+ * timeUtil.getOffsetStartAndEnd("day", 0);
+ * timeUtil.getOffsetStartAndEnd("week", 0);
+ * timeUtil.getOffsetStartAndEnd("month", 0);
+ * timeUtil.getOffsetStartAndEnd("quarter", 0);
+ * timeUtil.getOffsetStartAndEnd("year", 0);
+ */
+timeUtil.getOffsetStartAndEnd = function () {
+  var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "day";
+  var count = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : new Date();
+  var startTime, endTime;
+  var nowDate = timeUtil.getDateObject(date);
+  if (type === "hour") {
+    // 小时
+    // 一小时毫秒数
+    var offsetMillisecond = 1000 * 60 * 60;
+    // 相对于当前日期count个天的日期
+    var dateInfo = timeUtil.getDateInfo(new Date(nowDate.getTime() + offsetMillisecond * 1 * count));
+    // 获得当天的起始时间
+    startTime = new Date("".concat(dateInfo.year, "/").concat(dateInfo.month, "/").concat(dateInfo.day, " ").concat(dateInfo.hour, ":00:00")).getTime();
+    // 获得当天的结束时间
+    endTime = new Date("".concat(dateInfo.year, "/").concat(dateInfo.month, "/").concat(dateInfo.day, " ").concat(dateInfo.hour, ":00:00")).getTime() + (offsetMillisecond - 1);
+  } else if (type === "day") {
+    // 天
+    // 一天的毫秒数
+    var _offsetMillisecond = 1000 * 60 * 60 * 24;
+    // 相对于当前日期count个天的日期
+    var _dateInfo = timeUtil.getDateInfo(new Date(nowDate.getTime() + _offsetMillisecond * 1 * count));
+    // 获得当天的起始时间
+    startTime = new Date("".concat(_dateInfo.year, "/").concat(_dateInfo.month, "/").concat(_dateInfo.day)).getTime();
+    // 获得当天的结束时间
+    endTime = new Date("".concat(_dateInfo.year, "/").concat(_dateInfo.month, "/").concat(_dateInfo.day)).getTime() + (_offsetMillisecond - 1);
+  } else if (type === "week") {
+    // 周
+    nowDate.setDate(nowDate.getDate() - nowDate.getDay() + 1 + count * 7);
+    var dateInfo1 = timeUtil.getDateInfo(nowDate);
+    nowDate.setDate(nowDate.getDate() + 7);
+    var dateInfo2 = timeUtil.getDateInfo(nowDate);
+    // 开始时间
+    startTime = new Date("".concat(dateInfo1.year, "/").concat(dateInfo1.month, "/").concat(dateInfo1.day)).getTime();
+    // 结束时间
+    endTime = new Date("".concat(dateInfo2.year, "/").concat(dateInfo2.month, "/").concat(dateInfo2.day)).getTime() - 1;
+  } else if (type === "month") {
+    // 月
+    var _dateInfo2 = timeUtil.getDateInfo(nowDate);
+    var month = _dateInfo2.month + count;
+    var year = _dateInfo2.year;
+    if (month > 12) {
+      year = year + Math.floor(month / 12);
+      month = Math.abs(month) % 12;
+    } else if (month <= 0) {
+      year = year - 1 - Math.floor(Math.abs(month) / 12);
+      month = 12 - Math.abs(month) % 12;
+    }
+    var month_last_day = new Date(year, month, 0).getDate();
+    // 开始时间
+    startTime = new Date("".concat(year, "/").concat(month, "/1")).getTime();
+    // 结束时间
+    endTime = new Date("".concat(year, "/").concat(month, "/").concat(month_last_day)).getTime() + (24 * 60 * 60 * 1000 - 1);
+  } else if (type === "quarter") {
+    // 季度
+    nowDate.setMonth(nowDate.getMonth() + count * 3);
+    var _dateInfo3 = timeUtil.getDateInfo(nowDate);
+    var _month = _dateInfo3.month;
+    if ([1, 2, 3].indexOf(_month) > -1) {
+      // 第1季度
+      _month = 1;
+    } else if ([4, 5, 6].indexOf(_month) > -1) {
+      // 第2季度
+      _month = 4;
+    } else if ([7, 8, 9].indexOf(_month) > -1) {
+      // 第3季度
+      _month = 7;
+    } else if ([10, 11, 12].indexOf(_month) > -1) {
+      // 第4季度
+      _month = 10;
+    }
+    nowDate.setMonth(_month - 1); // 因为0代表1月，所以这里要减1
+    var _dateInfo4 = timeUtil.getDateInfo(nowDate);
+    nowDate.setMonth(nowDate.getMonth() + 3);
+    var _dateInfo5 = timeUtil.getDateInfo(nowDate);
+    // 开始时间
+    startTime = new Date("".concat(_dateInfo4.year, "/").concat(_dateInfo4.month, "/1")).getTime();
+    // 结束时间
+    endTime = new Date("".concat(_dateInfo5.year, "/").concat(_dateInfo5.month, "/1")).getTime() - 1;
+  } else if (type === "year") {
+    // 年
+    var _dateInfo6 = timeUtil.getDateInfo(nowDate);
+    var _year = _dateInfo6.year + count;
+    // 开始时间
+    startTime = new Date("".concat(_year, "/1/1")).getTime();
+    // 结束时间
+    endTime = new Date("".concat(_year, "/12/31")).getTime() + (24 * 60 * 60 * 1000 - 1);
+  }
+  return {
+    startTime: startTime,
+    endTime: endTime
+  };
+};
+var _default = timeUtil;
 exports.default = _default;
-
-/***/ }),
-
-/***/ 779:
-/*!*****************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/en.json ***!
-  \*****************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"prev\",\"uni-pagination.nextText\":\"next\",\"uni-pagination.piecePerPage\":\"piece/page\"}");
 
 /***/ }),
 
@@ -39834,7 +39818,49 @@ function createUniStatQuery(object) {
 
 /***/ }),
 
-/***/ 780:
+/***/ 786:
+/*!******************************************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/index.js ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 787));
+var _es = _interopRequireDefault(__webpack_require__(/*! ./es.json */ 788));
+var _fr = _interopRequireDefault(__webpack_require__(/*! ./fr.json */ 789));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 790));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 791));
+var _default = {
+  en: _en.default,
+  es: _es.default,
+  fr: _fr.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 787:
+/*!*****************************************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/en.json ***!
+  \*****************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"prev\",\"uni-pagination.nextText\":\"next\",\"uni-pagination.piecePerPage\":\"piece/page\"}");
+
+/***/ }),
+
+/***/ 788:
 /*!*****************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/es.json ***!
   \*****************************************************************************************************************/
@@ -39845,7 +39871,7 @@ module.exports = JSON.parse("{\"uni-pagination.prevText\":\"anterior\",\"uni-pag
 
 /***/ }),
 
-/***/ 781:
+/***/ 789:
 /*!*****************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/fr.json ***!
   \*****************************************************************************************************************/
@@ -39853,28 +39879,6 @@ module.exports = JSON.parse("{\"uni-pagination.prevText\":\"anterior\",\"uni-pag
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"uni-pagination.prevText\":\"précédente\",\"uni-pagination.nextText\":\"suivante\",\"uni-pagination.piecePerPage\":\"Articles/Pages\"}");
-
-/***/ }),
-
-/***/ 782:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hans.json ***!
-  \**********************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一页\",\"uni-pagination.nextText\":\"下一页\",\"uni-pagination.piecePerPage\":\"条/页\"}");
-
-/***/ }),
-
-/***/ 783:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hant.json ***!
-  \**********************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一頁\",\"uni-pagination.nextText\":\"下一頁\",\"uni-pagination.piecePerPage\":\"條/頁\"}");
 
 /***/ }),
 
@@ -39973,6 +39977,28 @@ exports.userFeildsMap = userFeildsMap;
 
 /***/ }),
 
+/***/ 790:
+/*!**********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hans.json ***!
+  \**********************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一页\",\"uni-pagination.nextText\":\"下一页\",\"uni-pagination.piecePerPage\":\"条/页\"}");
+
+/***/ }),
+
+/***/ 791:
+/*!**********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hant.json ***!
+  \**********************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一頁\",\"uni-pagination.nextText\":\"下一頁\",\"uni-pagination.piecePerPage\":\"條/頁\"}");
+
+/***/ }),
+
 /***/ 8:
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js ***!
@@ -39993,7 +40019,7 @@ module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, 
 
 /***/ }),
 
-/***/ 812:
+/***/ 820:
 /*!***************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
   \***************************************************************************************************************/
@@ -40497,7 +40523,7 @@ exports.fontData = fontData;
 
 /***/ }),
 
-/***/ 820:
+/***/ 828:
 /*!************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/index.js ***!
   \************************************************************************/
@@ -40506,16 +40532,16 @@ exports.fontData = fontData;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 821);
-var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 821, 1);
-/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 822);
-var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 822, 1);
-/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 823);
-var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 823, 1);
-/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 824);
-var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 824, 1);
-/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 825);
-var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 825, 1);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 829);
+var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 829, 1);
+/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 830);
+var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 830, 1);
+/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 831);
+var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 831, 1);
+/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 832);
+var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 832, 1);
+/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 833);
+var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 833, 1);
 
 
 
@@ -40532,7 +40558,7 @@ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpac
 
 /***/ }),
 
-/***/ 821:
+/***/ 829:
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/en.json ***!
   \***********************************************************************/
@@ -40543,7 +40569,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"u
 
 /***/ }),
 
-/***/ 822:
+/***/ 830:
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/es.json ***!
   \***********************************************************************/
@@ -40554,7 +40580,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 823:
+/***/ 831:
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/fr.json ***!
   \***********************************************************************/
@@ -40565,7 +40591,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 824:
+/***/ 832:
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hans.json ***!
   \****************************************************************************/
@@ -40576,7 +40602,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 825:
+/***/ 833:
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hant.json ***!
   \****************************************************************************/
@@ -40587,7 +40613,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 831:
+/***/ 839:
 /*!*****************************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-data-picker/components/uni-data-pickerview/uni-data-picker.js ***!
   \*****************************************************************************************************************************/
@@ -41257,7 +41283,7 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 858:
+/***/ 866:
 /*!********************************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-file-picker/components/uni-file-picker/choose-and-upload-file.js ***!
   \********************************************************************************************************************************/
@@ -41481,7 +41507,7 @@ function chooseAndUploadFile() {
 
 /***/ }),
 
-/***/ 859:
+/***/ 867:
 /*!***************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-file-picker/components/uni-file-picker/utils.js ***!
   \***************************************************************************************************************/
@@ -41683,7 +41709,7 @@ module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exp
 
 /***/ }),
 
-/***/ 902:
+/***/ 910:
 /*!***************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/popup.js ***!
   \***************************************************************************************************/
@@ -41725,7 +41751,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 903:
+/***/ 911:
 /*!********************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/index.js ***!
   \********************************************************************************************************/
@@ -41740,9 +41766,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 904));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 905));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 906));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 912));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 913));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 914));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -41752,7 +41778,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 904:
+/***/ 912:
 /*!*******************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/en.json ***!
   \*******************************************************************************************************/
@@ -41763,7 +41789,7 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"cancel\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 905:
+/***/ 913:
 /*!************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hans.json ***!
   \************************************************************************************************************/
@@ -41774,7 +41800,7 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 906:
+/***/ 914:
 /*!************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hant.json ***!
   \************************************************************************************************************/
@@ -41785,7 +41811,7 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 935:
+/***/ 943:
 /*!**********************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/pages/userinfo/cropImage/limeClipper/utils.js ***!
   \**********************************************************************************************************************/
@@ -42041,7 +42067,7 @@ function imageTouchMoveOfCalcOffset(data, clientXForLeft, clientYForLeft) {
 
 /***/ }),
 
-/***/ 950:
+/***/ 958:
 /*!****************************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
   \****************************************************************************************************************************/
@@ -42056,9 +42082,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 951));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 952));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 953));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 959));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 960));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 961));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -42068,7 +42094,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 951:
+/***/ 959:
 /*!***************************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
   \***************************************************************************************************************************/
@@ -42079,7 +42105,7 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"select date\"
 
 /***/ }),
 
-/***/ 952:
+/***/ 960:
 /*!********************************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
   \********************************************************************************************************************************/
@@ -42090,7 +42116,7 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"选择日期\
 
 /***/ }),
 
-/***/ 953:
+/***/ 961:
 /*!********************************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
   \********************************************************************************************************************************/
@@ -42101,7 +42127,7 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\
 
 /***/ }),
 
-/***/ 954:
+/***/ 962:
 /*!**********************************************************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
   \**********************************************************************************************************************/
@@ -42552,189 +42578,6 @@ function fixIosDateFormat(value) {
 
 /***/ }),
 
-/***/ 962:
-/*!*************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/download-excel/download.js ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = download;
-//download.js v4.2, by dandavis; 2008-2016. [MIT] see http://danml.com/download.html for tests/usage
-// v1 landed a FF+Chrome compat way of downloading strings to local un-named files, upgraded to use a hidden frame and optional mime
-// v2 added named files via a[download], msSaveBlob, IE (10+) support, and window.URL support for larger+faster saves than dataURLs
-// v3 added dataURL and Blob Input, bind-toggle arity, and legacy dataURL fallback was improved with force-download mime and base64 support. 3.1 improved safari handling.
-// v4 adds AMD/UMD, commonJS, and plain browser support
-// v4.1 adds url download capability via solo URL argument (same domain/CORS only)
-// v4.2 adds semantic variable names, long (over 2MB) dataURL support, and hidden by default temp anchors
-// https://github.com/rndme/download
-
-function download(data, strFileName, strMimeType) {
-  var self = window,
-    // this script is only for browsers anyway...
-    defaultMime = "application/octet-stream",
-    // this default mime also triggers iframe downloads
-    mimeType = strMimeType || defaultMime,
-    payload = data,
-    url = !strFileName && !strMimeType && payload,
-    anchor = document.createElement("a"),
-    toString = function toString(a) {
-      return String(a);
-    },
-    myBlob = self.Blob || self.MozBlob || self.WebKitBlob || toString,
-    fileName = strFileName || "download",
-    blob,
-    reader;
-  myBlob = myBlob.call ? myBlob.bind(self) : Blob;
-  if (String(this) === "true") {
-    //reverse arguments, allowing download.bind(true, "text/xml", "export.xml") to act as a callback
-    payload = [payload, mimeType];
-    mimeType = payload[0];
-    payload = payload[1];
-  }
-  if (url && url.length < 2048) {
-    // if no filename and no mime, assume a url was passed as the only argument
-    fileName = url.split("/").pop().split("?")[0];
-    anchor.href = url; // assign href prop to temp anchor
-    if (anchor.href.indexOf(url) !== -1) {
-      // if the browser determines that it's a potentially valid url path:
-      var ajax = new XMLHttpRequest();
-      ajax.open("GET", url, true);
-      ajax.responseType = 'blob';
-      ajax.onload = function (e) {
-        download(e.target.response, fileName, defaultMime);
-      };
-      setTimeout(function () {
-        ajax.send();
-      }, 0); // allows setting custom ajax headers using the return:
-      return ajax;
-    } // end if valid url?
-  } // end if url?
-
-  //go ahead and download dataURLs right away
-  if (/^data:([\w+-]+\/[\w+.-]+)?[,;]/.test(payload)) {
-    if (payload.length > 1024 * 1024 * 1.999 && myBlob !== toString) {
-      payload = dataUrlToBlob(payload);
-      mimeType = payload.type || defaultMime;
-    } else {
-      return navigator.msSaveBlob ?
-      // IE10 can't do a[download], only Blobs:
-      navigator.msSaveBlob(dataUrlToBlob(payload), fileName) : saver(payload); // everyone else can save dataURLs un-processed
-    }
-  } else {
-    //not data url, is it a string with special needs?
-    if (/([\x80-\xff])/.test(payload)) {
-      var i = 0,
-        tempUiArr = new Uint8Array(payload.length),
-        mx = tempUiArr.length;
-      for (i; i < mx; ++i) {
-        tempUiArr[i] = payload.charCodeAt(i);
-      }
-      payload = new myBlob([tempUiArr], {
-        type: mimeType
-      });
-    }
-  }
-  blob = payload instanceof myBlob ? payload : new myBlob([payload], {
-    type: mimeType
-  });
-  function dataUrlToBlob(strUrl) {
-    var parts = strUrl.split(/[:;,]/),
-      type = parts[1],
-      decoder = parts[2] == "base64" ? atob : decodeURIComponent,
-      binData = decoder(parts.pop()),
-      mx = binData.length,
-      i = 0,
-      uiArr = new Uint8Array(mx);
-    for (i; i < mx; ++i) {
-      uiArr[i] = binData.charCodeAt(i);
-    }
-    return new myBlob([uiArr], {
-      type: type
-    });
-  }
-  function saver(url, winMode) {
-    if ('download' in anchor) {
-      //html5 A[download]
-      anchor.href = url;
-      anchor.setAttribute("download", fileName);
-      anchor.className = "download-js-link";
-      anchor.innerHTML = "downloading...";
-      anchor.style.display = "none";
-      document.body.appendChild(anchor);
-      setTimeout(function () {
-        anchor.click();
-        document.body.removeChild(anchor);
-        if (winMode === true) {
-          setTimeout(function () {
-            self.URL.revokeObjectURL(anchor.href);
-          }, 250);
-        }
-      }, 66);
-      return true;
-    }
-
-    // handle non-a[download] safari as best we can:
-    if (/(Version)\/(\d+)\.(\d+)(?:\.(\d+))?.*Safari\//.test(navigator.userAgent)) {
-      if (/^data:/.test(url)) url = "data:" + url.replace(/^data:([\w\/\-\+]+)/, defaultMime);
-      if (!window.open(url)) {
-        // popup blocked, offer direct download:
-        if (confirm("Displaying New Document\n\nUse Save As... to download, then click back to return to this page.")) {
-          location.href = url;
-        }
-      }
-      return true;
-    }
-
-    //do iframe dataURL download (old ch+FF):
-    var f = document.createElement("iframe");
-    document.body.appendChild(f);
-    if (!winMode && /^data:/.test(url)) {
-      // force a mime that will download:
-      url = "data:" + url.replace(/^data:([\w\/\-\+]+)/, defaultMime);
-    }
-    f.src = url;
-    setTimeout(function () {
-      document.body.removeChild(f);
-    }, 333);
-  } //end saver
-
-  if (navigator.msSaveBlob) {
-    // IE10+ : (has Blob, but not a[download] or URL)
-    return navigator.msSaveBlob(blob, fileName);
-  }
-  if (self.URL) {
-    // simple fast and modern way using Blob and URL:
-    saver(self.URL.createObjectURL(blob), true);
-  } else {
-    // handle non-Blob()+non-URL browsers:
-    if (typeof blob === "string" || blob.constructor === toString) {
-      try {
-        return saver("data:" + mimeType + ";base64," + self.btoa(blob));
-      } catch (y) {
-        return saver("data:" + mimeType + "," + encodeURIComponent(blob));
-      }
-    }
-
-    // Blob but not URL support:
-    reader = new FileReader();
-    reader.onload = function (e) {
-      saver(this.result);
-    };
-    reader.readAsDataURL(blob);
-  }
-  return true;
-}
-; /* end download() */
-
-/***/ }),
-
 /***/ 97:
 /*!*****************************************************************************!*\
   !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/demo/table/tableData.js ***!
@@ -42943,6 +42786,189 @@ var _default = [{
   "address": "上海市普陀区金沙江路 1516 弄"
 }];
 exports.default = _default;
+
+/***/ }),
+
+/***/ 970:
+/*!*************************************************************************************!*\
+  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/download-excel/download.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = download;
+//download.js v4.2, by dandavis; 2008-2016. [MIT] see http://danml.com/download.html for tests/usage
+// v1 landed a FF+Chrome compat way of downloading strings to local un-named files, upgraded to use a hidden frame and optional mime
+// v2 added named files via a[download], msSaveBlob, IE (10+) support, and window.URL support for larger+faster saves than dataURLs
+// v3 added dataURL and Blob Input, bind-toggle arity, and legacy dataURL fallback was improved with force-download mime and base64 support. 3.1 improved safari handling.
+// v4 adds AMD/UMD, commonJS, and plain browser support
+// v4.1 adds url download capability via solo URL argument (same domain/CORS only)
+// v4.2 adds semantic variable names, long (over 2MB) dataURL support, and hidden by default temp anchors
+// https://github.com/rndme/download
+
+function download(data, strFileName, strMimeType) {
+  var self = window,
+    // this script is only for browsers anyway...
+    defaultMime = "application/octet-stream",
+    // this default mime also triggers iframe downloads
+    mimeType = strMimeType || defaultMime,
+    payload = data,
+    url = !strFileName && !strMimeType && payload,
+    anchor = document.createElement("a"),
+    toString = function toString(a) {
+      return String(a);
+    },
+    myBlob = self.Blob || self.MozBlob || self.WebKitBlob || toString,
+    fileName = strFileName || "download",
+    blob,
+    reader;
+  myBlob = myBlob.call ? myBlob.bind(self) : Blob;
+  if (String(this) === "true") {
+    //reverse arguments, allowing download.bind(true, "text/xml", "export.xml") to act as a callback
+    payload = [payload, mimeType];
+    mimeType = payload[0];
+    payload = payload[1];
+  }
+  if (url && url.length < 2048) {
+    // if no filename and no mime, assume a url was passed as the only argument
+    fileName = url.split("/").pop().split("?")[0];
+    anchor.href = url; // assign href prop to temp anchor
+    if (anchor.href.indexOf(url) !== -1) {
+      // if the browser determines that it's a potentially valid url path:
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", url, true);
+      ajax.responseType = 'blob';
+      ajax.onload = function (e) {
+        download(e.target.response, fileName, defaultMime);
+      };
+      setTimeout(function () {
+        ajax.send();
+      }, 0); // allows setting custom ajax headers using the return:
+      return ajax;
+    } // end if valid url?
+  } // end if url?
+
+  //go ahead and download dataURLs right away
+  if (/^data:([\w+-]+\/[\w+.-]+)?[,;]/.test(payload)) {
+    if (payload.length > 1024 * 1024 * 1.999 && myBlob !== toString) {
+      payload = dataUrlToBlob(payload);
+      mimeType = payload.type || defaultMime;
+    } else {
+      return navigator.msSaveBlob ?
+      // IE10 can't do a[download], only Blobs:
+      navigator.msSaveBlob(dataUrlToBlob(payload), fileName) : saver(payload); // everyone else can save dataURLs un-processed
+    }
+  } else {
+    //not data url, is it a string with special needs?
+    if (/([\x80-\xff])/.test(payload)) {
+      var i = 0,
+        tempUiArr = new Uint8Array(payload.length),
+        mx = tempUiArr.length;
+      for (i; i < mx; ++i) {
+        tempUiArr[i] = payload.charCodeAt(i);
+      }
+      payload = new myBlob([tempUiArr], {
+        type: mimeType
+      });
+    }
+  }
+  blob = payload instanceof myBlob ? payload : new myBlob([payload], {
+    type: mimeType
+  });
+  function dataUrlToBlob(strUrl) {
+    var parts = strUrl.split(/[:;,]/),
+      type = parts[1],
+      decoder = parts[2] == "base64" ? atob : decodeURIComponent,
+      binData = decoder(parts.pop()),
+      mx = binData.length,
+      i = 0,
+      uiArr = new Uint8Array(mx);
+    for (i; i < mx; ++i) {
+      uiArr[i] = binData.charCodeAt(i);
+    }
+    return new myBlob([uiArr], {
+      type: type
+    });
+  }
+  function saver(url, winMode) {
+    if ('download' in anchor) {
+      //html5 A[download]
+      anchor.href = url;
+      anchor.setAttribute("download", fileName);
+      anchor.className = "download-js-link";
+      anchor.innerHTML = "downloading...";
+      anchor.style.display = "none";
+      document.body.appendChild(anchor);
+      setTimeout(function () {
+        anchor.click();
+        document.body.removeChild(anchor);
+        if (winMode === true) {
+          setTimeout(function () {
+            self.URL.revokeObjectURL(anchor.href);
+          }, 250);
+        }
+      }, 66);
+      return true;
+    }
+
+    // handle non-a[download] safari as best we can:
+    if (/(Version)\/(\d+)\.(\d+)(?:\.(\d+))?.*Safari\//.test(navigator.userAgent)) {
+      if (/^data:/.test(url)) url = "data:" + url.replace(/^data:([\w\/\-\+]+)/, defaultMime);
+      if (!window.open(url)) {
+        // popup blocked, offer direct download:
+        if (confirm("Displaying New Document\n\nUse Save As... to download, then click back to return to this page.")) {
+          location.href = url;
+        }
+      }
+      return true;
+    }
+
+    //do iframe dataURL download (old ch+FF):
+    var f = document.createElement("iframe");
+    document.body.appendChild(f);
+    if (!winMode && /^data:/.test(url)) {
+      // force a mime that will download:
+      url = "data:" + url.replace(/^data:([\w\/\-\+]+)/, defaultMime);
+    }
+    f.src = url;
+    setTimeout(function () {
+      document.body.removeChild(f);
+    }, 333);
+  } //end saver
+
+  if (navigator.msSaveBlob) {
+    // IE10+ : (has Blob, but not a[download] or URL)
+    return navigator.msSaveBlob(blob, fileName);
+  }
+  if (self.URL) {
+    // simple fast and modern way using Blob and URL:
+    saver(self.URL.createObjectURL(blob), true);
+  } else {
+    // handle non-Blob()+non-URL browsers:
+    if (typeof blob === "string" || blob.constructor === toString) {
+      try {
+        return saver("data:" + mimeType + ";base64," + self.btoa(blob));
+      } catch (y) {
+        return saver("data:" + mimeType + "," + encodeURIComponent(blob));
+      }
+    }
+
+    // Blob but not URL support:
+    reader = new FileReader();
+    reader.onload = function (e) {
+      saver(this.result);
+    };
+    reader.readAsDataURL(blob);
+  }
+  return true;
+}
+; /* end download() */
 
 /***/ })
 
