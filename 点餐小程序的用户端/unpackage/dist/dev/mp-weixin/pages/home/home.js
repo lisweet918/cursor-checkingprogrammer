@@ -107,9 +107,6 @@ try {
     uImage: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-image/u-image */ "uni_modules/vk-uview-ui/components/u-image/u-image").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-image/u-image.vue */ 232))
     },
-    uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-icon/u-icon */ "uni_modules/vk-uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-icon/u-icon.vue */ 239))
-    },
   }
 } catch (e) {
   if (
@@ -286,11 +283,6 @@ var _default = {
       this.SET_ORDER_TYPE(type);
       uni.navigateTo({
         url: "/subpackageHome/pointSingle/point-single"
-      });
-    },
-    handleMyPromotion: function handleMyPromotion() {
-      uni.navigateTo({
-        url: "/subpackageHome/pointsMall/points-mall"
       });
     },
     initTableScene: function initTableScene() {

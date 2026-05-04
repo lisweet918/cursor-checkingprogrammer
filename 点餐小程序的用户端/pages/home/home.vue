@@ -47,18 +47,6 @@
 			</view>
 		</view>
 
-		<view class="wrap__pointsmall" @click="handleMyPromotion">
-			<view>
-				<u-image src="/static/img/home/promotion.png" width="180" height="180" lazy-load></u-image>
-			</view>
-			<view>
-				<view class="wrap__pointsmall__mypoint">我的推广</view>
-				<view class="wrap__pointsmall__pointdesc">
-					推广奖励实时到账，支持余额提现
-					<u-icon name="arrow-right" size="24"></u-icon>
-				</view>
-			</view>
-		</view>
 
 		<view v-if="tablePopupVisible" class="wrap__popup">
 			<view class="wrap__popup__mask" @click="closeTablePopup"></view>
@@ -162,11 +150,7 @@
 					url: `/subpackageHome/pointSingle/point-single`
 				});
 			},
-			handleMyPromotion() {
-				uni.navigateTo({
-					url: `/subpackageHome/pointsMall/points-mall`
-				});
-			},
+
 			initTableScene(options = {}) {
 				const tableNumber = this.getTableNumberFromOptions(options);
 				if (!tableNumber) {
