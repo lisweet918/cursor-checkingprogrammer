@@ -129,7 +129,7 @@
 <script>
 	const db = uniCloud.database()
 	// 管理员 OpenID (请替换为你自己的真实 OpenID)
-	const ADMIN_OPENID = 'YOUR_ADMIN_OPENID'
+	const ADMIN_OPENID = 'oID5R3QYVhXfjOEvGCUfnu4F_Qoo'
 
 	export default {
 		data() {

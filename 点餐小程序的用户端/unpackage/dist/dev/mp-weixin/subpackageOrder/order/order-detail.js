@@ -272,7 +272,7 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 
 var db = uniCloud.database();
 // 管理员 OpenID (请替换为你自己的真实 OpenID)
-var ADMIN_OPENID = 'YOUR_ADMIN_OPENID';
+var ADMIN_OPENID = 'oID5R3QYVhXfjOEvGCUfnu4F_Qoo';
 var _default = {
   data: function data() {
     return {
