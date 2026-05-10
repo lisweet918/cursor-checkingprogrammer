@@ -86,6 +86,8 @@
 
 <script>
 	const db = uniCloud.database()
+	// 管理员 OpenID (请替换为你自己的真实 OpenID)
+	const ADMIN_OPENID = 'YOUR_ADMIN_OPENID'
 
 	export default {
 		data() {
@@ -124,7 +126,33 @@
 				try {
 					const res = await db.collection('order').doc(this.orderId).get()
 					if (res.result.data && res.result.data.length > 0) {
-						this.orderData = res.result.data[0]
+						const data = res.result.data[0]
+						const userInfo = uni.getStorageSync('userInfo')
+						const isAdmin = userInfo && userInfo.openid === ADMIN_OPENID
+						
+						// 权限校验：如果订单被隐藏，或者非本人/非管理员访问
+						// 注意：is_show !== false 表示默认显示
+						if (data.is_show === false && !isAdmin) {
+							uni.showModal({
+								title: '提示',
+								content: '该订单已被管理员隐藏',
+								showCancel: false,
+								success: () => uni.navigateBack()
+							})
+							return
+						}
+						
+						if (!isAdmin && data.user_id && data.user_id !== userInfo.openid) {
+							uni.showModal({
+								title: '权限提示',
+								content: '您无权查看此订单',
+								showCancel: false,
+								success: () => uni.navigateBack()
+							})
+							return
+						}
+						
+						this.orderData = data
 					} else {
 						uni.showToast({ title: '订单不存在', icon: 'none' })
 					}

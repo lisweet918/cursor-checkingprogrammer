@@ -271,6 +271,8 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 
 var db = uniCloud.database();
+// 管理员 OpenID (请替换为你自己的真实 OpenID)
+var ADMIN_OPENID = 'YOUR_ADMIN_OPENID';
 var _default = {
   data: function data() {
     return {
@@ -311,7 +313,7 @@ var _default = {
     loadOrderDetail: function loadOrderDetail() {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var res;
+        var res, data, userInfo, isAdmin;
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -324,34 +326,71 @@ var _default = {
                 return db.collection('order').doc(_this.orderId).get();
               case 4:
                 res = _context.sent;
-                if (res.result.data && res.result.data.length > 0) {
-                  _this.orderData = res.result.data[0];
-                } else {
-                  uni.showToast({
-                    title: '订单不存在',
-                    icon: 'none'
-                  });
+                if (!(res.result.data && res.result.data.length > 0)) {
+                  _context.next = 18;
+                  break;
                 }
-                _context.next = 12;
+                data = res.result.data[0];
+                userInfo = uni.getStorageSync('userInfo');
+                isAdmin = userInfo && userInfo.openid === ADMIN_OPENID; // 权限校验：如果订单被隐藏，或者非本人/非管理员访问
+                // 注意：is_show !== false 表示默认显示
+                if (!(data.is_show === false && !isAdmin)) {
+                  _context.next = 12;
+                  break;
+                }
+                uni.showModal({
+                  title: '提示',
+                  content: '该订单已被管理员隐藏',
+                  showCancel: false,
+                  success: function success() {
+                    return uni.navigateBack();
+                  }
+                });
+                return _context.abrupt("return");
+              case 12:
+                if (!(!isAdmin && data.user_id && data.user_id !== userInfo.openid)) {
+                  _context.next = 15;
+                  break;
+                }
+                uni.showModal({
+                  title: '权限提示',
+                  content: '您无权查看此订单',
+                  showCancel: false,
+                  success: function success() {
+                    return uni.navigateBack();
+                  }
+                });
+                return _context.abrupt("return");
+              case 15:
+                _this.orderData = data;
+                _context.next = 19;
                 break;
-              case 8:
-                _context.prev = 8;
+              case 18:
+                uni.showToast({
+                  title: '订单不存在',
+                  icon: 'none'
+                });
+              case 19:
+                _context.next = 25;
+                break;
+              case 21:
+                _context.prev = 21;
                 _context.t0 = _context["catch"](1);
                 console.error('Failed to load order:', _context.t0);
                 uni.showToast({
                   title: '加载失败',
                   icon: 'none'
                 });
-              case 12:
-                _context.prev = 12;
+              case 25:
+                _context.prev = 25;
                 uni.hideLoading();
-                return _context.finish(12);
-              case 15:
+                return _context.finish(25);
+              case 28:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 8, 12, 15]]);
+        }, _callee, null, [[1, 21, 25, 28]]);
       }))();
     },
     moreOrder: function moreOrder() {

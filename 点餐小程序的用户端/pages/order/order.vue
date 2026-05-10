@@ -128,6 +128,8 @@
 
 <script>
 	const db = uniCloud.database()
+	// 管理员 OpenID (请替换为你自己的真实 OpenID)
+	const ADMIN_OPENID = 'YOUR_ADMIN_OPENID'
 
 	export default {
 		data() {
@@ -178,8 +180,30 @@
 				this.loading = true
 				uni.showLoading({ title: '加载中...' })
 				try {
-					// 仅演示，实际项目可能需要根据用户ID (user_id) 过滤
-					const res = await db.collection('order').orderBy('createTime', 'desc').get()
+					const userInfo = uni.getStorageSync('userInfo')
+					const _ = db.command
+					
+					// 基础查询条件：排除被后台关闭显示的订单
+					// 使用字符串形式的查询条件 (JQL) 更加直观且兼容性好
+					let whereStr = 'is_show != false'
+					
+					if (userInfo && userInfo.openid) {
+						if (userInfo.openid !== ADMIN_OPENID) {
+							// 普通用户：只能看自己的订单
+							whereStr += ` && user_id == "${userInfo.openid}"`
+						} else {
+							// 管理员：可以看到所有人的订单，但依然遵循 is_show 过滤
+							// 保持 whereStr = 'is_show != false' 即可
+						}
+					} else {
+						// 未登录：不显示任何订单（或者跳转到登录）
+						whereStr = '1 == 2' 
+					}
+					
+					const res = await db.collection('order')
+						.where(whereStr)
+						.orderBy('createTime', 'desc')
+						.get()
 					const allOrders = res.result.data || []
 					
 					this.pickupList = allOrders.filter(o => o.type === 'takein')

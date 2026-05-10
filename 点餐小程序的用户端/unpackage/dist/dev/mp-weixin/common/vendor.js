@@ -9970,7 +9970,7 @@ var b = "development" === "development",
   k = "true" === undefined || !0 === undefined,
   A = T([]),
   P = "h5" === E ? "web" : "app-plus" === E || "app-harmony" === E ? "app" : E,
-  C = T({"address":["127.0.0.1","10.5.138.24"],"servePort":7002,"debugPort":9001,"initialLaunchType":"remote","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
+  C = T({"address":["127.0.0.1","10.207.110.185","198.18.0.1"],"servePort":7002,"debugPort":9001,"initialLaunchType":"remote","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
   O = T([{"provider":"alipay","spaceName":"demo","spaceId":"env-00jy66me56x4","spaceAppId":"2021006131638686","accessKey":"3FUYLhHFOwlQ54wT","secretKey":"JXE5wlvuqgWFnn2N"}]) || [],
   x = true;
 var N = "";

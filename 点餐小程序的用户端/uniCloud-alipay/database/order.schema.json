@@ -140,6 +140,12 @@
 			"bsonType": "string",
 			"title": "下单用户ID",
 			"description": "关联的用户openid"
+		},
+		"is_show": {
+			"bsonType": "bool",
+			"title": "是否显示",
+			"description": "控制订单在用户端是否显示",
+			"defaultValue": true
 		}
 	}
 }

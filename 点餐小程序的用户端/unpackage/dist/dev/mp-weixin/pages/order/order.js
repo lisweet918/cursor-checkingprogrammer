@@ -332,6 +332,8 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 
 var db = uniCloud.database();
+// 管理员 OpenID (请替换为你自己的真实 OpenID)
+var ADMIN_OPENID = 'YOUR_ADMIN_OPENID';
 var _default = {
   data: function data() {
     return {
@@ -407,7 +409,7 @@ var _default = {
     loadOrders: function loadOrders() {
       var _this2 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var res, allOrders;
+        var userInfo, _, whereStr, res, allOrders;
         return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -417,9 +419,25 @@ var _default = {
                   title: '加载中...'
                 });
                 _context2.prev = 2;
-                _context2.next = 5;
-                return db.collection('order').orderBy('createTime', 'desc').get();
-              case 5:
+                userInfo = uni.getStorageSync('userInfo');
+                _ = db.command; // 基础查询条件：排除被后台关闭显示的订单
+                // 使用字符串形式的查询条件 (JQL) 更加直观且兼容性好
+                whereStr = 'is_show != false';
+                if (userInfo && userInfo.openid) {
+                  if (userInfo.openid !== ADMIN_OPENID) {
+                    // 普通用户：只能看自己的订单
+                    whereStr += " && user_id == \"".concat(userInfo.openid, "\"");
+                  } else {
+                    // 管理员：可以看到所有人的订单，但依然遵循 is_show 过滤
+                    // 保持 whereStr = 'is_show != false' 即可
+                  }
+                } else {
+                  // 未登录：不显示任何订单（或者跳转到登录）
+                  whereStr = '1 == 2';
+                }
+                _context2.next = 9;
+                return db.collection('order').where(whereStr).orderBy('createTime', 'desc').get();
+              case 9:
                 res = _context2.sent;
                 allOrders = res.result.data || [];
                 _this2.pickupList = allOrders.filter(function (o) {
@@ -429,27 +447,27 @@ var _default = {
                   return o.type === 'takeout';
                 });
                 _this2.couponList = []; // 优惠券订单逻辑如果有可在此处理
-                _context2.next = 16;
+                _context2.next = 20;
                 break;
-              case 12:
-                _context2.prev = 12;
+              case 16:
+                _context2.prev = 16;
                 _context2.t0 = _context2["catch"](2);
                 console.error(_context2.t0);
                 uni.showToast({
                   title: '加载失败',
                   icon: 'none'
                 });
-              case 16:
-                _context2.prev = 16;
+              case 20:
+                _context2.prev = 20;
                 _this2.loading = false;
                 uni.hideLoading();
-                return _context2.finish(16);
-              case 20:
+                return _context2.finish(20);
+              case 24:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, null, [[2, 12, 16, 20]]);
+        }, _callee2, null, [[2, 16, 20, 24]]);
       }))();
     },
     orderDetail: function orderDetail(item) {
