@@ -1,8 +1,8 @@
 {
-  "usingComponents": {},
-  "component": true,
   "componentGenerics": {
     "scoped-slots-title": true,
     "scoped-slots-btn": true
-  }
+  },
+  "component": true,
+  "usingComponents": {}
 }

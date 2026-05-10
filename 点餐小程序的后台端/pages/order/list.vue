@@ -58,6 +58,7 @@
             <uni-th align="center" width="100">件数</uni-th>
             <uni-th align="center" width="100">金额(元)</uni-th>
             <uni-th align="center" width="100">状态</uni-th>
+            <uni-th align="center" width="80">显示</uni-th>
             <uni-th align="center" width="160">操作</uni-th>
           </uni-tr>
           <uni-tr v-for="(item, index) in data" :key="index">
@@ -90,6 +91,9 @@
               <text :class="['status-badge', getStatusClass(item.status)]">
                 {{ getStatusText(item.status) }}
               </text>
+            </uni-td>
+            <uni-td align="center">
+              <switch :checked="item.is_show !== false" @change="toggleVisibility(item._id, $event.detail.value)" scale="0.7" />
             </uni-td>
             <uni-td align="center">
               <view class="uni-group">
@@ -148,8 +152,11 @@
               <view class="action-buttons">
                 <button v-if="selectedOrder.status === '0' || selectedOrder.status === 0" size="mini" type="warn" @click="updateStatus(selectedOrder._id, '1')">接单</button>
                 <button v-if="selectedOrder.status === '1' || selectedOrder.status === 1" size="mini" style="background:#52c41a;color:#fff;" @click="updateStatus(selectedOrder._id, '3')">完成</button>
-                <button v-if="selectedOrder.status !== '2' && selectedOrder.status !== 2" size="mini" type="default" @click="updateStatus(selectedOrder._id, '2')">退款</button>
               </view>
+            </view>
+            <view class="status-row" style="margin-top: 10px;">
+              <text class="info-label" style="width: 120px;">用户端显示</text>
+              <switch :checked="selectedOrder.is_show !== false" @change="toggleVisibility(selectedOrder._id, $event.detail.value)" scale="0.8" />
             </view>
           </view>
 
@@ -218,7 +225,7 @@
   export default {
     data() {
       return {
-        fields: '_id,createTime,out_trade_no,tableNumber,type,commodity_list,shop_num,price,status,remark,name,phone,address,house_number,transaction_id,payment_time_text,torder',
+        fields: '_id,createTime,out_trade_no,tableNumber,type,commodity_list,shop_num,price,status,remark,name,phone,address,house_number,transaction_id,payment_time_text,torder,is_show',
         query: '',
         where: '',
         orderby: 'createTime desc',
@@ -302,6 +309,20 @@
           this.$refs.udb.loadData()
         } catch (e) {
           uni.showModal({ title: '错误', content: e.message || '更新失败', showCancel: false })
+        }
+      },
+
+      async toggleVisibility(id, isShow) {
+        try {
+          await db.collection('order').doc(id).update({ is_show: isShow })
+          uni.showToast({ title: isShow ? '已在用户端显示' : '已在用户端隐藏' })
+          if (this.selectedOrder && this.selectedOrder._id === id) {
+            this.selectedOrder = { ...this.selectedOrder, is_show: isShow }
+          }
+          // 不强制刷新整个列表，只更新本地状态（如果可能）或者静默刷新
+          // 为了简单起见，这里可以不 reload，因为 switch 状态已经由用户操作更新了
+        } catch (e) {
+          uni.showModal({ title: '错误', content: e.message || '操作失败', showCancel: false })
         }
       },
     }
