@@ -11,6 +11,23 @@
   align-items: center;
   margin-bottom: 20px;
 }
+.section-divider.data-v-3b6f3c6c {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ebeef5;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.section-title.data-v-3b6f3c6c {
+  font-size: 15px;
+  font-weight: bold;
+  color: #303133;
+}
+.section-desc.data-v-3b6f3c6c {
+  font-size: 12px;
+  color: #909399;
+  margin-top: 6px;
+}
 .field-label.data-v-3b6f3c6c {
   width: 100px;
   font-size: 14px;

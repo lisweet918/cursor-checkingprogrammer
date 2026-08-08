@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "",
   "navigationBarBackgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "u-tabs": "/uni_modules/vk-uview-ui/components/u-tabs/u-tabs",
     "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image"

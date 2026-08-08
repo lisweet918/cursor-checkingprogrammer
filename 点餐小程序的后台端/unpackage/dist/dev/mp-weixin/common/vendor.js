@@ -67,10 +67,10 @@ module.exports = _nonIterableRest, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
-/***/ 1011:
-/*!********************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/qiun-data-charts/js_sdk/u-charts/u-charts.js ***!
-  \********************************************************************************************************/
+/***/ 1039:
+/*!*************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/qiun-data-charts/js_sdk/u-charts/u-charts.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7728,10 +7728,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1012:
-/*!**************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/qiun-data-charts/js_sdk/u-charts/config-ucharts.js ***!
-  \**************************************************************************************************************/
+/***/ 1040:
+/*!*******************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/qiun-data-charts/js_sdk/u-charts/config-ucharts.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8350,10 +8350,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1027:
-/*!**********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/pay-order/overview/fieldsMap.js ***!
-  \**********************************************************************************************/
+/***/ 1055:
+/*!***************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/pay-order/overview/fieldsMap.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8579,73 +8579,10 @@ exports.statPanelTodayFieldsMap = statPanelTodayFieldsMap;
 
 /***/ }),
 
-/***/ 1049:
-/*!********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/pay-order/funnel/fieldsMap.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fieldsMap = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
- * '' 空字符串 则表示不格式化
- * ',' 数字格式，例：1000 格式为 1,000
- * '%' 百分比格式 例：0.1 格式为 10%
- * ':' 时分秒格式 例：90 格式为 00:01:30
- * '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
- * 'sum' 表示对字段做求和运算
- * 'avg' 表示对字段做平均运算
- * '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var fieldsMap = [{
-  title: '活跃设备数',
-  field: 'activity_device_count',
-  tooltip: '统计时间内，访问设备数，一台设备多次访问被计为一台（包含未登录的用户）。',
-  formatter: ',',
-  value: 0,
-  contrast: 0,
-  stat: 'sum'
-}, {
-  title: '活跃用户数',
-  field: 'activity_user_count',
-  tooltip: '活跃用户数：统计时间内，访问人数，一人多次访问被计为一人（只统计已登录的用户）。',
-  formatter: ',',
-  value: 0,
-  contrast: 0,
-  stat: 'sum'
-}, {
-  title: '支付用户数',
-  field: 'pay_user_count',
-  tooltip: '统计时间内，成功支付的人数（不剔除退款订单）（只统计已登录的用户）。',
-  formatter: ',',
-  value: 0,
-  contrast: 0,
-  stat: 'sum'
-}];
-exports.fieldsMap = fieldsMap;
-
-/***/ }),
-
 /***/ 106:
-/*!***************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/login-page.mixin.js ***!
-  \***************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/login-page.mixin.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8748,52 +8685,66 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1097:
-/*!****************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/index.js ***!
-  \****************************************************************************************************************/
+/***/ 1077:
+/*!*************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/pay-order/funnel/fieldsMap.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 1098));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 1099));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1100));
-var _default = {
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 1098:
-/*!***************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/en.json ***!
-  \***************************************************************************************************************/
-/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"Pull up to show more\",\"uni-load-more.contentrefresh\":\"loading...\",\"uni-load-more.contentnomore\":\"No more data\"}");
-
-/***/ }),
-
-/***/ 1099:
-/*!********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hans.json ***!
-  \********************************************************************************************************************/
-/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉显示更多\",\"uni-load-more.contentrefresh\":\"正在加载...\",\"uni-load-more.contentnomore\":\"没有更多数据了\"}");
+exports.fieldsMap = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+ * '' 空字符串 则表示不格式化
+ * ',' 数字格式，例：1000 格式为 1,000
+ * '%' 百分比格式 例：0.1 格式为 10%
+ * ':' 时分秒格式 例：90 格式为 00:01:30
+ * '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+ * 'sum' 表示对字段做求和运算
+ * 'avg' 表示对字段做平均运算
+ * '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var fieldsMap = [{
+  title: '活跃设备数',
+  field: 'activity_device_count',
+  tooltip: '统计时间内，访问设备数，一台设备多次访问被计为一台（包含未登录的用户）。',
+  formatter: ',',
+  value: 0,
+  contrast: 0,
+  stat: 'sum'
+}, {
+  title: '活跃用户数',
+  field: 'activity_user_count',
+  tooltip: '活跃用户数：统计时间内，访问人数，一人多次访问被计为一人（只统计已登录的用户）。',
+  formatter: ',',
+  value: 0,
+  contrast: 0,
+  stat: 'sum'
+}, {
+  title: '支付用户数',
+  field: 'pay_user_count',
+  tooltip: '统计时间内，成功支付的人数（不剔除退款订单）（只统计已登录的用户）。',
+  formatter: ',',
+  value: 0,
+  contrast: 0,
+  stat: 'sum'
+}];
+exports.fieldsMap = fieldsMap;
 
 /***/ }),
 
@@ -8823,10 +8774,59 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 1100:
+/***/ 1125:
+/*!*********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/index.js ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 1126));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 1127));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1128));
+var _default = {
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 1126:
 /*!********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hant.json ***!
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/en.json ***!
   \********************************************************************************************************************/
+/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"Pull up to show more\",\"uni-load-more.contentrefresh\":\"loading...\",\"uni-load-more.contentnomore\":\"No more data\"}");
+
+/***/ }),
+
+/***/ 1127:
+/*!*************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hans.json ***!
+  \*************************************************************************************************************************/
+/*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉显示更多\",\"uni-load-more.contentrefresh\":\"正在加载...\",\"uni-load-more.contentnomore\":\"没有更多数据了\"}");
+
+/***/ }),
+
+/***/ 1128:
+/*!*************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-load-more/components/uni-load-more/i18n/zh-Hant.json ***!
+  \*************************************************************************************************************************/
 /*! exports provided: uni-load-more.contentdown, uni-load-more.contentrefresh, uni-load-more.contentnomore, default */
 /***/ (function(module) {
 
@@ -8834,10 +8834,10 @@ module.exports = JSON.parse("{\"uni-load-more.contentdown\":\"上拉顯示更多
 
 /***/ }),
 
-/***/ 1134:
-/*!***********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
-  \***********************************************************************************************************************/
+/***/ 1162:
+/*!****************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8987,9 +8987,9 @@ module.exports = toPropertyKey, module.exports.__esModule = true, module.exports
 /***/ }),
 
 /***/ 123:
-/*!*******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/password.js ***!
-  \*******************************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/password.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9083,10 +9083,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 1241:
-/*!********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/uni-nav-menu/mixins/rootParent.js ***!
-  \********************************************************************************************/
+/***/ 1269:
+/*!*************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/components/uni-nav-menu/mixins/rootParent.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9151,9 +9151,9 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /***/ }),
 
 /***/ 132:
-/*!***************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-app-versions.js ***!
-  \***************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-app-versions.js ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9383,9 +9383,9 @@ function filterToWhere(filter, command) {
 /***/ }),
 
 /***/ 133:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-upgrade-center/pages/utils.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-upgrade-center/pages/utils.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9496,9 +9496,9 @@ module.exports = toPrimitive, module.exports.__esModule = true, module.exports["
 /***/ }),
 
 /***/ 142:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-upgrade-center/pages/mixin/version_add_detail_mixin.js ***!
-  \**********************************************************************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-upgrade-center/pages/mixin/version_add_detail_mixin.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12373,9 +12373,9 @@ module.exports = _iterableToArray, module.exports.__esModule = true, module.expo
 /***/ }),
 
 /***/ 207:
-/*!****************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/pages/register/validator.js ***!
-  \****************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/pages/register/validator.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19127,9 +19127,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 26:
-/*!**********************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json ***!
-  \**********************************************************/
+/*!***************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -19138,9 +19138,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 262:
-/*!************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/check-id-card.js ***!
-  \************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/check-id-card.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19701,7 +19701,7 @@ var b = "development" === "development",
   k = "true" === undefined || !0 === undefined,
   A = T([]),
   P = "h5" === E ? "web" : "app-plus" === E || "app-harmony" === E ? "app" : E,
-  C = T({"address":["127.0.0.1","10.109.40.185","198.18.0.1"],"servePort":7001,"debugPort":9000,"initialLaunchType":"local","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
+  C = T({"address":["127.0.0.1","10.5.136.7"],"servePort":7001,"debugPort":9000,"initialLaunchType":"local","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
   O = T([{"provider":"alipay","spaceName":"demo","spaceId":"env-00jy66me56x4","spaceAppId":"2021006131638686","accessKey":"3FUYLhHFOwlQ54wT","secretKey":"JXE5wlvuqgWFnn2N"}]) || [],
   x = true;
 var N = "";
@@ -27578,9 +27578,9 @@ exports.default = er;
 /***/ }),
 
 /***/ 271:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/zhuohao.js ***!
-  \***************************************************************************/
+/*!********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/zhuohao.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28082,9 +28082,9 @@ module.exports = _assertThisInitialized, module.exports.__esModule = true, modul
 /***/ }),
 
 /***/ 304:
-/*!*******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/menu/product/mock-menu.js ***!
-  \*******************************************************************************/
+/*!************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/menu/product/mock-menu.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28563,148 +28563,6 @@ module.exports = _getPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 345:
-/*!********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/uni-data-menu/util.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.buildMenu = buildMenu;
-exports.buildMenus = buildMenus;
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
-function buildMenu(menu, menuList, menuIds) {
-  var nextLayer = [];
-  var _loop = function _loop(i) {
-    var currentMenu = menu[i];
-    var subMenu = menuList.filter(function (item) {
-      if (item.parent_id === currentMenu.menu_id) {
-        menuIds.push(item.menu_id);
-        return true;
-      }
-    });
-    nextLayer = nextLayer.concat(subMenu);
-    currentMenu.children = subMenu;
-  };
-  for (var i = menu.length - 1; i > -1; i--) {
-    _loop(i);
-  }
-  if (nextLayer.length) {
-    buildMenu(nextLayer, menuList, menuIds);
-  }
-}
-function getParentIds(menuItem, menuList) {
-  var parentArr = [];
-  var currentItem = menuItem;
-  while (currentItem && currentItem.parent_id) {
-    parentArr.push(currentItem.parent_id);
-    currentItem = menuList.find(function (item) {
-      return item.menu_id === currentItem.parent_id;
-    });
-  }
-  return parentArr;
-}
-function buildMenus(menuList) {
-  var trim = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  // 保证父子级顺序
-  menuList = menuList.sort(function (a, b) {
-    var parentIdsA = getParentIds(a, menuList);
-    var parentIdsB = getParentIds(b, menuList);
-    if (parentIdsA.includes(b.menu_id)) {
-      return 1;
-    }
-    return parentIdsA.length - parentIdsB.length || a.sort - b.sort;
-  });
-  // 删除无subMenu且非子节点的菜单项
-  if (trim) {
-    var _loop2 = function _loop2(i) {
-      var currentMenu = menuList[i];
-      var subMenu = menuList.filter(function (subMenuItem) {
-        return subMenuItem.parent_id === currentMenu.menu_id;
-      });
-      if (!currentMenu.isLeafNode && !subMenu.length) {
-        menuList.splice(i, 1);
-      }
-    };
-    for (var i = menuList.length - 1; i > -1; i--) {
-      _loop2(i);
-    }
-  }
-  var menuIds = [];
-  var menu = menuList.filter(function (item) {
-    if (!item.parent_id) {
-      menuIds.push(item.menu_id);
-      return true;
-    }
-  });
-  buildMenu(menu, menuList, menuIds);
-  // 包含所有无效菜单
-  if (!trim && menuIds.length !== menuList.length) {
-    menu.push.apply(menu, (0, _toConsumableArray2.default)(menuList.filter(function (item) {
-      return !menuIds.includes(item.menu_id);
-    })));
-  }
-  return menu;
-}
-
-/***/ }),
-
-/***/ 346:
-/*!***************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/system/menu/originalMenuList.json ***!
-  \***************************************************************************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"menu_id\":\"index\",\"name\":\"首页\",\"icon\":\"uni-icons-home\",\"url\":\"/\",\"sort\":100,\"parent_id\":\"\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_management\",\"name\":\"系统管理\",\"icon\":\"admin-icons-fl-xitong\",\"url\":\"\",\"sort\":1000,\"parent_id\":\"\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_user\",\"name\":\"用户管理\",\"icon\":\"admin-icons-manager-user\",\"url\":\"/pages/system/user/list\",\"sort\":1010,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469398},{\"menu_id\":\"system_role\",\"name\":\"角色管理\",\"icon\":\"admin-icons-manager-role\",\"url\":\"/pages/system/role/list\",\"sort\":1020,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469397},{\"menu_id\":\"system_permission\",\"name\":\"权限管理\",\"icon\":\"admin-icons-manager-permission\",\"url\":\"/pages/system/permission/list\",\"sort\":1030,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_menu\",\"name\":\"菜单管理\",\"icon\":\"admin-icons-manager-menu\",\"url\":\"/pages/system/menu/list\",\"sort\":1040,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_app\",\"name\":\"应用管理\",\"icon\":\"admin-icons-manager-app\",\"url\":\"/pages/system/app/list\",\"sort\":1035,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469399},{\"menu_id\":\"system_update\",\"name\":\"App升级中心\",\"icon\":\"uni-icons-cloud-upload\",\"url\":\"/uni_modules/uni-upgrade-center/pages/version/list\",\"sort\":1036,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1656491532434},{\"menu_id\":\"system_tag\",\"name\":\"标签管理\",\"icon\":\"admin-icons-manager-tag\",\"url\":\"/pages/system/tag/list\",\"sort\":1037,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662479389},{\"permission\":[],\"enable\":true,\"menu_id\":\"safety_statistics\",\"name\":\"安全审计\",\"icon\":\"admin-icons-safety\",\"url\":\"\",\"sort\":3100,\"parent_id\":\"\",\"create_date\":1638356430871},{\"permission\":[],\"enable\":true,\"menu_id\":\"safety_statistics_user_log\",\"name\":\"用户日志\",\"icon\":\"\",\"url\":\"/pages/system/safety/list\",\"sort\":3101,\"parent_id\":\"safety_statistics\",\"create_date\":1638356430871},{\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat\",\"name\":\"uni 统计\",\"icon\":\"admin-icons-tongji\",\"url\":\"\",\"sort\":2100,\"parent_id\":\"\",\"create_date\":1638356430871},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device\",\"name\":\"设备统计\",\"icon\":\"admin-icons-shebeitongji\",\"url\":\"\",\"sort\":2120,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-overview\",\"name\":\"概况\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/overview/overview\",\"sort\":2121,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-activity\",\"name\":\"活跃度\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/activity/activity\",\"sort\":2122,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-trend\",\"name\":\"趋势分析\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/trend/trend\",\"sort\":2123,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-retention\",\"name\":\"留存\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/retention/retention\",\"sort\":2124,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-comparison\",\"name\":\"平台对比\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/comparison/comparison\",\"sort\":2125,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-stickiness\",\"name\":\"粘性\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/stickiness/stickiness\",\"sort\":2126,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user\",\"name\":\"注册用户统计\",\"icon\":\"admin-icons-yonghutongji\",\"url\":\"\",\"sort\":2122,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-overview\",\"name\":\"概况\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/overview/overview\",\"sort\":2121,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-activity\",\"name\":\"活跃度\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/activity/activity\",\"sort\":2122,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"icon\":\"\",\"menu_id\":\"uni-stat-user-trend\",\"name\":\"趋势分析\",\"url\":\"/pages/uni-stat/user/trend/trend\",\"sort\":2123,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-retention\",\"name\":\"留存\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/retention/retention\",\"sort\":2124,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-comparison\",\"name\":\"平台对比\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/comparison/comparison\",\"sort\":2125,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-stickiness\",\"name\":\"粘性\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/stickiness/stickiness\",\"sort\":2126,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-analysis\",\"name\":\"页面统计\",\"icon\":\"admin-icons-page-ent\",\"url\":\"\",\"sort\":2123,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-res\",\"name\":\"受访页\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-res/page-res\",\"sort\":2131,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-ent\",\"name\":\"入口页\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-ent/page-ent\",\"sort\":2132,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-content-analysis\",\"name\":\"内容统计\",\"icon\":\"admin-icons-doc\",\"url\":\"\",\"sort\":2140,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-content-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-content\",\"name\":\"内容统计\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-content/page-content\",\"sort\":2141,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-content-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-rule\",\"name\":\"页面规则\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-rule/page-rule\",\"sort\":2142,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-senceChannel\",\"name\":\"渠道/场景值分析\",\"icon\":\"admin-icons-qudaofenxi\",\"url\":\"\",\"sort\":2150,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-senceChannel\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-senceChannel-scene\",\"name\":\"场景值（小程序）\",\"icon\":\"\",\"url\":\"/pages/uni-stat/scene/scene\",\"sort\":2151,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-senceChannel\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-senceChannel-channel\",\"name\":\"渠道（app）\",\"icon\":\"\",\"url\":\"/pages/uni-stat/channel/channel\",\"sort\":2152,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-event-event\",\"name\":\"自定义事件\",\"icon\":\"admin-icons-shijianfenxi\",\"url\":\"/pages/uni-stat/event/event\",\"sort\":2160,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-error\",\"name\":\"错误统计\",\"icon\":\"admin-icons-cuowutongji\",\"url\":\"\",\"sort\":2170,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-error\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-error-js\",\"name\":\"代码错误\",\"icon\":\"\",\"url\":\"/pages/uni-stat/error/js/js\",\"sort\":2171,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-error\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-error-app\",\"name\":\"app崩溃\",\"icon\":\"\",\"url\":\"/pages/uni-stat/error/app/app\",\"sort\":2172,\"create_date\":1638356902516},{\"menu_id\":\"uni-stat-pay\",\"name\":\"支付统计\",\"icon\":\"uni-icons-circle\",\"url\":\"\",\"sort\":2122,\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"create_date\":1667386977981},{\"menu_id\":\"uni-stat-pay-overview\",\"name\":\"概况\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/overview/overview\",\"sort\":21221,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1667387038602},{\"menu_id\":\"uni-stat-pay-funnel\",\"name\":\"转换漏斗分析\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/funnel/funnel\",\"sort\":21222,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1668430092890},{\"menu_id\":\"uni-stat-pay-ranking\",\"name\":\"价值用户排行\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/ranking/ranking\",\"sort\":21223,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1668430128302},{\"menu_id\":\"uni-stat-pay-order-list\",\"name\":\"订单明细\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/list/list\",\"sort\":21224,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1667387078947}]");
-
-/***/ }),
-
-/***/ 347:
-/*!*****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端 sync nonrecursive -menu.json$ ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 347;
-
-/***/ }),
-
-/***/ 348:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules sync menu.json$ ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 348;
-
-/***/ }),
-
 /***/ 35:
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
@@ -28746,79 +28604,6 @@ module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
-/***/ 357:
-/*!**************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-admin-menus.js ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-// 校验规则由 schema 生成，请不要直接修改当前文件，如果需要请在uniCloud控制台修改schema
-// uniCloud: https://unicloud.dcloud.net.cn/
-var _default = {
-  "menu_id": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }]
-  },
-  "name": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }]
-  },
-  "icon": {
-    "rules": [{
-      "format": "string"
-    }]
-  },
-  "url": {
-    "rules": [{
-      "format": "string"
-    }, {
-      validateFunction: function validateFunction(rule, value, data, callback) {
-        if (value !== "" && value.indexOf("http") === -1 && value.indexOf("/") !== 0) {
-          callback('URL必须以/开头，如/pages/index/index');
-        }
-        return true;
-      }
-    }]
-  },
-  "sort": {
-    "rules": [{
-      "format": "int"
-    }]
-  },
-  "parent_id": {
-    "rules": [{
-      "format": "string"
-    }]
-  },
-  "permission": {
-    "rules": [{
-      "format": "array"
-    }]
-  },
-  "enable": {
-    "rules": [{
-      "format": "bool"
-    }]
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
 /***/ 36:
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
@@ -28838,9 +28623,9 @@ module.exports = _isNativeFunction, module.exports.__esModule = true, module.exp
 /***/ }),
 
 /***/ 37:
-/*!***************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json?{"type":"origin-pages-json"} ***!
-  \***************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json?{"type":"origin-pages-json"} ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29348,10 +29133,262 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ 373:
+/*!*************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/components/uni-data-menu/util.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.buildMenu = buildMenu;
+exports.buildMenus = buildMenus;
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18));
+function buildMenu(menu, menuList, menuIds) {
+  var nextLayer = [];
+  var _loop = function _loop(i) {
+    var currentMenu = menu[i];
+    var subMenu = menuList.filter(function (item) {
+      if (item.parent_id === currentMenu.menu_id) {
+        menuIds.push(item.menu_id);
+        return true;
+      }
+    });
+    nextLayer = nextLayer.concat(subMenu);
+    currentMenu.children = subMenu;
+  };
+  for (var i = menu.length - 1; i > -1; i--) {
+    _loop(i);
+  }
+  if (nextLayer.length) {
+    buildMenu(nextLayer, menuList, menuIds);
+  }
+}
+function getParentIds(menuItem, menuList) {
+  var parentArr = [];
+  var currentItem = menuItem;
+  while (currentItem && currentItem.parent_id) {
+    parentArr.push(currentItem.parent_id);
+    currentItem = menuList.find(function (item) {
+      return item.menu_id === currentItem.parent_id;
+    });
+  }
+  return parentArr;
+}
+function buildMenus(menuList) {
+  var trim = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  // 保证父子级顺序
+  menuList = menuList.sort(function (a, b) {
+    var parentIdsA = getParentIds(a, menuList);
+    var parentIdsB = getParentIds(b, menuList);
+    if (parentIdsA.includes(b.menu_id)) {
+      return 1;
+    }
+    return parentIdsA.length - parentIdsB.length || a.sort - b.sort;
+  });
+  // 删除无subMenu且非子节点的菜单项
+  if (trim) {
+    var _loop2 = function _loop2(i) {
+      var currentMenu = menuList[i];
+      var subMenu = menuList.filter(function (subMenuItem) {
+        return subMenuItem.parent_id === currentMenu.menu_id;
+      });
+      if (!currentMenu.isLeafNode && !subMenu.length) {
+        menuList.splice(i, 1);
+      }
+    };
+    for (var i = menuList.length - 1; i > -1; i--) {
+      _loop2(i);
+    }
+  }
+  var menuIds = [];
+  var menu = menuList.filter(function (item) {
+    if (!item.parent_id) {
+      menuIds.push(item.menu_id);
+      return true;
+    }
+  });
+  buildMenu(menu, menuList, menuIds);
+  // 包含所有无效菜单
+  if (!trim && menuIds.length !== menuList.length) {
+    menu.push.apply(menu, (0, _toConsumableArray2.default)(menuList.filter(function (item) {
+      return !menuIds.includes(item.menu_id);
+    })));
+  }
+  return menu;
+}
+
+/***/ }),
+
 /***/ 374:
-/*!**************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-permissions.js ***!
-  \**************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/system/menu/originalMenuList.json ***!
+  \********************************************************************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"menu_id\":\"index\",\"name\":\"首页\",\"icon\":\"uni-icons-home\",\"url\":\"/\",\"sort\":100,\"parent_id\":\"\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_management\",\"name\":\"系统管理\",\"icon\":\"admin-icons-fl-xitong\",\"url\":\"\",\"sort\":1000,\"parent_id\":\"\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_user\",\"name\":\"用户管理\",\"icon\":\"admin-icons-manager-user\",\"url\":\"/pages/system/user/list\",\"sort\":1010,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469398},{\"menu_id\":\"system_role\",\"name\":\"角色管理\",\"icon\":\"admin-icons-manager-role\",\"url\":\"/pages/system/role/list\",\"sort\":1020,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469397},{\"menu_id\":\"system_permission\",\"name\":\"权限管理\",\"icon\":\"admin-icons-manager-permission\",\"url\":\"/pages/system/permission/list\",\"sort\":1030,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_menu\",\"name\":\"菜单管理\",\"icon\":\"admin-icons-manager-menu\",\"url\":\"/pages/system/menu/list\",\"sort\":1040,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469396},{\"menu_id\":\"system_app\",\"name\":\"应用管理\",\"icon\":\"admin-icons-manager-app\",\"url\":\"/pages/system/app/list\",\"sort\":1035,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662469399},{\"menu_id\":\"system_update\",\"name\":\"App升级中心\",\"icon\":\"uni-icons-cloud-upload\",\"url\":\"/uni_modules/uni-upgrade-center/pages/version/list\",\"sort\":1036,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1656491532434},{\"menu_id\":\"system_tag\",\"name\":\"标签管理\",\"icon\":\"admin-icons-manager-tag\",\"url\":\"/pages/system/tag/list\",\"sort\":1037,\"parent_id\":\"system_management\",\"permission\":[],\"enable\":true,\"create_date\":1602662479389},{\"permission\":[],\"enable\":true,\"menu_id\":\"safety_statistics\",\"name\":\"安全审计\",\"icon\":\"admin-icons-safety\",\"url\":\"\",\"sort\":3100,\"parent_id\":\"\",\"create_date\":1638356430871},{\"permission\":[],\"enable\":true,\"menu_id\":\"safety_statistics_user_log\",\"name\":\"用户日志\",\"icon\":\"\",\"url\":\"/pages/system/safety/list\",\"sort\":3101,\"parent_id\":\"safety_statistics\",\"create_date\":1638356430871},{\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat\",\"name\":\"uni 统计\",\"icon\":\"admin-icons-tongji\",\"url\":\"\",\"sort\":2100,\"parent_id\":\"\",\"create_date\":1638356430871},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device\",\"name\":\"设备统计\",\"icon\":\"admin-icons-shebeitongji\",\"url\":\"\",\"sort\":2120,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-overview\",\"name\":\"概况\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/overview/overview\",\"sort\":2121,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-activity\",\"name\":\"活跃度\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/activity/activity\",\"sort\":2122,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-trend\",\"name\":\"趋势分析\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/trend/trend\",\"sort\":2123,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-retention\",\"name\":\"留存\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/retention/retention\",\"sort\":2124,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-comparison\",\"name\":\"平台对比\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/comparison/comparison\",\"sort\":2125,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-device\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-device-stickiness\",\"name\":\"粘性\",\"icon\":\"\",\"url\":\"/pages/uni-stat/device/stickiness/stickiness\",\"sort\":2126,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user\",\"name\":\"注册用户统计\",\"icon\":\"admin-icons-yonghutongji\",\"url\":\"\",\"sort\":2122,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-overview\",\"name\":\"概况\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/overview/overview\",\"sort\":2121,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-activity\",\"name\":\"活跃度\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/activity/activity\",\"sort\":2122,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"icon\":\"\",\"menu_id\":\"uni-stat-user-trend\",\"name\":\"趋势分析\",\"url\":\"/pages/uni-stat/user/trend/trend\",\"sort\":2123,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-retention\",\"name\":\"留存\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/retention/retention\",\"sort\":2124,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-comparison\",\"name\":\"平台对比\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/comparison/comparison\",\"sort\":2125,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-user\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-user-stickiness\",\"name\":\"粘性\",\"icon\":\"\",\"url\":\"/pages/uni-stat/user/stickiness/stickiness\",\"sort\":2126,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-analysis\",\"name\":\"页面统计\",\"icon\":\"admin-icons-page-ent\",\"url\":\"\",\"sort\":2123,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-res\",\"name\":\"受访页\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-res/page-res\",\"sort\":2131,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-ent\",\"name\":\"入口页\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-ent/page-ent\",\"sort\":2132,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-content-analysis\",\"name\":\"内容统计\",\"icon\":\"admin-icons-doc\",\"url\":\"\",\"sort\":2140,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-content-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-content\",\"name\":\"内容统计\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-content/page-content\",\"sort\":2141,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-page-content-analysis\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-page-rule\",\"name\":\"页面规则\",\"icon\":\"\",\"url\":\"/pages/uni-stat/page-rule/page-rule\",\"sort\":2142,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-senceChannel\",\"name\":\"渠道/场景值分析\",\"icon\":\"admin-icons-qudaofenxi\",\"url\":\"\",\"sort\":2150,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-senceChannel\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-senceChannel-scene\",\"name\":\"场景值（小程序）\",\"icon\":\"\",\"url\":\"/pages/uni-stat/scene/scene\",\"sort\":2151,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-senceChannel\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-senceChannel-channel\",\"name\":\"渠道（app）\",\"icon\":\"\",\"url\":\"/pages/uni-stat/channel/channel\",\"sort\":2152,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-event-event\",\"name\":\"自定义事件\",\"icon\":\"admin-icons-shijianfenxi\",\"url\":\"/pages/uni-stat/event/event\",\"sort\":2160,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-error\",\"name\":\"错误统计\",\"icon\":\"admin-icons-cuowutongji\",\"url\":\"\",\"sort\":2170,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-error\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-error-js\",\"name\":\"代码错误\",\"icon\":\"\",\"url\":\"/pages/uni-stat/error/js/js\",\"sort\":2171,\"create_date\":1638356902516},{\"parent_id\":\"uni-stat-error\",\"permission\":[],\"enable\":true,\"menu_id\":\"uni-stat-error-app\",\"name\":\"app崩溃\",\"icon\":\"\",\"url\":\"/pages/uni-stat/error/app/app\",\"sort\":2172,\"create_date\":1638356902516},{\"menu_id\":\"uni-stat-pay\",\"name\":\"支付统计\",\"icon\":\"uni-icons-circle\",\"url\":\"\",\"sort\":2122,\"parent_id\":\"uni-stat\",\"permission\":[],\"enable\":true,\"create_date\":1667386977981},{\"menu_id\":\"uni-stat-pay-overview\",\"name\":\"概况\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/overview/overview\",\"sort\":21221,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1667387038602},{\"menu_id\":\"uni-stat-pay-funnel\",\"name\":\"转换漏斗分析\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/funnel/funnel\",\"sort\":21222,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1668430092890},{\"menu_id\":\"uni-stat-pay-ranking\",\"name\":\"价值用户排行\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/ranking/ranking\",\"sort\":21223,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1668430128302},{\"menu_id\":\"uni-stat-pay-order-list\",\"name\":\"订单明细\",\"icon\":\"\",\"url\":\"/pages/uni-stat/pay-order/list/list\",\"sort\":21224,\"parent_id\":\"uni-stat-pay\",\"permission\":[],\"enable\":true,\"create_date\":1667387078947}]");
+
+/***/ }),
+
+/***/ 375:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端 sync nonrecursive -menu.json$ ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	var e = new Error("Cannot find module '" + req + "'");
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 375;
+
+/***/ }),
+
+/***/ 376:
+/*!********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules sync menu.json$ ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	var e = new Error("Cannot find module '" + req + "'");
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 376;
+
+/***/ }),
+
+/***/ 38:
+/*!*******************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json?{"type":"stat"} ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  "appid": "__UNI__4D30B80"
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 385:
+/*!*******************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-admin-menus.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+// 校验规则由 schema 生成，请不要直接修改当前文件，如果需要请在uniCloud控制台修改schema
+// uniCloud: https://unicloud.dcloud.net.cn/
+var _default = {
+  "menu_id": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }]
+  },
+  "name": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }]
+  },
+  "icon": {
+    "rules": [{
+      "format": "string"
+    }]
+  },
+  "url": {
+    "rules": [{
+      "format": "string"
+    }, {
+      validateFunction: function validateFunction(rule, value, data, callback) {
+        if (value !== "" && value.indexOf("http") === -1 && value.indexOf("/") !== 0) {
+          callback('URL必须以/开头，如/pages/index/index');
+        }
+        return true;
+      }
+    }]
+  },
+  "sort": {
+    "rules": [{
+      "format": "int"
+    }]
+  },
+  "parent_id": {
+    "rules": [{
+      "format": "string"
+    }]
+  },
+  "permission": {
+    "rules": [{
+      "format": "array"
+    }]
+  },
+  "enable": {
+    "rules": [{
+      "format": "bool"
+    }]
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 4:
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 402:
+/*!*******************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-permissions.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29457,166 +29494,6 @@ function filterToWhere(filter, command) {
   }
   return where;
 }
-
-/***/ }),
-
-/***/ 38:
-/*!**************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages.json?{"type":"stat"} ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  "appid": "__UNI__4D30B80"
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 397:
-/*!********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-roles.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.enumConverter = void 0;
-exports.filterToWhere = filterToWhere;
-exports.validator = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
-
-var validator = {
-  "role_id": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }],
-    "label": "唯一ID"
-  },
-  "role_name": {
-    "rules": [{
-      "required": true
-    }, {
-      "format": "string"
-    }],
-    "label": "名称"
-  },
-  "permission": {
-    "rules": [{
-      "format": "array"
-    }],
-    "label": "权限"
-  },
-  "comment": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "备注"
-  },
-  "create_date": {
-    "rules": [{
-      "format": "timestamp"
-    }]
-  }
-};
-exports.validator = validator;
-var enumConverter = {};
-exports.enumConverter = enumConverter;
-function filterToWhere(filter, command) {
-  var where = {};
-  for (var field in filter) {
-    var _filter$field = filter[field],
-      type = _filter$field.type,
-      value = _filter$field.value;
-    switch (type) {
-      case "search":
-        if (typeof value === 'string' && value.length) {
-          where[field] = new RegExp(value);
-        }
-        break;
-      case "select":
-        if (value.length) {
-          var selectValue = [];
-          var _iterator = _createForOfIteratorHelper(value),
-            _step;
-          try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-              var s = _step.value;
-              selectValue.push(command.eq(s));
-            }
-          } catch (err) {
-            _iterator.e(err);
-          } finally {
-            _iterator.f();
-          }
-          where[field] = command.or(selectValue);
-        }
-        break;
-      case "range":
-        if (value.length) {
-          var gt = value[0];
-          var lt = value[1];
-          where[field] = command.and([command.gte(gt), command.lte(lt)]);
-        }
-        break;
-      case "date":
-        if (value.length) {
-          var _value = (0, _slicedToArray2.default)(value, 2),
-            _s = _value[0],
-            e = _value[1];
-          var startDate = new Date(_s);
-          var endDate = new Date(e);
-          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
-        }
-        break;
-      case "timestamp":
-        if (value.length) {
-          var _value2 = (0, _slicedToArray2.default)(value, 2),
-            _startDate = _value2[0],
-            _endDate = _value2[1];
-          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
-        }
-        break;
-    }
-  }
-  return where;
-}
-
-/***/ }),
-
-/***/ 4:
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -30877,10 +30754,322 @@ module.exports = index_cjs;
 
 /***/ }),
 
-/***/ 420:
-/*!********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-users.js ***!
-  \********************************************************************************/
+/***/ 425:
+/*!*************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-roles.js ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enumConverter = void 0;
+exports.filterToWhere = filterToWhere;
+exports.validator = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
+
+var validator = {
+  "role_id": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }],
+    "label": "唯一ID"
+  },
+  "role_name": {
+    "rules": [{
+      "required": true
+    }, {
+      "format": "string"
+    }],
+    "label": "名称"
+  },
+  "permission": {
+    "rules": [{
+      "format": "array"
+    }],
+    "label": "权限"
+  },
+  "comment": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "备注"
+  },
+  "create_date": {
+    "rules": [{
+      "format": "timestamp"
+    }]
+  }
+};
+exports.validator = validator;
+var enumConverter = {};
+exports.enumConverter = enumConverter;
+function filterToWhere(filter, command) {
+  var where = {};
+  for (var field in filter) {
+    var _filter$field = filter[field],
+      type = _filter$field.type,
+      value = _filter$field.value;
+    switch (type) {
+      case "search":
+        if (typeof value === 'string' && value.length) {
+          where[field] = new RegExp(value);
+        }
+        break;
+      case "select":
+        if (value.length) {
+          var selectValue = [];
+          var _iterator = _createForOfIteratorHelper(value),
+            _step;
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var s = _step.value;
+              selectValue.push(command.eq(s));
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+          where[field] = command.or(selectValue);
+        }
+        break;
+      case "range":
+        if (value.length) {
+          var gt = value[0];
+          var lt = value[1];
+          where[field] = command.and([command.gte(gt), command.lte(lt)]);
+        }
+        break;
+      case "date":
+        if (value.length) {
+          var _value = (0, _slicedToArray2.default)(value, 2),
+            _s = _value[0],
+            e = _value[1];
+          var startDate = new Date(_s);
+          var endDate = new Date(e);
+          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
+        }
+        break;
+      case "timestamp":
+        if (value.length) {
+          var _value2 = (0, _slicedToArray2.default)(value, 2),
+            _startDate = _value2[0],
+            _endDate = _value2[1];
+          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
+        }
+        break;
+    }
+  }
+  return where;
+}
+
+/***/ }),
+
+/***/ 43:
+/*!********************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/admin.config.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  login: {
+    url: '/uni_modules/uni-id-pages/pages/login/login-withpwd' // 登录页面路径
+  },
+
+  index: {
+    url: '/pages/index/index' // 登录后跳转的第一个页面
+  },
+
+  error: {
+    url: '/pages/error/404' // 404 Not Found 错误页面路径
+  },
+
+  navBar: {
+    // 顶部导航
+    logo: '/static/logo.png',
+    // 左侧 Logo
+    langs: [{
+      text: '中文简体',
+      lang: 'zh-Hans'
+    }, {
+      text: '中文繁體',
+      lang: 'zh-Hant'
+    }, {
+      text: 'English',
+      lang: 'en'
+    }],
+    themes: [{
+      text: '默认',
+      value: 'default'
+    }, {
+      text: '绿柔',
+      value: 'green'
+    }],
+    debug: {
+      enable: "development" !== 'production',
+      //是否显示错误信息
+      engine: [{
+        // 搜索引擎配置（每条错误信息后，会自动生成搜索链接，点击后跳转至搜索引擎）
+        name: '百度',
+        url: 'https://www.baidu.com/baidu?wd=ERR_MSG'
+      }, {
+        name: '谷歌',
+        url: 'https://www.google.com/search?q=ERR_MSG'
+      }]
+    }
+  },
+  sideBar: {
+    // 左侧菜单
+    // 配置静态菜单列表（放置在用户被授权的菜单列表下边）
+    staticMenu: [{
+      menu_id: "order-manage",
+      text: '订单管理',
+      icon: 'admin-icons-list',
+      url: "",
+      children: [{
+        menu_id: "order-list",
+        text: '全部订单',
+        icon: 'admin-icons-table',
+        value: '/pages/order/list'
+      }]
+    }, {
+      menu_id: "product-manage",
+      text: '菜品管理',
+      icon: 'admin-icons-pushMessage',
+      url: "",
+      children: [{
+        menu_id: "category-list",
+        text: '分类管理',
+        icon: 'admin-icons-tag',
+        value: '/pages/menu/category/list'
+      }, {
+        menu_id: "product-list",
+        text: '菜品列表',
+        icon: 'admin-icons-table',
+        value: '/pages/menu/product/list'
+      }, {
+        menu_id: "product-add",
+        text: '新增菜品',
+        icon: 'admin-icons-add',
+        value: '/pages/menu/product/form'
+      }]
+    }, {
+      menu_id: "banner-manage",
+      text: '轮播图管理',
+      icon: 'admin-icons-image',
+      url: "",
+      children: [{
+        menu_id: "banner-list",
+        text: '首页轮播图',
+        icon: 'admin-icons-image',
+        value: '/pages/banner/list'
+      }, {
+        menu_id: "menu-banner-list",
+        text: '点餐页轮播图',
+        icon: 'admin-icons-image',
+        value: '/pages/menu_banner/list'
+      }]
+    }, {
+      menu_id: "store-manage",
+      text: '店铺管理',
+      icon: 'admin-icons-shop',
+      url: "",
+      children: [{
+        menu_id: "store-settings",
+        text: '店铺设置',
+        icon: 'admin-icons-gear',
+        value: '/pages/store/settings'
+      }, {
+        menu_id: "my-menus",
+        text: '我的页面功能',
+        icon: 'admin-icons-list',
+        value: '/pages/my_menus/list'
+      }, {
+        menu_id: "wx-users",
+        text: '会员管理',
+        icon: 'admin-icons-staff',
+        value: '/pages/wx_users/list'
+      }]
+    }, {
+      menu_id: "demo",
+      text: '静态功能演示',
+      icon: 'admin-icons-kaifashili',
+      url: "",
+      children: [{
+        menu_id: "icons",
+        text: '图标',
+        icon: 'admin-icons-icon',
+        value: '/pages/demo/icons/icons'
+      }, {
+        menu_id: "table",
+        text: '表格',
+        icon: 'admin-icons-table',
+        value: '/pages/demo/table/table'
+      }]
+    }, {
+      menu_id: "admim-doc-pulgin",
+      text: '文档与插件',
+      icon: 'admin-icons-eco',
+      url: "",
+      children: [{
+        menu_id: "admin-doc",
+        icon: 'admin-icons-doc',
+        text: 'uni-admin 框架文档',
+        value: 'https://uniapp.dcloud.net.cn/uniCloud/admin'
+      }, {
+        menu_id: "stat-doc",
+        icon: 'admin-icons-help',
+        text: 'uni 统计教程',
+        value: 'https://uniapp.dcloud.net.cn/uni-stat-v2.html'
+      }, {
+        menu_id: "admin-pulgin",
+        icon: 'admin-icons-pulgin',
+        text: 'uni-admin 插件',
+        value: 'https://ext.dcloud.net.cn/?cat1=7&cat2=74'
+      }]
+    }]
+  },
+  uniStat: {}
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 44:
+/*!*****************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/package.json ***!
+  \*****************************************************************/
+/*! exports provided: name, id, displayName, version, description, main, scripts, repository, keywords, engines, author, license, bugs, homepage, dcloudext, uni_modules, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"uni-admin 基础框架（原名 uniCloud admin）\",\"id\":\"uni-template-admin\",\"displayName\":\"uni-admin 基础框架\",\"version\":\"2.5.13\",\"description\":\"基于uni-app & uniCloud的后台管理项目模板（管理后台开发必备神器）\",\"main\":\"main.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"repository\":\"https://github.com/dcloudio/uni-admin.git\",\"keywords\":[\"admin\",\"uniCloud\",\"管理后台\",\"云后台\",\"uni-admin\"],\"engines\":{\"HBuilderX\":\"^3.6.0\",\"uni-app\":\"^4.36\",\"uni-app-x\":\"\"},\"author\":\"\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/dcloudio/uni-admin/issues\"},\"homepage\":\"https://github.com/dcloudio/uni-admin#readme\",\"dcloudext\":{\"sale\":{\"regular\":{\"price\":\"0.00\"},\"sourcecode\":{\"price\":\"0.00\"}},\"contact\":{\"qq\":\"\"},\"declaration\":{\"ads\":\"无\",\"data\":\"无\",\"permissions\":\"无\"},\"npmurl\":\"\",\"type\":\"unicloud-template-project\",\"darkmode\":\"x\",\"i18n\":\"√\",\"widescreen\":\"√\"},\"uni_modules\":{\"dependencies\":[],\"encrypt\":[],\"platforms\":{\"cloud\":{\"tcb\":\"√\",\"aliyun\":\"√\",\"alipay\":\"√\"},\"client\":{\"uni-app\":{\"vue\":{\"vue2\":\"√\",\"vue3\":\"√\"},\"web\":{\"safari\":\"√\",\"chrome\":\"√\"},\"app\":{\"vue\":\"√\",\"nvue\":\"x\",\"android\":\"√\",\"ios\":\"√\",\"harmony\":\"√\"},\"mp\":{\"weixin\":\"√\",\"alipay\":\"√\",\"toutiao\":\"-\",\"baidu\":\"-\",\"kuaishou\":\"-\",\"jd\":\"-\",\"harmony\":\"-\",\"qq\":\"-\",\"lark\":\"-\"},\"quickapp\":{\"huawei\":\"-\",\"union\":\"-\"}},\"uni-app-x\":{\"web\":{\"safari\":\"-\",\"chrome\":\"-\"},\"app\":{\"android\":\"-\",\"ios\":\"-\",\"harmony\":\"-\"},\"mp\":{\"weixin\":\"-\"}},\"App\":{\"app-harmony\":\"u\",\"app-nvue\":\"u\",\"app-uvue\":\"u\",\"app-vue\":\"u\"}}}}}");
+
+/***/ }),
+
+/***/ 448:
+/*!*************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-users.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31083,10 +31272,10 @@ function filterToWhere(filter, command) {
 
 /***/ }),
 
-/***/ 43:
-/*!***************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/admin.config.js ***!
-  \***************************************************************/
+/***/ 45:
+/*!***********************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/store/constants.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31096,186 +31285,266 @@ function filterToWhere(filter, command) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.uniAdminCacheKey = void 0;
+/** uni-admin 缓存键名 */
+var uniAdminCacheKey = {
+  theme: "uni-admin-theme" // 主题
+};
+exports.uniAdminCacheKey = uniAdminCacheKey;
+
+/***/ }),
+
+/***/ 46:
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/ext-storage/uploadFileForExtStorage.js ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = void 0;
-var _default = {
-  login: {
-    url: '/uni_modules/uni-id-pages/pages/login/login-withpwd' // 登录页面路径
-  },
-
-  index: {
-    url: '/pages/index/index' // 登录后跳转的第一个页面
-  },
-
-  error: {
-    url: '/pages/error/404' // 404 Not Found 错误页面路径
-  },
-
-  navBar: {
-    // 顶部导航
-    logo: '/static/logo.png',
-    // 左侧 Logo
-    langs: [{
-      text: '中文简体',
-      lang: 'zh-Hans'
-    }, {
-      text: '中文繁體',
-      lang: 'zh-Hant'
-    }, {
-      text: 'English',
-      lang: 'en'
-    }],
-    themes: [{
-      text: '默认',
-      value: 'default'
-    }, {
-      text: '绿柔',
-      value: 'green'
-    }],
-    debug: {
-      enable: "development" !== 'production',
-      //是否显示错误信息
-      engine: [{
-        // 搜索引擎配置（每条错误信息后，会自动生成搜索链接，点击后跳转至搜索引擎）
-        name: '百度',
-        url: 'https://www.baidu.com/baidu?wd=ERR_MSG'
-      }, {
-        name: '谷歌',
-        url: 'https://www.google.com/search?q=ERR_MSG'
-      }]
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+/**
+ * 设置 uniCloud.uploadFile 默认上传到扩展存储
+ * @param {String} provider 云储存供应商
+ * 	@value unicloud				内置存储
+ * 	@value extStorage 		扩展存储
+ * @param {String} domain 自定义域名，仅扩展存储有效
+ * @param {Boolean} fileID2fileURL 是否将fileID转为fileURL
+ * @param {Function} uploadFileOptions 获取上传参数的函数，仅扩展存储有效
+ */
+function init() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var defaultProvider = options.provider;
+  var originalDefaultProvider = defaultProvider;
+  var extStorage = new ExtStorage(options);
+  var uploadFile = uniCloud.uploadFile;
+  uniCloud.uploadFile = function () {
+    var options = (arguments.length <= 0 ? undefined : arguments[0]) || {};
+    var _options$provider = options.provider,
+      provider = _options$provider === void 0 ? defaultProvider : _options$provider;
+    if (provider === "extStorage") {
+      return extStorage.uploadFile.apply(extStorage, arguments);
+    } else {
+      return uploadFile.apply(void 0, arguments);
     }
-  },
-  sideBar: {
-    // 左侧菜单
-    // 配置静态菜单列表（放置在用户被授权的菜单列表下边）
-    staticMenu: [{
-      menu_id: "order-manage",
-      text: '订单管理',
-      icon: 'admin-icons-list',
-      url: "",
-      children: [{
-        menu_id: "order-list",
-        text: '全部订单',
-        icon: 'admin-icons-table',
-        value: '/pages/order/list'
-      }]
-    }, {
-      menu_id: "product-manage",
-      text: '菜品管理',
-      icon: 'admin-icons-pushMessage',
-      url: "",
-      children: [{
-        menu_id: "category-list",
-        text: '分类管理',
-        icon: 'admin-icons-tag',
-        value: '/pages/menu/category/list'
-      }, {
-        menu_id: "product-list",
-        text: '菜品列表',
-        icon: 'admin-icons-table',
-        value: '/pages/menu/product/list'
-      }, {
-        menu_id: "product-add",
-        text: '新增菜品',
-        icon: 'admin-icons-add',
-        value: '/pages/menu/product/form'
-      }]
-    }, {
-      menu_id: "banner-manage",
-      text: '轮播图管理',
-      icon: 'admin-icons-image',
-      url: "",
-      children: [{
-        menu_id: "banner-list",
-        text: '首页轮播图',
-        icon: 'admin-icons-image',
-        value: '/pages/banner/list'
-      }, {
-        menu_id: "menu-banner-list",
-        text: '点餐页轮播图',
-        icon: 'admin-icons-image',
-        value: '/pages/menu_banner/list'
-      }]
-    }, {
-      menu_id: "store-manage",
-      text: '店铺管理',
-      icon: 'admin-icons-shop',
-      url: "",
-      children: [{
-        menu_id: "store-settings",
-        text: '店铺设置',
-        icon: 'admin-icons-gear',
-        value: '/pages/store/settings'
-      }, {
-        menu_id: "my-menus",
-        text: '我的页面功能',
-        icon: 'admin-icons-list',
-        value: '/pages/my_menus/list'
-      }, {
-        menu_id: "wx-users",
-        text: '会员管理',
-        icon: 'admin-icons-staff',
-        value: '/pages/wx_users/list'
-      }]
-    }, {
-      menu_id: "demo",
-      text: '静态功能演示',
-      icon: 'admin-icons-kaifashili',
-      url: "",
-      children: [{
-        menu_id: "icons",
-        text: '图标',
-        icon: 'admin-icons-icon',
-        value: '/pages/demo/icons/icons'
-      }, {
-        menu_id: "table",
-        text: '表格',
-        icon: 'admin-icons-table',
-        value: '/pages/demo/table/table'
-      }]
-    }, {
-      menu_id: "admim-doc-pulgin",
-      text: '文档与插件',
-      icon: 'admin-icons-eco',
-      url: "",
-      children: [{
-        menu_id: "admin-doc",
-        icon: 'admin-icons-doc',
-        text: 'uni-admin 框架文档',
-        value: 'https://uniapp.dcloud.net.cn/uniCloud/admin'
-      }, {
-        menu_id: "stat-doc",
-        icon: 'admin-icons-help',
-        text: 'uni 统计教程',
-        value: 'https://uniapp.dcloud.net.cn/uni-stat-v2.html'
-      }, {
-        menu_id: "admin-pulgin",
-        icon: 'admin-icons-pulgin',
-        text: 'uni-admin 插件',
-        value: 'https://ext.dcloud.net.cn/?cat1=7&cat2=74'
-      }]
-    }]
-  },
-  uniStat: {}
+  };
+  var getTempFileURL = uniCloud.getTempFileURL;
+  uniCloud.getTempFileURL = function () {
+    var options = (arguments.length <= 0 ? undefined : arguments[0]) || {};
+    var _options$provider2 = options.provider,
+      provider = _options$provider2 === void 0 ? defaultProvider : _options$provider2;
+    if (provider === "extStorage") {
+      return extStorage.getTempFileURL.apply(extStorage, arguments);
+    } else {
+      return getTempFileURL.apply(void 0, arguments);
+    }
+  };
+  var deleteFile = uniCloud.deleteFile;
+  uniCloud.deleteFile = function () {
+    var options = (arguments.length <= 0 ? undefined : arguments[0]) || {};
+    var _options$provider3 = options.provider,
+      provider = _options$provider3 === void 0 ? defaultProvider : _options$provider3;
+    if (provider === "extStorage") {
+      return extStorage.deleteFile.apply(extStorage, arguments);
+    } else {
+      return deleteFile.apply(void 0, arguments);
+    }
+  };
+  uniCloud.setCloudStorage = function () {
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var provider = data.provider,
+      domain = data.domain,
+      fileID2fileURL = data.fileID2fileURL;
+    if (provider === null) {
+      defaultProvider = originalDefaultProvider;
+    } else if (provider) {
+      defaultProvider = provider;
+    }
+    if (domain) extStorage.domain = domain;
+    if (fileID2fileURL) extStorage.fileID2fileURL = fileID2fileURL;
+  };
+}
+var _default = {
+  init: init
 };
 exports.default = _default;
+var ExtStorage = /*#__PURE__*/function () {
+  function ExtStorage() {
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    (0, _classCallCheck2.default)(this, ExtStorage);
+    var uploadFileOptions = data.uploadFileOptions,
+      domain = data.domain,
+      fileID2fileURL = data.fileID2fileURL;
+    this.uploadFileOptions = uploadFileOptions;
+    this.domain = domain;
+    this.fileID2fileURL = fileID2fileURL;
+  }
+
+  // 上传文件
+  (0, _createClass2.default)(ExtStorage, [{
+    key: "uploadFile",
+    value: function uploadFile(options) {
+      var _this = this;
+      var filePath = options.filePath,
+        cloudPath = options.cloudPath;
+      var promiseRes = new Promise( /*#__PURE__*/function () {
+        var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(resolve, reject) {
+          var uploadFileOptionsRes, uploadTask;
+          return _regenerator.default.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.prev = 0;
+                  _context.next = 3;
+                  return _this.uploadFileOptions({
+                    cloudPath: cloudPath,
+                    domain: _this.domain
+                  });
+                case 3:
+                  uploadFileOptionsRes = _context.sent;
+                  uploadTask = uni.uploadFile(_objectSpread(_objectSpread({}, uploadFileOptionsRes.uploadFileOptions), {}, {
+                    // 上传文件所需参数
+                    filePath: filePath,
+                    // 本地文件路径
+                    success: function success(uploadFileRes) {
+                      if (uploadFileRes.statusCode !== 200) {
+                        var err = uploadFileRes;
+                        if (typeof options.fail === "function") options.fail(err);
+                        reject(err);
+                      } else {
+                        var res = {
+                          cloudPath: uploadFileOptionsRes.cloudPath,
+                          // 文件云端路径
+                          fileID: uploadFileOptionsRes.fileID,
+                          // 文件ID
+                          fileURL: uploadFileOptionsRes.fileURL // 文件URL（如果是私有权限，则此URL是无法直接访问的）
+                        };
+
+                        if (_this.fileID2fileURL) {
+                          res.fileID = "https://".concat(_this.domain, "/").concat(res.cloudPath);
+                        }
+                        if (typeof options.success === "function") options.success(res);
+                        resolve(res);
+                      }
+                    },
+                    fail: function fail(err) {
+                      if (typeof options.fail === "function") options.fail(err);
+                      reject(err);
+                    },
+                    complete: function complete() {
+                      if (typeof options.complete === "function") options.complete();
+                    }
+                  })); // 监听上传进度
+                  uploadTask.onProgressUpdate(function (progressEvent) {
+                    if (typeof options.onUploadProgress === "function") {
+                      var total = progressEvent.totalBytesExpectedToSend;
+                      var loaded = progressEvent.totalBytesSent;
+                      var progress = Math.round(loaded * 100 / total);
+                      options.onUploadProgress({
+                        total: total,
+                        loaded: loaded,
+                        progress: progress
+                      });
+                    }
+                  });
+                  _context.next = 13;
+                  break;
+                case 8:
+                  _context.prev = 8;
+                  _context.t0 = _context["catch"](0);
+                  if (typeof options.fail === "function") options.fail(_context.t0);
+                  reject(_context.t0);
+                  if (typeof options.complete === "function") options.complete();
+                case 13:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee, null, [[0, 8]]);
+        }));
+        return function (_x, _x2) {
+          return _ref.apply(this, arguments);
+        };
+      }());
+      promiseRes.catch(function () {});
+      return promiseRes;
+    }
+
+    // 获取临时文件下载地址
+  }, {
+    key: "getTempFileURL",
+    value: function getTempFileURL() {
+      var _this2 = this;
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var fileList = options.fileList;
+      return new Promise(function (resolve, reject) {
+        var res = {
+          fileList: fileList.map(function (item, index) {
+            var cloudPath = getCloudPath(item);
+            return {
+              fileID: item,
+              tempFileURL: "https://".concat(_this2.domain, "/").concat(cloudPath)
+            };
+          })
+        };
+        if (typeof options.success === "function") options.success(res);
+        resolve(res);
+        if (typeof options.complete === "function") options.complete();
+      });
+    }
+
+    // 删除文件
+  }, {
+    key: "deleteFile",
+    value: function deleteFile() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      // 扩展存储不允许前端删除文件（故此处直接返回）
+      return new Promise(function (resolve, reject) {
+        var res = {
+          fileList: []
+        };
+        if (typeof options.success === "function") options.success(res);
+        resolve(res);
+        if (typeof options.complete === "function") options.complete();
+      });
+    }
+  }]);
+  return ExtStorage;
+}();
+function getCloudPath(cloudPath) {
+  var qiniuPrefix = 'qiniu://';
+  if (cloudPath.indexOf(qiniuPrefix) === 0) {
+    cloudPath = cloudPath.substring(qiniuPrefix.length);
+  } else if (cloudPath.indexOf('http://') === 0 || cloudPath.indexOf('https://') === 0) {
+    var startIndex = cloudPath.indexOf('://') + 3;
+    startIndex = cloudPath.indexOf('/', startIndex);
+    var endIndex = cloudPath.indexOf('?') === -1 ? cloudPath.length : cloudPath.indexOf('?');
+    endIndex = cloudPath.indexOf('#') !== -1 && cloudPath.indexOf('#') < endIndex ? cloudPath.indexOf('#') : endIndex;
+    cloudPath = cloudPath.substring(startIndex + 1, endIndex);
+  }
+  return cloudPath;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 44:
-/*!************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/package.json ***!
-  \************************************************************/
-/*! exports provided: name, id, displayName, version, description, main, scripts, repository, keywords, engines, author, license, bugs, homepage, dcloudext, uni_modules, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"name\":\"uni-admin 基础框架（原名 uniCloud admin）\",\"id\":\"uni-template-admin\",\"displayName\":\"uni-admin 基础框架\",\"version\":\"2.5.13\",\"description\":\"基于uni-app & uniCloud的后台管理项目模板（管理后台开发必备神器）\",\"main\":\"main.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\"},\"repository\":\"https://github.com/dcloudio/uni-admin.git\",\"keywords\":[\"admin\",\"uniCloud\",\"管理后台\",\"云后台\",\"uni-admin\"],\"engines\":{\"HBuilderX\":\"^3.6.0\",\"uni-app\":\"^4.36\",\"uni-app-x\":\"\"},\"author\":\"\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/dcloudio/uni-admin/issues\"},\"homepage\":\"https://github.com/dcloudio/uni-admin#readme\",\"dcloudext\":{\"sale\":{\"regular\":{\"price\":\"0.00\"},\"sourcecode\":{\"price\":\"0.00\"}},\"contact\":{\"qq\":\"\"},\"declaration\":{\"ads\":\"无\",\"data\":\"无\",\"permissions\":\"无\"},\"npmurl\":\"\",\"type\":\"unicloud-template-project\",\"darkmode\":\"x\",\"i18n\":\"√\",\"widescreen\":\"√\"},\"uni_modules\":{\"dependencies\":[],\"encrypt\":[],\"platforms\":{\"cloud\":{\"tcb\":\"√\",\"aliyun\":\"√\",\"alipay\":\"√\"},\"client\":{\"uni-app\":{\"vue\":{\"vue2\":\"√\",\"vue3\":\"√\"},\"web\":{\"safari\":\"√\",\"chrome\":\"√\"},\"app\":{\"vue\":\"√\",\"nvue\":\"x\",\"android\":\"√\",\"ios\":\"√\",\"harmony\":\"√\"},\"mp\":{\"weixin\":\"√\",\"alipay\":\"√\",\"toutiao\":\"-\",\"baidu\":\"-\",\"kuaishou\":\"-\",\"jd\":\"-\",\"harmony\":\"-\",\"qq\":\"-\",\"lark\":\"-\"},\"quickapp\":{\"huawei\":\"-\",\"union\":\"-\"}},\"uni-app-x\":{\"web\":{\"safari\":\"-\",\"chrome\":\"-\"},\"app\":{\"android\":\"-\",\"ios\":\"-\",\"harmony\":\"-\"},\"mp\":{\"weixin\":\"-\"}},\"App\":{\"app-harmony\":\"u\",\"app-nvue\":\"u\",\"app-uvue\":\"u\",\"app-vue\":\"u\"}}}}}");
-
-/***/ }),
-
-/***/ 442:
-/*!******************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-forms/components/uni-forms/validate.js ***!
-  \******************************************************************************************************/
+/***/ 470:
+/*!***********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-forms/components/uni-forms/validate.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31964,10 +32233,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 443:
-/*!***************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-forms/components/uni-forms/utils.js ***!
-  \***************************************************************************************************/
+/***/ 471:
+/*!********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-forms/components/uni-forms/utils.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32300,279 +32569,142 @@ exports.isEqual = isEqual;
 
 /***/ }),
 
-/***/ 45:
-/*!******************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/constants.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 49:
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
 
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.uniAdminCacheKey = void 0;
-/** uni-admin 缓存键名 */
-var uniAdminCacheKey = {
-  theme: "uni-admin-theme" // 主题
-};
-exports.uniAdminCacheKey = uniAdminCacheKey;
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    if(typeof renderjs.beforeCreate === 'function'){
+			renderjs.beforeCreate = [renderjs.beforeCreate]
+		}
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
 
 /***/ }),
 
-/***/ 46:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/ext-storage/uploadFileForExtStorage.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23));
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ 24));
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-/**
- * 设置 uniCloud.uploadFile 默认上传到扩展存储
- * @param {String} provider 云储存供应商
- * 	@value unicloud				内置存储
- * 	@value extStorage 		扩展存储
- * @param {String} domain 自定义域名，仅扩展存储有效
- * @param {Boolean} fileID2fileURL 是否将fileID转为fileURL
- * @param {Function} uploadFileOptions 获取上传参数的函数，仅扩展存储有效
- */
-function init() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var defaultProvider = options.provider;
-  var originalDefaultProvider = defaultProvider;
-  var extStorage = new ExtStorage(options);
-  var uploadFile = uniCloud.uploadFile;
-  uniCloud.uploadFile = function () {
-    var options = (arguments.length <= 0 ? undefined : arguments[0]) || {};
-    var _options$provider = options.provider,
-      provider = _options$provider === void 0 ? defaultProvider : _options$provider;
-    if (provider === "extStorage") {
-      return extStorage.uploadFile.apply(extStorage, arguments);
-    } else {
-      return uploadFile.apply(void 0, arguments);
-    }
-  };
-  var getTempFileURL = uniCloud.getTempFileURL;
-  uniCloud.getTempFileURL = function () {
-    var options = (arguments.length <= 0 ? undefined : arguments[0]) || {};
-    var _options$provider2 = options.provider,
-      provider = _options$provider2 === void 0 ? defaultProvider : _options$provider2;
-    if (provider === "extStorage") {
-      return extStorage.getTempFileURL.apply(extStorage, arguments);
-    } else {
-      return getTempFileURL.apply(void 0, arguments);
-    }
-  };
-  var deleteFile = uniCloud.deleteFile;
-  uniCloud.deleteFile = function () {
-    var options = (arguments.length <= 0 ? undefined : arguments[0]) || {};
-    var _options$provider3 = options.provider,
-      provider = _options$provider3 === void 0 ? defaultProvider : _options$provider3;
-    if (provider === "extStorage") {
-      return extStorage.deleteFile.apply(extStorage, arguments);
-    } else {
-      return deleteFile.apply(void 0, arguments);
-    }
-  };
-  uniCloud.setCloudStorage = function () {
-    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var provider = data.provider,
-      domain = data.domain,
-      fileID2fileURL = data.fileID2fileURL;
-    if (provider === null) {
-      defaultProvider = originalDefaultProvider;
-    } else if (provider) {
-      defaultProvider = provider;
-    }
-    if (domain) extStorage.domain = domain;
-    if (fileID2fileURL) extStorage.fileID2fileURL = fileID2fileURL;
-  };
-}
-var _default = {
-  init: init
-};
-exports.default = _default;
-var ExtStorage = /*#__PURE__*/function () {
-  function ExtStorage() {
-    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    (0, _classCallCheck2.default)(this, ExtStorage);
-    var uploadFileOptions = data.uploadFileOptions,
-      domain = data.domain,
-      fileID2fileURL = data.fileID2fileURL;
-    this.uploadFileOptions = uploadFileOptions;
-    this.domain = domain;
-    this.fileID2fileURL = fileID2fileURL;
-  }
-
-  // 上传文件
-  (0, _createClass2.default)(ExtStorage, [{
-    key: "uploadFile",
-    value: function uploadFile(options) {
-      var _this = this;
-      var filePath = options.filePath,
-        cloudPath = options.cloudPath;
-      var promiseRes = new Promise( /*#__PURE__*/function () {
-        var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(resolve, reject) {
-          var uploadFileOptionsRes, uploadTask;
-          return _regenerator.default.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  _context.prev = 0;
-                  _context.next = 3;
-                  return _this.uploadFileOptions({
-                    cloudPath: cloudPath,
-                    domain: _this.domain
-                  });
-                case 3:
-                  uploadFileOptionsRes = _context.sent;
-                  uploadTask = uni.uploadFile(_objectSpread(_objectSpread({}, uploadFileOptionsRes.uploadFileOptions), {}, {
-                    // 上传文件所需参数
-                    filePath: filePath,
-                    // 本地文件路径
-                    success: function success(uploadFileRes) {
-                      if (uploadFileRes.statusCode !== 200) {
-                        var err = uploadFileRes;
-                        if (typeof options.fail === "function") options.fail(err);
-                        reject(err);
-                      } else {
-                        var res = {
-                          cloudPath: uploadFileOptionsRes.cloudPath,
-                          // 文件云端路径
-                          fileID: uploadFileOptionsRes.fileID,
-                          // 文件ID
-                          fileURL: uploadFileOptionsRes.fileURL // 文件URL（如果是私有权限，则此URL是无法直接访问的）
-                        };
-
-                        if (_this.fileID2fileURL) {
-                          res.fileID = "https://".concat(_this.domain, "/").concat(res.cloudPath);
-                        }
-                        if (typeof options.success === "function") options.success(res);
-                        resolve(res);
-                      }
-                    },
-                    fail: function fail(err) {
-                      if (typeof options.fail === "function") options.fail(err);
-                      reject(err);
-                    },
-                    complete: function complete() {
-                      if (typeof options.complete === "function") options.complete();
-                    }
-                  })); // 监听上传进度
-                  uploadTask.onProgressUpdate(function (progressEvent) {
-                    if (typeof options.onUploadProgress === "function") {
-                      var total = progressEvent.totalBytesExpectedToSend;
-                      var loaded = progressEvent.totalBytesSent;
-                      var progress = Math.round(loaded * 100 / total);
-                      options.onUploadProgress({
-                        total: total,
-                        loaded: loaded,
-                        progress: progress
-                      });
-                    }
-                  });
-                  _context.next = 13;
-                  break;
-                case 8:
-                  _context.prev = 8;
-                  _context.t0 = _context["catch"](0);
-                  if (typeof options.fail === "function") options.fail(_context.t0);
-                  reject(_context.t0);
-                  if (typeof options.complete === "function") options.complete();
-                case 13:
-                case "end":
-                  return _context.stop();
-              }
-            }
-          }, _callee, null, [[0, 8]]);
-        }));
-        return function (_x, _x2) {
-          return _ref.apply(this, arguments);
-        };
-      }());
-      promiseRes.catch(function () {});
-      return promiseRes;
-    }
-
-    // 获取临时文件下载地址
-  }, {
-    key: "getTempFileURL",
-    value: function getTempFileURL() {
-      var _this2 = this;
-      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      var fileList = options.fileList;
-      return new Promise(function (resolve, reject) {
-        var res = {
-          fileList: fileList.map(function (item, index) {
-            var cloudPath = getCloudPath(item);
-            return {
-              fileID: item,
-              tempFileURL: "https://".concat(_this2.domain, "/").concat(cloudPath)
-            };
-          })
-        };
-        if (typeof options.success === "function") options.success(res);
-        resolve(res);
-        if (typeof options.complete === "function") options.complete();
-      });
-    }
-
-    // 删除文件
-  }, {
-    key: "deleteFile",
-    value: function deleteFile() {
-      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      // 扩展存储不允许前端删除文件（故此处直接返回）
-      return new Promise(function (resolve, reject) {
-        var res = {
-          fileList: []
-        };
-        if (typeof options.success === "function") options.success(res);
-        resolve(res);
-        if (typeof options.complete === "function") options.complete();
-      });
-    }
-  }]);
-  return ExtStorage;
-}();
-function getCloudPath(cloudPath) {
-  var qiniuPrefix = 'qiniu://';
-  if (cloudPath.indexOf(qiniuPrefix) === 0) {
-    cloudPath = cloudPath.substring(qiniuPrefix.length);
-  } else if (cloudPath.indexOf('http://') === 0 || cloudPath.indexOf('https://') === 0) {
-    var startIndex = cloudPath.indexOf('://') + 3;
-    startIndex = cloudPath.indexOf('/', startIndex);
-    var endIndex = cloudPath.indexOf('?') === -1 ? cloudPath.length : cloudPath.indexOf('?');
-    endIndex = cloudPath.indexOf('#') !== -1 && cloudPath.indexOf('#') < endIndex ? cloudPath.indexOf('#') : endIndex;
-    cloudPath = cloudPath.substring(startIndex + 1, endIndex);
-  }
-  return cloudPath;
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 468:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/system/app/mixin/publish_add_detail_mixin.js ***!
-  \**************************************************************************************************/
+/***/ 496:
+/*!*******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/system/app/mixin/publish_add_detail_mixin.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32587,7 +32719,7 @@ exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ 13));
-var _opendbAppList = __webpack_require__(/*! @/js_sdk/validator/opendb-app-list.js */ 469);
+var _opendbAppList = __webpack_require__(/*! @/js_sdk/validator/opendb-app-list.js */ 497);
 var formatFilePickerValue = function formatFilePickerValue(url) {
   return url ? {
     "name": "",
@@ -32879,10 +33011,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 469:
-/*!***********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-app-list.js ***!
-  \***********************************************************************************/
+/***/ 497:
+/*!****************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/opendb-app-list.js ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33036,142 +33168,184 @@ exports.mpPlatform = mpPlatform;
 
 /***/ }),
 
-/***/ 49:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 5:
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    if(typeof renderjs.beforeCreate === 'function'){
-			renderjs.beforeCreate = [renderjs.beforeCreate]
-		}
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
+var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ 6);
+var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ 7);
+var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ 8);
+var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ 10);
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
 }
-
+module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
-/***/ 492:
-/*!******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-tag.js ***!
-  \******************************************************************************/
+/***/ 50:
+/*!*******************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/store/index.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _app = _interopRequireDefault(__webpack_require__(/*! ./modules/app.js */ 51));
+var _error = _interopRequireDefault(__webpack_require__(/*! ./modules/error.js */ 52));
+var _user = _interopRequireDefault(__webpack_require__(/*! ./modules/user.js */ 53));
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 42));
+// const modulesFiles = require.context('./modules', true, /\.js$/)
+// const modules = modulesFiles.keys().reduce((modules, modulePath) => {
+//     const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
+//     const value = modulesFiles(modulePath)
+//     modules[moduleName] = value.default
+//     return modules
+// }, {})
+
+_vue.default.use(_vuex.default);
+var store = new _vuex.default.Store({
+  modules: {
+    app: _app.default,
+    error: _error.default,
+    user: _user.default
+  }
+});
+var _default = store;
+exports.default = _default;
+
+/***/ }),
+
+/***/ 51:
+/*!*************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/app.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _constants = __webpack_require__(/*! ../constants.js */ 45);
+var statConfig = __webpack_require__(/*! uni-stat-config */ 38).default || __webpack_require__(/*! uni-stat-config */ 38);
+var _default = {
+  namespaced: true,
+  state: {
+    inited: false,
+    navMenu: [],
+    routes: [],
+    theme: uni.getStorageSync(_constants.uniAdminCacheKey.theme) || 'default',
+    appName: "点餐小程序的后台端" || false,
+    appid: statConfig && statConfig.appid || ''
+  },
+  mutations: {
+    SET_APP_NAME: function SET_APP_NAME(state, appName) {
+      state.appName = appName;
+    },
+    SET_NAV_MENU: function SET_NAV_MENU(state, navMenu) {
+      state.inited = true;
+      state.navMenu = navMenu;
+    },
+    SET_ROUTES: function SET_ROUTES(state, routes) {
+      state.routes = routes;
+    },
+    SET_THEME: function SET_THEME(state, theme) {
+      uni.setStorageSync(_constants.uniAdminCacheKey.theme, theme);
+      state.theme = theme;
+    }
+  },
+  actions: {
+    init: function init(_ref) {
+      var commit = _ref.commit,
+        dispatch = _ref.dispatch;
+      // 初始化获取用户信息
+      dispatch('user/getUserInfo', null, {
+        root: true
+      });
+    },
+    setAppName: function setAppName(_ref2, appName) {
+      var commit = _ref2.commit;
+      commit('SET_APP_NAME', appName);
+    },
+    setRoutes: function setRoutes(_ref3, routes) {
+      var commit = _ref3.commit;
+      commit('SET_ROUTES', routes);
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 52:
+/*!***************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/error.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  namespaced: true,
+  state: {
+    logs: []
+  },
+  mutations: {
+    ADD_ERROR_LOG: function ADD_ERROR_LOG(state, log) {
+      state.logs.unshift(log);
+    },
+    CLEAR_ERROR_LOG: function CLEAR_ERROR_LOG(state) {
+      state.logs.splice(0);
+    }
+  },
+  actions: {
+    add: function add(_ref, log) {
+      var commit = _ref.commit;
+      if (!log.route) {
+        var pages = getCurrentPages();
+        if (pages.length) {
+          log.route = pages[pages.length - 1].route;
+        }
+      }
+      log.route = '/' + (log.route || '');
+      commit('ADD_ERROR_LOG', log);
+    },
+    clear: function clear(_ref2) {
+      var commit = _ref2.commit;
+      commit('CLEAR_ERROR_LOG');
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 520:
+/*!***********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-id-tag.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33280,273 +33454,10 @@ function filterToWhere(filter, command) {
 
 /***/ }),
 
-/***/ 5:
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ 6);
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ 7);
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ 8);
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ 10);
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
-}
-module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 50:
-/*!**************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/index.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _app = _interopRequireDefault(__webpack_require__(/*! ./modules/app.js */ 51));
-var _error = _interopRequireDefault(__webpack_require__(/*! ./modules/error.js */ 52));
-var _user = _interopRequireDefault(__webpack_require__(/*! ./modules/user.js */ 53));
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 42));
-// const modulesFiles = require.context('./modules', true, /\.js$/)
-// const modules = modulesFiles.keys().reduce((modules, modulePath) => {
-//     const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
-//     const value = modulesFiles(modulePath)
-//     modules[moduleName] = value.default
-//     return modules
-// }, {})
-
-_vue.default.use(_vuex.default);
-var store = new _vuex.default.Store({
-  modules: {
-    app: _app.default,
-    error: _error.default,
-    user: _user.default
-  }
-});
-var _default = store;
-exports.default = _default;
-
-/***/ }),
-
-/***/ 51:
-/*!********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/app.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _constants = __webpack_require__(/*! ../constants.js */ 45);
-var statConfig = __webpack_require__(/*! uni-stat-config */ 38).default || __webpack_require__(/*! uni-stat-config */ 38);
-var _default = {
-  namespaced: true,
-  state: {
-    inited: false,
-    navMenu: [],
-    routes: [],
-    theme: uni.getStorageSync(_constants.uniAdminCacheKey.theme) || 'default',
-    appName: "点餐小程序的后台端" || false,
-    appid: statConfig && statConfig.appid || ''
-  },
-  mutations: {
-    SET_APP_NAME: function SET_APP_NAME(state, appName) {
-      state.appName = appName;
-    },
-    SET_NAV_MENU: function SET_NAV_MENU(state, navMenu) {
-      state.inited = true;
-      state.navMenu = navMenu;
-    },
-    SET_ROUTES: function SET_ROUTES(state, routes) {
-      state.routes = routes;
-    },
-    SET_THEME: function SET_THEME(state, theme) {
-      uni.setStorageSync(_constants.uniAdminCacheKey.theme, theme);
-      state.theme = theme;
-    }
-  },
-  actions: {
-    init: function init(_ref) {
-      var commit = _ref.commit,
-        dispatch = _ref.dispatch;
-      // 初始化获取用户信息
-      dispatch('user/getUserInfo', null, {
-        root: true
-      });
-    },
-    setAppName: function setAppName(_ref2, appName) {
-      var commit = _ref2.commit;
-      commit('SET_APP_NAME', appName);
-    },
-    setRoutes: function setRoutes(_ref3, routes) {
-      var commit = _ref3.commit;
-      commit('SET_ROUTES', routes);
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 52:
-/*!**********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/error.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  namespaced: true,
-  state: {
-    logs: []
-  },
-  mutations: {
-    ADD_ERROR_LOG: function ADD_ERROR_LOG(state, log) {
-      state.logs.unshift(log);
-    },
-    CLEAR_ERROR_LOG: function CLEAR_ERROR_LOG(state) {
-      state.logs.splice(0);
-    }
-  },
-  actions: {
-    add: function add(_ref, log) {
-      var commit = _ref.commit;
-      if (!log.route) {
-        var pages = getCurrentPages();
-        if (pages.length) {
-          log.route = pages[pages.length - 1].route;
-        }
-      }
-      log.route = '/' + (log.route || '');
-      commit('ADD_ERROR_LOG', log);
-    },
-    clear: function clear(_ref2) {
-      var commit = _ref2.commit;
-      commit('CLEAR_ERROR_LOG');
-    }
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 521:
-/*!************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-res/fieldsMap.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
-  	* 'sum' 表示对字段做求和运算
-  	* 'avg' 表示对字段做平均运算
-  	* '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var _default = [{
-  title: '受访页',
-  field: 'path',
-  tooltip: '设备进入应用访问的所有页面，例如设备从页面1进入应用，跳转到页面2，1,2均为受访页',
-  stat: -1
-}, {
-  title: '页面名称',
-  field: 'title',
-  stat: -1
-}, {
-  title: '访问次数',
-  field: 'visit_times',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问；',
-  value: 0
-}, {
-  title: '退出页次数',
-  field: 'exit_times',
-  tooltip: '作为访问会话最后一个访问页面(即离开页）的次数',
-  value: 0
-}, {
-  title: '退出率',
-  field: 'exitRate',
-  computed: 'exit_times/visit_times',
-  formatter: '%',
-  tooltip: '在此页面，选择离开应用占此页面访问次数的比例',
-  // value: 0,
-  stat: -1
-}, {
-  title: '访问总时长(秒)',
-  field: 'duration',
-  disabled: true
-}, {
-  title: '次均停留时长',
-  field: 'avg_device_session_time',
-  computed: 'duration/visit_times',
-  formatter: ':',
-  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
-  value: 0
-}, {
-  title: '设备平均停留时长',
-  field: 'avg_user_time',
-  computed: 'duration/visit_devices',
-  formatter: ':',
-  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/访问设备数',
-  value: 0
-}, {
-  title: '分享次数',
-  field: 'share_count',
-  tooltip: '页面被分享成功的次数',
-  value: 0
-}];
-exports.default = _default;
-
-/***/ }),
-
 /***/ 53:
-/*!*********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/user.js ***!
-  \*********************************************************************/
+/*!**************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/store/modules/user.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33586,167 +33497,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 530:
-/*!************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-ent/fieldsMap.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
-  	* 'sum' 表示对字段做求和运算
-  	* 'avg' 表示对字段做平均运算
-  	* '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var _default = [{
-  title: '入口页',
-  field: 'path',
-  tooltip: '设备进入应用访问的第一个页面，例如设备从页面1进入应用，跳转到页面2，1为入口页，而2不是'
-}, {
-  title: '页面名称',
-  field: 'title'
-}, {
-  title: '访问次数',
-  field: 'visit_times',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
-  value: 0
-}, {
-  title: '入口页次数',
-  field: 'entry_count',
-  tooltip: '作为访问会话第一个访问页面（即着陆页）的次数',
-  value: 0
-}, {
-  title: '跳出率',
-  field: 'bounce_rate',
-  formatter: '%%',
-  tooltip: '只浏览一个页面便离开应用的次数占总启动次数的百分比',
-  value: 0,
-  stat: 'avg'
-}, {
-  title: '访问总时长(秒)',
-  field: 'duration',
-  disabled: true
-}, {
-  title: '次均停留时长',
-  field: 'avg_device_session_time',
-  computed: 'duration/visit_times',
-  formatter: ':',
-  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
-  value: 0
-}, {
-  title: '设备平均停留时长 ',
-  field: 'avg_user_time',
-  computed: 'duration/visit_devices',
-  formatter: ':',
-  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/访问设备数',
-  value: 0
-}];
-exports.default = _default;
-
-/***/ }),
-
-/***/ 539:
-/*!****************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-content/fieldsMap.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
-  	* 'sum' 表示对字段做求和运算
-  	* 'avg' 表示对字段做平均运算
-  	* '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var _default = [{
-  title: '内容统计页面',
-  field: 'page_link',
-  stat: -1
-}, {
-  title: '页面名称',
-  field: 'page_title',
-  stat: -1
-}, {
-  title: '访问次数',
-  field: 'visit_times',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问；',
-  value: 0
-}, {
-  title: '访问设备数',
-  field: 'visit_devices',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问；',
-  value: 0
-}, {
-  title: '次均停留时长',
-  field: 'avg_device_session_time',
-  computed: 'duration/visit_times',
-  formatter: ':',
-  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
-  value: 0
-}, {
-  title: '设备平均停留时长',
-  field: 'avg_user_time',
-  computed: 'duration/visit_devices',
-  formatter: ':',
-  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/访问设备数',
-  value: 0
-}, {
-  title: '分享次数',
-  field: 'share_count',
-  tooltip: '页面被分享成功的次数',
-  value: 0
-}];
-exports.default = _default;
-
-/***/ }),
-
 /***/ 54:
-/*!****************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/store.js ***!
-  \****************************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/common/store.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33992,10 +33746,396 @@ exports.store = store;
 
 /***/ }),
 
-/***/ 548:
-/*!**********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-stat-pages.js ***!
-  \**********************************************************************************/
+/***/ 549:
+/*!*****************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-res/fieldsMap.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+  	* 'sum' 表示对字段做求和运算
+  	* 'avg' 表示对字段做平均运算
+  	* '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var _default = [{
+  title: '受访页',
+  field: 'path',
+  tooltip: '设备进入应用访问的所有页面，例如设备从页面1进入应用，跳转到页面2，1,2均为受访页',
+  stat: -1
+}, {
+  title: '页面名称',
+  field: 'title',
+  stat: -1
+}, {
+  title: '访问次数',
+  field: 'visit_times',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问；',
+  value: 0
+}, {
+  title: '退出页次数',
+  field: 'exit_times',
+  tooltip: '作为访问会话最后一个访问页面(即离开页）的次数',
+  value: 0
+}, {
+  title: '退出率',
+  field: 'exitRate',
+  computed: 'exit_times/visit_times',
+  formatter: '%',
+  tooltip: '在此页面，选择离开应用占此页面访问次数的比例',
+  // value: 0,
+  stat: -1
+}, {
+  title: '访问总时长(秒)',
+  field: 'duration',
+  disabled: true
+}, {
+  title: '次均停留时长',
+  field: 'avg_device_session_time',
+  computed: 'duration/visit_times',
+  formatter: ':',
+  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
+  value: 0
+}, {
+  title: '设备平均停留时长',
+  field: 'avg_user_time',
+  computed: 'duration/visit_devices',
+  formatter: ':',
+  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/访问设备数',
+  value: 0
+}, {
+  title: '分享次数',
+  field: 'share_count',
+  tooltip: '页面被分享成功的次数',
+  value: 0
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 55:
+/*!***************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/config.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  //调试模式
+  "debug": false,
+  /*
+  	登录类型 未列举到的或运行环境不支持的，将被自动隐藏。
+  	如果需要在不同平台有不同的配置，直接用条件编译即可
+  */
+  "isAdmin": true,
+  // 区分管理端与用户端
+  "loginTypes": [
+  // "qq",
+  // "xiaomi",
+  // "sinaweibo",
+  // "taobao",
+  // "facebook",
+  // "google",
+  // "alipay",
+  // "douyin",
+
+  // "weixin",
+  "username"
+
+  // "smsCode"
+  ],
+
+  //政策协议
+  // "agreements": {
+  // 	"serviceUrl": "https://xxx", //用户服务协议链接
+  // 	"privacyUrl": "https://xxx", //隐私政策条款链接
+  // 	// 哪些场景下显示，1.注册（包括登录并注册，如：微信登录、苹果登录、短信验证码登录）、2.登录（如：用户名密码登录）
+  // 	"scope": [
+  // 		'register', 'login'
+  // 	]
+  // },
+  // 提供各类服务接入（如微信登录服务）的应用id
+  "appid": {
+    "weixin": {
+      // 微信公众号的appid，来源:登录微信公众号（https://mp.weixin.qq.com）-> 设置与开发 -> 基本配置 -> 公众号开发信息 -> AppID
+      "h5": "xxxxxx",
+      // 微信开放平台的appid，来源:登录微信开放平台（https://open.weixin.qq.com） -> 管理中心 -> 网站应用 -> 选择对应的应用名称，点击查看 -> AppID
+      "web": "xxxxxx"
+    }
+  },
+  /**
+   * 密码强度
+   * super（超强：密码必须包含大小写字母、数字和特殊符号，长度范围：8-16位之间）
+   * strong（强: 密密码必须包含字母、数字和特殊符号，长度范围：8-16位之间）
+   * medium (中：密码必须为字母、数字和特殊符号任意两种的组合，长度范围：8-16位之间)
+   * weak（弱：密码必须包含字母和数字，长度范围：6-16位之间）
+   * 为空或false则不验证密码强度
+   */
+  "passwordStrength": "medium"
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 558:
+/*!*****************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-ent/fieldsMap.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+  	* 'sum' 表示对字段做求和运算
+  	* 'avg' 表示对字段做平均运算
+  	* '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var _default = [{
+  title: '入口页',
+  field: 'path',
+  tooltip: '设备进入应用访问的第一个页面，例如设备从页面1进入应用，跳转到页面2，1为入口页，而2不是'
+}, {
+  title: '页面名称',
+  field: 'title'
+}, {
+  title: '访问次数',
+  field: 'visit_times',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
+  value: 0
+}, {
+  title: '入口页次数',
+  field: 'entry_count',
+  tooltip: '作为访问会话第一个访问页面（即着陆页）的次数',
+  value: 0
+}, {
+  title: '跳出率',
+  field: 'bounce_rate',
+  formatter: '%%',
+  tooltip: '只浏览一个页面便离开应用的次数占总启动次数的百分比',
+  value: 0,
+  stat: 'avg'
+}, {
+  title: '访问总时长(秒)',
+  field: 'duration',
+  disabled: true
+}, {
+  title: '次均停留时长',
+  field: 'avg_device_session_time',
+  computed: 'duration/visit_times',
+  formatter: ':',
+  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
+  value: 0
+}, {
+  title: '设备平均停留时长 ',
+  field: 'avg_user_time',
+  computed: 'duration/visit_devices',
+  formatter: ':',
+  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/访问设备数',
+  value: 0
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 56:
+/*!*******************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/plugin.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _util = __webpack_require__(/*! ./util.js */ 57);
+var _error = __webpack_require__(/*! ./error.js */ 59);
+var _request = __webpack_require__(/*! ./request.js */ 60);
+var _fetchMock = __webpack_require__(/*! ./fetchMock.js */ 63);
+var _permission = __webpack_require__(/*! ./permission.js */ 64);
+var _interceptor = __webpack_require__(/*! ./interceptor.js */ 65);
+var _store = __webpack_require__(/*! ../uni-id-pages/store */ 66);
+var _default = {
+  install: function install(Vue) {
+    (0, _util.initUtil)(Vue);
+    (0, _error.initError)(Vue);
+    (0, _store.initUniIdPageStore)(Vue);
+    (0, _request.initRequest)(Vue);
+    (0, _fetchMock.initFetch)(Vue);
+    (0, _permission.initPermission)(Vue);
+    (0, _interceptor.initInterceptor)();
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 567:
+/*!*********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/page-content/fieldsMap.js ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+  	* 'sum' 表示对字段做求和运算
+  	* 'avg' 表示对字段做平均运算
+  	* '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var _default = [{
+  title: '内容统计页面',
+  field: 'page_link',
+  stat: -1
+}, {
+  title: '页面名称',
+  field: 'page_title',
+  stat: -1
+}, {
+  title: '访问次数',
+  field: 'visit_times',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问；',
+  value: 0
+}, {
+  title: '访问设备数',
+  field: 'visit_devices',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问；',
+  value: 0
+}, {
+  title: '次均停留时长',
+  field: 'avg_device_session_time',
+  computed: 'duration/visit_times',
+  formatter: ':',
+  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
+  value: 0
+}, {
+  title: '设备平均停留时长',
+  field: 'avg_user_time',
+  computed: 'duration/visit_devices',
+  formatter: ':',
+  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/访问设备数',
+  value: 0
+}, {
+  title: '分享次数',
+  field: 'share_count',
+  tooltip: '页面被分享成功的次数',
+  value: 0
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 57:
+/*!*****************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/util.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initUtil = initUtil;
+var _dateFormat = __webpack_require__(/*! @/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js */ 58);
+function formatBytes(bytes) {
+  var sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+  if (bytes == 0) {
+    return 'n/a';
+  }
+  var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+  if (i == 0) {
+    return bytes + ' ' + sizes[i];
+  }
+  return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+}
+function initUtil(Vue) {
+  Vue.prototype.$formatDate = _dateFormat.formatDate;
+  Vue.prototype.$formatBytes = formatBytes;
+}
+
+/***/ }),
+
+/***/ 576:
+/*!***************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-stat-pages.js ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34092,428 +34232,10 @@ function filterToWhere(filter, command) {
 
 /***/ }),
 
-/***/ 55:
-/*!**********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/config.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  //调试模式
-  "debug": false,
-  /*
-  	登录类型 未列举到的或运行环境不支持的，将被自动隐藏。
-  	如果需要在不同平台有不同的配置，直接用条件编译即可
-  */
-  "isAdmin": true,
-  // 区分管理端与用户端
-  "loginTypes": [
-  // "qq",
-  // "xiaomi",
-  // "sinaweibo",
-  // "taobao",
-  // "facebook",
-  // "google",
-  // "alipay",
-  // "douyin",
-
-  // "weixin",
-  "username"
-
-  // "smsCode"
-  ],
-
-  //政策协议
-  // "agreements": {
-  // 	"serviceUrl": "https://xxx", //用户服务协议链接
-  // 	"privacyUrl": "https://xxx", //隐私政策条款链接
-  // 	// 哪些场景下显示，1.注册（包括登录并注册，如：微信登录、苹果登录、短信验证码登录）、2.登录（如：用户名密码登录）
-  // 	"scope": [
-  // 		'register', 'login'
-  // 	]
-  // },
-  // 提供各类服务接入（如微信登录服务）的应用id
-  "appid": {
-    "weixin": {
-      // 微信公众号的appid，来源:登录微信公众号（https://mp.weixin.qq.com）-> 设置与开发 -> 基本配置 -> 公众号开发信息 -> AppID
-      "h5": "xxxxxx",
-      // 微信开放平台的appid，来源:登录微信开放平台（https://open.weixin.qq.com） -> 管理中心 -> 网站应用 -> 选择对应的应用名称，点击查看 -> AppID
-      "web": "xxxxxx"
-    }
-  },
-  /**
-   * 密码强度
-   * super（超强：密码必须包含大小写字母、数字和特殊符号，长度范围：8-16位之间）
-   * strong（强: 密密码必须包含字母、数字和特殊符号，长度范围：8-16位之间）
-   * medium (中：密码必须为字母、数字和特殊符号任意两种的组合，长度范围：8-16位之间)
-   * weak（弱：密码必须包含字母和数字，长度范围：6-16位之间）
-   * 为空或false则不验证密码强度
-   */
-  "passwordStrength": "medium"
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 557:
-/*!*********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/scene/fieldsMap.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
-  	* 'sum' 表示对字段做求和运算
-  	* 'avg' 表示对字段做平均运算
-  	* '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * disabled 是否用于展示，默认为 true
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var _default = [{
-  title: '场景值',
-  field: 'channel_code',
-  tooltip: '',
-  formatter: ''
-}, {
-  title: '场景名称',
-  field: 'channel_name',
-  tooltip: '',
-  formatter: ''
-}, {
-  title: '新增设备',
-  field: 'new_device_count',
-  tooltip: '首次访问应用的设备数（以设备为判断标准，去重）',
-  value: 0
-}, {
-  title: '活跃设备',
-  field: 'active_device_count',
-  tooltip: '访问过应用内任意页面的总设备数（去重）',
-  value: 0
-}, {
-  title: '访问次数',
-  field: 'page_visit_count',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
-  value: 0
-}, {
-  title: '启动次数',
-  field: 'app_launch_count',
-  tooltip: '设备从打开应用到主动关闭应用或超时退出计为一次启动',
-  value: 0
-}, {
-  title: '次均停留时长',
-  field: 'avg_device_session_time',
-  computed: 'duration/app_launch_count',
-  formatter: ':',
-  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
-  value: 0,
-  stat: 'avg'
-}, {
-  title: '设备平均停留时长 ',
-  field: 'avg_device_time',
-  computed: 'duration/active_device_count',
-  formatter: ':',
-  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/活跃设备',
-  value: 0,
-  stat: 'avg'
-}, {
-  title: '跳出率',
-  field: 'bounceRate',
-  computed: 'bounce_times/app_launch_count',
-  formatter: '%',
-  tooltip: '只浏览一个页面便离开应用的次数占总启动次数的百分比',
-  value: 0,
-  contrast: 0,
-  fix: 2
-}, {
-  field: 'bounce_times',
-  disable: true
-}, {
-  title: '总设备数',
-  field: 'total_devices',
-  tooltip: '从添加统计到当前选择时间的总设备数（去重）',
-  value: 0
-}];
-exports.default = _default;
-
-/***/ }),
-
-/***/ 56:
-/*!**************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/plugin.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _util = __webpack_require__(/*! ./util.js */ 57);
-var _error = __webpack_require__(/*! ./error.js */ 59);
-var _request = __webpack_require__(/*! ./request.js */ 60);
-var _fetchMock = __webpack_require__(/*! ./fetchMock.js */ 63);
-var _permission = __webpack_require__(/*! ./permission.js */ 64);
-var _interceptor = __webpack_require__(/*! ./interceptor.js */ 65);
-var _store = __webpack_require__(/*! ../uni-id-pages/store */ 66);
-var _default = {
-  install: function install(Vue) {
-    (0, _util.initUtil)(Vue);
-    (0, _error.initError)(Vue);
-    (0, _store.initUniIdPageStore)(Vue);
-    (0, _request.initRequest)(Vue);
-    (0, _fetchMock.initFetch)(Vue);
-    (0, _permission.initPermission)(Vue);
-    (0, _interceptor.initInterceptor)();
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 566:
-/*!***********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/channel/fieldsMap.js ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和无谓的重复，固在此抽出来统一配置和处理（计算、格式化等）
- * title 显示所使用名称
- * field 字段名
- * computed 计算表达式配置（需要 mapfield 函数支持）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var _default = [{
-  title: '渠道值',
-  field: 'channel_code',
-  tooltip: '',
-  formatter: ''
-}, {
-  title: '渠道名称',
-  field: 'channel_name',
-  tooltip: '',
-  formatter: ''
-}, {
-  title: '新增设备',
-  field: 'new_device_count',
-  tooltip: '首次访问应用的设备数（以设备为判断标准，去重）',
-  value: 0
-}, {
-  title: '活跃设备',
-  field: 'active_device_count',
-  tooltip: '访问过应用内任意页面的总设备数（去重）',
-  value: 0
-}, {
-  title: '访问次数',
-  field: 'page_visit_count',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
-  value: 0
-}, {
-  title: '启动次数',
-  field: 'app_launch_count',
-  tooltip: '设备从打开应用到主动关闭应用或超时退出计为一次启动',
-  value: 0
-}, {
-  title: '次均停留时长',
-  field: 'avg_device_session_time',
-  computed: 'duration/app_launch_count',
-  formatter: ':',
-  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
-  value: 0
-}, {
-  title: '设备平均停留时长 ',
-  field: 'avg_device_time',
-  computed: 'duration/active_device_count',
-  formatter: ':',
-  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/活跃设备',
-  value: 0
-}, {
-  title: '跳出率',
-  field: 'bounceRate',
-  computed: 'bounce_times/app_launch_count',
-  formatter: '%',
-  tooltip: '只浏览一个页面便离开应用的次数占总启动次数的百分比',
-  value: 0,
-  contrast: 0,
-  fix: 2
-}, {
-  title: '总设备数',
-  field: 'total_devices',
-  tooltip: '从添加统计到当前选择时间的总设备数（去重）',
-  value: 0
-}];
-exports.default = _default;
-
-/***/ }),
-
-/***/ 57:
-/*!************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/util.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initUtil = initUtil;
-var _dateFormat = __webpack_require__(/*! @/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js */ 58);
-function formatBytes(bytes) {
-  var sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
-  if (bytes == 0) {
-    return 'n/a';
-  }
-  var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-  if (i == 0) {
-    return bytes + ' ' + sizes[i];
-  }
-  return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
-}
-function initUtil(Vue) {
-  Vue.prototype.$formatDate = _dateFormat.formatDate;
-  Vue.prototype.$formatBytes = formatBytes;
-}
-
-/***/ }),
-
-/***/ 575:
-/*!************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/error/js/fieldsMap.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.popupFieldsMap = exports.fieldsMap = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
-  	* 'sum' 表示对字段做求和运算
-  	* 'avg' 表示对字段做平均运算
-  	* '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-
-var fieldsMap = [{
-  title: '最近发生时间',
-  field: 'last_time',
-  tooltip: '',
-  formatter: ''
-}, {
-  title: '错误次数',
-  field: 'count',
-  tooltip: '相同错误在某时间段内发生的次数'
-}, {
-  title: '错误占比',
-  computed: 'count/total_count',
-  field: 'count/total_count',
-  formatter: '%',
-  tooltip: '某个错误发生的次数/总错误数'
-}, {
-  title: '平台',
-  field: 'platform',
-  formatter: ''
-}, {
-  title: '平台版本号',
-  field: 'version',
-  tooltip: '原生平台为客户端 SDK 版本号；小程序平台为微信、支付宝、百度等应用的版本号',
-  formatter: ''
-}, {
-  title: '错误信息',
-  field: 'msg',
-  formatter: ''
-}];
-exports.fieldsMap = fieldsMap;
-var popupFieldsMap = [{
-  title: '创建时间',
-  field: 'create_time',
-  formatter: ''
-}, {
-  title: '客户端操作系统',
-  field: 'os',
-  formatter: ''
-}, {
-  title: '客户端 user-agent 信息',
-  field: 'ua',
-  formatter: ''
-}];
-exports.popupFieldsMap = popupFieldsMap;
-
-/***/ }),
-
 /***/ 58:
-/*!*******************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js ***!
-  \*******************************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-dateformat/components/uni-dateformat/date-format.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34728,10 +34450,441 @@ function friendlyDate(time, _ref) {
 
 /***/ }),
 
-/***/ 584:
-/*!*************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/error/app/fieldsMap.js ***!
-  \*************************************************************************************/
+/***/ 585:
+/*!**************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/scene/fieldsMap.js ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+  	* 'sum' 表示对字段做求和运算
+  	* 'avg' 表示对字段做平均运算
+  	* '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * disabled 是否用于展示，默认为 true
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var _default = [{
+  title: '场景值',
+  field: 'channel_code',
+  tooltip: '',
+  formatter: ''
+}, {
+  title: '场景名称',
+  field: 'channel_name',
+  tooltip: '',
+  formatter: ''
+}, {
+  title: '新增设备',
+  field: 'new_device_count',
+  tooltip: '首次访问应用的设备数（以设备为判断标准，去重）',
+  value: 0
+}, {
+  title: '活跃设备',
+  field: 'active_device_count',
+  tooltip: '访问过应用内任意页面的总设备数（去重）',
+  value: 0
+}, {
+  title: '访问次数',
+  field: 'page_visit_count',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
+  value: 0
+}, {
+  title: '启动次数',
+  field: 'app_launch_count',
+  tooltip: '设备从打开应用到主动关闭应用或超时退出计为一次启动',
+  value: 0
+}, {
+  title: '次均停留时长',
+  field: 'avg_device_session_time',
+  computed: 'duration/app_launch_count',
+  formatter: ':',
+  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
+  value: 0,
+  stat: 'avg'
+}, {
+  title: '设备平均停留时长 ',
+  field: 'avg_device_time',
+  computed: 'duration/active_device_count',
+  formatter: ':',
+  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/活跃设备',
+  value: 0,
+  stat: 'avg'
+}, {
+  title: '跳出率',
+  field: 'bounceRate',
+  computed: 'bounce_times/app_launch_count',
+  formatter: '%',
+  tooltip: '只浏览一个页面便离开应用的次数占总启动次数的百分比',
+  value: 0,
+  contrast: 0,
+  fix: 2
+}, {
+  field: 'bounce_times',
+  disable: true
+}, {
+  title: '总设备数',
+  field: 'total_devices',
+  tooltip: '从添加统计到当前选择时间的总设备数（去重）',
+  value: 0
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 59:
+/*!******************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/error.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initError = initError;
+var _store = _interopRequireDefault(__webpack_require__(/*! @/store */ 50));
+var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
+function initError(Vue) {
+  var debugOptions = _adminConfig.default.navBar.debug;
+  if (debugOptions && debugOptions.enable === true) {
+    var oldErrorHandler = Vue.config.errorHandler;
+    Vue.config.errorHandler = function errorHandler(err, vm, info) {
+      console.error(err);
+      var route = vm.$page && vm.$page.route;
+      _store.default.dispatch('error/add', {
+        err: err.toString(),
+        info: info,
+        route: route,
+        time: new Date().toLocaleTimeString()
+      });
+      return oldErrorHandler(err, vm, info);
+    };
+  }
+}
+
+/***/ }),
+
+/***/ 594:
+/*!****************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/channel/fieldsMap.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和无谓的重复，固在此抽出来统一配置和处理（计算、格式化等）
+ * title 显示所使用名称
+ * field 字段名
+ * computed 计算表达式配置（需要 mapfield 函数支持）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var _default = [{
+  title: '渠道值',
+  field: 'channel_code',
+  tooltip: '',
+  formatter: ''
+}, {
+  title: '渠道名称',
+  field: 'channel_name',
+  tooltip: '',
+  formatter: ''
+}, {
+  title: '新增设备',
+  field: 'new_device_count',
+  tooltip: '首次访问应用的设备数（以设备为判断标准，去重）',
+  value: 0
+}, {
+  title: '活跃设备',
+  field: 'active_device_count',
+  tooltip: '访问过应用内任意页面的总设备数（去重）',
+  value: 0
+}, {
+  title: '访问次数',
+  field: 'page_visit_count',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
+  value: 0
+}, {
+  title: '启动次数',
+  field: 'app_launch_count',
+  tooltip: '设备从打开应用到主动关闭应用或超时退出计为一次启动',
+  value: 0
+}, {
+  title: '次均停留时长',
+  field: 'avg_device_session_time',
+  computed: 'duration/app_launch_count',
+  formatter: ':',
+  tooltip: '平均每次打开应用停留在应用内的总时长，即应用停留总时长/启动次数',
+  value: 0
+}, {
+  title: '设备平均停留时长 ',
+  field: 'avg_device_time',
+  computed: 'duration/active_device_count',
+  formatter: ':',
+  tooltip: '平均每个设备停留在应用内的总时长，即应用停留总时长/活跃设备',
+  value: 0
+}, {
+  title: '跳出率',
+  field: 'bounceRate',
+  computed: 'bounce_times/app_launch_count',
+  formatter: '%',
+  tooltip: '只浏览一个页面便离开应用的次数占总启动次数的百分比',
+  value: 0,
+  contrast: 0,
+  fix: 2
+}, {
+  title: '总设备数',
+  field: 'total_devices',
+  tooltip: '从添加统计到当前选择时间的总设备数（去重）',
+  value: 0
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 6:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 60:
+/*!********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/request.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initRequest = initRequest;
+exports.request = request;
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ 61));
+var _index = _interopRequireDefault(__webpack_require__(/*! @/store/index.js */ 50));
+var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
+var _excluded = ["objectName", "functionName", "showModal"];
+var debugOptions = _adminConfig.default.navBar.debug;
+var db = uniCloud.database();
+function request(action, params, options) {
+  var _Object$assign = Object.assign({
+      objectName: 'uni-id-co',
+      functionName: '',
+      showModal: false,
+      customUI: true,
+      loadingOptions: {
+        title: 'xxx'
+      }
+    }, options),
+    objectName = _Object$assign.objectName,
+    functionName = _Object$assign.functionName,
+    showModal = _Object$assign.showModal,
+    objectOptions = (0, _objectWithoutProperties2.default)(_Object$assign, _excluded);
+
+  // 兼容 云函数 与 云对象 请求，默认为云对象
+  var call;
+  if (functionName) {
+    call = uniCloud.callFunction({
+      name: functionName,
+      data: {
+        action: action,
+        params: params
+      }
+    });
+  } else {
+    var uniCloudObject = uniCloud.importObject(objectName, objectOptions);
+    call = uniCloudObject[action](params);
+  }
+  return call.then(function (result) {
+    result = functionName ? result.result : result;
+    if (!result) {
+      return Promise.resolve(result);
+    }
+    if (result.errCode) {
+      return Promise.reject(result);
+    }
+    return Promise.resolve(result);
+  }).catch(function (err) {
+    showModal && uni.showModal({
+      content: err.errMsg || '请求服务失败',
+      showCancel: false
+    });
+    return Promise.reject(err);
+  });
+}
+function initRequest(Vue) {
+  Vue.prototype.$request = request;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 603:
+/*!*****************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/error/js/fieldsMap.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.popupFieldsMap = exports.fieldsMap = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+  	* 'sum' 表示对字段做求和运算
+  	* 'avg' 表示对字段做平均运算
+  	* '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+
+var fieldsMap = [{
+  title: '最近发生时间',
+  field: 'last_time',
+  tooltip: '',
+  formatter: ''
+}, {
+  title: '错误次数',
+  field: 'count',
+  tooltip: '相同错误在某时间段内发生的次数'
+}, {
+  title: '错误占比',
+  computed: 'count/total_count',
+  field: 'count/total_count',
+  formatter: '%',
+  tooltip: '某个错误发生的次数/总错误数'
+}, {
+  title: '平台',
+  field: 'platform',
+  formatter: ''
+}, {
+  title: '平台版本号',
+  field: 'version',
+  tooltip: '原生平台为客户端 SDK 版本号；小程序平台为微信、支付宝、百度等应用的版本号',
+  formatter: ''
+}, {
+  title: '错误信息',
+  field: 'msg',
+  formatter: ''
+}];
+exports.fieldsMap = fieldsMap;
+var popupFieldsMap = [{
+  title: '创建时间',
+  field: 'create_time',
+  formatter: ''
+}, {
+  title: '客户端操作系统',
+  field: 'os',
+  formatter: ''
+}, {
+  title: '客户端 user-agent 信息',
+  field: 'ua',
+  formatter: ''
+}];
+exports.popupFieldsMap = popupFieldsMap;
+
+/***/ }),
+
+/***/ 61:
+/*!************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ 62);
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+module.exports = _objectWithoutProperties, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 612:
+/*!******************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/error/app/fieldsMap.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34952,10 +35105,10 @@ exports.fieldsMap = fieldsMap;
 
 /***/ }),
 
-/***/ 585:
-/*!*******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-stat-app-crash-logs.js ***!
-  \*******************************************************************************************/
+/***/ 613:
+/*!************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-stat-app-crash-logs.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35192,47 +35345,33 @@ function filterToWhere(filter, command) {
 
 /***/ }),
 
-/***/ 59:
-/*!*************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/error.js ***!
-  \*************************************************************************/
+/***/ 62:
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initError = initError;
-var _store = _interopRequireDefault(__webpack_require__(/*! @/store */ 50));
-var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
-function initError(Vue) {
-  var debugOptions = _adminConfig.default.navBar.debug;
-  if (debugOptions && debugOptions.enable === true) {
-    var oldErrorHandler = Vue.config.errorHandler;
-    Vue.config.errorHandler = function errorHandler(err, vm, info) {
-      console.error(err);
-      var route = vm.$page && vm.$page.route;
-      _store.default.dispatch('error/add', {
-        err: err.toString(),
-        info: info,
-        route: route,
-        time: new Date().toLocaleTimeString()
-      });
-      return oldErrorHandler(err, vm, info);
-    };
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
   }
+  return target;
 }
+module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
-/***/ 594:
-/*!*********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/event/fieldsMap.js ***!
-  \*********************************************************************************/
+/***/ 622:
+/*!**************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/event/fieldsMap.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35289,99 +35428,41 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 6:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 60:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/request.js ***!
-  \***************************************************************************/
+/***/ 63:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/fetchMock.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uniCloud, uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initRequest = initRequest;
-exports.request = request;
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ 61));
-var _index = _interopRequireDefault(__webpack_require__(/*! @/store/index.js */ 50));
-var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
-var _excluded = ["objectName", "functionName", "showModal"];
-var debugOptions = _adminConfig.default.navBar.debug;
-var db = uniCloud.database();
-function request(action, params, options) {
-  var _Object$assign = Object.assign({
-      objectName: 'uni-id-co',
-      functionName: '',
-      showModal: false,
-      customUI: true,
-      loadingOptions: {
-        title: 'xxx'
-      }
-    }, options),
-    objectName = _Object$assign.objectName,
-    functionName = _Object$assign.functionName,
-    showModal = _Object$assign.showModal,
-    objectOptions = (0, _objectWithoutProperties2.default)(_Object$assign, _excluded);
+exports.initFetch = initFetch;
+function fetchMock(url) {
+  // return fetch(url)
+  // 	.then(response => response.json())
+  // 	.then(res => {
+  // 		return Promise.resolve(res)
+  // 	}).catch(err => {
+  // 		return Promise.resolve([])
+  // 	})
 
-  // 兼容 云函数 与 云对象 请求，默认为云对象
-  var call;
-  if (functionName) {
-    call = uniCloud.callFunction({
-      name: functionName,
-      data: {
-        action: action,
-        params: params
-      }
-    });
-  } else {
-    var uniCloudObject = uniCloud.importObject(objectName, objectOptions);
-    call = uniCloudObject[action](params);
-  }
-  return call.then(function (result) {
-    result = functionName ? result.result : result;
-    if (!result) {
-      return Promise.resolve(result);
-    }
-    if (result.errCode) {
-      return Promise.reject(result);
-    }
-    return Promise.resolve(result);
-  }).catch(function (err) {
-    showModal && uni.showModal({
-      content: err.errMsg || '请求服务失败',
-      showCancel: false
-    });
-    return Promise.reject(err);
-  });
+  return Promise.resolve([]);
 }
-function initRequest(Vue) {
-  Vue.prototype.$request = request;
+function initFetch(Vue) {
+  Vue.prototype.$fetch = fetchMock;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 603:
-/*!*******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/overview/fieldsMap.js ***!
-  \*******************************************************************************************/
+/***/ 631:
+/*!************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/overview/fieldsMap.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35513,37 +35594,38 @@ exports.entFieldsMap = entFieldsMap;
 
 /***/ }),
 
-/***/ 61:
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \************************************************************************/
+/***/ 64:
+/*!***********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/permission.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ 62);
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-  return target;
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initPermission = initPermission;
+function initPermission(Vue) {
+  Vue.prototype.$hasPermission = function hasPermission(name) {
+    var permission = this.$uniIdPagesStore.store.userInfo.permission || [];
+    var role = this.$uniIdPagesStore.store.userInfo.role || [];
+    return role.indexOf('admin') > -1 || permission.indexOf(name) > -1;
+  };
+  Vue.prototype.$hasRole = function hasRole(name) {
+    var role = this.$uniIdPagesStore.store.userInfo.role || [];
+    return role.indexOf(name) > -1;
+  };
 }
-module.exports = _objectWithoutProperties, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
-/***/ 612:
-/*!*******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/activity/fieldsMap.js ***!
-  \*******************************************************************************************/
+/***/ 640:
+/*!************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/activity/fieldsMap.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35604,10 +35686,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 619:
-/*!****************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/trend/fieldsMap.js ***!
-  \****************************************************************************************/
+/***/ 647:
+/*!*********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/trend/fieldsMap.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35702,33 +35784,50 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 62:
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \*****************************************************************************/
+/***/ 65:
+/*!************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/interceptor.js ***!
+  \************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-  return target;
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initInterceptor = initInterceptor;
+var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
+function initInterceptor() {
+  var isNavigatingToError = false;
+  uni.addInterceptor('navigateTo', {
+    invoke: function invoke(_ref) {
+      var url = _ref.url;
+      isNavigatingToError = url && url.startsWith(_adminConfig.default.error.url) ? true : false;
+    },
+    fail: function fail(_ref2) {
+      var errMsg = _ref2.errMsg;
+      if (errMsg.indexOf('is not found') !== -1) {
+        // 避免错误页面本身不存在时产生死循环
+        if (!isNavigatingToError) {
+          uni.navigateTo({
+            url: _adminConfig.default.error.url + '?errMsg=' + errMsg
+          });
+        }
+      }
+    }
+  });
 }
-module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 
-/***/ 626:
-/*!********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/retention/fieldsMap.js ***!
-  \********************************************************************************************/
+/***/ 654:
+/*!*************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/retention/fieldsMap.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35797,69 +35896,61 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 63:
-/*!*****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/fetchMock.js ***!
-  \*****************************************************************************/
+/***/ 66:
+/*!*********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-id-pages/store.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initFetch = initFetch;
-function fetchMock(url) {
-  // return fetch(url)
-  // 	.then(response => response.json())
-  // 	.then(res => {
-  // 		return Promise.resolve(res)
-  // 	}).catch(err => {
-  // 		return Promise.resolve([])
-  // 	})
-
-  return Promise.resolve([]);
-}
-function initFetch(Vue) {
-  Vue.prototype.$fetch = fetchMock;
+exports.initUniIdPageStore = initUniIdPageStore;
+var uniIdPagesStore = _interopRequireWildcard(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/store */ 54));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function initUniIdPageStore(Vue) {
+  Vue.prototype.$uniIdPagesStore = uniIdPagesStore;
 }
 
 /***/ }),
 
-/***/ 64:
-/*!******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/permission.js ***!
-  \******************************************************************************/
+/***/ 67:
+/*!******************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/index.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.initPermission = initPermission;
-function initPermission(Vue) {
-  Vue.prototype.$hasPermission = function hasPermission(name) {
-    var permission = this.$uniIdPagesStore.store.userInfo.permission || [];
-    var role = this.$uniIdPagesStore.store.userInfo.role || [];
-    return role.indexOf('admin') > -1 || permission.indexOf(name) > -1;
-  };
-  Vue.prototype.$hasRole = function hasRole(name) {
-    var role = this.$uniIdPagesStore.store.userInfo.role || [];
-    return role.indexOf(name) > -1;
-  };
-}
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 68));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 69));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 70));
+var _default = {
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
 
 /***/ }),
 
-/***/ 643:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/stickiness/fieldsMap.js ***!
-  \*********************************************************************************************/
+/***/ 671:
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/device/stickiness/fieldsMap.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35921,50 +36012,21 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 65:
-/*!*******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-admin/interceptor.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 68:
+/*!*****************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/en.json ***!
+  \*****************************************************************/
+/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
+/***/ (function(module) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initInterceptor = initInterceptor;
-var _adminConfig = _interopRequireDefault(__webpack_require__(/*! @/admin.config.js */ 43));
-function initInterceptor() {
-  var isNavigatingToError = false;
-  uni.addInterceptor('navigateTo', {
-    invoke: function invoke(_ref) {
-      var url = _ref.url;
-      isNavigatingToError = url && url.startsWith(_adminConfig.default.error.url) ? true : false;
-    },
-    fail: function fail(_ref2) {
-      var errMsg = _ref2.errMsg;
-      if (errMsg.indexOf('is not found') !== -1) {
-        // 避免错误页面本身不存在时产生死循环
-        if (!isNavigatingToError) {
-          uni.navigateTo({
-            url: _adminConfig.default.error.url + '?errMsg=' + errMsg
-          });
-        }
-      }
-    }
-  });
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"System Login\",\"prompt\":\"If there is no administrator account, please create an administrator first...\"},\"field\":{\"username\":\"Account\",\"password\":\"Password\",\"captcha\":\"Captcha\"},\"button\":{\"login\":\"Log In\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin doc\",\"plugin\":\"More admin plugin\",\"changeLanguage\":\"Language\",\"changePwd\":\"ChangePwd\",\"signOut\":\"Sign out\"}},\"index\":{\"text\":{\"prompt\":\"Main content, customizable content and style\",\"vesion\":\"The current version can be viewed in the console and package.json\"}},\"updatePwd\":{\"text\":{\"title\":\"Change Password\"},\"field\":{\"oldPassword\":\"Old password\",\"newPassword\":\"New password\",\"passwordConfirmation\":\"Confirm password\"},\"button\":{\"save\":\"Save\",\"back\":\"Back\"}},\"common\":{\"placeholder\":{\"query\":\"Enter search content\"},\"button\":{\"search\":\"Search\",\"add\":\"Add\",\"edit\":\"Edit\",\"delete\":\"Delete\",\"batchDelete\":\"Batch Delete\",\"exportExcel\":\"Export Excel\",\"submit\":\"Submit\",\"back\":\"Back\",\"tagManager\":\"Tag Manager\",\"publish\":\"Publish page management\",\"version\":\"version manager\",\"sendSMS\":\"Send SMS\"},\"empty\":\"No more data\",\"piecePerPage\":\"piece/page\"},\"user\":{\"text\":{\"userManager\":\"Users Manager\"}},\"role\":{\"text\":{\"roleManager\":\"Roles Manager\"}},\"permission\":{\"text\":{\"permissionManager\":\"Permissions Manager\"}},\"app\":{\"text\":{\"appManager\":\"App Manager\",\"describle\":\"Manage the apps that users can login\"}},\"menu\":{\"text\":{\"menuManager\":\"Menus Manager\",\"additiveMenu\":\"Additive Menu\"},\"button\":{\"addFirstLevelMenu\":\"Add First-level Menu\",\"addChildMenu\":\"Submenu\",\"updateBuiltInMenu\":\"Update built-in Menu\"}},\"demo\":{\"icons\":{\"title\":\"Icons\",\"describle\":\"Click icons to copy the icon code\"},\"table\":{\"title\":\"Table\"}}}");
 
 /***/ }),
 
-/***/ 652:
-/*!*****************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/overview/fieldsMap.js ***!
-  \*****************************************************************************************/
+/***/ 680:
+/*!**********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/overview/fieldsMap.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36076,34 +36138,10 @@ exports.entFieldsMap = entFieldsMap;
 
 /***/ }),
 
-/***/ 66:
-/*!****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-id-pages/store.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initUniIdPageStore = initUniIdPageStore;
-var uniIdPagesStore = _interopRequireWildcard(__webpack_require__(/*! @/uni_modules/uni-id-pages/common/store */ 54));
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function initUniIdPageStore(Vue) {
-  Vue.prototype.$uniIdPagesStore = uniIdPagesStore;
-}
-
-/***/ }),
-
-/***/ 661:
-/*!*****************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/activity/fieldsMap.js ***!
-  \*****************************************************************************************/
+/***/ 689:
+/*!**********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/activity/fieldsMap.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36168,10 +36206,21 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 668:
-/*!**************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/trend/fieldsMap.js ***!
-  \**************************************************************************************/
+/***/ 69:
+/*!**********************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hans.json ***!
+  \**********************************************************************/
+/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系统登录\",\"prompt\":\"如无管理员账号，请先创建管理员\"},\"field\":{\"username\":\"账号\",\"password\":\"密码\",\"captcha\":\"验证码\"},\"button\":{\"login\":\"登录\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文档\",\"plugin\":\"浏览更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密码\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"内容主体，可自定义内容及样式\",\"vesion\":\"可在控制台和 package.json 中查看当前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密码\"},\"field\":{\"oldPassword\":\"旧密码\",\"newPassword\":\"新密码\",\"passwordConfirmation\":\"确认新密码\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"请输入搜索内容\"},\"button\":{\"search\":\"搜索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"删除\",\"batchDelete\":\"批量删除\",\"exportExcel\":\"导出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"标签管理\",\"publish\":\"发布页管理\",\"version\":\"版本管理\",\"sendSMS\":\"群发短信\"},\"empty\":\"没有更多数据\",\"piecePerPage\":\"条/页\"},\"user\":{\"text\":{\"userManager\":\"用户管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"权限管理\"}},\"app\":{\"text\":{\"appManager\":\"应用管理\",\"describle\":\"管理用户可登录的应用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜单列表\",\"additiveMenu\":\"待添加菜单\"},\"button\":{\"addFirstLevelMenu\":\"新增一级菜单\",\"addChildMenu\":\"子菜单\",\"updateBuiltInMenu\":\"更新内置菜单\"}},\"demo\":{\"icons\":{\"title\":\"图标\",\"describle\":\"点击图标即可复制图标代码\"},\"table\":{\"title\":\"表格\"}}}");
+
+/***/ }),
+
+/***/ 696:
+/*!*******************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/trend/fieldsMap.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36242,37 +36291,61 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 67:
-/*!*************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/index.js ***!
-  \*************************************************************/
+/***/ 7:
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
+  \*********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 68));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 69));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 70));
-var _default = {
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
-};
-exports.default = _default;
+function _iterableToArrayLimit(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = !0,
+      o = !1;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0) {
+        ;
+      }
+    } catch (r) {
+      o = !0, n = r;
+    } finally {
+      try {
+        if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
-/***/ 675:
-/*!******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/retention/fieldsMap.js ***!
-  \******************************************************************************************/
+/***/ 70:
+/*!**********************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hant.json ***!
+  \**********************************************************************/
+/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系統登錄\",\"prompt\":\"如無管理員賬號，請先創建管理員...\"},\"field\":{\"username\":\"賬號\",\"password\":\"密碼\",\"captcha\":\"驗證碼\"},\"button\":{\"login\":\"登錄\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文檔\",\"plugin\":\"瀏覽更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密碼\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"內容主體，可自定義內容及樣式\",\"vesion\":\"可在控制台和 package.json 中查看當前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密碼\"},\"field\":{\"oldPassword\":\"舊密碼\",\"newPassword\":\"新密碼\",\"passwordConfirmation\":\"確認新密碼\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"請輸入搜索內容\"},\"button\":{\"search\":\"檢索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"刪除\",\"batchDelete\":\"批量刪除\",\"exportExcel\":\"導出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"標簽管理\",\"publish\":\"發布頁管理\",\"version\":\"版本管理\",\"sendSMS\":\"群發短信\"},\"empty\":\"沒有更多數據\",\"piecePerPage\":\"條/頁\"},\"user\":{\"text\":{\"userManager\":\"用戶管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"權限管理\"}},\"app\":{\"text\":{\"appManager\":\"應用管理\",\"describle\":\"管理用戶可登錄的應用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜單列表\",\"additiveMenu\":\"待添加菜單\"},\"button\":{\"addFirstLevelMenu\":\"新增一級菜單\",\"addChildMenu\":\"子菜單\",\"updateBuiltInMenu\":\"更新內寘選單\"}},\"demo\":{\"icons\":{\"title\":\"圖標\",\"describle\":\"點擊圖標即可複製圖標代碼\"},\"table\":{\"title\":\"表格\"}}}");
+
+/***/ }),
+
+/***/ 703:
+/*!***********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/retention/fieldsMap.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36337,428 +36410,6 @@ function fieldsFactory() {
 }
 var _default = fieldsFactory;
 exports.default = _default;
-
-/***/ }),
-
-/***/ 68:
-/*!************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/en.json ***!
-  \************************************************************/
-/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"System Login\",\"prompt\":\"If there is no administrator account, please create an administrator first...\"},\"field\":{\"username\":\"Account\",\"password\":\"Password\",\"captcha\":\"Captcha\"},\"button\":{\"login\":\"Log In\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin doc\",\"plugin\":\"More admin plugin\",\"changeLanguage\":\"Language\",\"changePwd\":\"ChangePwd\",\"signOut\":\"Sign out\"}},\"index\":{\"text\":{\"prompt\":\"Main content, customizable content and style\",\"vesion\":\"The current version can be viewed in the console and package.json\"}},\"updatePwd\":{\"text\":{\"title\":\"Change Password\"},\"field\":{\"oldPassword\":\"Old password\",\"newPassword\":\"New password\",\"passwordConfirmation\":\"Confirm password\"},\"button\":{\"save\":\"Save\",\"back\":\"Back\"}},\"common\":{\"placeholder\":{\"query\":\"Enter search content\"},\"button\":{\"search\":\"Search\",\"add\":\"Add\",\"edit\":\"Edit\",\"delete\":\"Delete\",\"batchDelete\":\"Batch Delete\",\"exportExcel\":\"Export Excel\",\"submit\":\"Submit\",\"back\":\"Back\",\"tagManager\":\"Tag Manager\",\"publish\":\"Publish page management\",\"version\":\"version manager\",\"sendSMS\":\"Send SMS\"},\"empty\":\"No more data\",\"piecePerPage\":\"piece/page\"},\"user\":{\"text\":{\"userManager\":\"Users Manager\"}},\"role\":{\"text\":{\"roleManager\":\"Roles Manager\"}},\"permission\":{\"text\":{\"permissionManager\":\"Permissions Manager\"}},\"app\":{\"text\":{\"appManager\":\"App Manager\",\"describle\":\"Manage the apps that users can login\"}},\"menu\":{\"text\":{\"menuManager\":\"Menus Manager\",\"additiveMenu\":\"Additive Menu\"},\"button\":{\"addFirstLevelMenu\":\"Add First-level Menu\",\"addChildMenu\":\"Submenu\",\"updateBuiltInMenu\":\"Update built-in Menu\"}},\"demo\":{\"icons\":{\"title\":\"Icons\",\"describle\":\"Click icons to copy the icon code\"},\"table\":{\"title\":\"Table\"}}}");
-
-/***/ }),
-
-/***/ 69:
-/*!*****************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hans.json ***!
-  \*****************************************************************/
-/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系统登录\",\"prompt\":\"如无管理员账号，请先创建管理员\"},\"field\":{\"username\":\"账号\",\"password\":\"密码\",\"captcha\":\"验证码\"},\"button\":{\"login\":\"登录\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文档\",\"plugin\":\"浏览更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密码\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"内容主体，可自定义内容及样式\",\"vesion\":\"可在控制台和 package.json 中查看当前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密码\"},\"field\":{\"oldPassword\":\"旧密码\",\"newPassword\":\"新密码\",\"passwordConfirmation\":\"确认新密码\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"请输入搜索内容\"},\"button\":{\"search\":\"搜索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"删除\",\"batchDelete\":\"批量删除\",\"exportExcel\":\"导出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"标签管理\",\"publish\":\"发布页管理\",\"version\":\"版本管理\",\"sendSMS\":\"群发短信\"},\"empty\":\"没有更多数据\",\"piecePerPage\":\"条/页\"},\"user\":{\"text\":{\"userManager\":\"用户管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"权限管理\"}},\"app\":{\"text\":{\"appManager\":\"应用管理\",\"describle\":\"管理用户可登录的应用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜单列表\",\"additiveMenu\":\"待添加菜单\"},\"button\":{\"addFirstLevelMenu\":\"新增一级菜单\",\"addChildMenu\":\"子菜单\",\"updateBuiltInMenu\":\"更新内置菜单\"}},\"demo\":{\"icons\":{\"title\":\"图标\",\"describle\":\"点击图标即可复制图标代码\"},\"table\":{\"title\":\"表格\"}}}");
-
-/***/ }),
-
-/***/ 692:
-/*!*******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/stickiness/fieldsMap.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-/**
- * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
- * title 显示所使用名称
- * field 数据库字段名
- * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
- * tooltip 对字段解释的提示文字
- * formatter 数字格式化的配置，省缺为 ','
-  	* '' 空字符串 则表示不格式化
-	* ',' 数字格式，例：1000 格式为 1,000
-	* '%' 百分比格式 例：0.1 格式为 10%
-	* ':' 时分秒格式 例：90 格式为 00:01:30
-	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
- * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
-  	* 'sum' 表示对字段做求和运算
-  	* 'avg' 表示对字段做平均运算
-  	* '-1' 表示不对字段做运算
- * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
- * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
- * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
- */
-var _default = [{
-  title: '名称',
-  field: 'name',
-  tooltip: '',
-  formatter: ''
-}, {
-  title: '访问人数',
-  field: 'visit_users',
-  tooltip: '访问人数（活跃用户数）：访问过应用内任意页面的总用户数（去重）',
-  value: 0
-}, {
-  title: '访问人数占比',
-  field: 'visit_users/total_visit_users',
-  computed: 'visit_users/total_visit_users',
-  formatter: '%'
-}, {
-  title: '访问次数',
-  field: 'visit_times',
-  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
-  value: 0
-}, {
-  title: '访问次数占比',
-  field: 'visit_times/total_visit_times',
-  computed: 'visit_times/total_visit_times',
-  formatter: '%',
-  tooltip: ''
-}];
-exports.default = _default;
-
-/***/ }),
-
-/***/ 7:
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = !0,
-      o = !1;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) {
-        if (Object(t) !== t) return;
-        f = !1;
-      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0) {
-        ;
-      }
-    } catch (r) {
-      o = !0, n = r;
-    } finally {
-      try {
-        if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
-module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 70:
-/*!*****************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/i18n/zh-Hant.json ***!
-  \*****************************************************************/
-/*! exports provided: login, topwindow, index, updatePwd, common, user, role, permission, app, menu, demo, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"login\":{\"text\":{\"title\":\"系統登錄\",\"prompt\":\"如無管理員賬號，請先創建管理員...\"},\"field\":{\"username\":\"賬號\",\"password\":\"密碼\",\"captcha\":\"驗證碼\"},\"button\":{\"login\":\"登錄\"}},\"topwindow\":{\"text\":{\"doc\":\"Admin 框架文檔\",\"plugin\":\"瀏覽更多 Admin 插件\",\"changeLanguage\":\"切换语言\",\"changePwd\":\"修改密碼\",\"signOut\":\"退出\"}},\"index\":{\"text\":{\"prompt\":\"內容主體，可自定義內容及樣式\",\"vesion\":\"可在控制台和 package.json 中查看當前的版本\"}},\"updatePwd\":{\"text\":{\"title\":\"修改密碼\"},\"field\":{\"oldPassword\":\"舊密碼\",\"newPassword\":\"新密碼\",\"passwordConfirmation\":\"確認新密碼\"},\"button\":{\"save\":\"保存\",\"back\":\"返回\"}},\"common\":{\"placeholder\":{\"query\":\"請輸入搜索內容\"},\"button\":{\"search\":\"檢索\",\"add\":\"新增\",\"edit\":\"修改\",\"delete\":\"刪除\",\"batchDelete\":\"批量刪除\",\"exportExcel\":\"導出 Excel\",\"submit\":\"提交\",\"back\":\"返回\",\"tagManager\":\"標簽管理\",\"publish\":\"發布頁管理\",\"version\":\"版本管理\",\"sendSMS\":\"群發短信\"},\"empty\":\"沒有更多數據\",\"piecePerPage\":\"條/頁\"},\"user\":{\"text\":{\"userManager\":\"用戶管理\"}},\"role\":{\"text\":{\"roleManager\":\"角色管理\"}},\"permission\":{\"text\":{\"permissionManager\":\"權限管理\"}},\"app\":{\"text\":{\"appManager\":\"應用管理\",\"describle\":\"管理用戶可登錄的應用\"}},\"menu\":{\"text\":{\"menuManager\":\"菜單列表\",\"additiveMenu\":\"待添加菜單\"},\"button\":{\"addFirstLevelMenu\":\"新增一級菜單\",\"addChildMenu\":\"子菜單\",\"updateBuiltInMenu\":\"更新內寘選單\"}},\"demo\":{\"icons\":{\"title\":\"圖標\",\"describle\":\"點擊圖標即可複製圖標代碼\"},\"table\":{\"title\":\"表格\"}}}");
-
-/***/ }),
-
-/***/ 707:
-/*!**********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-pay-orders.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.enumConverter = void 0;
-exports.filterToWhere = filterToWhere;
-exports.validator = void 0;
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
-
-var validator = {
-  "user_id": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "用户ID"
-  },
-  "provider": {
-    "rules": [{
-      "format": "string"
-    }, {
-      "range": [{
-        "text": "微信支付",
-        "value": "wxpay"
-      }, {
-        "text": "支付宝",
-        "value": "alipay"
-      }, {
-        "text": "苹果应用内支付",
-        "value": "appleiap"
-      }]
-    }],
-    "label": "支付供应商"
-  },
-  "provider_pay_type": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "支付方式"
-  },
-  "uni_platform": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "应用平台"
-  },
-  "status": {
-    "rules": [{
-      "format": "int"
-    }, {
-      "range": [{
-        "text": "已关闭",
-        "value": -1
-      }, {
-        "text": "未支付",
-        "value": 0
-      }, {
-        "text": "已支付",
-        "value": 1
-      }, {
-        "text": "已部分退款",
-        "value": 2
-      }, {
-        "text": "已全额退款",
-        "value": 3
-      }]
-    }],
-    "defaultValue": 0,
-    "label": "订单状态"
-  },
-  "type": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "订单类型"
-  },
-  "order_no": {
-    "rules": [{
-      "format": "string"
-    }, {
-      "minLength": 20,
-      "maxLength": 28
-    }],
-    "label": "业务系统订单号"
-  },
-  "out_trade_no": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "支付插件订单号"
-  },
-  "transaction_id": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "交易单号"
-  },
-  "device_id": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "设备ID"
-  },
-  "client_ip": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "客户端IP"
-  },
-  "openid": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "openid"
-  },
-  "description": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "支付描述"
-  },
-  "err_msg ": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "支付失败原因"
-  },
-  "total_fee": {
-    "rules": [{
-      "format": "int"
-    }],
-    "label": "订单总金额"
-  },
-  "refund_fee": {
-    "rules": [{
-      "format": "int"
-    }],
-    "label": "订单总退款金额"
-  },
-  "refund_count": {
-    "rules": [{
-      "format": "int"
-    }],
-    "label": "当前退款笔数"
-  },
-  "refund_list": {
-    "rules": [{
-      "format": "array"
-    }],
-    "label": "退款详情"
-  },
-  "provider_appid": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "开放平台appid"
-  },
-  "appid": {
-    "rules": [{
-      "format": "string"
-    }],
-    "label": "DCloud AppId"
-  },
-  "user_order_success": {
-    "rules": [{
-      "format": "bool"
-    }],
-    "label": "回调状态"
-  },
-  "pay_date": {
-    "rules": [{
-      "format": "timestamp"
-    }],
-    "label": "支付时间"
-  },
-  "notify_date": {
-    "rules": [{
-      "format": "timestamp"
-    }],
-    "label": "异步通知时间"
-  },
-  "cancel_date": {
-    "rules": [{
-      "format": "timestamp"
-    }],
-    "label": "取消时间"
-  }
-};
-exports.validator = validator;
-var enumConverter = {
-  "provider_valuetotext": {
-    "wxpay": "微信支付",
-    "alipay": "支付宝",
-    "appleiap": "苹果应用内支付"
-  },
-  "status_valuetotext": {
-    "0": "未支付",
-    "1": "已支付",
-    "2": "已部分退款",
-    "3": "已全额退款",
-    "-1": "已关闭"
-  }
-};
-exports.enumConverter = enumConverter;
-function filterToWhere(filter, command) {
-  var where = {};
-  for (var field in filter) {
-    var _filter$field = filter[field],
-      type = _filter$field.type,
-      value = _filter$field.value;
-    switch (type) {
-      case "search":
-        if (typeof value === 'string' && value.length) {
-          //where[field] = new RegExp(value)
-          where[field] = value;
-        }
-        // if (typeof value === 'string' && value.length) {
-        // 	str += `(${field} == '${value}' || /${value}/.test(${field}))`
-        // 	where[field] = new RegExp(value)
-        // }
-        break;
-      case "select":
-        if (value.length) {
-          var selectValue = [];
-          var _iterator = _createForOfIteratorHelper(value),
-            _step;
-          try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-              var s = _step.value;
-              selectValue.push(command.eq(s));
-            }
-          } catch (err) {
-            _iterator.e(err);
-          } finally {
-            _iterator.f();
-          }
-          where[field] = command.or(selectValue);
-        }
-        break;
-      case "range":
-        if (value.length) {
-          var gt = value[0];
-          var lt = value[1];
-          where[field] = command.and([command.gte(gt), command.lte(lt)]);
-        }
-        break;
-      case "date":
-        if (value.length) {
-          var _value = (0, _slicedToArray2.default)(value, 2),
-            _s = _value[0],
-            e = _value[1];
-          var startDate = new Date(_s);
-          var endDate = new Date(e);
-          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
-        }
-        break;
-      case "timestamp":
-        if (value.length) {
-          var _value2 = (0, _slicedToArray2.default)(value, 2),
-            _startDate = _value2[0],
-            _endDate = _value2[1];
-          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
-        }
-        break;
-    }
-  }
-  return where;
-}
 
 /***/ }),
 
@@ -39079,10 +38730,359 @@ VueI18n.version = '8.28.2';
 
 /***/ }),
 
-/***/ 716:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-stat/timeUtil.js ***!
-  \***************************************************************************/
+/***/ 720:
+/*!************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/uni-stat/user/stickiness/fieldsMap.js ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+/**
+ * 页面上的数据都来自数据库，且多处 ui 消费，页面直接使用字段会造成耦合和冗余，固在此抽出来统一配置（clientdb 查询方法、概念文字提示等）和处理（对值再计算、格式化等）
+ * title 显示所使用名称
+ * field 数据库字段名
+ * computed 计算表达式配置，只支持除法计算（需要 mapfield 函数支持，也可自行扩展）
+ * tooltip 对字段解释的提示文字
+ * formatter 数字格式化的配置，省缺为 ','
+  	* '' 空字符串 则表示不格式化
+	* ',' 数字格式，例：1000 格式为 1,000
+	* '%' 百分比格式 例：0.1 格式为 10%
+	* ':' 时分秒格式 例：90 格式为 00:01:30
+	* '-' 日期格式 例：1655196831390(值需为时间戳) 格式为 2022-06-14
+ * stat 对字段做 groupField 时需使用的数据库计算方法，省缺为 'sum'
+  	* 'sum' 表示对字段做求和运算
+  	* 'avg' 表示对字段做平均运算
+  	* '-1' 表示不对字段做运算
+ * fix 数字保留几位小数，>1 默认不保留小数，<1 默认保留两位小数
+ * value 默认值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ * contrast 对比值 (仅用于 uni-stat-panel 组件) todo: 可移除
+ */
+var _default = [{
+  title: '名称',
+  field: 'name',
+  tooltip: '',
+  formatter: ''
+}, {
+  title: '访问人数',
+  field: 'visit_users',
+  tooltip: '访问人数（活跃用户数）：访问过应用内任意页面的总用户数（去重）',
+  value: 0
+}, {
+  title: '访问人数占比',
+  field: 'visit_users/total_visit_users',
+  computed: 'visit_users/total_visit_users',
+  formatter: '%'
+}, {
+  title: '访问次数',
+  field: 'visit_times',
+  tooltip: '访问过应用内任意页面总次数，多个页面之间跳转、同一页面的重复访问计为多次访问',
+  value: 0
+}, {
+  title: '访问次数占比',
+  field: 'visit_times/total_visit_times',
+  computed: 'visit_times/total_visit_times',
+  formatter: '%',
+  tooltip: ''
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 735:
+/*!***************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/validator/uni-pay-orders.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.enumConverter = void 0;
+exports.filterToWhere = filterToWhere;
+exports.validator = void 0;
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5));
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+// 表单校验规则由 schema2code 生成，不建议直接修改校验规则，而建议通过 schema2code 生成, 详情: https://uniapp.dcloud.net.cn/uniCloud/schema
+
+var validator = {
+  "user_id": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "用户ID"
+  },
+  "provider": {
+    "rules": [{
+      "format": "string"
+    }, {
+      "range": [{
+        "text": "微信支付",
+        "value": "wxpay"
+      }, {
+        "text": "支付宝",
+        "value": "alipay"
+      }, {
+        "text": "苹果应用内支付",
+        "value": "appleiap"
+      }]
+    }],
+    "label": "支付供应商"
+  },
+  "provider_pay_type": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "支付方式"
+  },
+  "uni_platform": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "应用平台"
+  },
+  "status": {
+    "rules": [{
+      "format": "int"
+    }, {
+      "range": [{
+        "text": "已关闭",
+        "value": -1
+      }, {
+        "text": "未支付",
+        "value": 0
+      }, {
+        "text": "已支付",
+        "value": 1
+      }, {
+        "text": "已部分退款",
+        "value": 2
+      }, {
+        "text": "已全额退款",
+        "value": 3
+      }]
+    }],
+    "defaultValue": 0,
+    "label": "订单状态"
+  },
+  "type": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "订单类型"
+  },
+  "order_no": {
+    "rules": [{
+      "format": "string"
+    }, {
+      "minLength": 20,
+      "maxLength": 28
+    }],
+    "label": "业务系统订单号"
+  },
+  "out_trade_no": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "支付插件订单号"
+  },
+  "transaction_id": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "交易单号"
+  },
+  "device_id": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "设备ID"
+  },
+  "client_ip": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "客户端IP"
+  },
+  "openid": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "openid"
+  },
+  "description": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "支付描述"
+  },
+  "err_msg ": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "支付失败原因"
+  },
+  "total_fee": {
+    "rules": [{
+      "format": "int"
+    }],
+    "label": "订单总金额"
+  },
+  "refund_fee": {
+    "rules": [{
+      "format": "int"
+    }],
+    "label": "订单总退款金额"
+  },
+  "refund_count": {
+    "rules": [{
+      "format": "int"
+    }],
+    "label": "当前退款笔数"
+  },
+  "refund_list": {
+    "rules": [{
+      "format": "array"
+    }],
+    "label": "退款详情"
+  },
+  "provider_appid": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "开放平台appid"
+  },
+  "appid": {
+    "rules": [{
+      "format": "string"
+    }],
+    "label": "DCloud AppId"
+  },
+  "user_order_success": {
+    "rules": [{
+      "format": "bool"
+    }],
+    "label": "回调状态"
+  },
+  "pay_date": {
+    "rules": [{
+      "format": "timestamp"
+    }],
+    "label": "支付时间"
+  },
+  "notify_date": {
+    "rules": [{
+      "format": "timestamp"
+    }],
+    "label": "异步通知时间"
+  },
+  "cancel_date": {
+    "rules": [{
+      "format": "timestamp"
+    }],
+    "label": "取消时间"
+  }
+};
+exports.validator = validator;
+var enumConverter = {
+  "provider_valuetotext": {
+    "wxpay": "微信支付",
+    "alipay": "支付宝",
+    "appleiap": "苹果应用内支付"
+  },
+  "status_valuetotext": {
+    "0": "未支付",
+    "1": "已支付",
+    "2": "已部分退款",
+    "3": "已全额退款",
+    "-1": "已关闭"
+  }
+};
+exports.enumConverter = enumConverter;
+function filterToWhere(filter, command) {
+  var where = {};
+  for (var field in filter) {
+    var _filter$field = filter[field],
+      type = _filter$field.type,
+      value = _filter$field.value;
+    switch (type) {
+      case "search":
+        if (typeof value === 'string' && value.length) {
+          //where[field] = new RegExp(value)
+          where[field] = value;
+        }
+        // if (typeof value === 'string' && value.length) {
+        // 	str += `(${field} == '${value}' || /${value}/.test(${field}))`
+        // 	where[field] = new RegExp(value)
+        // }
+        break;
+      case "select":
+        if (value.length) {
+          var selectValue = [];
+          var _iterator = _createForOfIteratorHelper(value),
+            _step;
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var s = _step.value;
+              selectValue.push(command.eq(s));
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+          where[field] = command.or(selectValue);
+        }
+        break;
+      case "range":
+        if (value.length) {
+          var gt = value[0];
+          var lt = value[1];
+          where[field] = command.and([command.gte(gt), command.lte(lt)]);
+        }
+        break;
+      case "date":
+        if (value.length) {
+          var _value = (0, _slicedToArray2.default)(value, 2),
+            _s = _value[0],
+            e = _value[1];
+          var startDate = new Date(_s);
+          var endDate = new Date(e);
+          where[field] = command.and([command.gte(startDate), command.lte(endDate)]);
+        }
+        break;
+      case "timestamp":
+        if (value.length) {
+          var _value2 = (0, _slicedToArray2.default)(value, 2),
+            _startDate = _value2[0],
+            _endDate = _value2[1];
+          where[field] = command.and([command.gte(_startDate), command.lte(_endDate)]);
+        }
+        break;
+    }
+  }
+  return where;
+}
+
+/***/ }),
+
+/***/ 744:
+/*!********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-stat/timeUtil.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39298,9 +39298,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 78:
-/*!***********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-stat/util.js ***!
-  \***********************************************************************/
+/*!****************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/js_sdk/uni-stat/util.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39843,74 +39843,10 @@ function createUniStatQuery(object) {
 
 /***/ }),
 
-/***/ 786:
-/*!******************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/index.js ***!
-  \******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 787));
-var _es = _interopRequireDefault(__webpack_require__(/*! ./es.json */ 788));
-var _fr = _interopRequireDefault(__webpack_require__(/*! ./fr.json */ 789));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 790));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 791));
-var _default = {
-  en: _en.default,
-  es: _es.default,
-  fr: _fr.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 787:
-/*!*****************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/en.json ***!
-  \*****************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"prev\",\"uni-pagination.nextText\":\"next\",\"uni-pagination.piecePerPage\":\"piece/page\"}");
-
-/***/ }),
-
-/***/ 788:
-/*!*****************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/es.json ***!
-  \*****************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"anterior\",\"uni-pagination.nextText\":\"prxima\",\"uni-pagination.piecePerPage\":\"Art��culo/P��gina\"}");
-
-/***/ }),
-
-/***/ 789:
-/*!*****************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/fr.json ***!
-  \*****************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"précédente\",\"uni-pagination.nextText\":\"suivante\",\"uni-pagination.piecePerPage\":\"Articles/Pages\"}");
-
-/***/ }),
-
 /***/ 79:
-/*!************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/index/fieldsMap.js ***!
-  \************************************************************************/
+/*!*****************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/index/fieldsMap.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40002,28 +39938,6 @@ exports.userFeildsMap = userFeildsMap;
 
 /***/ }),
 
-/***/ 790:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hans.json ***!
-  \**********************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一页\",\"uni-pagination.nextText\":\"下一页\",\"uni-pagination.piecePerPage\":\"条/页\"}");
-
-/***/ }),
-
-/***/ 791:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hant.json ***!
-  \**********************************************************************************************************************/
-/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一頁\",\"uni-pagination.nextText\":\"下一頁\",\"uni-pagination.piecePerPage\":\"條/頁\"}");
-
-/***/ }),
-
 /***/ 8:
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js ***!
@@ -40044,10 +39958,96 @@ module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, 
 
 /***/ }),
 
-/***/ 820:
-/*!***************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
-  \***************************************************************************************************************/
+/***/ 814:
+/*!***********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/index.js ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 815));
+var _es = _interopRequireDefault(__webpack_require__(/*! ./es.json */ 816));
+var _fr = _interopRequireDefault(__webpack_require__(/*! ./fr.json */ 817));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 818));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 819));
+var _default = {
+  en: _en.default,
+  es: _es.default,
+  fr: _fr.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 815:
+/*!**********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/en.json ***!
+  \**********************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"prev\",\"uni-pagination.nextText\":\"next\",\"uni-pagination.piecePerPage\":\"piece/page\"}");
+
+/***/ }),
+
+/***/ 816:
+/*!**********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/es.json ***!
+  \**********************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"anterior\",\"uni-pagination.nextText\":\"prxima\",\"uni-pagination.piecePerPage\":\"Art��culo/P��gina\"}");
+
+/***/ }),
+
+/***/ 817:
+/*!**********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/fr.json ***!
+  \**********************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"précédente\",\"uni-pagination.nextText\":\"suivante\",\"uni-pagination.piecePerPage\":\"Articles/Pages\"}");
+
+/***/ }),
+
+/***/ 818:
+/*!***************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hans.json ***!
+  \***************************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一页\",\"uni-pagination.nextText\":\"下一页\",\"uni-pagination.piecePerPage\":\"条/页\"}");
+
+/***/ }),
+
+/***/ 819:
+/*!***************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-pagination/components/uni-pagination/i18n/zh-Hant.json ***!
+  \***************************************************************************************************************************/
+/*! exports provided: uni-pagination.prevText, uni-pagination.nextText, uni-pagination.piecePerPage, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"uni-pagination.prevText\":\"上一頁\",\"uni-pagination.nextText\":\"下一頁\",\"uni-pagination.piecePerPage\":\"條/頁\"}");
+
+/***/ }),
+
+/***/ 848:
+/*!********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40548,7 +40548,7 @@ exports.fontData = fontData;
 
 /***/ }),
 
-/***/ 828:
+/***/ 856:
 /*!************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/index.js ***!
   \************************************************************************/
@@ -40557,16 +40557,16 @@ exports.fontData = fontData;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 829);
-var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 829, 1);
-/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 830);
-var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 830, 1);
-/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 831);
-var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 831, 1);
-/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 832);
-var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 832, 1);
-/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 833);
-var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 833, 1);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ 857);
+var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ 857, 1);
+/* harmony import */ var _es_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./es.json */ 858);
+var _es_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./es.json */ 858, 1);
+/* harmony import */ var _fr_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr.json */ 859);
+var _fr_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./fr.json */ 859, 1);
+/* harmony import */ var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans.json */ 860);
+var _zh_Hans_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hans.json */ 860, 1);
+/* harmony import */ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./zh-Hant.json */ 861);
+var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./zh-Hant.json */ 861, 1);
 
 
 
@@ -40583,7 +40583,7 @@ var _zh_Hant_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpac
 
 /***/ }),
 
-/***/ 829:
+/***/ 857:
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/en.json ***!
   \***********************************************************************/
@@ -40594,7 +40594,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"Success\",\"u
 
 /***/ }),
 
-/***/ 830:
+/***/ 858:
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/es.json ***!
   \***********************************************************************/
@@ -40605,7 +40605,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 831:
+/***/ 859:
 /*!***********************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/fr.json ***!
   \***********************************************************************/
@@ -40616,7 +40616,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 832:
+/***/ 860:
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hans.json ***!
   \****************************************************************************/
@@ -40627,7 +40627,7 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 833:
+/***/ 861:
 /*!****************************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-cli-shared/components/i18n/zh-Hant.json ***!
   \****************************************************************************/
@@ -40638,10 +40638,10 @@ module.exports = JSON.parse("{\"uniCloud.component.add.success\":\"新增成功\
 
 /***/ }),
 
-/***/ 839:
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-data-picker/components/uni-data-pickerview/uni-data-picker.js ***!
-  \*****************************************************************************************************************************/
+/***/ 867:
+/*!**********************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-data-picker/components/uni-data-pickerview/uni-data-picker.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41308,10 +41308,29 @@ exports.default = _default2;
 
 /***/ }),
 
-/***/ 866:
-/*!********************************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-file-picker/components/uni-file-picker/choose-and-upload-file.js ***!
-  \********************************************************************************************************************************/
+/***/ 88:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/demo/icons/uni-icons.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = ['pulldown', 'refreshempty', 'back', 'forward', 'more', 'more-filled', 'scan', 'qq', 'weibo', 'weixin', 'pengyouquan', 'loop', 'refresh', 'refresh-filled', 'arrowthindown', 'arrowthinleft', 'arrowthinright', 'arrowthinup', 'undo-filled', 'undo', 'redo', 'redo-filled', 'bars', 'chatboxes', 'camera', 'chatboxes-filled', 'camera-filled', 'cart-filled', 'cart', 'checkbox-filled', 'checkbox', 'arrowleft', 'arrowdown', 'arrowright', 'smallcircle-filled', 'arrowup', 'circle', 'eye-filled', 'eye-slash-filled', 'eye-slash', 'eye', 'flag-filled', 'flag', 'gear-filled', 'reload', 'gear', 'hand-thumbsdown-filled', 'hand-thumbsdown', 'hand-thumbsup-filled', 'heart-filled', 'hand-thumbsup', 'heart', 'home', 'info', 'home-filled', 'info-filled', 'circle-filled', 'chat-filled', 'chat', 'mail-open-filled', 'email-filled', 'mail-open', 'email', 'checkmarkempty', 'list', 'locked-filled', 'locked', 'map-filled', 'map-pin', 'map-pin-ellipse', 'map', 'minus-filled', 'mic-filled', 'minus', 'micoff', 'mic', 'clear', 'smallcircle', 'close', 'closeempty', 'paperclip', 'paperplane', 'paperplane-filled', 'person-filled', 'contact-filled', 'person', 'contact', 'images-filled', 'phone', 'images', 'image', 'image-filled', 'location-filled', 'location', 'plus-filled', 'plus', 'plusempty', 'help-filled', 'help', 'navigate-filled', 'navigate', 'mic-slash-filled', 'search', 'settings', 'sound', 'sound-filled', 'spinner-cycle', 'download-filled', 'personadd-filled', 'videocam-filled', 'personadd', 'upload', 'upload-filled', 'starhalf', 'star-filled', 'star', 'trash', 'phone-filled', 'compose', 'videocam', 'trash-filled', 'download', 'chatbubble-filled', 'chatbubble', 'cloud-download', 'cloud-upload-filled', 'cloud-upload', 'cloud-download-filled', 'headphones', 'shop'];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 894:
+/*!*************************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-file-picker/components/uni-file-picker/choose-and-upload-file.js ***!
+  \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41532,10 +41551,10 @@ function chooseAndUploadFile() {
 
 /***/ }),
 
-/***/ 867:
-/*!***************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-file-picker/components/uni-file-picker/utils.js ***!
-  \***************************************************************************************************************/
+/***/ 895:
+/*!********************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-file-picker/components/uni-file-picker/utils.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41697,25 +41716,6 @@ exports.get_file_data = get_file_data;
 
 /***/ }),
 
-/***/ 88:
-/*!*****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/demo/icons/uni-icons.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = ['pulldown', 'refreshempty', 'back', 'forward', 'more', 'more-filled', 'scan', 'qq', 'weibo', 'weixin', 'pengyouquan', 'loop', 'refresh', 'refresh-filled', 'arrowthindown', 'arrowthinleft', 'arrowthinright', 'arrowthinup', 'undo-filled', 'undo', 'redo', 'redo-filled', 'bars', 'chatboxes', 'camera', 'chatboxes-filled', 'camera-filled', 'cart-filled', 'cart', 'checkbox-filled', 'checkbox', 'arrowleft', 'arrowdown', 'arrowright', 'smallcircle-filled', 'arrowup', 'circle', 'eye-filled', 'eye-slash-filled', 'eye-slash', 'eye', 'flag-filled', 'flag', 'gear-filled', 'reload', 'gear', 'hand-thumbsdown-filled', 'hand-thumbsdown', 'hand-thumbsup-filled', 'heart-filled', 'hand-thumbsup', 'heart', 'home', 'info', 'home-filled', 'info-filled', 'circle-filled', 'chat-filled', 'chat', 'mail-open-filled', 'email-filled', 'mail-open', 'email', 'checkmarkempty', 'list', 'locked-filled', 'locked', 'map-filled', 'map-pin', 'map-pin-ellipse', 'map', 'minus-filled', 'mic-filled', 'minus', 'micoff', 'mic', 'clear', 'smallcircle', 'close', 'closeempty', 'paperclip', 'paperplane', 'paperplane-filled', 'person-filled', 'contact-filled', 'person', 'contact', 'images-filled', 'phone', 'images', 'image', 'image-filled', 'location-filled', 'location', 'plus-filled', 'plus', 'plusempty', 'help-filled', 'help', 'navigate-filled', 'navigate', 'mic-slash-filled', 'search', 'settings', 'sound', 'sound-filled', 'spinner-cycle', 'download-filled', 'personadd-filled', 'videocam-filled', 'personadd', 'upload', 'upload-filled', 'starhalf', 'star-filled', 'star', 'trash', 'phone-filled', 'compose', 'videocam', 'trash-filled', 'download', 'chatbubble-filled', 'chatbubble', 'cloud-download', 'cloud-upload-filled', 'cloud-upload', 'cloud-download-filled', 'headphones', 'shop'];
-exports.default = _default;
-
-/***/ }),
-
 /***/ 9:
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
@@ -41734,10 +41734,10 @@ module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exp
 
 /***/ }),
 
-/***/ 910:
-/*!***************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/popup.js ***!
-  \***************************************************************************************************/
+/***/ 938:
+/*!********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/popup.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41776,10 +41776,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 911:
-/*!********************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/index.js ***!
-  \********************************************************************************************************/
+/***/ 939:
+/*!*************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/index.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41791,9 +41791,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 912));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 913));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 914));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 940));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 941));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 942));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -41803,10 +41803,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 912:
-/*!*******************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/en.json ***!
-  \*******************************************************************************************************/
+/***/ 940:
+/*!************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/en.json ***!
+  \************************************************************************************************************/
 /*! exports provided: uni-popup.cancel, uni-popup.ok, uni-popup.placeholder, uni-popup.title, uni-popup.shareTitle, default */
 /***/ (function(module) {
 
@@ -41814,10 +41814,10 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"cancel\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 913:
-/*!************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hans.json ***!
-  \************************************************************************************************************/
+/***/ 941:
+/*!*****************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hans.json ***!
+  \*****************************************************************************************************************/
 /*! exports provided: uni-popup.cancel, uni-popup.ok, uni-popup.placeholder, uni-popup.title, uni-popup.shareTitle, default */
 /***/ (function(module) {
 
@@ -41825,10 +41825,10 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 914:
-/*!************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hant.json ***!
-  \************************************************************************************************************/
+/***/ 942:
+/*!*****************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-popup/components/uni-popup/i18n/zh-Hant.json ***!
+  \*****************************************************************************************************************/
 /*! exports provided: uni-popup.cancel, uni-popup.ok, uni-popup.placeholder, uni-popup.title, uni-popup.shareTitle, default */
 /***/ (function(module) {
 
@@ -41836,10 +41836,221 @@ module.exports = JSON.parse("{\"uni-popup.cancel\":\"取消\",\"uni-popup.ok\":\
 
 /***/ }),
 
-/***/ 943:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/pages/userinfo/cropImage/limeClipper/utils.js ***!
-  \**********************************************************************************************************************/
+/***/ 97:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/demo/table/tableData.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = [{
+  "date": "2020-09-01",
+  "name": "Dcloud1",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-02",
+  "name": "Dcloud2",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-03",
+  "name": "Dcloud3",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-04",
+  "name": "Dcloud4",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-05",
+  "name": "Dcloud5",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-06",
+  "name": "Dcloud6",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-07",
+  "name": "Dcloud7",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-08",
+  "name": "Dcloud8",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-09",
+  "name": "Dcloud9",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-10",
+  "name": "Dcloud10",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-11",
+  "name": "Dcloud11",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-12",
+  "name": "Dcloud12",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-13",
+  "name": "Dcloud13",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-14",
+  "name": "Dcloud14",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-15",
+  "name": "Dcloud15",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-16",
+  "name": "Dcloud16",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-01",
+  "name": "Dcloud17",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-02",
+  "name": "Dcloud18",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-03",
+  "name": "Dcloud19",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-04",
+  "name": "Dcloud20",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-05",
+  "name": "Dcloud21",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-06",
+  "name": "Dcloud22",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-07",
+  "name": "Dcloud23",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-08",
+  "name": "Dcloud24",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-09",
+  "name": "Dcloud25",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-10",
+  "name": "Dcloud26",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-11",
+  "name": "Dcloud27",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-12",
+  "name": "Dcloud28",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-13",
+  "name": "Dcloud29",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-14",
+  "name": "Dcloud30",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-15",
+  "name": "Dcloud31",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-16",
+  "name": "Dcloud32",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-01",
+  "name": "Dcloud33",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-02",
+  "name": "Dcloud34",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-03",
+  "name": "Dcloud35",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-04",
+  "name": "Dcloud36",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-05",
+  "name": "Dcloud37",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-06",
+  "name": "Dcloud38",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-07",
+  "name": "Dcloud39",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-08",
+  "name": "Dcloud40",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-09",
+  "name": "Dcloud41",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-10",
+  "name": "Dcloud42",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-11",
+  "name": "Dcloud43",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-12",
+  "name": "Dcloud44",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}, {
+  "date": "2020-09-13",
+  "name": "Dcloud45",
+  "address": "上海市普陀区金沙江路 1518 弄"
+}, {
+  "date": "2020-09-14",
+  "name": "Dcloud46",
+  "address": "上海市普陀区金沙江路 1517 弄"
+}, {
+  "date": "2020-09-15",
+  "name": "Dcloud47",
+  "address": "上海市普陀区金沙江路 1519 弄"
+}, {
+  "date": "2020-09-16",
+  "name": "Dcloud48",
+  "address": "上海市普陀区金沙江路 1516 弄"
+}];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 971:
+/*!***************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-id-pages/pages/userinfo/cropImage/limeClipper/utils.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42092,10 +42303,10 @@ function imageTouchMoveOfCalcOffset(data, clientXForLeft, clientYForLeft) {
 
 /***/ }),
 
-/***/ 958:
-/*!****************************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
-  \****************************************************************************************************************************/
+/***/ 986:
+/*!*********************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42107,9 +42318,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 959));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 960));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 961));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 987));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 988));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 989));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -42119,10 +42330,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 959:
-/*!***************************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
-  \***************************************************************************************************************************/
+/***/ 987:
+/*!********************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
+  \********************************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.SUN, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -42130,10 +42341,10 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"select date\"
 
 /***/ }),
 
-/***/ 960:
-/*!********************************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
-  \********************************************************************************************************************************/
+/***/ 988:
+/*!*************************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
+  \*************************************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -42141,10 +42352,10 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"选择日期\
 
 /***/ }),
 
-/***/ 961:
-/*!********************************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
-  \********************************************************************************************************************************/
+/***/ 989:
+/*!*************************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
+  \*************************************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -42152,10 +42363,10 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\
 
 /***/ }),
 
-/***/ 962:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
-  \**********************************************************************************************************************/
+/***/ 990:
+/*!***************************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42603,221 +42814,10 @@ function fixIosDateFormat(value) {
 
 /***/ }),
 
-/***/ 97:
-/*!*****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/pages/demo/table/tableData.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = [{
-  "date": "2020-09-01",
-  "name": "Dcloud1",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-02",
-  "name": "Dcloud2",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-03",
-  "name": "Dcloud3",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-04",
-  "name": "Dcloud4",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-05",
-  "name": "Dcloud5",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-06",
-  "name": "Dcloud6",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-07",
-  "name": "Dcloud7",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-08",
-  "name": "Dcloud8",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-09",
-  "name": "Dcloud9",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-10",
-  "name": "Dcloud10",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-11",
-  "name": "Dcloud11",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-12",
-  "name": "Dcloud12",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-13",
-  "name": "Dcloud13",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-14",
-  "name": "Dcloud14",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-15",
-  "name": "Dcloud15",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-16",
-  "name": "Dcloud16",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-01",
-  "name": "Dcloud17",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-02",
-  "name": "Dcloud18",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-03",
-  "name": "Dcloud19",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-04",
-  "name": "Dcloud20",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-05",
-  "name": "Dcloud21",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-06",
-  "name": "Dcloud22",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-07",
-  "name": "Dcloud23",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-08",
-  "name": "Dcloud24",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-09",
-  "name": "Dcloud25",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-10",
-  "name": "Dcloud26",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-11",
-  "name": "Dcloud27",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-12",
-  "name": "Dcloud28",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-13",
-  "name": "Dcloud29",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-14",
-  "name": "Dcloud30",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-15",
-  "name": "Dcloud31",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-16",
-  "name": "Dcloud32",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-01",
-  "name": "Dcloud33",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-02",
-  "name": "Dcloud34",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-03",
-  "name": "Dcloud35",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-04",
-  "name": "Dcloud36",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-05",
-  "name": "Dcloud37",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-06",
-  "name": "Dcloud38",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-07",
-  "name": "Dcloud39",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-08",
-  "name": "Dcloud40",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-09",
-  "name": "Dcloud41",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-10",
-  "name": "Dcloud42",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-11",
-  "name": "Dcloud43",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-12",
-  "name": "Dcloud44",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}, {
-  "date": "2020-09-13",
-  "name": "Dcloud45",
-  "address": "上海市普陀区金沙江路 1518 弄"
-}, {
-  "date": "2020-09-14",
-  "name": "Dcloud46",
-  "address": "上海市普陀区金沙江路 1517 弄"
-}, {
-  "date": "2020-09-15",
-  "name": "Dcloud47",
-  "address": "上海市普陀区金沙江路 1519 弄"
-}, {
-  "date": "2020-09-16",
-  "name": "Dcloud48",
-  "address": "上海市普陀区金沙江路 1516 弄"
-}];
-exports.default = _default;
-
-/***/ }),
-
-/***/ 970:
-/*!*************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的后台端/components/download-excel/download.js ***!
-  \*************************************************************************************/
+/***/ 998:
+/*!******************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的后台端/components/download-excel/download.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

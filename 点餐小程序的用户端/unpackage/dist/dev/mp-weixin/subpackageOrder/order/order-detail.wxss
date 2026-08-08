@@ -179,6 +179,21 @@
 .wrap__list__prices text.data-v-3668b134:nth-child(2) {
   font-size: 30rpx;
 }
+.wrap__fee.data-v-3668b134 {
+  border-top: 1rpx solid #f0f0f0;
+  padding: 20rpx 0;
+  margin-bottom: 10rpx;
+}
+.wrap__fee__row.data-v-3668b134 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 14rpx;
+}
+.wrap__fee__row.data-v-3668b134:first-child {
+  margin-top: 0;
+}
 .wrap__orderinfo.data-v-3668b134 {
   margin: 20rpx 20rpx 0 20rpx;
   background-color: white;

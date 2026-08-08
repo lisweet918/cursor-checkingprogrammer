@@ -9426,9 +9426,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 26:
-/*!**********************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json ***!
-  \**********************************************************/
+/*!***************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9970,7 +9970,7 @@ var b = "development" === "development",
   k = "true" === undefined || !0 === undefined,
   A = T([]),
   P = "h5" === E ? "web" : "app-plus" === E || "app-harmony" === E ? "app" : E,
-  C = T({"address":["127.0.0.1","10.207.110.185","198.18.0.1"],"servePort":7002,"debugPort":9001,"initialLaunchType":"remote","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
+  C = T({"address":["127.0.0.1","10.5.136.7"],"servePort":7002,"debugPort":9001,"initialLaunchType":"remote","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
   O = T([{"provider":"alipay","spaceName":"demo","spaceId":"env-00jy66me56x4","spaceAppId":"2021006131638686","accessKey":"3FUYLhHFOwlQ54wT","secretKey":"JXE5wlvuqgWFnn2N"}]) || [],
   x = true;
 var N = "";
@@ -18320,10 +18320,27 @@ module.exports = _possibleConstructorReturn, module.exports.__esModule = true, m
 
 /***/ }),
 
-/***/ 335:
-/*!********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/emitter.js ***!
-  \********************************************************************************************/
+/***/ 34:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _getPrototypeOf(o);
+}
+module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 343:
+/*!*************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/emitter.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18391,45 +18408,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 34:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _getPrototypeOf(o);
-}
-module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 343:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/guanbi.png ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAflBMVEUAAABUVldRUlZUVldTVlZQUFA9PT1TVldTVldTVVZTVlZUVldUVldTVVdUVlZUVldTVVZSVFRTVldUVldSVVVUVlZUVVdTVlZSVVZTU1ZOTlNUVVZTVlZTVlZSVVZTU1dTVldTVVZTVVZTVVZTVFdQVVVSVVVUVVdUVFdUVleyYCyVAAAAKXRSTlMA/SP4pAoE39NMYvXr2+/ndBqnoF3BumxCKRDNmVU6IdmKhHpoNjCtYZmEy20AAAFYSURBVEjH7dTZbsIwEEBROyELeMm+AUnY2/n/HyxqSvHMSFh9LvMY34OQY0e85w8TrVeJNfs+ogvFpc307jTEpO8OCgBUWhMx77MQQNp2QiIeE/geaTZIBCv1s9AO6HkDj0nuwunDx3N7csGY/QK5CNqD3Lkg14AE7wG0CzoNWPAeMhf0CRDBetmizS4lFp8R6SG7oG2dUixMXirUq30hkFhjARb/friaBRouSB+Qngve+wXvufD1XPh6v1Co58IQEZazeDVDA3hsHr3qg0pJDJ43ig4/n/x++Ht+B3nvF7z3C95z4eulRxQVuS+NkVjUSGzPFr/faiCnRKa9C24pO28xEapyQa1pL5gw+ENGey6sCzaa9FzIxAXXA+m5CEu0S0eFey7MGr+3j0XYaumfYhcuf6iLBBZHo3WWngt6B6cyuS80NTsb2+smr29bwabou3wMYvGf5wvbvnv9DG8MowAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 344:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/gougou.png ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAk1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6eSN1AAAAMHRSTlMA+/H5I9QRCuvl4Rf2R3kyLMfBsquThFUG7txkPicdvKalopiNjHNnUTXPy7teXFdkgxhUAAABG0lEQVQ4y+2Tx46DMBRFXTEm9F7T61T//9eNMgmGERYvm1E2OUt0dHnv2kYv/gXmf/CV3z3khmlFFa2SEMEstlRdoZslLH/Z6oYs4IFjfJdJDrnCJ6qXD5AccNVjnwDXytzexRFUh+cMwY0AakuxDk4W827Z2DrY8aDaIh3s7izTSixg9+8iJzqYB4Yft+vaqdfer36ptUt8w3ZnTq/XwMkCgawd1dvFbOp2UT8iP7KzHGr7LKfyadi+eudDcGqq7UDUCKC23Ci7e8skF9Ikc/OlWG7o1CVHgYyEyWQQvNK1TbJ97v6V5ffM0wgyB49cul3MXngvsUfBLfT6m8gdnQdA2eW3WfDbBcEIL5aEyLhFD8GKbF8w9OJp/AB1/0D8ddOiVQAAAABJRU5ErkJggg=="
-
-/***/ }),
-
 /***/ 35:
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
@@ -18471,6 +18449,28 @@ module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
+/***/ 351:
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/guanbi.png ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAflBMVEUAAABUVldRUlZUVldTVlZQUFA9PT1TVldTVldTVVZTVlZUVldUVldTVVdUVlZUVldTVVZSVFRTVldUVldSVVVUVlZUVVdTVlZSVVZTU1ZOTlNUVVZTVlZTVlZSVVZTU1dTVldTVVZTVVZTVVZTVFdQVVVSVVVUVVdUVFdUVleyYCyVAAAAKXRSTlMA/SP4pAoE39NMYvXr2+/ndBqnoF3BumxCKRDNmVU6IdmKhHpoNjCtYZmEy20AAAFYSURBVEjH7dTZbsIwEEBROyELeMm+AUnY2/n/HyxqSvHMSFh9LvMY34OQY0e85w8TrVeJNfs+ogvFpc307jTEpO8OCgBUWhMx77MQQNp2QiIeE/geaTZIBCv1s9AO6HkDj0nuwunDx3N7csGY/QK5CNqD3Lkg14AE7wG0CzoNWPAeMhf0CRDBetmizS4lFp8R6SG7oG2dUixMXirUq30hkFhjARb/friaBRouSB+Qngve+wXvufD1XPh6v1Co58IQEZazeDVDA3hsHr3qg0pJDJ43ig4/n/x++Ht+B3nvF7z3C95z4eulRxQVuS+NkVjUSGzPFr/faiCnRKa9C24pO28xEapyQa1pL5gw+ENGey6sCzaa9FzIxAXXA+m5CEu0S0eFey7MGr+3j0XYaumfYhcuf6iLBBZHo3WWngt6B6cyuS80NTsb2+smr29bwabou3wMYvGf5wvbvnv9DG8MowAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ 352:
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/gougou.png ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAk1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6eSN1AAAAMHRSTlMA+/H5I9QRCuvl4Rf2R3kyLMfBsquThFUG7txkPicdvKalopiNjHNnUTXPy7teXFdkgxhUAAABG0lEQVQ4y+2Tx46DMBRFXTEm9F7T61T//9eNMgmGERYvm1E2OUt0dHnv2kYv/gXmf/CV3z3khmlFFa2SEMEstlRdoZslLH/Z6oYs4IFjfJdJDrnCJ6qXD5AccNVjnwDXytzexRFUh+cMwY0AakuxDk4W827Z2DrY8aDaIh3s7izTSixg9+8iJzqYB4Yft+vaqdfer36ptUt8w3ZnTq/XwMkCgawd1dvFbOp2UT8iP7KzHGr7LKfyadi+eudDcGqq7UDUCKC23Ci7e8skF9Ikc/OlWG7o1CVHgYyEyWQQvNK1TbJ97v6V5ffM0wgyB49cul3MXngvsUfBLfT6m8gdnQdA2eW3WfDbBcEIL5aEyLhFD8GKbF8w9OJp/AB1/0D8ddOiVQAAAABJRU5ErkJggg=="
+
+/***/ }),
+
 /***/ 36:
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/isNativeFunction.js ***!
@@ -18490,9 +18490,9 @@ module.exports = _isNativeFunction, module.exports.__esModule = true, module.exp
 /***/ }),
 
 /***/ 37:
-/*!***************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"origin-pages-json"} ***!
-  \***************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"origin-pages-json"} ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18514,7 +18514,9 @@ var _default = {
     "path": "pages/order/order",
     "style": {
       "navigationBarTitleText": "",
-      "navigationBarBackgroundColor": "#FFFFFF"
+      "navigationBarBackgroundColor": "#FFFFFF",
+      "enablePullDownRefresh": true,
+      "backgroundTextStyle": "dark"
     }
   }, {
     "path": "pages/my/my",
@@ -18607,6 +18609,11 @@ var _default = {
         "navigationBarTitleText": "优惠劵"
       }
     }, {
+      "path": "myCoupon/coupon-list",
+      "style": {
+        "navigationBarTitleText": "我的优惠券"
+      }
+    }, {
       "path": "riderCenter/rider-center",
       "style": {
         "navigationBarTitleText": "骑手中心"
@@ -18646,9 +18653,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 38:
-/*!**************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"stat"} ***!
-  \**************************************************************************/
+/*!*******************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"stat"} ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18666,10 +18673,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 380:
-/*!****************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/async-validator.js ***!
-  \****************************************************************************************************/
+/***/ 388:
+/*!*********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/async-validator.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19844,11 +19851,11 @@ Schema.warning = warning;
 Schema.messages = messages;
 var _default = Schema;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 381)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 389)))
 
 /***/ }),
 
-/***/ 381:
+/***/ 389:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -19879,7 +19886,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 382);
+        if (!path) path = __webpack_require__(/*! path */ 390);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -19893,7 +19900,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 382:
+/***/ 390:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -20203,7 +20210,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 381)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 389)))
 
 /***/ }),
 
@@ -20355,93 +20362,10 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 446:
-/*!*****************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/popup.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 447));
-// 定义 type 类型:弹出类型：top/bottom/center
-var config = {
-  // 顶部弹出
-  top: 'top',
-  // 底部弹出
-  bottom: 'bottom',
-  // 居中弹出
-  center: 'center',
-  // 消息提示
-  message: 'top',
-  // 对话框
-  dialog: 'center',
-  // 分享
-  share: 'bottom'
-};
-var _default = {
-  data: function data() {
-    return {
-      config: config
-    };
-  },
-  mixins: [_message.default]
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 447:
-/*!*******************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/message.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  created: function created() {
-    if (this.type === 'message') {
-      // 不显示遮罩
-      this.maskShow = false;
-      // 获取子组件对象
-      this.childrenMsg = null;
-    }
-  },
-  methods: {
-    customOpen: function customOpen() {
-      if (this.childrenMsg) {
-        this.childrenMsg.open();
-      }
-    },
-    customClose: function customClose() {
-      if (this.childrenMsg) {
-        this.childrenMsg.close();
-      }
-    }
-  }
-};
-exports.default = _default;
-
-/***/ }),
-
 /***/ 45:
-/*!***********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/index.js ***!
-  \***********************************************************************/
+/*!****************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/index.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20604,10 +20528,93 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ 454:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/popup.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 455));
+// 定义 type 类型:弹出类型：top/bottom/center
+var config = {
+  // 顶部弹出
+  top: 'top',
+  // 底部弹出
+  bottom: 'bottom',
+  // 居中弹出
+  center: 'center',
+  // 消息提示
+  message: 'top',
+  // 对话框
+  dialog: 'center',
+  // 分享
+  share: 'bottom'
+};
+var _default = {
+  data: function data() {
+    return {
+      config: config
+    };
+  },
+  mixins: [_message.default]
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 455:
+/*!************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/message.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  created: function created() {
+    if (this.type === 'message') {
+      // 不显示遮罩
+      this.maskShow = false;
+      // 获取子组件对象
+      this.childrenMsg = null;
+    }
+  },
+  methods: {
+    customOpen: function customOpen() {
+      if (this.childrenMsg) {
+        this.childrenMsg.open();
+      }
+    },
+    customClose: function customClose() {
+      if (this.childrenMsg) {
+        this.childrenMsg.close();
+      }
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+
 /***/ 46:
-/*!***************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/promotion.js ***!
-  \***************************************************************************/
+/*!********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/promotion.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20660,9 +20667,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 47:
-/*!***********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/order.js ***!
-  \***********************************************************************/
+/*!****************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/order.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20715,9 +20722,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 48:
-/*!**********************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/menu.js ***!
-  \**********************************************************************/
+/*!***************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/request/menu.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21090,9 +21097,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 49:
-/*!************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni.promisify.adaptor.js ***!
-  \************************************************************************/
+/*!*****************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni.promisify.adaptor.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21133,9 +21140,9 @@ module.exports = _slicedToArray, module.exports.__esModule = true, module.export
 /***/ }),
 
 /***/ 50:
-/*!********************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/index.js ***!
-  \********************************************************************************/
+/*!*************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/index.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21285,9 +21292,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 51:
-/*!*******************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/mixin/mixin.js ***!
-  \*******************************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/mixin/mixin.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21369,9 +21376,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 52:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/request/index.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/request/index.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21581,9 +21588,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 53:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/deepMerge.js ***!
-  \**************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/deepMerge.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21631,9 +21638,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 54:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/deepClone.js ***!
-  \**************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/deepClone.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21673,9 +21680,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 55:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/test.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/test.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21980,9 +21987,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 56:
-/*!****************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/queryParams.js ***!
-  \****************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/queryParams.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22062,9 +22069,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 57:
-/*!**********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/route.js ***!
-  \**********************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/route.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22244,9 +22251,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 58:
-/*!***************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/timeFormat.js ***!
-  \***************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/timeFormat.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22321,9 +22328,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 59:
-/*!*************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/timeFrom.js ***!
-  \*************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/timeFrom.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22400,9 +22407,9 @@ module.exports = _arrayWithHoles, module.exports.__esModule = true, module.expor
 /***/ }),
 
 /***/ 60:
-/*!******************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/colorGradient.js ***!
-  \******************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/colorGradient.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22554,9 +22561,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 61:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/guid.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/guid.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22615,9 +22622,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 62:
-/*!**********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/color.js ***!
-  \**********************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/color.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22664,9 +22671,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 63:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/type2icon.js ***!
-  \**************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/type2icon.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22718,9 +22725,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 64:
-/*!****************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/randomArray.js ***!
-  \****************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/randomArray.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22745,9 +22752,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 65:
-/*!************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/addUnit.js ***!
-  \************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/addUnit.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22774,9 +22781,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 66:
-/*!***********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/random.js ***!
-  \***********************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/random.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22801,9 +22808,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 67:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/trim.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/trim.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22834,9 +22841,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 68:
-/*!**********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/toast.js ***!
-  \**********************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/toast.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22862,9 +22869,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 69:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/getParent.js ***!
-  \**************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/getParent.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22972,9 +22979,9 @@ module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module
 /***/ }),
 
 /***/ 70:
-/*!************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/$parent.js ***!
-  \************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/$parent.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23008,9 +23015,9 @@ function $parent() {
 /***/ }),
 
 /***/ 71:
-/*!********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/sys.js ***!
-  \********************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/sys.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23035,9 +23042,9 @@ function sys() {
 /***/ }),
 
 /***/ 72:
-/*!**********************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/getSystemInfoSync.js ***!
-  \**********************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/getSystemInfoSync.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23083,9 +23090,9 @@ function getCompatibleSystemInfo() {
 /***/ }),
 
 /***/ 73:
-/*!*************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/debounce.js ***!
-  \*************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/debounce.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23131,9 +23138,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 74:
-/*!*************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/throttle.js ***!
-  \*************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/throttle.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23187,9 +23194,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 75:
-/*!*************************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/addStyle.js ***!
-  \*************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/function/addStyle.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23272,9 +23279,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 76:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/config/config.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/config/config.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23298,9 +23305,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 77:
-/*!*********************************************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/config/zIndex.js ***!
-  \*********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/config/zIndex.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23335,9 +23342,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 78:
-/*!**************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/store/index.js ***!
-  \**************************************************************/
+/*!*******************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/store/index.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24676,9 +24683,9 @@ module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, 
 /***/ }),
 
 /***/ 80:
-/*!**************************************************************!*\
-  !*** /Users/e/Desktop/扫码微信点餐小程序_副本/点餐小程序的用户端/common/util.js ***!
-  \**************************************************************/
+/*!*******************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/util.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
