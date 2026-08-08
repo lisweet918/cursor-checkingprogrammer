@@ -12,7 +12,7 @@
 						<text>{{ storeName }}</text>
 						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
 					</view>
-					<view>{{ getStatusText(item.status) }}</view>
+					<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
 					<view class="wrap__list__shopinfo__left">
@@ -34,6 +34,7 @@
 					</view>
 					<view class="wrap__list__shopinfo__right">x{{itemt.number}}</view>
 				</view>
+				<view class="wrap__list__time" v-if="item.createTime">{{ formatTime(item.createTime) }}</view>
 				<view class="wrap__list__prices">
 					共{{item.shop_num}}件商品，合计：
 					<text>￥</text>
@@ -43,8 +44,14 @@
 					<text>备注：{{item.remark}}</text>
 				</view>
 				<view class='wrap__list__bottom'>
-					<view>再来一单</view>
+					<view v-if="item.status == 0" class="wrap__list__bottom__cancel" @click.stop="cancelOrder(item)">取消订单</view>
+					<view @click.stop="reorder(item)">再来一单</view>
 				</view>
+			</view>
+			<view v-if="!pickupList.length" class="wrap__empty">
+				<image src="/static/img/home/icon_shopping_bag.png" class="wrap__empty__icon"></image>
+				<view class="wrap__empty__text">暂无自取订单</view>
+				<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
 			</view>
 		</view>
 
@@ -55,7 +62,7 @@
 						<text>{{ storeName }}</text>
 						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
 					</view>
-					<view>{{ getStatusText(item.status) }}</view>
+					<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
 					<view class="wrap__list__shopinfo__left">
@@ -77,6 +84,7 @@
 					</view>
 					<view class="wrap__list__shopinfo__right">x{{itemt.number}}</view>
 				</view>
+				<view class="wrap__list__time" v-if="item.createTime">{{ formatTime(item.createTime) }}</view>
 				<view class="wrap__list__prices">
 					共{{item.shop_num}}件商品，合计：
 					<text>￥</text>
@@ -86,8 +94,14 @@
 					<text>备注：{{item.remark}}</text>
 				</view>
 				<view class='wrap__list__bottom'>
-					<view>再来一单</view>
+					<view v-if="item.status == 0" class="wrap__list__bottom__cancel" @click.stop="cancelOrder(item)">取消订单</view>
+					<view @click.stop="reorder(item)">再来一单</view>
 				</view>
+			</view>
+			<view v-if="!takeoutList.length" class="wrap__empty">
+				<image src="/static/img/home/icon_shopping_bag.png" class="wrap__empty__icon"></image>
+				<view class="wrap__empty__text">暂无外卖订单</view>
+				<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
 			</view>
 		</view>
 
@@ -151,6 +165,10 @@
 			this.loadStoreSettings()
 			this.loadOrders()
 		},
+		async onPullDownRefresh() {
+			await this.loadOrders()
+			uni.stopPullDownRefresh()
+		},
 		methods: {
 			getStatusText(status) {
 				const s = parseInt(status);
@@ -161,6 +179,13 @@
 					case 3: return '已完成';
 					default: return '已支付';
 				}
+			},
+			formatTime(ts) {
+				if (!ts) return ''
+				const d = new Date(Number(ts))
+				if (isNaN(d.getTime())) return ''
+				const pad = n => (n < 10 ? '0' + n : '' + n)
+				return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
 			},
 			async loadStoreSettings() {
 				try {
@@ -223,6 +248,47 @@
 				// 跳转到订单详情页面
 				uni.navigateTo({
 					url: `/subpackageOrder/order/order-detail?id=${item._id}&type=${type}`
+				})
+			},
+			goOrder() {
+				uni.switchTab({ url: '/pages/home/home' })
+			},
+			reorder(item) {
+				const cart = (item.commodity_list || []).map(c => ({
+					id: c.id,
+					cate_id: c.cate_id || '',
+					name: c.name,
+					price: c.price,
+					number: c.number,
+					image: c.image,
+					is_single: c.is_single !== false,
+					materials_text: c.materials_text || ''
+				}))
+				if (!cart.length) {
+					uni.showToast({ title: '该订单无可购买商品', icon: 'none' })
+					return
+				}
+				uni.setStorageSync('cart', cart)
+				this.$store.commit('SET_ORDER_TYPE', item.type || 'takein')
+				uni.navigateTo({ url: '/subpackageHome/setTlement/pay' })
+			},
+			cancelOrder(item) {
+				uni.showModal({
+					title: '取消订单',
+					content: '确定要取消该订单吗？',
+					success: async (res) => {
+						if (!res.confirm) return
+						uni.showLoading({ title: '处理中...' })
+						try {
+							await db.collection('order').doc(item._id).update({ status: 2 })
+							uni.hideLoading()
+							uni.showToast({ title: '已取消', icon: 'none' })
+							this.loadOrders()
+						} catch (e) {
+							uni.hideLoading()
+							uni.showToast({ title: '取消失败', icon: 'none' })
+						}
+					}
 				})
 			},
 			checkCoupon(param) {

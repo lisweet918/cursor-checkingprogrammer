@@ -1,219 +1,615 @@
 .container {
+
 	height: auto;
+
 	padding-bottom: 120rpx;
 
-	&__shopbox {
+
+
+	&__tablebar {
+
 		display: flex;
+
+		align-items: center;
+
+		background: linear-gradient(135deg, #103b2a 0%, #1f5d43 100%);
+
+		margin: 0 0 20rpx 0;
+
+		padding: 30rpx 40rpx;
+
+		color: #ffffff;
+
+
+
+		&__item {
+
+			flex: 1;
+
+			display: flex;
+
+			flex-direction: column;
+
+			align-items: center;
+
+
+
+			&__label {
+
+				font-size: 22rpx;
+
+				opacity: 0.85;
+
+				margin-bottom: 8rpx;
+
+			}
+
+
+
+			&__value {
+
+				font-size: 40rpx;
+
+				font-weight: bold;
+
+				letter-spacing: 2rpx;
+
+			}
+
+		}
+
+
+
+		&__divider {
+
+			width: 1rpx;
+
+			height: 60rpx;
+
+			background-color: rgba(255, 255, 255, 0.3);
+
+		}
+
+	}
+
+
+
+	&__shopbox {
+
+		display: flex;
+
 		justify-content: space-between;
+
 		margin: 30rpx 30rpx 0 30rpx;
 
+
+
 		&__left {
+
 			display: flex;
+
 			align-items: flex-start;
 
+
+
 			&__info {
+
 				display: flex;
+
 				flex-direction: column;
+
 				justify-content: space-between;
+
 				margin-left: 20rpx;
 
+
+
 				view:nth-child(1) {
+
 					color: #333;
+
 				}
+
+
 
 				view:nth-child(2) {
+
 					font-size: 20rpx;
+
 					color: $u-type-info;
+
 					margin-top: 5rpx;
+
 				}
+
+
 
 				view:nth-child(3) {
+
 					font-size: 20rpx;
+
 					color: $u-type-info;
+
 					font-weight: bold;
+
 					margin-top: 10rpx;
+
 				}
+
 			}
+
 		}
 
+
+
 		&__right {
+
 			display: flex;
+
 			align-items: baseline;
+
 			color: #FF362D;
+
 			font-weight: bold;
+
 			margin-left: 5rpx;
 
+
+
 			text:nth-child(1) {
+
 				font-size: 20rpx;
+
 			}
+
+
 
 			text:nth-child(2) {
+
 				font-size: 26rpx;
+
 			}
+
 		}
+
 	}
+
+
 
 	&__addressbox {
+
 		background-color: white;
+
 		padding: 50rpx 24rpx;
+
 		margin-bottom: 20rpx;
 
+
+
 		&__addressinfo {
+
 			display: flex;
+
 			justify-content: space-between;
+
 			align-items: center;
+
+
 
 			&__info {
+
 				&__top {
+
 					color: #333333;
+
 					font-size: 30rpx;
+
 					font-weight: bold;
+
 					margin-bottom: 20rpx;
+
 				}
+
+
 
 				&__bottom {
+
 					display: flex;
+
 					align-items: center;
+
 					font-size: 24rpx;
+
 					color: $u-type-info;
 
+
+
 					view:nth-child(1) {
+
 						margin-right: 20rpx;
+
 					}
+
 				}
+
 			}
+
 		}
+
+
 
 		&__add-address {
+
 			display: flex;
+
 			align-items: center;
+
 			justify-content: center;
+
 			color: $u-type-info;
+
 			font-size: 30rpx;
+
 		}
+
 	}
+
 }
+
+
 
 .delivery-options {
+
 	margin-top: 10rpx;
 
+
+
 	.delivery-option {
+
 		display: flex;
+
 		justify-content: space-between;
+
 		align-items: center;
+
 		padding: 30rpx 20rpx;
+
 		margin-top: 30rpx;
+
 		font-weight: bold;
+
 		color: #333;
+
 		border: 2rpx solid #e4e7ed;
+
 		transition: all 0.3s ease;
+
 		border-radius: 18rpx;
 
+
+
 		&__right {
+
 			display: flex;
+
 			align-items: center;
+
 			color: #0A3D28;
+
 			font-weight: bold;
+
 		}
+
+
 
 		&--active {
+
 			background-color: #0A3D28;
+
 			color: #FFFFFF !important;
+
 			border-color: #0A3D28;
 
+
+
 			.delivery-option__right {
+
 				color: #FFFFFF !important;
+
 			}
+
+
 
 			.u-icon {
+
 				color: #FFFFFF !important;
+
 			}
+
 		}
+
 	}
+
 }
+
+
 
 .price {
+
 	display: flex;
+
 	align-items: baseline;
+
 	color: #FF362D;
+
 	font-weight: bold;
+
 	margin-left: 5rpx;
 
+
+
 	text:nth-child(1) {
+
 		font-size: 20rpx;
+
 	}
 
+
+
 	text:nth-child(2) {
+
 		font-size: 30rpx;
+
 	}
+
 }
+
+
 
 .total {
+
 	display: flex;
+
 	align-items: baseline;
 
+
+
 	text:nth-child(1) {
+
 		color: #333333;
+
 	}
+
+
 
 	text:nth-child(2),
+
 	text:nth-child(3) {
+
 		color: #FF362D;
+
 		font-weight: bold;
+
 	}
+
+
 
 	text:nth-child(2) {
+
 		font-size: 26rpx;
+
 	}
+
+
 
 	text:nth-child(3) {
+
 		font-size: 36rpx;
+
 	}
+
 }
+
+
 
 .pro-img {
+
 	width: 120rpx;
+
 	height: 90rpx;
+
 	flex-shrink: 0;
+
 }
+
+
 
 .coupon-label {
+
 	background-color: $color-primary;
+
 	color: #FFFFFF;
+
 	font-size: 18rpx;
+
 	line-height: 0.9rem;
+
 	width: 0.9rem;
+
 	height: 0.9rem;
+
 	margin-left: 10rpx;
+
 	text-align: center;
+
 }
+
+
 
 .wx-pay-icon {
+
 	width: 40rpx;
+
 	height: 40rpx;
+
 	margin-right: 10rpx;
+
 }
 
+
+
 .footer {
+
 	background-color: #FFFFFF;
+
 	z-index: 10;
+
 	position: fixed;
+
 	bottom: 0;
+
 	left: 0;
+
 	width: 100%;
+
 	height: 100rpx;
+
 	display: flex;
+
 	justify-content: flex-end;
+
 	align-items: center;
 
+
+
 	button {
+
 		width: 250rpx;
+
 		text-align: center;
+
 		padding: 0;
+
 		height: 100%;
+
 		line-height: 100rpx;
+
 		border-radius: 0 !important;
+
 		font-size: $font-size-lg;
+
 		background-color: #0A3D28;
+
 	}
+
+}
+
+.footer__disabled {
+
+	background-color: #c8c9cc !important;
+
+	color: #ffffff !important;
+
+	font-size: 26rpx !important;
+
+}
+
+
+
+.coupon-cell { display: flex; align-items: center; }
+
+.coupon-cell__deduct { color: #FF362D; font-weight: bold; }
+
+.coupon-cell__hint { color: #EE520C; font-size: 24rpx; }
+
+.coupon-cell__none { color: #999; font-size: 24rpx; }
+
+.coupon-picker {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+}
+
+.coupon-picker__mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.45);
+}
+
+.coupon-picker__panel {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	max-height: 70vh;
+	background: #fff;
+	border-radius: 24rpx 24rpx 0 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.coupon-picker__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	border-bottom: 1rpx solid #f0f0f0;
+}
+
+.coupon-picker__close {
+	color: #999;
+	font-size: 34rpx;
+}
+
+.coupon-picker__body {
+	padding: 20rpx 30rpx 40rpx;
+}
+
+.coupon-picker__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 28rpx 24rpx;
+	margin-bottom: 20rpx;
+	border-radius: 16rpx;
+	background: #f7f7f7;
+	border: 2rpx solid transparent;
+}
+
+.coupon-picker__item--active {
+	border-color: #0A3D28;
+	background: rgba(10, 61, 40, 0.06);
+}
+
+.coupon-picker__item__amount {
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #EE520C;
+}
+
+.coupon-picker__item__name {
+	font-size: 24rpx;
+	color: #666;
+	margin-top: 8rpx;
+}
+
+.coupon-picker__check {
+	color: #0A3D28;
+	font-weight: bold;
+	font-size: 32rpx;
+}
+
+.coupon-picker__empty {
+	text-align: center;
+	color: #999;
+	font-size: 26rpx;
+	padding: 60rpx 0;
 }

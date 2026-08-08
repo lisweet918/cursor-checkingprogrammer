@@ -166,7 +166,7 @@
             <view class="info-row"><text class="info-label">订单号</text><text class="info-value">{{ selectedOrder.out_trade_no || selectedOrder._id }}</text></view>
             <view class="info-row"><text class="info-label">下单时间</text><text class="info-value"><uni-dateformat :threshold="[0,0]" :date="selectedOrder.createTime"></uni-dateformat></text></view>
             <view class="info-row"><text class="info-label">订单类型</text><text class="info-value">{{ selectedOrder.type === 'takeout' ? '外卖配送' : '堂食' }}</text></view>
-            <view class="info-row" v-if="selectedOrder.tableNumber"><text class="info-label">桌号</text><text class="info-value">{{ selectedOrder.tableNumber }}</text></view>
+            <view class="info-row" v-if="selectedOrder.tableNumber"><text class="info-label">桌号</text><text class="info-value">{{ selectedOrder.tableNumber }}{{ selectedOrder.diningCount ? '（' + selectedOrder.diningCount + '人就餐）' : '' }}</text></view>
             <view class="info-row"><text class="info-label">备注</text><text class="info-value">{{ selectedOrder.remark || '无' }}</text></view>
           </view>
 
@@ -188,6 +188,20 @@
                 <text>¥{{ g.price }}</text>
                 <text>x{{ g.number }}</text>
                 <text class="goods-subtotal">¥{{ (g.price * g.number).toFixed(2) }}</text>
+              </view>
+            </view>
+            <view class="fee-row" v-if="selectedOrder.packing_fee > 0 || selectedOrder.delivery_fee > 0 || selectedOrder.coupon_deduct > 0">
+              <view class="info-row" v-if="selectedOrder.goods_amount != null">
+                <text class="info-label">商品小计</text><text class="info-value">¥{{ selectedOrder.goods_amount }}</text>
+              </view>
+              <view class="info-row" v-if="selectedOrder.packing_fee > 0">
+                <text class="info-label">打包费</text><text class="info-value">¥{{ selectedOrder.packing_fee }}</text>
+              </view>
+              <view class="info-row" v-if="selectedOrder.type === 'takeout'">
+                <text class="info-label">配送费</text><text class="info-value">{{ selectedOrder.delivery_fee > 0 ? '¥' + selectedOrder.delivery_fee : '免配送费' }}</text>
+              </view>
+              <view class="info-row" v-if="selectedOrder.coupon_deduct > 0">
+                <text class="info-label">优惠券抵扣</text><text class="info-value" style="color:#e74c3c;">-¥{{ selectedOrder.coupon_deduct }}</text>
               </view>
             </view>
             <view class="goods-total">
@@ -225,7 +239,7 @@
   export default {
     data() {
       return {
-        fields: '_id,createTime,out_trade_no,tableNumber,type,commodity_list,shop_num,price,status,remark,name,phone,address,house_number,transaction_id,payment_time_text,torder,is_show',
+        fields: '_id,createTime,out_trade_no,tableNumber,diningCount,type,commodity_list,shop_num,price,goods_amount,packing_fee,delivery_fee,coupon_deduct,status,remark,name,phone,address,house_number,transaction_id,payment_time_text,torder,is_show',
         query: '',
         where: '',
         orderby: 'createTime desc',
@@ -450,6 +464,11 @@
     color: #666;
   }
   .goods-subtotal { color: #e74c3c; font-weight: bold; }
+  .fee-row {
+    padding: 8px 0;
+    margin-top: 6px;
+    border-top: 1px dashed #e5e5e5;
+  }
   .goods-total {
     text-align: right;
     padding-top: 10px;

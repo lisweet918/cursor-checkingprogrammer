@@ -35,6 +35,24 @@
 					</view>
 					<view class="wrap__list__shopinfo__right">x{{item.number}}</view>
 				</view>
+				<view class="wrap__fee" v-if="orderData.packing_fee > 0 || orderData.delivery_fee > 0 || orderData.coupon_deduct > 0">
+					<view class="wrap__fee__row">
+						<text>商品小计</text>
+						<text>￥{{ orderData.goods_amount != null ? orderData.goods_amount : orderData.price }}</text>
+					</view>
+					<view class="wrap__fee__row" v-if="orderData.packing_fee > 0">
+						<text>打包费</text>
+						<text>￥{{ orderData.packing_fee }}</text>
+					</view>
+					<view class="wrap__fee__row" v-if="orderData.type == 'takeout'">
+						<text>配送费</text>
+						<text>{{ orderData.delivery_fee > 0 ? '￥' + orderData.delivery_fee : '免配送费' }}</text>
+					</view>
+					<view class="wrap__fee__row" v-if="orderData.coupon_deduct > 0">
+						<text>优惠券抵扣</text>
+						<text style="color:#FF362D;">-￥{{ orderData.coupon_deduct }}</text>
+					</view>
+				</view>
 				<view class="wrap__list__prices">
 					共{{orderData.shop_num}}件商品，合计：
 					<text>￥</text>
@@ -44,6 +62,10 @@
 
 			<view class="wrap__orderinfo">
 				<view class="wrap__orderinfo__title">订单信息</view>
+				<view v-if="type == 'takein' && orderData.tableNumber" class="wrap__orderinfo__cell">
+					<view>桌号</view>
+					<view>{{ orderData.tableNumber }}{{ orderData.diningCount ? '（' + orderData.diningCount + '人就餐）' : '' }}</view>
+				</view>
 				<view v-if="type == 'takeout'">
 					<view class="wrap__orderinfo__cell">
 						<view>收货人/联系方式</view>
@@ -164,9 +186,23 @@
 				}
 			},
 			moreOrder() {
-				uni.switchTab({
-					url: '/pages/home/home'
-				})
+				const cart = (this.orderData.commodity_list || []).map(c => ({
+					id: c.id,
+					cate_id: c.cate_id || '',
+					name: c.name,
+					price: c.price,
+					number: c.number,
+					image: c.image,
+					is_single: c.is_single !== false,
+					materials_text: c.materials_text || ''
+				}))
+				if (!cart.length) {
+					uni.switchTab({ url: '/pages/home/home' })
+					return
+				}
+				uni.setStorageSync('cart', cart)
+				this.$store.commit('SET_ORDER_TYPE', this.orderData.type || 'takein')
+				uni.navigateTo({ url: '/subpackageHome/setTlement/pay' })
 			}
 		}
 	}
@@ -327,6 +363,24 @@
 
 				text:nth-child(2) {
 					font-size: 30rpx;
+				}
+			}
+		}
+
+		&__fee {
+			border-top: 1rpx solid #f0f0f0;
+			padding: 20rpx 0;
+			margin-bottom: 10rpx;
+
+			&__row {
+				display: flex;
+				justify-content: space-between;
+				font-size: 24rpx;
+				color: #666;
+				margin-top: 14rpx;
+
+				&:first-child {
+					margin-top: 0;
 				}
 			}
 		}

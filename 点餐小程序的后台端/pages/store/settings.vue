@@ -22,7 +22,32 @@
         <text class="field-label">微信接单通知</text>
         <input class="field-input" v-model="formData.pushplus_token" type="text" placeholder="请输入PushPlus的Token，为空则不通知" />
       </view>
-      
+
+      <view class="section-divider">
+        <text class="section-title">外卖费用设置</text>
+        <text class="section-desc">仅影响外卖订单，全部留空或填 0 则不收取相应费用</text>
+      </view>
+
+      <view class="field-row">
+        <text class="field-label">打包费(元)</text>
+        <input class="field-input" v-model="formData.packing_fee" type="digit" placeholder="每单打包费，例：1" />
+      </view>
+
+      <view class="field-row">
+        <text class="field-label">配送费(元)</text>
+        <input class="field-input" v-model="formData.delivery_fee" type="digit" placeholder="基础配送费，例：3" />
+      </view>
+
+      <view class="field-row">
+        <text class="field-label">免配送费门槛(元)</text>
+        <input class="field-input" v-model="formData.free_delivery_threshold" type="digit" placeholder="满此金额免配送费，0 为不免" />
+      </view>
+
+      <view class="field-row">
+        <text class="field-label">起送金额(元)</text>
+        <input class="field-input" v-model="formData.min_order_amount" type="digit" placeholder="外卖起送门槛，0 为不限制" />
+      </view>
+
       <view class="field-row actions">
         <button class="uni-button" type="primary" :loading="loading" @click="submit">保存修改</button>
       </view>
@@ -41,7 +66,11 @@ export default {
       formData: {
         store_name: '七香嫂包子铺',
         business_hours: '早5:00 - 晚18:00',
-        pushplus_token: ''
+        pushplus_token: '',
+        packing_fee: '',
+        delivery_fee: '',
+        free_delivery_threshold: '',
+        min_order_amount: ''
       }
     }
   },
@@ -59,12 +88,21 @@ export default {
           this.formData.store_name = setting.store_name || '七香嫂包子铺'
           this.formData.business_hours = setting.business_hours || '早5:00 - 晚18:00'
           this.formData.pushplus_token = setting.pushplus_token || ''
+          this.formData.packing_fee = setting.packing_fee != null ? String(setting.packing_fee) : ''
+          this.formData.delivery_fee = setting.delivery_fee != null ? String(setting.delivery_fee) : ''
+          this.formData.free_delivery_threshold = setting.free_delivery_threshold != null ? String(setting.free_delivery_threshold) : ''
+          this.formData.min_order_amount = setting.min_order_amount != null ? String(setting.min_order_amount) : ''
         }
       } catch (e) {
         console.error('Failed to load settings:', e)
       } finally {
         uni.hideLoading()
       }
+    },
+    toAmount(val) {
+      const n = parseFloat(val)
+      if (isNaN(n) || n < 0) return 0
+      return Math.round(n * 100) / 100
     },
     async submit() {
       if (!this.formData.store_name.trim()) {
@@ -74,20 +112,19 @@ export default {
       
       this.loading = true
       try {
+        const payload = {
+          store_name: this.formData.store_name.trim(),
+          business_hours: this.formData.business_hours.trim(),
+          pushplus_token: this.formData.pushplus_token.trim(),
+          packing_fee: this.toAmount(this.formData.packing_fee),
+          delivery_fee: this.toAmount(this.formData.delivery_fee),
+          free_delivery_threshold: this.toAmount(this.formData.free_delivery_threshold),
+          min_order_amount: this.toAmount(this.formData.min_order_amount)
+        }
         if (this.recordId) {
-          // 更新
-          await db.collection('store_settings').doc(this.recordId).update({
-            store_name: this.formData.store_name.trim(),
-            business_hours: this.formData.business_hours.trim(),
-            pushplus_token: this.formData.pushplus_token.trim()
-          })
+          await db.collection('store_settings').doc(this.recordId).update(payload)
         } else {
-          // 新增
-          const res = await db.collection('store_settings').add({
-            store_name: this.formData.store_name.trim(),
-            business_hours: this.formData.business_hours.trim(),
-            pushplus_token: this.formData.pushplus_token.trim()
-          })
+          const res = await db.collection('store_settings').add(payload)
           this.recordId = res.result.id
         }
         uni.showToast({ title: '保存成功', icon: 'success' })
@@ -113,6 +150,23 @@ export default {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+}
+.section-divider {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ebeef5;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.section-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #303133;
+}
+.section-desc {
+  font-size: 12px;
+  color: #909399;
+  margin-top: 6px;
 }
 .field-label {
   width: 100px;

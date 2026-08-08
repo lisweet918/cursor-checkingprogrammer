@@ -10,6 +10,10 @@
 					<view class="title">
 						<view class="address">{{ storeName }}</view>
 						<view class="business">营业时间：{{ businessHours }}</view>
+						<view class="table-tag" v-if="orderType == 'takein' && tableInfo.tableNumber">
+							<text>桌号 {{ tableInfo.tableNumber }}</text>
+							<text v-if="tableInfo.diningCount"> · {{ tableInfo.diningCount }}人就餐</text>
+						</view>
 					</view>
 					<view class="buttons">
 						<button type="default" class="button" :class="{active: orderType == 'takein'}" plain
@@ -24,7 +28,12 @@
 				</view>
 			</view>
 		</view>
-		<view class="main">
+		<view v-if="!loading && filterCategories.length === 0" class="empty-menu">
+			<image src="/static/img/home/icon_shopping_bag.png" class="empty-menu__icon"></image>
+			<view class="empty-menu__text">该模式下暂无可售商品</view>
+			<view class="empty-menu__switch" @tap="switchOrderType">切换{{ orderType == 'takein' ? '外卖' : '自取' }}试试</view>
+		</view>
+		<view v-else class="main">
 			<scroll-view class="menu-bar" scroll-y scroll-with-animation>
 				<view class="wrapper">
 					<view class="menu-item" @tap="handleMenuSelected(category.id)"
@@ -125,11 +134,12 @@
 				productModalVisible: false,
 				cartPopupShow: false,
 				productsScrollTop: 0,
-				showSearch: false
+				showSearch: false,
+				loading: true
 			}
 		},
 		computed: {
-			...mapState(['orderType']),
+			...mapState(['orderType', 'tableInfo']),
 			productCartNum() {
 				return id => this.cart.reduce((acc, cur) => {
 					if (cur.id === id) {
@@ -181,6 +191,7 @@
 		async onLoad() {
 			const res = await this.$api('menu');
 			this.categories = res;
+			this.loading = false;
 			await this.$nextTick(async () => await this.calcSize())
 			this.currentCategoryId = this.filterCategories.length && this.filterCategories[0].id
 			this.loadAds();
