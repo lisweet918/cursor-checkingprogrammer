@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "uni-transition": "/components/uni-transition/uni-transition",
+    "yier-art": "/components/yier-art/yier-art",
     "cart-popup": "/components/cart-popup/cart-popup"
   }
 }

@@ -56,8 +56,25 @@
 }
 .actions .add-btn.data-v-c91d1000,
 .actions .minus-btn.data-v-c91d1000 {
-  width: 34rpx;
-  height: 34rpx;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.actions .add-btn.data-v-c91d1000 {
+  background: #815b49;
+  color: #fffdf7;
+  box-shadow: 0 4rpx 0 #e6d7ca;
+}
+.actions .minus-btn.data-v-c91d1000 {
+  background: #fffdf7;
+  color: #815b49;
+  border: 2rpx solid #d9c8b9;
 }
 .actions .number.data-v-c91d1000 {
   width: 44rpx;
@@ -76,7 +93,7 @@
 }
 .actions .materials-box .materials-btn.data-v-c91d1000 {
   border-radius: 50rpx;
-  background-color: #0A3D28;
+  background-color: #815B49;
   width: 100rpx;
   font-size: 20rpx;
   color: white;

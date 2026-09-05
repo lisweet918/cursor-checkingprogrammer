@@ -10,6 +10,7 @@
 					<view class="title">
 						<view class="address">{{ storeName }}</view>
 						<view class="business">营业时间：{{ businessHours }}</view>
+						<view class="companion-tip">一二布布陪你慢慢选，今天也要好好吃饭～</view>
 						<view class="table-tag" v-if="orderType == 'takein' && tableInfo.tableNumber">
 							<text>桌号 {{ tableInfo.tableNumber }}</text>
 							<text v-if="tableInfo.diningCount"> · {{ tableInfo.diningCount }}人就餐</text>
@@ -402,4 +403,169 @@
 
 <style lang="scss">
 	@import './index.scss';
+
+	.container {
+		background: #FFFDF7;
+		color: #65483D;
+	}
+
+	.header {
+		background: linear-gradient(180deg, #FFFDF7 0%, #EAF8FA 100%);
+		border-bottom: 1rpx solid rgba(101, 72, 61, 0.08);
+
+		.center {
+			padding-top: 18rpx;
+			padding-bottom: 18rpx;
+
+			.store {
+				.title {
+					.address {
+						color: #65483D;
+						font-size: 34rpx;
+						letter-spacing: 1rpx;
+					}
+
+					.business {
+						margin-top: 5rpx;
+						color: #9A7D70;
+					}
+
+					.companion-tip {
+						align-self: flex-start;
+						max-width: 100%;
+						margin-top: 10rpx;
+						padding: 5rpx 14rpx;
+						border-radius: 18rpx;
+						background: #F9DFDA;
+						color: #815B49;
+						font-size: 20rpx;
+						line-height: 1.5;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						box-sizing: border-box;
+					}
+
+					.table-tag {
+						background: #FFFFFF;
+						border: 1rpx solid #CDECF0;
+						color: #65483D;
+					}
+				}
+
+				.buttons {
+					background: rgba(255, 255, 255, 0.85);
+					border-color: #EADBD3;
+					box-shadow: 0 4rpx 14rpx rgba(101, 72, 61, 0.08);
+
+					.button {
+						color: #815B49 !important;
+
+						&.active {
+							background: #815B49;
+							color: #FFFFFF !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.main {
+		background: #FFFDF7;
+	}
+
+	.menu-bar {
+		background: #F8EFEA;
+
+		.wrapper .menu-item {
+			color: #9A7D70;
+
+			.image {
+				border-radius: 14rpx;
+			}
+
+			&.active {
+				background: #FFFDF7;
+				border-left-color: #ECAEA4;
+				color: #65483D;
+				font-weight: 600 !important;
+			}
+		}
+	}
+
+	.product-section {
+		background: #FFFDF7;
+
+		.ads1 {
+			margin: 16rpx 0 10rpx;
+			border-radius: 24rpx;
+			overflow: hidden;
+			box-shadow: 0 8rpx 24rpx rgba(101, 72, 61, 0.08);
+		}
+
+		.products-list {
+			.category-name {
+				display: flex;
+				align-items: center;
+				color: #65483D;
+				font-size: 28rpx;
+				font-weight: 700;
+
+				&::before {
+					content: '';
+					width: 8rpx;
+					height: 28rpx;
+					margin-right: 12rpx;
+					border-radius: 8rpx;
+					background: #F2B7AD;
+				}
+			}
+
+			.product {
+				box-sizing: border-box;
+				margin-bottom: 20rpx;
+				padding: 18rpx;
+				border: 1rpx solid rgba(101, 72, 61, 0.08);
+				border-radius: 24rpx;
+				background: #FFFFFF;
+				box-shadow: 0 8rpx 22rpx rgba(101, 72, 61, 0.06);
+
+				.image {
+					border-radius: 18rpx;
+				}
+
+				.content {
+					.name {
+						color: #65483D;
+					}
+
+					.sold {
+						color: #A88E82;
+					}
+
+					.labels .label {
+						border-radius: 10rpx;
+					}
+
+					.price .prices {
+						color: #C9655B;
+					}
+				}
+			}
+		}
+	}
+
+	.empty-menu {
+		background: #FFFDF7;
+
+		&__text {
+			color: #9A7D70;
+		}
+
+		&__switch {
+			background: #815B49;
+			box-shadow: 0 8rpx 20rpx rgba(129, 91, 73, 0.18);
+		}
+	}
 </style>

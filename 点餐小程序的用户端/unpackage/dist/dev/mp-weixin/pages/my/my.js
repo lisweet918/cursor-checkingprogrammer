@@ -17,19 +17,16 @@ var components
 try {
   components = {
     uNavbar: function () {
-      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-navbar/u-navbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-navbar/u-navbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-navbar/u-navbar.vue */ 254))
+      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-navbar/u-navbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-navbar/u-navbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-navbar/u-navbar.vue */ 261))
+    },
+    yierArt: function () {
+      return __webpack_require__.e(/*! import() | components/yier-art/yier-art */ "components/yier-art/yier-art").then(__webpack_require__.bind(null, /*! @/components/yier-art/yier-art.vue */ 247))
     },
     uAvatar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 261))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 268))
     },
     uIcon: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-icon/u-icon */ "uni_modules/vk-uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-icon/u-icon.vue */ 268))
-    },
-    uCellGroup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 275))
-    },
-    uCellItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 282))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-icon/u-icon */ "uni_modules/vk-uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-icon/u-icon.vue */ 254))
     },
   }
 } catch (e) {
@@ -53,6 +50,15 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.dynamicMenus.length || _vm.userinfo.nickname
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -95,161 +101,11 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
+var YierArt = function YierArt() {
+  __webpack_require__.e(/*! require.ensure | components/yier-art/yier-art */ "components/yier-art/yier-art").then((function () {
+    return resolve(__webpack_require__(/*! @/components/yier-art/yier-art.vue */ 247));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
 // 定义订单状态常量，方便维护
 
 var ORDER_STATUS = {
@@ -260,6 +116,9 @@ var ORDER_STATUS = {
   REFUND: 4
 };
 var _default = {
+  components: {
+    YierArt: YierArt
+  },
   data: function data() {
     return {
       userinfo: {},
@@ -267,11 +126,11 @@ var _default = {
       couponCount: 0,
       dynamicMenus: [],
       background: {
-        backgroundColor: '#F5F5F5'
+        backgroundColor: '#F5FCFC'
       },
       titleStyle: {
         fontSize: '29rpx',
-        color: '#333333'
+        color: '#65483D'
       }
     };
   },

@@ -102,13 +102,13 @@ var components
 try {
   components = {
     uForm: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-form/u-form */ "uni_modules/vk-uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-form/u-form.vue */ 376))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-form/u-form */ "uni_modules/vk-uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-form/u-form.vue */ 362))
     },
     uFormItem: function () {
-      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue */ 383))
+      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-form-item/u-form-item.vue */ 369))
     },
     uInput: function () {
-      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-input/u-input.vue */ 338))
+      return Promise.all(/*! import() | uni_modules/vk-uview-ui/components/u-input/u-input */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/vk-uview-ui/components/u-input/u-input")]).then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-input/u-input.vue */ 324))
     },
   }
 } catch (e) {

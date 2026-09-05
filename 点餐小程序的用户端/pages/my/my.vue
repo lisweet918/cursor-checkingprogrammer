@@ -1,160 +1,163 @@
 <template>
-
 	<view class="wrap">
-
-		<!-- 自定义导航栏 -->
-
-		<u-navbar :background="background" :border-bottom="false" :is-back="false"></u-navbar>
-
-
-
-		<!-- 用户信息 -->
-
-		<view class="wrap__userinfo">
-
-			<view class="wrap__userinfo__login" @click="handleUserInfo">
-
-				<view>尊敬的顾客，</view>
-
-				<view>{{ userinfo.nickname || '点击这里授权登录' }}</view>
-
-			</view>
-
-
-
-			<view @click="handleUserInfo">
-
-				<u-avatar :src="displayAvatar" size="77"></u-avatar>
-
-			</view>
-
+		<view class="wrap__background">
+			<view class="wrap__background__bubble wrap__background__bubble--one"></view>
+			<view class="wrap__background__bubble wrap__background__bubble--two"></view>
+			<view class="wrap__background__bubble wrap__background__bubble--three"></view>
 		</view>
 
-
-
-		<view class="wrap__myasset">
-
-			<view class="wrap__myasset__points">
-
-				<view>会员积分</view>
-
-				<view>
-
-					<text>{{ userinfo.points || 0 }}</text>
-
-					<text>分</text>
-
-				</view>
-
-			</view>
-
-			<view class="wrap__myasset__group"></view>
-
-			<view class="wrap__myasset__coupon" @click="handleMyCoupon">
-
-				<view>优惠券</view>
-
-				<view>
-
-					<text>{{ couponCount }}</text>
-
-					<text>张</text>
-
-				</view>
-
-			</view>
-
+		<!-- 自定义导航栏：u-navbar 保留顶部安全区 -->
+		<view class="wrap__nav">
+			<u-navbar :background="background" :border-bottom="false" :is-back="false"></u-navbar>
 		</view>
 
-
-
-		<view class="wrap__order">
-
-			<view class="wrap__order__head">
-
-				<view class="wrap__order__head__title">我的订单</view>
-
-				<view class="wrap__order__head__more" @click="goOrderList">
-
-					<text>全部订单</text>
-
-					<u-icon name="arrow-right" size="24" color="#999"></u-icon>
-
+		<view class="wrap__content">
+			<!-- 我的小窝主题头 -->
+			<view class="wrap__hero">
+				<view class="wrap__hero__copy">
+					<view class="wrap__hero__eyebrow">YIER · BUBU</view>
+					<view class="wrap__hero__title">我的快乐小窝</view>
+					<view class="wrap__hero__subtitle">把好吃的和好心情都收进来</view>
 				</view>
-
+				<view class="wrap__hero__art">
+					<yier-art character="pair" :size="250" />
+				</view>
 			</view>
 
-			<view class="wrap__order__grid">
-
-				<view class="wrap__order__grid__item" @click="goOrderList">
-
-					<u-icon name="clock" size="48" color="#0A3D28"></u-icon>
-
-					<view>待接单</view>
-
+			<!-- 用户会员卡 -->
+			<view class="wrap__userinfo" @click="handleUserInfo">
+				<view class="wrap__userinfo__avatar">
+					<u-avatar :src="displayAvatar" size="108"></u-avatar>
+					<view class="wrap__userinfo__avatar__badge">♥</view>
 				</view>
-
-				<view class="wrap__order__grid__item" @click="goOrderList">
-
-					<u-icon name="car" size="48" color="#0A3D28"></u-icon>
-
-					<view>进行中</view>
-
+				<view class="wrap__userinfo__main">
+					<view class="wrap__userinfo__hello">{{ userinfo.nickname ? '欢迎回来' : '你好呀，新朋友' }}</view>
+					<view class="wrap__userinfo__name">{{ userinfo.nickname || '点击登录快乐小窝' }}</view>
+					<view class="wrap__userinfo__tag">
+						<text class="wrap__userinfo__tag__dot"></text>
+						<text>{{ userinfo.nickname ? '快乐小窝会员' : '登录后查看会员权益' }}</text>
+					</view>
 				</view>
-
-				<view class="wrap__order__grid__item" @click="goOrderList">
-
-					<u-icon name="checkmark-circle" size="48" color="#0A3D28"></u-icon>
-
-					<view>已完成</view>
-
+				<view class="wrap__userinfo__arrow">
+					<u-icon name="arrow-right" size="28" color="#815B49"></u-icon>
 				</view>
-
-				<view class="wrap__order__grid__item" @click="handleMyCoupon">
-
-					<u-icon name="coupon" size="48" color="#0A3D28"></u-icon>
-
-					<view>优惠券</view>
-
-				</view>
-
 			</view>
 
-		</view>
+			<!-- 积分和优惠券小票 -->
+			<view class="wrap__myasset">
+				<view class="wrap__myasset__stamp wrap__myasset__stamp--left"></view>
+				<view class="wrap__myasset__points">
+					<view class="wrap__myasset__label">
+						<view class="wrap__myasset__icon wrap__myasset__icon--points">★</view>
+						<text>会员积分</text>
+					</view>
+					<view class="wrap__myasset__value">
+						<text>{{ userinfo.points || 0 }}</text>
+						<text>分</text>
+					</view>
+				</view>
+				<view class="wrap__myasset__group">
+					<view class="wrap__myasset__group__notch wrap__myasset__group__notch--top"></view>
+					<view class="wrap__myasset__group__line"></view>
+					<view class="wrap__myasset__group__notch wrap__myasset__group__notch--bottom"></view>
+				</view>
+				<view class="wrap__myasset__coupon" @click.stop="handleMyCoupon">
+					<view class="wrap__myasset__label">
+						<view class="wrap__myasset__icon wrap__myasset__icon--coupon">♥</view>
+						<text>优惠券</text>
+					</view>
+					<view class="wrap__myasset__value">
+						<text>{{ couponCount }}</text>
+						<text>张</text>
+					</view>
+				</view>
+				<view class="wrap__myasset__stamp wrap__myasset__stamp--right"></view>
+			</view>
 
+			<!-- 订单快捷入口 -->
+			<view class="wrap__order">
+				<view class="wrap__order__head">
+					<view>
+						<view class="wrap__order__head__title">我的订单</view>
+						<view class="wrap__order__head__caption">ORDER NOTES</view>
+					</view>
+					<view class="wrap__order__head__more" @click="goOrderList">
+						<text>全部订单</text>
+						<u-icon name="arrow-right" size="24" color="#815B49"></u-icon>
+					</view>
+				</view>
+				<view class="wrap__order__grid">
+					<view class="wrap__order__grid__item" @click="goOrderList">
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--blue">
+							<u-icon name="clock" size="42" color="#65483D"></u-icon>
+						</view>
+						<view>待接单</view>
+					</view>
+					<view class="wrap__order__grid__item" @click="goOrderList">
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--pink">
+							<u-icon name="car" size="42" color="#65483D"></u-icon>
+						</view>
+						<view>进行中</view>
+					</view>
+					<view class="wrap__order__grid__item" @click="goOrderList">
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--cream">
+							<u-icon name="checkmark-circle" size="42" color="#65483D"></u-icon>
+						</view>
+						<view>已完成</view>
+					</view>
+					<view class="wrap__order__grid__item" @click="handleMyCoupon">
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--brown">
+							<u-icon name="coupon" size="42" color="#FFFDF7"></u-icon>
+						</view>
+						<view>优惠券</view>
+					</view>
+				</view>
+			</view>
 
-
-		<view class="wrap__cell">
-
-			<u-cell-group :border="false">
-
-				<u-cell-item v-for="(item, index) in dynamicMenus" :key="index"
-
-					:title="item.title" hover-class="none" :title-style="titleStyle" :border-bottom="false"
-
+			<!-- 动态工具入口 -->
+			<view class="wrap__cell" v-if="dynamicMenus.length || userinfo.nickname">
+				<view class="wrap__cell__head">
+					<text class="wrap__cell__head__title">小窝工具箱</text>
+					<text class="wrap__cell__head__caption">MY TOOLS</text>
+				</view>
+				<view class="wrap__cell__item" v-for="(item, index) in dynamicMenus" :key="index"
 					@click="handleDynamicMenu(item.page_path)">
+					<view class="wrap__cell__item__icon">
+						<u-icon name="grid" size="30" color="#815B49"></u-icon>
+					</view>
+					<text class="wrap__cell__item__title">{{ item.title }}</text>
+					<u-icon name="arrow-right" size="25" color="#B99F94"></u-icon>
+				</view>
+				<view class="wrap__cell__item wrap__cell__item--logout" v-if="userinfo.nickname" @click="logout">
+					<view class="wrap__cell__item__icon wrap__cell__item__icon--pink">
+						<u-icon name="minus-circle" size="30" color="#815B49"></u-icon>
+					</view>
+					<text class="wrap__cell__item__title">退出登录</text>
+					<u-icon name="arrow-right" size="25" color="#B99F94"></u-icon>
+				</view>
+			</view>
 
-				</u-cell-item>
-
-				
-
-				<u-cell-item v-if="userinfo.nickname" title="退出登录" hover-class="none" :title-style="titleStyle" :border-bottom="false"
-
-					@click="logout"></u-cell-item>
-
-			</u-cell-group>
-
+			<!-- 底部角色寄语 -->
+			<view class="wrap__footer">
+				<view class="wrap__footer__art">
+					<yier-art character="pair" :size="300" />
+				</view>
+				<view class="wrap__footer__message">
+					<text>今天也要和一二布布</text>
+					<text>一起好好吃饭呀 ♥</text>
+				</view>
+				<view class="wrap__footer__dots">· · ·</view>
+			</view>
 		</view>
-
 	</view>
-
 </template>
 
 
 
 <script>
+	import YierArt from '@/components/yier-art/yier-art.vue';
 
-	// 定义订单状态常量，方便维护
+		// 定义订单状态常量，方便维护
 
 	const ORDER_STATUS = {
 
@@ -172,9 +175,12 @@
 
 
 
-	export default {
+		export default {
+			components: {
+				YierArt
+			},
 
-		data() {
+			data() {
 
 			return {
 
@@ -185,9 +191,9 @@
 
 				dynamicMenus: [],
 
-				background: {
+					background: {
 
-					backgroundColor: '#F5F5F5'
+						backgroundColor: '#F5FCFC'
 
 				},
 
@@ -195,7 +201,7 @@
 
 					fontSize: '29rpx',
 
-					color: '#333333'
+						color: '#65483D'
 
 				}
 

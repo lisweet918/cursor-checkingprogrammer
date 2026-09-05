@@ -1,0 +1,1 @@
+<view class="{{['yier-art','data-v-eed192b8','yier-art--'+character]}}" style="{{(frameStyle)}}" aria-hidden="true"><image class="yier-art__image data-v-eed192b8" style="{{(imageStyle)}}" src="/static/img/backgrounds/yier-bubu-original-bg.jpg" mode="scaleToFill"></image></view>

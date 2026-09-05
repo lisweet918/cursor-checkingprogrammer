@@ -2,9 +2,8 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "u-navbar": "/uni_modules/vk-uview-ui/components/u-navbar/u-navbar",
+    "yier-art": "/components/yier-art/yier-art",
     "u-avatar": "/uni_modules/vk-uview-ui/components/u-avatar/u-avatar",
-    "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon",
-    "u-cell-group": "/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group",
-    "u-cell-item": "/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item"
+    "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon"
   }
 }

@@ -3,8 +3,7 @@
 		<uni-transition :mode-class="['slide-bottom']" :show="!!cartNum" :styles="cartBarStyles">
 			<view class="left">
 				<view class="detail-action" @tap="details">
-					<image src="/static/img/home/icon_shopping_bag.png"
-						class="shopbag-btn"></image>
+					<yier-art character="bubu" :size="80" />
 					<view class="badge">{{ cartNum }}</view>
 				</view>
 				<view class="price">
@@ -12,7 +11,7 @@
 					<text>{{ cartPrice }}</text>
 				</view>
 			</view>
-			<button class="right" @tap="pay">结算</button>
+			<button class="right" @tap="pay">去结算 ›</button>
 		</uni-transition>
 		<cart-popup :cart="cart" ref="cartPopup" @add="add" @minus="minus" @clear="clear"></cart-popup>
 	</view>
@@ -21,10 +20,12 @@
 <script>
 	import uniTransition from '@/components/uni-transition/uni-transition.vue'
 	import cartPopup from '@/components/cart-popup/cart-popup.vue'
+	import YierArt from '@/components/yier-art/yier-art.vue'
 
 	export default {
 		name: 'CartBar',
 		components: {
+			YierArt,
 			uniTransition,
 			cartPopup
 		},
@@ -54,8 +55,10 @@
 					// #endif
 					'width': '100%',
 					'z-index': '995',
-					'height': '100rpx',
-					'background-color': '#f0f0f1',
+					'height': 'calc(112rpx + env(safe-area-inset-bottom))',
+					'padding-bottom': 'env(safe-area-inset-bottom)',
+					'background-color': '#FFFDF7',
+					'border-top': '2rpx solid #EBDDD1',
 					'display': 'flex',
 					'justify-content': 'space-between',
 					'align-items': 'stretch',
@@ -134,7 +137,7 @@
 		.price {
 			display: flex;
 			align-items: baseline;
-			color: #FF362D;
+			color: #815B49;
 			font-weight: bold;
 
 			text:nth-child(1) {
@@ -152,10 +155,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 70rpx;
-		border-radius: 0 !important;
-		font-size: $font-size-extra-lg;
-		background-color: #0A3D28;
+		padding: 0 42rpx;
+		margin: 14rpx 24rpx 14rpx 0;
+		border-radius: 44rpx !important;
+		font-size: 30rpx;
+		background-color: #815B49;
 		color: white;
 	}
 </style>

@@ -3,6 +3,7 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "u-swiper": "/uni_modules/vk-uview-ui/components/u-swiper/u-swiper",
-    "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image"
+    "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image",
+    "yier-art": "/components/yier-art/yier-art"
   }
 }

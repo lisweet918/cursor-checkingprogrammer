@@ -102,10 +102,10 @@ var components
 try {
   components = {
     uGrid: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-grid/u-grid */ "uni_modules/vk-uview-ui/components/u-grid/u-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-grid/u-grid.vue */ 355))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-grid/u-grid */ "uni_modules/vk-uview-ui/components/u-grid/u-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-grid/u-grid.vue */ 341))
     },
     uGridItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item */ "uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item.vue */ 362))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item */ "uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-grid-item/u-grid-item.vue */ 348))
     },
   }
 } catch (e) {

@@ -1,6 +1,9 @@
 .container {
 
 	height: auto;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #EAF8FA 0%, #FFFDF7 42%, #FFFDF7 100%);
+	color: #65483D;
 
 	padding-bottom: 120rpx;
 
@@ -12,11 +15,13 @@
 
 		align-items: center;
 
-		background: linear-gradient(135deg, #103b2a 0%, #1f5d43 100%);
+			background: linear-gradient(135deg, #815B49 0%, #A87D69 100%);
 
-		margin: 0 0 20rpx 0;
+			margin: 20rpx;
 
-		padding: 30rpx 40rpx;
+			padding: 30rpx 40rpx;
+			border-radius: 26rpx;
+			box-shadow: 0 10rpx 26rpx rgba(101, 72, 61, 0.16);
 
 		color: #ffffff;
 
@@ -148,7 +153,7 @@
 
 			align-items: baseline;
 
-			color: #FF362D;
+				color: #C9655B;
 
 			font-weight: bold;
 
@@ -178,11 +183,14 @@
 
 	&__addressbox {
 
-		background-color: white;
+			background-color: rgba(255, 255, 255, 0.94);
 
-		padding: 50rpx 24rpx;
+			padding: 34rpx 28rpx;
 
-		margin-bottom: 20rpx;
+			margin: 20rpx;
+			border: 1rpx solid rgba(101, 72, 61, 0.08);
+			border-radius: 26rpx;
+			box-shadow: 0 8rpx 24rpx rgba(101, 72, 61, 0.08);
 
 
 
@@ -200,7 +208,7 @@
 
 				&__top {
 
-					color: #333333;
+						color: #65483D;
 
 					font-size: 30rpx;
 
@@ -220,7 +228,7 @@
 
 					font-size: 24rpx;
 
-					color: $u-type-info;
+				color: #9A7D70;
 
 
 
@@ -278,9 +286,9 @@
 
 		font-weight: bold;
 
-		color: #333;
+			color: #65483D;
 
-		border: 2rpx solid #e4e7ed;
+			border: 2rpx solid #EADBD3;
 
 		transition: all 0.3s ease;
 
@@ -294,7 +302,7 @@
 
 			align-items: center;
 
-			color: #0A3D28;
+				color: #815B49;
 
 			font-weight: bold;
 
@@ -304,11 +312,11 @@
 
 		&--active {
 
-			background-color: #0A3D28;
+				background-color: #815B49;
 
 			color: #FFFFFF !important;
 
-			border-color: #0A3D28;
+				border-color: #815B49;
 
 
 
@@ -340,7 +348,7 @@
 
 	align-items: baseline;
 
-	color: #FF362D;
+	color: #C9655B;
 
 	font-weight: bold;
 
@@ -386,7 +394,7 @@
 
 	text:nth-child(3) {
 
-		color: #FF362D;
+			color: #C9655B;
 
 		font-weight: bold;
 
@@ -426,7 +434,7 @@
 
 .coupon-label {
 
-	background-color: $color-primary;
+	background-color: #815B49;
 
 	color: #FFFFFF;
 
@@ -460,7 +468,7 @@
 
 .footer {
 
-	background-color: #FFFFFF;
+	background-color: rgba(255, 253, 247, 0.98);
 
 	z-index: 10;
 
@@ -498,7 +506,7 @@
 
 		font-size: $font-size-lg;
 
-		background-color: #0A3D28;
+			background-color: #815B49;
 
 	}
 
@@ -518,9 +526,9 @@
 
 .coupon-cell { display: flex; align-items: center; }
 
-.coupon-cell__deduct { color: #FF362D; font-weight: bold; }
+.coupon-cell__deduct { color: #C9655B; font-weight: bold; }
 
-.coupon-cell__hint { color: #EE520C; font-size: 24rpx; }
+.coupon-cell__hint { color: #B97867; font-size: 24rpx; }
 
 .coupon-cell__none { color: #999; font-size: 24rpx; }
 
@@ -539,7 +547,7 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.45);
+	background: rgba(101, 72, 61, 0.42);
 }
 
 .coupon-picker__panel {
@@ -548,8 +556,8 @@
 	bottom: 0;
 	width: 100%;
 	max-height: 70vh;
-	background: #fff;
-	border-radius: 24rpx 24rpx 0 0;
+	background: #FFFDF7;
+	border-radius: 32rpx 32rpx 0 0;
 	display: flex;
 	flex-direction: column;
 }
@@ -561,7 +569,8 @@
 	padding: 30rpx;
 	font-size: 30rpx;
 	font-weight: bold;
-	border-bottom: 1rpx solid #f0f0f0;
+	color: #65483D;
+	border-bottom: 1rpx solid #F0E2DB;
 }
 
 .coupon-picker__close {
@@ -580,19 +589,20 @@
 	padding: 28rpx 24rpx;
 	margin-bottom: 20rpx;
 	border-radius: 16rpx;
-	background: #f7f7f7;
+	background: #FFFFFF;
 	border: 2rpx solid transparent;
+	box-shadow: 0 6rpx 18rpx rgba(101, 72, 61, 0.06);
 }
 
 .coupon-picker__item--active {
-	border-color: #0A3D28;
-	background: rgba(10, 61, 40, 0.06);
+	border-color: #DDA99E;
+	background: #F9DFDA;
 }
 
 .coupon-picker__item__amount {
 	font-size: 34rpx;
 	font-weight: bold;
-	color: #EE520C;
+	color: #C9655B;
 }
 
 .coupon-picker__item__name {
@@ -602,7 +612,7 @@
 }
 
 .coupon-picker__check {
-	color: #0A3D28;
+	color: #815B49;
 	font-weight: bold;
 	font-size: 32rpx;
 }
@@ -612,4 +622,66 @@
 	color: #999;
 	font-size: 26rpx;
 	padding: 60rpx 0;
+}
+
+// 结算页卡片统一为奶油白与柔和圆角，保持原有信息层级和交互区域不变。
+.container > .bg-white {
+	margin: 0 20rpx 20rpx;
+	border: 1rpx solid rgba(101, 72, 61, 0.08);
+	border-radius: 26rpx;
+	background: rgba(255, 255, 255, 0.94) !important;
+	box-shadow: 0 8rpx 24rpx rgba(101, 72, 61, 0.07);
+	overflow: hidden;
+}
+
+.container__shopbox {
+	padding-bottom: 24rpx;
+	border-bottom: 1rpx dashed #EEDFD8;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+.delivery-option {
+	background: #FFFDF7;
+	box-shadow: 0 5rpx 14rpx rgba(101, 72, 61, 0.05);
+
+	&--active {
+		box-shadow: 0 8rpx 20rpx rgba(129, 91, 73, 0.18);
+	}
+}
+
+.footer {
+	height: calc(118rpx + env(safe-area-inset-bottom));
+	padding: 12rpx 20rpx calc(12rpx + env(safe-area-inset-bottom));
+	box-sizing: border-box;
+	box-shadow: 0 -8rpx 26rpx rgba(101, 72, 61, 0.09);
+
+	button {
+		height: 82rpx;
+		line-height: 82rpx;
+		border-radius: 42rpx !important;
+		background: #815B49;
+		color: #FFFFFF;
+		box-shadow: 0 8rpx 20rpx rgba(129, 91, 73, 0.2);
+	}
+}
+
+.footer__disabled {
+	background: #D6C6BD !important;
+	box-shadow: none !important;
+}
+
+.coupon-picker__head::before {
+	content: '';
+	width: 10rpx;
+	height: 30rpx;
+	margin-right: 12rpx;
+	border-radius: 10rpx;
+	background: #F2B7AD;
+}
+
+.coupon-picker__head > text:first-of-type {
+	flex: 1;
 }

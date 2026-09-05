@@ -1,8 +1,11 @@
 {
   "navigationBarTitleText": "",
-  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarBackgroundColor": "#F5FCFC",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
-    "u-tabs": "/uni_modules/vk-uview-ui/components/u-tabs/u-tabs",
-    "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image"
+    "yier-art": "/components/yier-art/yier-art",
+    "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image",
+    "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon"
   }
 }

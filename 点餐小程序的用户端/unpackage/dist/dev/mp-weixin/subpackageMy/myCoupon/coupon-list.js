@@ -102,7 +102,7 @@ var components
 try {
   components = {
     uTabs: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 247))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 393))
     },
   }
 } catch (e) {
@@ -186,6 +186,46 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //

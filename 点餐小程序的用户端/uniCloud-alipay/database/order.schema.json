@@ -48,6 +48,12 @@
 			"title": "桌号",
 			"description": "堂食对应的桌号"
 		},
+		"diningCount": {
+			"bsonType": "int",
+			"title": "就餐人数",
+			"description": "堂食订单的就餐人数",
+			"minimum": 0
+		},
 		"commodity_list": {
 			"bsonType": "array",
 			"title": "商品列表",
@@ -90,6 +96,35 @@
 			"bsonType": "int",
 			"title": "商品总件数",
 			"description": "所有商品数量合计"
+		},
+		"goods_amount": {
+			"bsonType": "double",
+			"title": "商品金额",
+			"description": "商品合计金额，单位：元",
+			"minimum": 0
+		},
+		"packing_fee": {
+			"bsonType": "double",
+			"title": "打包费",
+			"description": "订单打包费，单位：元",
+			"minimum": 0
+		},
+		"delivery_fee": {
+			"bsonType": "double",
+			"title": "配送费",
+			"description": "外卖配送费，单位：元",
+			"minimum": 0
+		},
+		"coupon_deduct": {
+			"bsonType": "double",
+			"title": "优惠金额",
+			"description": "优惠券抵扣金额，单位：元",
+			"minimum": 0
+		},
+		"coupon_id": {
+			"bsonType": "string",
+			"title": "优惠券ID",
+			"description": "本订单使用的用户优惠券ID"
 		},
 		"price": {
 			"bsonType": "double",

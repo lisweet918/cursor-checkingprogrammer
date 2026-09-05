@@ -105,7 +105,7 @@ try {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-image/u-image */ "uni_modules/vk-uview-ui/components/u-image/u-image").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-image/u-image.vue */ 240))
     },
     uAvatar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 261))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 268))
     },
   }
 } catch (e) {

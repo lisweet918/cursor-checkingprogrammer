@@ -1,10 +1,9 @@
 <template>
 	<view class="actions">
 		<template v-if="!materialsBtn">
-			<image src="/static/img/home/round_minus.png" class="minus-btn" v-show="number" @tap.stop="minus">
-			</image>
+			<view class="minus-btn" v-show="number" @tap.stop="minus" aria-label="减少数量">−</view>
 			<view v-show="number" class="number">{{ number }}</view>
-			<image src="/static/img/home/round_add_normal.png" class="add-btn" @tap.stop="add"></image>
+			<view class="add-btn" @tap.stop="add" aria-label="增加数量">+</view>
 		</template>
 		<template v-else>
 			<view class="materials-box">
@@ -49,9 +48,18 @@
 
 		.add-btn,
 		.minus-btn {
-			width: 34rpx;
-			height: 34rpx;
+			width: 48rpx;
+			height: 48rpx;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 34rpx;
+			line-height: 1;
+			flex-shrink: 0;
 		}
+		.add-btn { background: #815b49; color: #fffdf7; box-shadow: 0 4rpx 0 #e6d7ca; }
+		.minus-btn { background: #fffdf7; color: #815b49; border: 2rpx solid #d9c8b9; }
 
 		.number {
 			width: 44rpx;
@@ -71,7 +79,7 @@
 
 			.materials-btn {
 				border-radius: 50rpx;
-				background-color: #0A3D28;
+				background-color: #815B49;
 				width: 100rpx;
 				font-size: 20rpx;
 				color: white;

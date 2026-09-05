@@ -101,11 +101,14 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uTabs: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-tabs/u-tabs */ "uni_modules/vk-uview-ui/components/u-tabs/u-tabs").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-tabs/u-tabs.vue */ 247))
+    yierArt: function () {
+      return __webpack_require__.e(/*! import() | components/yier-art/yier-art */ "components/yier-art/yier-art").then(__webpack_require__.bind(null, /*! @/components/yier-art/yier-art.vue */ 247))
     },
     uImage: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-image/u-image */ "uni_modules/vk-uview-ui/components/u-image/u-image").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-image/u-image.vue */ 240))
+    },
+    uIcon: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-icon/u-icon */ "uni_modules/vk-uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-icon/u-icon.vue */ 254))
     },
   }
 } catch (e) {
@@ -158,6 +161,8 @@ var render = function () {
       : null
   var g1 =
     !(_vm.current === 0) && _vm.current === 1 ? _vm.takeoutList.length : null
+  var g2 =
+    !(_vm.current === 0) && !(_vm.current === 1) ? _vm.couponList.length : null
   _vm.$mp.data = Object.assign(
     {},
     {
@@ -166,6 +171,7 @@ var render = function () {
         g0: g0,
         l1: l1,
         g1: g1,
+        g2: g2,
       },
     }
   )
@@ -211,153 +217,18 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
+var YierArt = function YierArt() {
+  __webpack_require__.e(/*! require.ensure | components/yier-art/yier-art */ "components/yier-art/yier-art").then((function () {
+    return resolve(__webpack_require__(/*! @/components/yier-art/yier-art.vue */ 247));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
 var db = uniCloud.database();
 // 管理员 OpenID (请替换为你自己的真实 OpenID)
 var ADMIN_OPENID = 'oID5R3QYVhXfjOEvGCUfnu4F_Qoo';
 var _default = {
+  components: {
+    YierArt: YierArt
+  },
   data: function data() {
     return {
       current: 0,
@@ -367,7 +238,7 @@ var _default = {
       }, {
         name: '外卖订单'
       }, {
-        name: '劵码订单'
+        name: '券码订单'
       }],
       pickupList: [],
       takeoutList: [],

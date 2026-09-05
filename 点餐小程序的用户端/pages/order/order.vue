@@ -1,18 +1,37 @@
-<template>
-	<view class="wrap">
-		<view class="wrap__tabs">
-			<u-tabs :list="tabsList" :is-scroll="false" v-model="current" @change="change" active-color="#0A3D28"
-				bar-width="100" duration="0" inactive-color="#9A9A9A"></u-tabs>
-		</view>
+	<template>
+		<view class="wrap">
+			<image class="wrap__background" src="/static/img/backgrounds/yier-bubu-original-bg.jpg" mode="widthFix"></image>
 
-		<view v-if="current === 0">
-			<view v-for="(item,index) in pickupList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
-				<view class="wrap__list__top">
-					<view style="display: flex; flex-direction: column;">
-						<text>{{ storeName }}</text>
-						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
+			<view class="wrap__theme">
+				<view class="wrap__theme__copy">
+					<view class="wrap__theme__eyebrow">
+						<text class="wrap__theme__eyebrow__dot"></text>
+						一二布布陪你好好吃饭
 					</view>
-					<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
+					<view class="wrap__theme__title">美味小记录</view>
+					<view class="wrap__theme__subtitle">每一顿喜欢，都值得被记住</view>
+				</view>
+				<view class="wrap__theme__sticker">
+					<yier-art character="pair" :size="250" />
+				</view>
+			</view>
+
+			<view class="wrap__tabs">
+				<view v-for="(tab, index) in tabsList" :key="tab.name" class="wrap__tabs__item"
+					:class="{ 'wrap__tabs__item--active': current === index }" @click="change(index)">
+					<text>{{ tab.name }}</text>
+					<text v-if="current === index" class="wrap__tabs__item__dot"></text>
+				</view>
+			</view>
+
+		<view v-if="current === 0" class="wrap__content">
+				<view v-for="(item,index) in pickupList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
+					<view class="wrap__list__top">
+						<view class="wrap__list__store">
+							<text class="wrap__list__store__name">{{ storeName || '我的小餐桌' }}</text>
+							<text v-if="item.name" class="wrap__list__store__customer">下单用户：{{item.name}} {{item.phone || ''}}</text>
+						</view>
+						<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
 					<view class="wrap__list__shopinfo__left">
@@ -34,35 +53,41 @@
 					</view>
 					<view class="wrap__list__shopinfo__right">x{{itemt.number}}</view>
 				</view>
-				<view class="wrap__list__time" v-if="item.createTime">{{ formatTime(item.createTime) }}</view>
+					<view class="wrap__list__time" v-if="item.createTime">
+						<u-icon name="clock" size="22" color="#A98D81"></u-icon>
+						<text>{{ formatTime(item.createTime) }}</text>
+					</view>
 				<view class="wrap__list__prices">
 					共{{item.shop_num}}件商品，合计：
 					<text>￥</text>
 					<text>{{item.price}}</text>
 				</view>
-				<view class="wrap__list__remark" v-if="item.remark" style="margin-bottom: 20rpx; font-size: 24rpx; color: #999; display: flex; justify-content: flex-end;">
-					<text>备注：{{item.remark}}</text>
+					<view class="wrap__list__remark" v-if="item.remark">
+						<text>备注：{{item.remark}}</text>
 				</view>
 				<view class='wrap__list__bottom'>
 					<view v-if="item.status == 0" class="wrap__list__bottom__cancel" @click.stop="cancelOrder(item)">取消订单</view>
 					<view @click.stop="reorder(item)">再来一单</view>
 				</view>
-			</view>
-			<view v-if="!pickupList.length" class="wrap__empty">
-				<image src="/static/img/home/icon_shopping_bag.png" class="wrap__empty__icon"></image>
-				<view class="wrap__empty__text">暂无自取订单</view>
-				<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
-			</view>
+				</view>
+				<view v-if="!pickupList.length" class="wrap__empty">
+					<view class="wrap__empty__sticker">
+						<yier-art character="yier" :size="220" />
+					</view>
+					<view class="wrap__empty__title">还没有自取订单呀</view>
+					<view class="wrap__empty__text">点一份喜欢的美味，一二陪你等待出餐</view>
+					<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
+				</view>
 		</view>
 
-		<view v-else-if="current === 1">
-			<view v-for="(item,index) in takeoutList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
-				<view class="wrap__list__top">
-					<view style="display: flex; flex-direction: column;">
-						<text>{{ storeName }}</text>
-						<text v-if="item.name" style="font-size: 24rpx; color: #666; margin-top: 10rpx;">下单用户：{{item.name}} {{item.phone || ''}}</text>
-					</view>
-					<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
+		<view v-else-if="current === 1" class="wrap__content">
+				<view v-for="(item,index) in takeoutList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
+					<view class="wrap__list__top">
+						<view class="wrap__list__store">
+							<text class="wrap__list__store__name">{{ storeName || '我的小餐桌' }}</text>
+							<text v-if="item.name" class="wrap__list__store__customer">下单用户：{{item.name}} {{item.phone || ''}}</text>
+						</view>
+						<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
 				</view>
 				<view class="wrap__list__shopinfo" v-for="(itemt,indext) in item.commodity_list" :key="indext">
 					<view class="wrap__list__shopinfo__left">
@@ -84,28 +109,34 @@
 					</view>
 					<view class="wrap__list__shopinfo__right">x{{itemt.number}}</view>
 				</view>
-				<view class="wrap__list__time" v-if="item.createTime">{{ formatTime(item.createTime) }}</view>
+					<view class="wrap__list__time" v-if="item.createTime">
+						<u-icon name="clock" size="22" color="#A98D81"></u-icon>
+						<text>{{ formatTime(item.createTime) }}</text>
+					</view>
 				<view class="wrap__list__prices">
 					共{{item.shop_num}}件商品，合计：
 					<text>￥</text>
 					<text>{{item.price}}</text>
 				</view>
-				<view class="wrap__list__remark" v-if="item.remark" style="margin-bottom: 20rpx; font-size: 24rpx; color: #999; display: flex; justify-content: flex-end;">
-					<text>备注：{{item.remark}}</text>
+					<view class="wrap__list__remark" v-if="item.remark">
+						<text>备注：{{item.remark}}</text>
 				</view>
 				<view class='wrap__list__bottom'>
 					<view v-if="item.status == 0" class="wrap__list__bottom__cancel" @click.stop="cancelOrder(item)">取消订单</view>
 					<view @click.stop="reorder(item)">再来一单</view>
 				</view>
-			</view>
-			<view v-if="!takeoutList.length" class="wrap__empty">
-				<image src="/static/img/home/icon_shopping_bag.png" class="wrap__empty__icon"></image>
-				<view class="wrap__empty__text">暂无外卖订单</view>
-				<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
-			</view>
+				</view>
+				<view v-if="!takeoutList.length" class="wrap__empty">
+					<view class="wrap__empty__sticker">
+						<yier-art character="bubu" :size="220" />
+					</view>
+					<view class="wrap__empty__title">还没有外卖订单呢</view>
+					<view class="wrap__empty__text">布布已经准备好，等你选一份好吃的</view>
+					<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
+				</view>
 		</view>
 
-		<view v-else>
+		<view v-else class="wrap__content">
 			<view v-for="(item,index) in couponList" :key="item._id" class="wrap__list">
 				<view class="wrap__list__top">
 					<view>{{ storeName }}</view>
@@ -131,29 +162,42 @@
 					<text>￥</text>
 					<text>{{item.price}}</text>
 				</view>
-				<view class="wrap__list__couponBottom">
-					<view v-if="item.status == '0'" @click="checkCoupon(item)">查看劵码</view>
-					<view>删除订单</view>
+					<view class="wrap__list__couponBottom">
+						<view v-if="item.status == '0'" @click="checkCoupon(item)">查看券码</view>
+						<view>删除订单</view>
+					</view>
+				</view>
+				<view v-if="!couponList.length" class="wrap__empty wrap__empty--coupon">
+					<view class="wrap__empty__sticker wrap__empty__sticker--pair">
+						<yier-art character="pair" :size="280" />
+					</view>
+					<view class="wrap__empty__title">暂无券码记录</view>
+					<view class="wrap__empty__text">券码订单功能还在准备中，以后的记录会放在这里</view>
+					<view class="wrap__empty__btn wrap__empty__btn--soft" @click="goOrder">回首页看看</view>
 				</view>
 			</view>
-		</view>
 	</view>
 </template>
 
-<script>
-	const db = uniCloud.database()
+	<script>
+		import YierArt from '@/components/yier-art/yier-art.vue'
+
+		const db = uniCloud.database()
 	// 管理员 OpenID (请替换为你自己的真实 OpenID)
 	const ADMIN_OPENID = 'oID5R3QYVhXfjOEvGCUfnu4F_Qoo'
 
-	export default {
-		data() {
+		export default {
+			components: {
+				YierArt
+			},
+			data() {
 			return {
 				current: 0,
 				storeName: '',
 				tabsList: [
 					{ name: '自取订单' },
 					{ name: '外卖订单' },
-					{ name: '劵码订单' }
+						{ name: '券码订单' }
 				],
 				pickupList: [],
 				takeoutList: [],

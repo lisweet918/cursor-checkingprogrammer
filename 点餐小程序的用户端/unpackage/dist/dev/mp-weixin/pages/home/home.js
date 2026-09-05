@@ -107,6 +107,9 @@ try {
     uImage: function () {
       return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-image/u-image */ "uni_modules/vk-uview-ui/components/u-image/u-image").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-image/u-image.vue */ 240))
     },
+    yierArt: function () {
+      return __webpack_require__.e(/*! import() | components/yier-art/yier-art */ "components/yier-art/yier-art").then(__webpack_require__.bind(null, /*! @/components/yier-art/yier-art.vue */ 247))
+    },
   }
 } catch (e) {
   if (
@@ -129,15 +132,6 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.swiperList.length
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        g0: g0,
-      },
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -184,15 +178,26 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 var _vuex = __webpack_require__(/*! vuex */ 79);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+var YierArt = function YierArt() {
+  __webpack_require__.e(/*! require.ensure | components/yier-art/yier-art */ "components/yier-art/yier-art").then((function () {
+    return resolve(__webpack_require__(/*! @/components/yier-art/yier-art.vue */ 247));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
 var ORDER_TYPE = {
   TAKE_IN: 'takein',
   TAKE_OUT: 'takeout'
 };
 var _default = {
+  components: {
+    YierArt: YierArt
+  },
   data: function data() {
     return {
+      statusBarHeight: 20,
       userinfo: {},
-      swiperList: [],
+      swiperList: [{
+        image: '/static/img/home/yier-bubu-banner.jpg'
+      }],
       displayAvatar: '/static/logo.jpg',
       tablePopupVisible: false,
       currentTableNumber: '',
@@ -202,10 +207,11 @@ var _default = {
   },
   computed: _objectSpread({}, (0, _vuex.mapState)(['tableInfo'])),
   onLoad: function onLoad(options) {
+    this.statusBarHeight = uni.getSystemInfoSync().statusBarHeight || 20;
     this.initTableScene(options);
   },
   onShow: function onShow() {
-    this.loadBanners();
+    // The original banner is local so it stays visible without network access.
     var userInfo = uni.getStorageSync('userInfo');
     this.userinfo = userInfo || {};
     this.resolveAvatar();
@@ -253,64 +259,6 @@ var _default = {
       }))();
     }
   }, (0, _vuex.mapMutations)(['SET_ORDER_TYPE', 'SET_TABLE_INFO'])), {}, {
-    loadBanners: function loadBanners() {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var db, res, fileList, urlRes;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.prev = 0;
-                db = uniCloud.database();
-                _context2.next = 4;
-                return db.collection('banner').where({
-                  is_show: true
-                }).orderBy('sort', 'asc').get();
-              case 4:
-                res = _context2.sent;
-                if (!(res.result.data && res.result.data.length > 0)) {
-                  _context2.next = 12;
-                  break;
-                }
-                // 提取所有的 fileID
-                fileList = res.result.data.map(function (item) {
-                  return item.image;
-                }).filter(Boolean);
-                if (!(fileList.length > 0)) {
-                  _context2.next = 12;
-                  break;
-                }
-                _context2.next = 10;
-                return uniCloud.getTempFileURL({
-                  fileList: fileList
-                });
-              case 10:
-                urlRes = _context2.sent;
-                _this2.swiperList = res.result.data.map(function (item, index) {
-                  var fileInfo = urlRes.fileList.find(function (f) {
-                    return f.fileID === item.image;
-                  }) || {};
-                  var realUrl = fileInfo.tempFileURL || fileInfo.download_url || item.image;
-                  return {
-                    image: realUrl
-                  };
-                });
-              case 12:
-                _context2.next = 17;
-                break;
-              case 14:
-                _context2.prev = 14;
-                _context2.t0 = _context2["catch"](0);
-                console.error('Failed to load banners:', _context2.t0);
-              case 17:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, null, [[0, 14]]);
-      }))();
-    },
     handleLogin: function handleLogin() {
       if (!this.userinfo.nickname) {
         uni.navigateTo({

@@ -9970,7 +9970,7 @@ var b = "development" === "development",
   k = "true" === undefined || !0 === undefined,
   A = T([]),
   P = "h5" === E ? "web" : "app-plus" === E || "app-harmony" === E ? "app" : E,
-  C = T({"address":["127.0.0.1","10.5.136.7"],"servePort":7002,"debugPort":9001,"initialLaunchType":"remote","skipFiles":["<node_internals>/**","/Applications/HBuilderX.app/Contents/HBuilderX/plugins/unicloud/**/*.js"]}),
+  C = T(undefined),
   O = T([{"provider":"alipay","spaceName":"demo","spaceId":"env-00jy66me56x4","spaceAppId":"2021006131638686","accessKey":"3FUYLhHFOwlQ54wT","secretKey":"JXE5wlvuqgWFnn2N"}]) || [],
   x = true;
 var N = "";
@@ -18299,45 +18299,7 @@ module.exports = _inherits, module.exports.__esModule = true, module.exports["de
 
 /***/ }),
 
-/***/ 33:
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 30);
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  } else if (call !== void 0) {
-    throw new TypeError("Derived constructors may only return object or undefined");
-  }
-  return assertThisInitialized(self);
-}
-module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 34:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _getPrototypeOf(o);
-}
-module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 343:
+/***/ 329:
 /*!*************************************************************************************************!*\
   !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/emitter.js ***!
   \*************************************************************************************************/
@@ -18408,6 +18370,66 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ 33:
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 30);
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+  return assertThisInitialized(self);
+}
+module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 337:
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/guanbi.png ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAflBMVEUAAABUVldRUlZUVldTVlZQUFA9PT1TVldTVldTVVZTVlZUVldUVldTVVdUVlZUVldTVVZSVFRTVldUVldSVVVUVlZUVVdTVlZSVVZTU1ZOTlNUVVZTVlZTVlZSVVZTU1dTVldTVVZTVVZTVVZTVFdQVVVSVVVUVVdUVFdUVleyYCyVAAAAKXRSTlMA/SP4pAoE39NMYvXr2+/ndBqnoF3BumxCKRDNmVU6IdmKhHpoNjCtYZmEy20AAAFYSURBVEjH7dTZbsIwEEBROyELeMm+AUnY2/n/HyxqSvHMSFh9LvMY34OQY0e85w8TrVeJNfs+ogvFpc307jTEpO8OCgBUWhMx77MQQNp2QiIeE/geaTZIBCv1s9AO6HkDj0nuwunDx3N7csGY/QK5CNqD3Lkg14AE7wG0CzoNWPAeMhf0CRDBetmizS4lFp8R6SG7oG2dUixMXirUq30hkFhjARb/friaBRouSB+Qngve+wXvufD1XPh6v1Co58IQEZazeDVDA3hsHr3qg0pJDJ43ig4/n/x++Ht+B3nvF7z3C95z4eulRxQVuS+NkVjUSGzPFr/faiCnRKa9C24pO28xEapyQa1pL5gw+ENGey6sCzaa9FzIxAXXA+m5CEu0S0eFey7MGr+3j0XYaumfYhcuf6iLBBZHo3WWngt6B6cyuS80NTsb2+smr29bwabou3wMYvGf5wvbvnv9DG8MowAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ 338:
+/*!**************************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/gougou.png ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAk1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6eSN1AAAAMHRSTlMA+/H5I9QRCuvl4Rf2R3kyLMfBsquThFUG7txkPicdvKalopiNjHNnUTXPy7teXFdkgxhUAAABG0lEQVQ4y+2Tx46DMBRFXTEm9F7T61T//9eNMgmGERYvm1E2OUt0dHnv2kYv/gXmf/CV3z3khmlFFa2SEMEstlRdoZslLH/Z6oYs4IFjfJdJDrnCJ6qXD5AccNVjnwDXytzexRFUh+cMwY0AakuxDk4W827Z2DrY8aDaIh3s7izTSixg9+8iJzqYB4Yft+vaqdfer36ptUt8w3ZnTq/XwMkCgawd1dvFbOp2UT8iP7KzHGr7LKfyadi+eudDcGqq7UDUCKC23Ci7e8skF9Ikc/OlWG7o1CVHgYyEyWQQvNK1TbJ97v6V5ffM0wgyB49cul3MXngvsUfBLfT6m8gdnQdA2eW3WfDbBcEIL5aEyLhFD8GKbF8w9OJp/AB1/0D8ddOiVQAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ 34:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _getPrototypeOf(o);
+}
+module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
 /***/ 35:
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
@@ -18446,28 +18468,6 @@ function _wrapNativeSuper(Class) {
   return _wrapNativeSuper(Class);
 }
 module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 351:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/guanbi.png ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAflBMVEUAAABUVldRUlZUVldTVlZQUFA9PT1TVldTVldTVVZTVlZUVldUVldTVVdUVlZUVldTVVZSVFRTVldUVldSVVVUVlZUVVdTVlZSVVZTU1ZOTlNUVVZTVlZTVlZSVVZTU1dTVldTVVZTVVZTVVZTVFdQVVVSVVVUVVdUVFdUVleyYCyVAAAAKXRSTlMA/SP4pAoE39NMYvXr2+/ndBqnoF3BumxCKRDNmVU6IdmKhHpoNjCtYZmEy20AAAFYSURBVEjH7dTZbsIwEEBROyELeMm+AUnY2/n/HyxqSvHMSFh9LvMY34OQY0e85w8TrVeJNfs+ogvFpc307jTEpO8OCgBUWhMx77MQQNp2QiIeE/geaTZIBCv1s9AO6HkDj0nuwunDx3N7csGY/QK5CNqD3Lkg14AE7wG0CzoNWPAeMhf0CRDBetmizS4lFp8R6SG7oG2dUixMXirUq30hkFhjARb/friaBRouSB+Qngve+wXvufD1XPh6v1Co58IQEZazeDVDA3hsHr3qg0pJDJ43ig4/n/x++Ht+B3nvF7z3C95z4eulRxQVuS+NkVjUSGzPFr/faiCnRKa9C24pO28xEapyQa1pL5gw+ENGey6sCzaa9FzIxAXXA+m5CEu0S0eFey7MGr+3j0XYaumfYhcuf6iLBBZHo3WWngt6B6cyuS80NTsb2+smr29bwabou3wMYvGf5wvbvnv9DG8MowAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 352:
-/*!**************************************************************************************************!*\
-  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/gougou.png ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAk1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6eSN1AAAAMHRSTlMA+/H5I9QRCuvl4Rf2R3kyLMfBsquThFUG7txkPicdvKalopiNjHNnUTXPy7teXFdkgxhUAAABG0lEQVQ4y+2Tx46DMBRFXTEm9F7T61T//9eNMgmGERYvm1E2OUt0dHnv2kYv/gXmf/CV3z3khmlFFa2SEMEstlRdoZslLH/Z6oYs4IFjfJdJDrnCJ6qXD5AccNVjnwDXytzexRFUh+cMwY0AakuxDk4W827Z2DrY8aDaIh3s7izTSixg9+8iJzqYB4Yft+vaqdfer36ptUt8w3ZnTq/XwMkCgawd1dvFbOp2UT8iP7KzHGr7LKfyadi+eudDcGqq7UDUCKC23Ci7e8skF9Ikc/OlWG7o1CVHgYyEyWQQvNK1TbJ97v6V5ffM0wgyB49cul3MXngvsUfBLfT6m8gdnQdA2eW3WfDbBcEIL5aEyLhFD8GKbF8w9OJp/AB1/0D8ddOiVQAAAABJRU5ErkJggg=="
 
 /***/ }),
 
@@ -18514,7 +18514,7 @@ var _default = {
     "path": "pages/order/order",
     "style": {
       "navigationBarTitleText": "",
-      "navigationBarBackgroundColor": "#FFFFFF",
+      "navigationBarBackgroundColor": "#F5FCFC",
       "enablePullDownRefresh": true,
       "backgroundTextStyle": "dark"
     }
@@ -18628,8 +18628,9 @@ var _default = {
   },
   "uniIdRouter": {},
   "tabBar": {
-    "color": "#A8A8A8",
-    "selectedColor": "#0A3D28",
+    "color": "#9A887D",
+    "selectedColor": "#815B49",
+    "backgroundColor": "#FFFDF7",
     "list": [{
       "iconPath": "/static/tabbar/home.png",
       "selectedIconPath": "/static/tabbar/select-home.png",
@@ -18652,28 +18653,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 38:
-/*!*******************************************************************************!*\
-  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"stat"} ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  "appid": "__UNI__4004051"
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 388:
+/***/ 374:
 /*!*********************************************************************************************************!*\
   !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/async-validator.js ***!
   \*********************************************************************************************************/
@@ -19851,11 +19831,11 @@ Schema.warning = warning;
 Schema.messages = messages;
 var _default = Schema;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 389)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 375)))
 
 /***/ }),
 
-/***/ 389:
+/***/ 375:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -19886,7 +19866,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 390);
+        if (!path) path = __webpack_require__(/*! path */ 376);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -19900,7 +19880,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 390:
+/***/ 376:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -20210,7 +20190,28 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 389)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 375)))
+
+/***/ }),
+
+/***/ 38:
+/*!*******************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"stat"} ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  "appid": "__UNI__4004051"
+};
+exports.default = _default;
 
 /***/ }),
 

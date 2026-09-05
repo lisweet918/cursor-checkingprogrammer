@@ -102,13 +102,13 @@ var components
 try {
   components = {
     uAvatar: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 261))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-avatar/u-avatar */ "uni_modules/vk-uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-avatar/u-avatar.vue */ 268))
     },
     uCellGroup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 275))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group */ "uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-group/u-cell-group.vue */ 379))
     },
     uCellItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 282))
+      return __webpack_require__.e(/*! import() | uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item */ "uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item").then(__webpack_require__.bind(null, /*! @/uni_modules/vk-uview-ui/components/u-cell-item/u-cell-item.vue */ 386))
     },
   }
 } catch (e) {
