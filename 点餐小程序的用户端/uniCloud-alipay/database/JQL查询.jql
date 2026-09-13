@@ -8,5 +8,8 @@
 // 数据库查询有最大返回条数限制，详见：https://uniapp.dcloud.net.cn/uniCloud/cf-database.html#limit
 // 详细JQL语法，请参考：https://uniapp.dcloud.net.cn/uniCloud/jql.html
 
-// 下面示例查询uni-id-users表的所有数据
-db.collection('uni-id-users').get();
+// 1. 查询 1:53 附近的订单记录 (可取消注释查看)
+// db.collection('order').where('createTime >= 1788630700000 && createTime <= 1788630900000').get();
+
+// 2. 直接删除 2026-09-06 01:53 附近的这笔测试订单（在HBuilderX中按F5即可直接运行删除）
+// 测试订单清理语句已移除，避免误执行。

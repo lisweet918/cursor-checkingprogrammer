@@ -57,7 +57,7 @@
   height: 100%;
   border-radius: 100%;
   background-color: #ffffff;
-  box-shadow: 0 10rpx 10rpx 0 rgba(200, 199, 204, 0.2);
+  box-shadow: 0 8rpx 20rpx rgba(125, 83, 60, 0.14);
   position: relative;
   display: flex;
   align-items: center;
@@ -68,43 +68,71 @@
   margin-right: 20rpx;
   margin-left: 20rpx;
 }
-.left .detail-action .shopbag-btn.data-v-dfd5d828 {
-  width: 70rpx;
-  height: 70rpx;
-}
 .left .detail-action .badge.data-v-dfd5d828 {
-  background-color: #FF362D;
-  font-size: 24rpx;
-  color: #ffffff;
-  line-height: 1rem;
-  width: 1rem;
+  background-color: #E65A4B;
+  font-size: 22rpx;
+  color: #FFFFFF;
+  line-height: 32rpx;
+  min-width: 32rpx;
+  height: 32rpx;
+  padding: 0 8rpx;
   text-align: center;
-  border-radius: 100%;
+  border-radius: 16rpx;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -6rpx;
+  top: -4rpx;
+  font-weight: 700;
+  border: 2rpx solid #FFFFFF;
 }
 .left .price.data-v-dfd5d828 {
   display: flex;
   align-items: baseline;
-  color: #815B49;
-  font-weight: bold;
+  color: #C25648;
+  font-weight: 800;
 }
 .left .price text.data-v-dfd5d828:nth-child(1) {
   font-size: 26rpx;
   margin-right: 5rpx;
 }
 .left .price text.data-v-dfd5d828:nth-child(2) {
-  font-size: 36rpx;
+  font-size: 40rpx;
 }
 .right.data-v-dfd5d828 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 42rpx;
+  padding: 0 46rpx;
   margin: 14rpx 24rpx 14rpx 0;
   border-radius: 44rpx !important;
-  font-size: 30rpx;
-  background-color: #815B49;
-  color: white;
+  font-size: 29rpx;
+  font-weight: 700;
+  background-color: #7D533C;
+  color: #FFFDF9;
+  box-shadow: 0 6rpx 18rpx rgba(125, 83, 60, 0.24);
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+}
+.right.data-v-dfd5d828:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+.left .detail-action.data-v-dfd5d828 {
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 6rpx 18rpx rgba(76, 101, 99, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2rpx 0 white, 0 8rpx 24rpx rgba(107, 85, 68, 0.14);
+}
+.left .detail-action .badge.data-v-dfd5d828 {
+  background: linear-gradient(145deg, #e58f7d, #c86556);
+  border-color: #fffaf4;
+  box-shadow: inset 0 2rpx 0 rgba(255, 255, 255, 0.32);
+}
+.left .price.data-v-dfd5d828 {
+  color: #ac614a;
+}
+.right.data-v-dfd5d828 {
+  background: linear-gradient(155deg, #a47b62 0%, #80583f 52%, #704b36 100%);
+  color: #fffdf9;
+  box-shadow: inset 0 2rpx 0 rgba(255, 255, 255, 0.48), inset 0 0 0 1px rgba(255, 255, 255, 0.18), 0 8rpx 18rpx rgba(106, 74, 54, 0.2);
 }

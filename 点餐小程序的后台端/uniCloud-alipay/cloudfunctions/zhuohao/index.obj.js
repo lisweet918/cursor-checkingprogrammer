@@ -4,8 +4,8 @@ const db = uniCloud.database();
 const zhuohaoCollection = db.collection('zhuohao');
 
 const WECHAT_MP_CONFIG = {
-	appid: 'wxbe2e8cc90cfb7086',
-	secret: 'f73869c07d0582bceac6fbb08a416e6c'
+	appid: process.env.WECHAT_APP_ID || 'wxbe2e8cc90cfb7086',
+	secret: process.env.WECHAT_APP_SECRET || 'f73869c07d0582bceac6fbb08a416e6c'
 };
 
 function httpsRequest(url, options = {}) {
@@ -173,7 +173,7 @@ async function createMiniCode(tableNumber) {
 
 	const scene = `tableNumber=${cleanTableNumber}`;
 	const page = 'pages/home/home';
-	const envVersion = 'trial';
+	const envVersion = process.env.WECHAT_CODE_ENV || 'trial';
 	const payload = JSON.stringify({
 		scene,
 		page,
@@ -236,13 +236,13 @@ async function createMiniCode(tableNumber) {
 }
 
 module.exports = {
-	_before: function () {},
-	getWechatConfig() {
-		return getWechatConfig();
-	},
-	async getAccessToken() {
-		return await getAccessToken();
-	},
+	async _before() {
+ const method = this.getMethodName();
+ if (method === 'getDetailByTableNumber') return;
+ const uniId = require('uni-id-common').createInstance({ clientInfo: this.getClientInfo() });
+ const auth = await uniId.checkToken(this.getUniIdToken());
+ if (auth.errCode || !Array.isArray(auth.role) || !auth.role.includes('admin')) throw new Error('请使用管理员账号操作桌号');
+},
 	async createMiniCode(tableNumber) {
 		return await createMiniCode(tableNumber);
 	},

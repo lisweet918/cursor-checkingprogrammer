@@ -12,12 +12,9 @@
 	</view>
 </template>
 
-<script setup>
-	import {
-		ref
-	} from 'vue'
-
-	const withdrawList = ref([{
+<script>
+	export default {
+	data() { return { withdrawList: [{
 		"apply_amount": 50,
 		"createtime": '2026-01-03 19:52'
 	}, {
@@ -26,7 +23,8 @@
 	}, {
 		"apply_amount": 50,
 		"createtime": '2026-01-01 13:55'
-	}]);
+	}] } }
+	}
 </script>
 
 <style lang="scss" scoped>

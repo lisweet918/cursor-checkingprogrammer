@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container glass-menu">
 		<u-navbar :border-bottom="false">
 			<u-search placeholder="搜索" disabled @tap="showSearch = true" :show-action="false"></u-search>
 		</u-navbar>
@@ -28,10 +28,15 @@
 					</view>
 				</view>
 			</view>
+			<view v-if="!loading && !cart.length && filterCategories.length" class="cart-companion">
+				<yier-feedback compact title="布布等你加点好吃的" description="购物车空空的，点菜旁的 ＋ 一起装满它" />
+			</view>
 		</view>
-		<view v-if="!loading && filterCategories.length === 0" class="empty-menu">
-			<image src="/static/img/home/icon_shopping_bag.png" class="empty-menu__icon"></image>
-			<view class="empty-menu__text">该模式下暂无可售商品</view>
+		<view v-if="loading" class="menu-companion">
+			<yier-feedback kind="loading" title="美味正在集合" description="一二和布布陪你等一小会儿…" />
+		</view>
+		<view v-else-if="filterCategories.length === 0" class="empty-menu">
+			<yier-feedback title="这边的餐桌还空着" description="该模式下暂无可售商品，换个方式看看吧" />
 			<view class="empty-menu__switch" @tap="switchOrderType">切换{{ orderType == 'takein' ? '外卖' : '自取' }}试试</view>
 		</view>
 		<view v-else class="main">
@@ -50,11 +55,11 @@
 			<scroll-view class="product-section" scroll-y scroll-with-animation :scroll-top="productsScrollTop"
 				@scroll="productsScroll">
 				<view class="wrapper">
-					<view id="ads">
-						<swiper class="ads1" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000"
-							circular>
+					<view id="ads" v-if="ads1 && ads1.length > 0">
+						<swiper class="ads1" :indicator-dots="ads1.length > 1" :autoplay="ads1.length > 1" :interval="3000" :duration="1000"
+							circular :style="{ height: swiperHeight || '320rpx' }" @change="onSwiperChange">
 							<swiper-item v-for="(ad, index) in ads1" :key="index">
-								<image :src="ad" class="w-100" mode="widthFix"></image>
+								<image :src="ad" class="w-100 banner-image" mode="widthFix" @load="onBannerImgLoad($event, index)"></image>
 							</swiper-item>
 						</swiper>
 					</view>
@@ -113,9 +118,12 @@
 	import cartPopup from '@/components/cart-popup/cart-popup.vue'
 	import Search from '@/components/search/search.vue'
 	import util from '@/common/util.js'
+	import YierFeedback from '@/components/yier-feedback/yier-feedback.vue'
+	import { prepareProduct } from '@/common/product-preferences.js'
 
 	export default {
 		components: {
+			YierFeedback,
 			Actions,
 			CartBar,
 			ProductModal,
@@ -132,6 +140,9 @@
 				product: {},
 				currentCategoryId: 0,
 				ads1: [],
+				swiperHeight: '',
+				bannerHeights: [],
+				currentSwiperIndex: 0,
 				productModalVisible: false,
 				cartPopupShow: false,
 				productsScrollTop: 0,
@@ -160,7 +171,7 @@
 					});
 					return {
 						...category,
-						products: filterProducts
+						products: filterProducts.map(product => prepareProduct(product, category.name))
 					};
 				}).filter(category => {
 					return category.products.length > 0;
@@ -212,6 +223,9 @@
 								const fileInfo = urlRes.fileList.find(f => f.fileID === item.image) || {};
 								return fileInfo.tempFileURL || fileInfo.download_url || item.image;
 							});
+							this.$nextTick(async () => {
+								await this.calcSize();
+							});
 						}
 					}
 				} catch (e) {
@@ -221,7 +235,7 @@
 			async loadStoreSettings() {
 				try {
 					const db = uniCloud.database();
-					const res = await db.collection('store_settings').get();
+					const res = await db.collection('store_settings').field('store_name,business_hours,packing_fee,delivery_fee,free_delivery_threshold,min_order_amount').get();
 					if (res.result.data && res.result.data.length > 0) {
 						this.storeName = res.result.data[0].store_name || '七香嫂包子铺';
 						this.businessHours = res.result.data[0].business_hours || '早5:00 - 晚18:00';
@@ -261,12 +275,13 @@
 				this.$nextTick(async () => await this.calcSize())
 			},
 			handleAddToCart(product) {
+				// A menu product must choose its options first; cart rows already have image/notes.
+				if (!product.is_single && product.images && !product.materials_text) {
+					this.showProductDetailModal(product)
+					return
+				}
 				const index = this.cart.findIndex(item => {
-					if (!product.is_single) {
-						return (item.id == product.id) && (item.materials_text == product.materials_text)
-					} else {
-						return item.id === product.id
-					}
+					return item.id == product.id && (item.materials_text || '') === (product.materials_text || '')
 				})
 
 				if (index > -1) {
@@ -280,51 +295,28 @@
 					name: product.name,
 					price: product.price,
 					number: product.number || 1,
-					image: product.images[0].url,
+					image: product.image || (product.images && product.images[0] ? product.images[0].url : ''),
 					is_single: product.is_single,
 					materials_text: product.materials_text || ''
 				})
 			},
 			handleMinusFromCart(product) {
-				let index
-				if (product.is_single) {
-					index = this.cart.findIndex(item => item.id == product.id)
-				} else {
-					index = this.cart.findIndex(item => (item.id == product.id) && (item.materials_text == product
-						.materials_text))
-				}
+				const index = this.cart.findIndex(item => item.id == product.id &&
+					(item.materials_text || '') === (product.materials_text || ''))
+				if (index < 0) return
 				this.cart[index].number -= 1
 				if (this.cart[index].number <= 0) {
 					this.cart.splice(index, 1)
 				}
 			},
 			showProductDetailModal(product) {
-				product.materials = product.materials || [];
-
-				if (product.materials && product.materials.length > 0) {
-					product.materials.forEach(group => {
-						if (group.values && group.values.length > 0) {
-							group.values.forEach((val, idx) => {
-								if (idx === 0) {
-									val.is_selected = 1;
-								} else {
-									val.is_selected = 0;
-								}
-
-								if (val.is_exclusive === undefined) {
-									val.is_exclusive = 0;
-								}
-							});
-						}
-					});
-				}
-
-				this.product = product
+				const category = this.categories.find(item => item.id == product.category_id) || {}
+				this.product = prepareProduct(product, category.name)
 				this.productModalVisible = true
 			},
 			handleAddToCartInModal(product) {
-				const price = product.price;
-				this.handleAddToCart(product)
+				// Details may legitimately have no optional add-ons selected.
+				this.handleAddToCart({ ...product, images: undefined, image: product.images && product.images[0] ? product.images[0].url : '' })
 				this.closeProductDetailModal()
 			},
 			closeProductDetailModal() {
@@ -396,6 +388,41 @@
 				uni.navigateTo({
 					url: '/subpackageHome/setTlement/pay'
 				})
+			},
+			onBannerImgLoad(e, index) {
+				const { width, height } = (e && e.detail) || {};
+				if (!width || !height) return;
+				const ratio = height / width;
+				const rpxHeight = Math.round(540 * ratio) + 'rpx';
+
+				uni.createSelectorQuery().in(this).select('#ads').boundingClientRect(rect => {
+					const finalHeight = (rect && rect.width) ? Math.round(rect.width * ratio) + 'px' : rpxHeight;
+					this.$set(this.bannerHeights, index, finalHeight);
+					if (index === this.currentSwiperIndex || !this.swiperHeight) {
+						this.swiperHeight = finalHeight;
+						this.$nextTick(async () => {
+							await this.calcSize();
+						});
+					}
+				}).exec();
+
+				if (!this.swiperHeight || index === this.currentSwiperIndex) {
+					this.swiperHeight = rpxHeight;
+					this.$set(this.bannerHeights, index, rpxHeight);
+					this.$nextTick(async () => {
+						await this.calcSize();
+					});
+				}
+			},
+			onSwiperChange(e) {
+				const current = (e && e.detail && e.detail.current) || 0;
+				this.currentSwiperIndex = current;
+				if (this.bannerHeights[current]) {
+					this.swiperHeight = this.bannerHeights[current];
+					this.$nextTick(async () => {
+						await this.calcSize();
+					});
+				}
 			}
 		}
 	}
@@ -403,15 +430,17 @@
 
 <style lang="scss">
 	@import './index.scss';
+	.cart-companion { margin: 0 24rpx 18rpx; pointer-events: none; }
+	.menu-companion { margin: 30rpx 24rpx; }
 
 	.container {
-		background: #FFFDF7;
-		color: #65483D;
+		background: #FCF9F2;
+		color: #5A3F33;
 	}
 
 	.header {
-		background: linear-gradient(180deg, #FFFDF7 0%, #EAF8FA 100%);
-		border-bottom: 1rpx solid rgba(101, 72, 61, 0.08);
+		background: linear-gradient(180deg, #FFFFFF 0%, #FAF5ED 100%);
+		border-bottom: 2rpx solid #F5ECE0;
 
 		.center {
 			padding-top: 18rpx;
@@ -420,25 +449,28 @@
 			.store {
 				.title {
 					.address {
-						color: #65483D;
+						color: #5A3F33;
 						font-size: 34rpx;
+						font-weight: 800;
 						letter-spacing: 1rpx;
 					}
 
 					.business {
-						margin-top: 5rpx;
-						color: #9A7D70;
+						margin-top: 6rpx;
+						color: #9C8276;
+						font-size: 21rpx;
 					}
 
 					.companion-tip {
 						align-self: flex-start;
 						max-width: 100%;
 						margin-top: 10rpx;
-						padding: 5rpx 14rpx;
+						padding: 6rpx 16rpx;
 						border-radius: 18rpx;
-						background: #F9DFDA;
-						color: #815B49;
-						font-size: 20rpx;
+						background: #FFF2DF;
+						color: #9C661D;
+						font-weight: 600;
+						font-size: 21rpx;
 						line-height: 1.5;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -447,23 +479,29 @@
 					}
 
 					.table-tag {
-						background: #FFFFFF;
-						border: 1rpx solid #CDECF0;
-						color: #65483D;
+						background: #FFF7EB;
+						border: 1rpx solid #F7E4C4;
+						color: #6E4733;
+						font-weight: 700;
+						border-radius: 16rpx;
 					}
 				}
 
 				.buttons {
-					background: rgba(255, 255, 255, 0.85);
-					border-color: #EADBD3;
-					box-shadow: 0 4rpx 14rpx rgba(101, 72, 61, 0.08);
+					background: #FFFFFF;
+					border-color: #F0E2D4;
+					border-radius: 36rpx;
+					box-shadow: 0 6rpx 16rpx rgba(125, 83, 60, 0.08);
 
 					.button {
-						color: #815B49 !important;
+						color: #7D533C !important;
+						font-weight: 600;
 
 						&.active {
-							background: #815B49;
-							color: #FFFFFF !important;
+							background: #7D533C;
+							color: #FFFDF9 !important;
+							border-radius: 30rpx;
+							font-weight: 700;
 						}
 					}
 				}
@@ -472,45 +510,51 @@
 	}
 
 	.main {
-		background: #FFFDF7;
+		background: #FCF9F2;
 	}
 
 	.menu-bar {
-		background: #F8EFEA;
+		background: #F8F3EC;
 
 		.wrapper .menu-item {
-			color: #9A7D70;
+			color: #9E8579;
+			font-weight: 500;
 
 			.image {
 				border-radius: 14rpx;
 			}
 
 			&.active {
-				background: #FFFDF7;
-				border-left-color: #ECAEA4;
-				color: #65483D;
-				font-weight: 600 !important;
+				background: #FCF9F2;
+				border-left-color: #F5A623;
+				color: #5A3F33;
+				font-weight: 800 !important;
 			}
 		}
 	}
 
 	.product-section {
-		background: #FFFDF7;
+		background: #FCF9F2;
 
 		.ads1 {
 			margin: 16rpx 0 10rpx;
-			border-radius: 24rpx;
+			border-radius: 28rpx;
 			overflow: hidden;
-			box-shadow: 0 8rpx 24rpx rgba(101, 72, 61, 0.08);
+			box-shadow: 0 8rpx 24rpx rgba(125, 83, 60, 0.06);
+
+			.banner-image {
+				width: 100%;
+				display: block;
+			}
 		}
 
 		.products-list {
 			.category-name {
 				display: flex;
 				align-items: center;
-				color: #65483D;
+				color: #5A3F33;
 				font-size: 28rpx;
-				font-weight: 700;
+				font-weight: 800;
 
 				&::before {
 					content: '';
@@ -518,38 +562,41 @@
 					height: 28rpx;
 					margin-right: 12rpx;
 					border-radius: 8rpx;
-					background: #F2B7AD;
+					background: #F5A623;
 				}
 			}
 
 			.product {
 				box-sizing: border-box;
 				margin-bottom: 20rpx;
-				padding: 18rpx;
-				border: 1rpx solid rgba(101, 72, 61, 0.08);
-				border-radius: 24rpx;
+				padding: 20rpx;
+				border: 2rpx solid #FAF6F0;
+				border-radius: 28rpx;
 				background: #FFFFFF;
-				box-shadow: 0 8rpx 22rpx rgba(101, 72, 61, 0.06);
+				box-shadow: 0 8rpx 24rpx rgba(125, 83, 60, 0.05);
 
 				.image {
-					border-radius: 18rpx;
+					border-radius: 20rpx;
 				}
 
 				.content {
 					.name {
-						color: #65483D;
+						color: #5A3F33;
+						font-weight: 700;
 					}
 
 					.sold {
-						color: #A88E82;
+						color: #A89185;
 					}
 
 					.labels .label {
-						border-radius: 10rpx;
+						border-radius: 12rpx;
+						font-weight: 600;
 					}
 
 					.price .prices {
-						color: #C9655B;
+						color: #C25648;
+						font-weight: 800;
 					}
 				}
 			}
@@ -557,15 +604,23 @@
 	}
 
 	.empty-menu {
-		background: #FFFDF7;
+		background: #FFFFFF;
+		border-radius: 36rpx;
+		margin: 30rpx;
+		padding: 60rpx 40rpx;
 
 		&__text {
-			color: #9A7D70;
+			color: #9E8579;
 		}
 
 		&__switch {
-			background: #815B49;
-			box-shadow: 0 8rpx 20rpx rgba(129, 91, 73, 0.18);
+			background: #7D533C;
+			box-shadow: 0 8rpx 20rpx rgba(125, 83, 60, 0.22);
+			border-radius: 36rpx;
+			font-weight: 700;
+			color: #FFFDF9;
 		}
 	}
+	@import '@/common/scss/liquid-glass-pages.scss';
+	@include glass-menu-page;
 </style>

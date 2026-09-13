@@ -1,6 +1,7 @@
 <template>
 	<view class="container">
-		<view v-for="(item,index) in dataList" :key="index" class="address-item" @click="chooseAddress">
+		<view v-if="!dataList.length" style="padding: 40rpx; text-align: center;">还没有收货地址，添加一个吧</view>
+		<view v-for="(item,index) in dataList" :key="item.id" class="address-item" @click="chooseAddress(item)">
 			<view class="address-info">
 				{{ item.address }} {{item.house_number}}
 			</view>
@@ -10,8 +11,8 @@
 					<view>{{ item.phone }}</view>
 				</view>
 				<view class="address-actions">
-					<view>编辑</view>
-					<view>删除</view>
+					<view @click.stop="edit(item)">编辑</view>
+					<view @click.stop="remove(item)">删除</view>
 				</view>
 			</view>
 		</view>
@@ -26,21 +27,31 @@
 	export default {
 		data() {
 			return {
-				dataList: [{
-					address: '北京市东城区王府井大街',
-					house_number: '88号',
-					name: 'Kaiyuan_Q',
-					phone: '18888888888'
-				}]
+				dataList: [], storageKey: ''
 			}
 		},
+		onShow() {
+			const user = uni.getStorageSync('userInfo') || {}
+			this.storageKey = 'addresses:' + (user.openid || 'guest')
+			this.dataList = uni.getStorageSync(this.storageKey) || []
+		},
 		methods: {
+			edit(item) { uni.navigateTo({ url: '/subpackageMy/myAddress/add-address?id=' + encodeURIComponent(item.id) }) },
+			remove(item) {
+				uni.showModal({ title: '删除地址', content: '确定删除这个地址吗？', success: res => {
+					if (!res.confirm) return
+					this.dataList = this.dataList.filter(a => a.id !== item.id)
+					uni.setStorageSync(this.storageKey, this.dataList)
+					if (this.$store.state.addressInfo.id === item.id) this.$store.commit('SET_ADDRESS', {})
+				} })
+			},
 			add() {
 				uni.navigateTo({
 					url: `/subpackageMy/myAddress/add-address`
 				})
 			},
-			chooseAddress() {
+			chooseAddress(item) {
+				this.$store.commit('SET_ADDRESS', { ...item });
 				uni.navigateBack();
 			}
 		}

@@ -1,10 +1,12 @@
 {
   "navigationBarTitleText": "",
-  "navigationBarBackgroundColor": "#F5FCFC",
+  "navigationBarBackgroundColor": "#FCF9F2",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
   "usingComponents": {
+    "glass-tabbar": "/components/glass-tabbar/glass-tabbar",
     "yier-art": "/components/yier-art/yier-art",
+    "yier-feedback": "/components/yier-feedback/yier-feedback",
     "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image",
     "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon"
   }

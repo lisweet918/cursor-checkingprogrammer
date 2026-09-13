@@ -64,6 +64,12 @@
   -webkit-transform: translateX(-50%) translateY(100%);
           transform: translateX(-50%) translateY(100%);
 }
+.modal-box.modal-box--transparent {
+  background: transparent;
+}
+.modal-mask.modal-mask--light {
+  background: rgba(39, 56, 55, 0.28);
+}
 /* 显示状态：滑入到屏幕底部（水平居中） */
 .modal-show {
   opacity: 1;

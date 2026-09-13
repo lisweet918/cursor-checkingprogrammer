@@ -3,6 +3,7 @@
   "usingComponents": {
     "u-navbar": "/uni_modules/vk-uview-ui/components/u-navbar/u-navbar",
     "u-search": "/uni_modules/vk-uview-ui/components/u-search/u-search",
+    "yier-feedback": "/components/yier-feedback/yier-feedback",
     "actions": "/components/actions/actions",
     "product-modal": "/components/product-modal/product-modal",
     "search": "/components/search/search",

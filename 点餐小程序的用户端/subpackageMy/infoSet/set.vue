@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import { userDatabase } from '@/common/user-api.js'
 	export default {
 		data() {
 			return {
@@ -85,18 +86,18 @@
 						cloudPath: `avatar/${this.userInfo.openid}_${Date.now()}.jpg`
 					});
 					const newAvatar = uploadRes.fileID;
-					
+
 					// 2. 更新数据库
-					const db = uniCloud.database();
+					const db = userDatabase();
 					await db.collection('wx_users').doc(this.userInfo._id).update({
 						avatar: newAvatar
 					});
-					
+
 					// 3. 更新本地缓存
 					this.userInfo.avatar = newAvatar;
 					uni.setStorageSync('userInfo', this.userInfo);
 					this.resolveAvatar();
-					
+
 					uni.showToast({ title: '修改成功' });
 				} catch (err) {
 					console.error('上传失败', err);
@@ -107,7 +108,7 @@
 			},
 			async loadOrders() {
 				try {
-					const db = uniCloud.database()
+					const db = userDatabase()
 					const res = await db.collection('order')
 						.where({ user_id: this.userInfo.openid })
 						.orderBy('createTime', 'desc')
@@ -149,7 +150,7 @@
 		background-color: #fff;
 		padding: 20rpx;
 		border-radius: 16rpx;
-		
+
 		&__title {
 			font-size: 32rpx;
 			font-weight: bold;
@@ -219,7 +220,7 @@
 				font-size: 24rpx;
 				color: #666;
 			}
-			
+
 			.order-item {
 				background-color: #f8f8f8;
 				padding: 4rpx 10rpx;

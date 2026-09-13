@@ -47,34 +47,15 @@
 	</view>
 </template>
 
-<script setup>
-	import {
-		ref,
-		onMounted,
-		getCurrentInstance
-	} from 'vue'
-
-	const {
-		proxy
-	} = getCurrentInstance();
-
-	const promotionList = ref([]);
-
-	const withdrawRecord = () => {
-		uni.navigateTo({
-			url: `/subpackageHome/pointsMall/withdraw-history`
-		})
+<script>
+	export default {
+		data() { return { promotionList: [] } },
+		async onLoad() { this.promotionList = await this.$api('promotion') || [] },
+		methods: {
+			withdrawRecord() { uni.navigateTo({ url: '/subpackageHome/pointsMall/withdraw-history' }) },
+			inviteFriends() { uni.navigateTo({ url: '/pages/friendRegistration/friend-registration' }) }
+		}
 	}
-
-	const inviteFriends = () => {
-		uni.navigateTo({
-			url: `/pages/friendRegistration/friend-registration`
-		})
-	}
-
-	onMounted(async () => {
-		promotionList.value = await proxy.$api('promotion')
-	})
 </script>
 
 <style lang="scss" scoped>

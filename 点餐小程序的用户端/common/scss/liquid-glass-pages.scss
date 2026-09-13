@@ -1,0 +1,122 @@
+@import './liquid-glass.scss';
+
+// Page-specific hooks keep the theme out of unrelated pages and shared widgets.
+@mixin glass-home-page {
+	.glass-home {
+		@include glass-scene;
+		.wrap__hero { @include glass-inset; background-color: rgba(255, 255, 255, .54); }
+		.wrap__usercard { @include glass-panel(.56, 16px); }
+		.wrap__usercard__tag { background: rgba(255, 250, 240, .86); color: #765842; }
+		.wrap__usercard__sub { color: #7e7168; }
+		.wrap__usercard__btn { @include glass-button; }
+		.wrap__tablecard { @include glass-inset; border-color: rgba(255, 255, 255, .85); }
+		.wrap__section__subtitle { color: #827467; }
+		.wrap__menu__card {
+			@include glass-panel(.48, 16px);
+			border-color: rgba(255, 255, 255, .76);
+			transition: transform .18s ease;
+		}
+		.wrap__menu__card--dine { background-image: linear-gradient(145deg, rgba(255, 255, 255, .56), rgba(223, 246, 234, .22)); }
+		.wrap__menu__card--takeout { background-image: linear-gradient(145deg, rgba(255, 255, 255, .56), rgba(255, 226, 214, .26)); }
+		.wrap__menu__card__pill { @include glass-inset; color: #7b5b46; }
+		.wrap__menu__card__desc { color: #7d7067; }
+		.wrap__menu__card__foot { border-top-color: rgba(255, 255, 255, .82); }
+		.wrap__menu__card__arrow { @include glass-button; }
+		.wrap__footer__badge { @include glass-inset; border-color: rgba(255, 255, 255, .7); }
+		.wrap__popup__mask { background: rgba(46, 62, 58, .28); }
+		.wrap__popup__panel { @include glass-panel(.88, 18px); border-color: rgba(255, 255, 255, .86); }
+		.wrap__popup__button { @include glass-button; }
+		.wrap__popup__button--ghost { @include glass-inset; color: #765842; }
+		padding-bottom: calc(174rpx + env(safe-area-inset-bottom));
+		.home-glass-backdrop { position: fixed; inset: 0; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; pointer-events: none; background: #dcefeb; }
+		.home-glass-backdrop__art { position: absolute; width: 100%; height: 100%; opacity: .48; }
+		.home-glass-backdrop::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(250,252,245,.87), rgba(249,246,237,.3) 62%, rgba(220,238,233,.06)); }
+		.wrap__safe, .wrap__topbar, .wrap__hero, .wrap__usercard, .wrap__tablecard, .wrap__section, .wrap__menu, .wrap__footer { position: relative; z-index: 1; }
+		.wrap__hero { background: rgba(255,255,255,.24); box-shadow: inset 0 0 0 1px rgba(255,255,255,.94), 0 12rpx 30rpx rgba(54,90,88,.09); }
+		.wrap__usercard, .wrap__menu__card--dine, .wrap__menu__card--takeout { @include glass-clear; border-color: transparent; }
+		.wrap__menu__card { border-radius: 42rpx; }
+		.wrap__menu__card--pressed { transform: scale(.96); }
+		.wrap__menu__card__arrow, .wrap__usercard__btn { @include glass-inset; background: linear-gradient(135deg, rgba(255,255,255,.83), rgba(201,232,220,.55)); color: #345f56; }
+		.wrap__menu__card__pill { background: rgba(255,255,255,.55); color: #45685c; }
+		.wrap__menu__card__desc, .wrap__usercard__sub { color: #52685f; }
+		.wrap__footer__badge { background: rgba(255,255,255,.54); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.glass-home .wrap__menu__card, .glass-home .wrap__usercard { transition: none; }
+	}
+}
+
+@mixin glass-my-page {
+	.glass-my {
+		@include glass-scene;
+		padding-bottom: calc(174rpx + env(safe-area-inset-bottom));
+		.wrap__hero__eyebrow { @include glass-inset; color: #7d604b; }
+		.wrap__userinfo { @include glass-panel(.56, 16px); }
+		.wrap__userinfo__tag { background: rgba(255, 250, 240, .86); color: #765842; }
+		.wrap__myasset__tile { @include glass-inset; border-color: rgba(255, 255, 255, .85); }
+		.wrap__myasset__tile--points { background-image: linear-gradient(145deg, rgba(255, 255, 255, .65), rgba(221, 246, 233, .3)); }
+		.wrap__myasset__tile--coupon { background-image: linear-gradient(145deg, rgba(255, 255, 255, .65), rgba(255, 225, 217, .3)); }
+		.wrap__order, .wrap__cell { @include glass-inset; }
+		.wrap__order__head, .wrap__cell__item { border-bottom-color: rgba(118, 93, 72, .08); }
+		.wrap__order__grid__icon { box-shadow: inset 0 2rpx 0 rgba(255, 255, 255, .85), 0 4rpx 14rpx rgba(76, 101, 99, .05); }
+	}
+}
+
+@mixin glass-orders-page {
+	.glass-orders {
+		@include glass-scene;
+		padding-bottom: calc(174rpx + env(safe-area-inset-bottom));
+		.wrap__theme { @include glass-inset; border-color: rgba(255, 255, 255, .8); }
+		.wrap__theme__subtitle { color: #7e7066; }
+		.wrap__tabs { @include glass-panel(.62, 14px); }
+		.wrap__tabs__item { color: #81736a; }
+		.wrap__tabs__item--active { @include glass-inset; background-color: rgba(255, 250, 242, .92); color: #76543e; }
+		.wrap__list { @include glass-inset; }
+		.wrap__list__top { border-bottom-color: rgba(118, 93, 72, .08); }
+	}
+}
+
+@mixin glass-menu-page {
+	.glass-menu {
+		@include glass-scene;
+		.header { background: rgba(255, 255, 255, .3); border-bottom-color: rgba(255, 255, 255, .7); }
+		.header .center .store .buttons { @include glass-panel(.72, 12px); border-color: rgba(255, 255, 255, .8); }
+		.header .center .store .buttons .button.active { @include glass-button; }
+		.header .center .store .title .companion-tip { @include glass-inset; color: #7e6350; }
+		.main, .product-section { background: transparent; }
+		.menu-bar { background: rgba(242, 248, 245, .38); }
+		.menu-bar .wrapper .menu-item { color: #81736a; }
+		.menu-bar .wrapper .menu-item.active { @include glass-inset; border-left-color: #b48b6c; color: #654c3d; }
+		.product-section .products-list .category-name::before { background: #b48b6c; }
+		.product-section .products-list .product { @include glass-inset; border-color: rgba(255, 255, 255, .76); }
+		.product-section .products-list .product .content .sold { color: #82756d; }
+		.empty-menu { @include glass-inset; }
+		.empty-menu__switch { @include glass-button; }
+	}
+}
+
+@mixin glass-checkout-page {
+	.glass-checkout.receipt-checkout {
+		@include glass-scene;
+		// Keep the receipt itself paper-like so prices and selected tastes remain crisp.
+		.receipt-paper { box-shadow: 0 14rpx 36rpx rgba(76, 101, 99, .1), inset 0 0 0 1px rgba(255, 255, 255, .9); }
+		.container__addressbox, .container__tablebar { @include glass-inset; }
+		.receipt-order-method { @include glass-inset; border-radius: 24rpx; }
+		.receipt-footer { @include glass-panel(.76, 18px); border-top-color: rgba(255, 255, 255, .85); }
+		.receipt-footer .receipt-submit { @include glass-button; }
+		.coupon-picker__panel { @include glass-panel(.9, 18px); }
+	}
+}
+
+@mixin glass-detail-page {
+	.glass-detail {
+		@include glass-scene;
+		.meal-progress { @include glass-panel(.62, 16px); border-color: rgba(255, 255, 255, .84); }
+		.meal-progress__eyebrow, .meal-progress__caption { color: #857164; }
+		.meal-progress__ticket { @include glass-inset; color: #76543e; }
+		.meal-progress__steps { border-top-color: rgba(123, 96, 76, .16); }
+		.meal-progress__step--done .meal-progress__dot { @include glass-button; }
+		.wrap__list, .wrap__orderinfo { @include glass-inset; border-radius: 28rpx; }
+		.wrap__bottom { @include glass-panel(.8, 18px); }
+	}
+}

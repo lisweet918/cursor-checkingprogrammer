@@ -1,6 +1,8 @@
 {
   "name": "zhuohao",
-  "dependencies": {},
+  "dependencies": {
+    "uni-id-common": "file:../../../../点餐小程序的后台端/uni_modules/uni-id-common/uniCloud/cloudfunctions/common/uni-id-common"
+  },
   "extensions": {
     "uni-cloud-jql": {}
   }

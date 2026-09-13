@@ -110,6 +110,100 @@ module.exports = toPropertyKey, module.exports.__esModule = true, module.exports
 
 /***/ }),
 
+/***/ 129:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/product-preferences.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.prepareProduct = prepareProduct;
+exports.selectedMaterials = selectedMaterials;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+// Personal-use drink preferences are preparation notes, never price modifiers.
+// Keep merchant-defined groups and only supply missing drink preference groups.
+function prepareProduct() {
+  var product = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var categoryName = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  var copy = JSON.parse(JSON.stringify(product || {}));
+  copy.images = Array.isArray(copy.images) ? copy.images : [];
+  copy.labels = Array.isArray(copy.labels) ? copy.labels : [];
+  copy.materials = (Array.isArray(copy.materials) ? copy.materials : []).filter(function (group) {
+    return group && Array.isArray(group.values) && group.values.some(function (value) {
+      return value && value.name;
+    });
+  }).map(function (group) {
+    return _objectSpread(_objectSpread({}, group), {}, {
+      values: group.values.filter(function (value) {
+        return value && value.name;
+      })
+    });
+  });
+  var drink = /(奶茶|饮品|饮料|咖啡|果茶|想喝)/.test(categoryName) || /(奶茶|咖啡|拿铁|美式|果茶|柠檬茶|瑞幸|星巴克|蜜雪冰城|霸王茶姬|古茗|茶百道|喜茶|沪上阿姨|茉莉奶白|益禾堂|书亦烧仙草|ChaPanda|Hey Tea|Coco)/i.test(copy.name || '');
+  var addGroup = function addGroup(group_name, names) {
+    return copy.materials.push({
+      group_name: group_name,
+      values: names.map(function (name, index) {
+        return {
+          name: name,
+          is_selected: index === 0 ? 1 : 0,
+          is_exclusive: 0
+        };
+      })
+    });
+  };
+  if (drink) {
+    if (!copy.materials.some(function (group) {
+      return /(甜|糖)/.test(group.group_name || '');
+    })) {
+      addGroup('甜度', ['正常糖', '七分糖', '五分糖', '三分糖', '无糖']);
+    }
+    if (!copy.materials.some(function (group) {
+      return /(冰|温|冷热)/.test(group.group_name || '');
+    })) {
+      addGroup('冰量 / 温度', ['正常冰', '少冰', '去冰', '常温', '热']);
+    }
+  }
+  copy.materials.forEach(function (group) {
+    group.values.forEach(function (value) {
+      value.is_exclusive = value.is_exclusive === true || Number(value.is_exclusive) === 1 ? 1 : 0;
+      value.is_selected = value.is_selected === true || Number(value.is_selected) === 1 ? 1 : 0;
+    });
+    if (!group.values.some(function (value) {
+      return value.is_exclusive;
+    })) {
+      var selected = Math.max(0, group.values.findIndex(function (value) {
+        return value.is_selected;
+      }));
+      group.values.forEach(function (value, index) {
+        value.is_selected = index === selected ? 1 : 0;
+      });
+    }
+  });
+  if (copy.materials.length) copy.is_single = false;
+  copy.number = 1;
+  return copy;
+}
+function selectedMaterials(product) {
+  return (product.materials || []).reduce(function (names, group) {
+    (group.values || []).forEach(function (value) {
+      if (value.is_selected) names.push(value.name);
+    });
+    return names;
+  }, []).join('，');
+}
+
+/***/ }),
+
 /***/ 13:
 /*!*******************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
@@ -18299,7 +18393,86 @@ module.exports = _inherits, module.exports.__esModule = true, module.exports["de
 
 /***/ }),
 
-/***/ 329:
+/***/ 33:
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 30);
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+  return assertThisInitialized(self);
+}
+module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 34:
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _getPrototypeOf(o);
+}
+module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 35:
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ 34);
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
+var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ 36);
+var construct = __webpack_require__(/*! ./construct.js */ 15);
+function _wrapNativeSuper(Class) {
+  var _cache = typeof Map === "function" ? new Map() : undefined;
+  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
+    if (Class === null || !isNativeFunction(Class)) return Class;
+    if (typeof Class !== "function") {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+    if (typeof _cache !== "undefined") {
+      if (_cache.has(Class)) return _cache.get(Class);
+      _cache.set(Class, Wrapper);
+    }
+    function Wrapper() {
+      return construct(Class, arguments, getPrototypeOf(this).constructor);
+    }
+    Wrapper.prototype = Object.create(Class.prototype, {
+      constructor: {
+        value: Wrapper,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    return setPrototypeOf(Wrapper, Class);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _wrapNativeSuper(Class);
+}
+module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 350:
 /*!*************************************************************************************************!*\
   !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/emitter.js ***!
   \*************************************************************************************************/
@@ -18370,28 +18543,7 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 33:
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 30);
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  } else if (call !== void 0) {
-    throw new TypeError("Derived constructors may only return object or undefined");
-  }
-  return assertThisInitialized(self);
-}
-module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 337:
+/***/ 358:
 /*!**************************************************************************************************!*\
   !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/guanbi.png ***!
   \**************************************************************************************************/
@@ -18402,7 +18554,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg
 
 /***/ }),
 
-/***/ 338:
+/***/ 359:
 /*!**************************************************************************************************!*\
   !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/hbxw-timepicker/static/gougou.png ***!
   \**************************************************************************************************/
@@ -18410,64 +18562,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAk1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6eSN1AAAAMHRSTlMA+/H5I9QRCuvl4Rf2R3kyLMfBsquThFUG7txkPicdvKalopiNjHNnUTXPy7teXFdkgxhUAAABG0lEQVQ4y+2Tx46DMBRFXTEm9F7T61T//9eNMgmGERYvm1E2OUt0dHnv2kYv/gXmf/CV3z3khmlFFa2SEMEstlRdoZslLH/Z6oYs4IFjfJdJDrnCJ6qXD5AccNVjnwDXytzexRFUh+cMwY0AakuxDk4W827Z2DrY8aDaIh3s7izTSixg9+8iJzqYB4Yft+vaqdfer36ptUt8w3ZnTq/XwMkCgawd1dvFbOp2UT8iP7KzHGr7LKfyadi+eudDcGqq7UDUCKC23Ci7e8skF9Ikc/OlWG7o1CVHgYyEyWQQvNK1TbJ97v6V5ffM0wgyB49cul3MXngvsUfBLfT6m8gdnQdA2eW3WfDbBcEIL5aEyLhFD8GKbF8w9OJp/AB1/0D8ddOiVQAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 34:
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _getPrototypeOf(o);
-}
-module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ 35:
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/wrapNativeSuper.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ 34);
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ 16);
-var isNativeFunction = __webpack_require__(/*! ./isNativeFunction.js */ 36);
-var construct = __webpack_require__(/*! ./construct.js */ 15);
-function _wrapNativeSuper(Class) {
-  var _cache = typeof Map === "function" ? new Map() : undefined;
-  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
-    if (Class === null || !isNativeFunction(Class)) return Class;
-    if (typeof Class !== "function") {
-      throw new TypeError("Super expression must either be null or a function");
-    }
-    if (typeof _cache !== "undefined") {
-      if (_cache.has(Class)) return _cache.get(Class);
-      _cache.set(Class, Wrapper);
-    }
-    function Wrapper() {
-      return construct(Class, arguments, getPrototypeOf(this).constructor);
-    }
-    Wrapper.prototype = Object.create(Class.prototype, {
-      constructor: {
-        value: Wrapper,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    return setPrototypeOf(Wrapper, Class);
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  return _wrapNativeSuper(Class);
-}
-module.exports = _wrapNativeSuper, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -18514,7 +18608,7 @@ var _default = {
     "path": "pages/order/order",
     "style": {
       "navigationBarTitleText": "",
-      "navigationBarBackgroundColor": "#F5FCFC",
+      "navigationBarBackgroundColor": "#FCF9F2",
       "enablePullDownRefresh": true,
       "backgroundTextStyle": "dark"
     }
@@ -18537,8 +18631,8 @@ var _default = {
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "倚品美食馆",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#FCF9F2",
+    "backgroundColor": "#FCF9F2"
   },
   "subPackages": [{
     "root": "subpackageHome",
@@ -18628,9 +18722,9 @@ var _default = {
   },
   "uniIdRouter": {},
   "tabBar": {
-    "color": "#9A887D",
-    "selectedColor": "#815B49",
-    "backgroundColor": "#FFFDF7",
+    "color": "#A89285",
+    "selectedColor": "#7D533C",
+    "backgroundColor": "#FFFFFF",
     "list": [{
       "iconPath": "/static/tabbar/home.png",
       "selectedIconPath": "/static/tabbar/select-home.png",
@@ -18653,7 +18747,28 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 374:
+/***/ 38:
+/*!*******************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"stat"} ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  "appid": "__UNI__4004051"
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 395:
 /*!*********************************************************************************************************!*\
   !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/uni_modules/vk-uview-ui/libs/util/async-validator.js ***!
   \*********************************************************************************************************/
@@ -19831,11 +19946,11 @@ Schema.warning = warning;
 Schema.messages = messages;
 var _default = Schema;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 375)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 396)))
 
 /***/ }),
 
-/***/ 375:
+/***/ 396:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -19866,7 +19981,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 376);
+        if (!path) path = __webpack_require__(/*! path */ 397);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -19880,7 +19995,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 376:
+/***/ 397:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -20190,28 +20305,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 375)))
-
-/***/ }),
-
-/***/ 38:
-/*!*******************************************************************************!*\
-  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/pages.json?{"type":"stat"} ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  "appid": "__UNI__4004051"
-};
-exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 396)))
 
 /***/ }),
 
@@ -20497,7 +20591,7 @@ var _default = /*#__PURE__*/function () {
               _context.next = 25;
               break;
             }
-            return _context.abrupt("return", json[name]);
+            return _context.abrupt("return", []);
           case 25:
             return _context.abrupt("return", categories);
           case 28:
@@ -20505,7 +20599,7 @@ var _default = /*#__PURE__*/function () {
             _context.t0 = _context["catch"](3);
             console.error('Fetch menu failed', _context.t0);
             uni.hideLoading();
-            return _context.abrupt("return", json[name]);
+            return _context.abrupt("return", []);
           case 33:
             return _context.abrupt("return", new Promise(function (resolve) {
               setTimeout(function () {
@@ -20526,89 +20620,6 @@ var _default = /*#__PURE__*/function () {
 }();
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
-
-/***/ }),
-
-/***/ 454:
-/*!**********************************************************************************!*\
-  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/popup.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 455));
-// 定义 type 类型:弹出类型：top/bottom/center
-var config = {
-  // 顶部弹出
-  top: 'top',
-  // 底部弹出
-  bottom: 'bottom',
-  // 居中弹出
-  center: 'center',
-  // 消息提示
-  message: 'top',
-  // 对话框
-  dialog: 'center',
-  // 分享
-  share: 'bottom'
-};
-var _default = {
-  data: function data() {
-    return {
-      config: config
-    };
-  },
-  mixins: [_message.default]
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ 455:
-/*!************************************************************************************!*\
-  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/message.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  created: function created() {
-    if (this.type === 'message') {
-      // 不显示遮罩
-      this.maskShow = false;
-      // 获取子组件对象
-      this.childrenMsg = null;
-    }
-  },
-  methods: {
-    customOpen: function customOpen() {
-      if (this.childrenMsg) {
-        this.childrenMsg.open();
-      }
-    },
-    customClose: function customClose() {
-      if (this.childrenMsg) {
-        this.childrenMsg.close();
-      }
-    }
-  }
-};
-exports.default = _default;
 
 /***/ }),
 
@@ -20718,6 +20729,89 @@ var _default = [{
   "amount": 1,
   "createtime": '2026-01-01 14:00'
 }];
+exports.default = _default;
+
+/***/ }),
+
+/***/ 475:
+/*!**********************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/popup.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 476));
+// 定义 type 类型:弹出类型：top/bottom/center
+var config = {
+  // 顶部弹出
+  top: 'top',
+  // 底部弹出
+  bottom: 'bottom',
+  // 居中弹出
+  center: 'center',
+  // 消息提示
+  message: 'top',
+  // 对话框
+  dialog: 'center',
+  // 分享
+  share: 'bottom'
+};
+var _default = {
+  data: function data() {
+    return {
+      config: config
+    };
+  },
+  mixins: [_message.default]
+};
+exports.default = _default;
+
+/***/ }),
+
+/***/ 476:
+/*!************************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/components/uni-popup/message.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  created: function created() {
+    if (this.type === 'message') {
+      // 不显示遮罩
+      this.maskShow = false;
+      // 获取子组件对象
+      this.childrenMsg = null;
+    }
+  },
+  methods: {
+    customOpen: function customOpen() {
+      if (this.childrenMsg) {
+        this.childrenMsg.open();
+      }
+    },
+    customClose: function customClose() {
+      if (this.childrenMsg) {
+        this.childrenMsg.close();
+      }
+    }
+  }
+};
 exports.default = _default;
 
 /***/ }),
@@ -23366,12 +23460,7 @@ _vue.default.use(_vuex.default);
 var store = new _vuex.default.Store({
   state: {
     orderType: 'takein',
-    addressInfo: {
-      address: '北京市东城区王府井大街',
-      house_number: '88号',
-      name: 'Kaiyuan_Q',
-      phone: '18888888888'
-    },
+    addressInfo: {},
     remark: '',
     tableInfo: {
       tableNumber: '',
@@ -24801,6 +24890,448 @@ var _default = {
   hexToRgba: hexToRgba
 };
 exports.default = _default;
+
+/***/ }),
+
+/***/ 87:
+/*!***************************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/glass-motion.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+exports.glassPoint = glassPoint;
+exports.mapGlassPoint = mapGlassPoint;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+// Decorative touch feedback only: no gesture interception or navigation.
+function glassPoint(event) {
+  var touches = event && event.touches;
+  if (!touches || touches.length !== 1) return null;
+  var touch = touches[0];
+  return Number.isFinite(touch.clientX) && Number.isFinite(touch.clientY) ? {
+    x: touch.clientX,
+    y: touch.clientY
+  } : null;
+}
+function mapGlassPoint(point, rect) {
+  if (!point || !rect || !Number.isFinite(rect.left) || !Number.isFinite(rect.top) || !(rect.width > 0) || !(rect.height > 0)) return {
+    x: 50,
+    y: 50
+  };
+  var clamp = function clamp(value) {
+    return Math.round(Math.max(0, Math.min(100, value)));
+  };
+  return {
+    x: clamp((point.x - rect.left) / rect.width * 100),
+    y: clamp((point.y - rect.top) / rect.height * 100)
+  };
+}
+var _default = {
+  data: function data() {
+    return {
+      glassTouches: {}
+    };
+  },
+  computed: {
+    glassStyles: function glassStyles() {
+      var _this = this;
+      var styles = {};
+      ['dock', 'user', 'dine', 'takeout'].forEach(function (key) {
+        styles[key] = _this.glassStyle(key);
+      });
+      return styles;
+    }
+  },
+  onHide: function onHide() {
+    this.glassReset();
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.glassReset();
+  },
+  methods: {
+    glassPressed: function glassPressed(key) {
+      return !!(this.glassTouches[key] && this.glassTouches[key].pressed);
+    },
+    glassStyle: function glassStyle(key) {
+      var state = this.glassTouches[key] || {
+        x: 50,
+        y: 50
+      };
+      return {
+        '--glass-x': state.x + '%',
+        '--glass-y': state.y + '%',
+        '--glass-rotate': ((state.x - 50) / 65).toFixed(2) + 'deg'
+      };
+    },
+    glassStart: function glassStart(key, event) {
+      var _this2 = this;
+      var point = glassPoint(event);
+      if (!point) {
+        this.glassEnd(key);
+        return;
+      }
+      if (!this._glassSessions) this._glassSessions = {};
+      var session = {
+        origin: point,
+        point: point,
+        rect: null,
+        lastPaint: 0
+      };
+      this._glassSessions[key] = session;
+      this.$set(this.glassTouches, key, {
+        x: 50,
+        y: 50,
+        pressed: true
+      });
+      try {
+        uni.createSelectorQuery().in(this).select('.glass-touch-' + key).boundingClientRect(function (rect) {
+          // Late callbacks from released/cancelled touches cannot relight glass.
+          if (!_this2._glassSessions || _this2._glassSessions[key] !== session) return;
+          session.rect = rect;
+          _this2.$set(_this2.glassTouches, key, _objectSpread(_objectSpread({}, mapGlassPoint(session.point, rect)), {}, {
+            pressed: true
+          }));
+        }).exec();
+      } catch (error) {/* A centered highlight also works without node queries. */}
+    },
+    glassMove: function glassMove(key, event) {
+      var session = this._glassSessions && this._glassSessions[key];
+      if (!session) return;
+      var point = glassPoint(event);
+      if (!point) {
+        this.glassEnd(key);
+        return;
+      }
+      var dx = Math.abs(point.x - session.origin.x);
+      var dy = Math.abs(point.y - session.origin.y);
+      // Vertical scrolling takes over without leaving a card pressed.
+      if (dy > 14 && dy >= dx) {
+        this.glassEnd(key);
+        return;
+      }
+      session.point = point;
+      var now = Date.now();
+      if (now - session.lastPaint < 32) return;
+      session.lastPaint = now;
+      this.$set(this.glassTouches, key, _objectSpread(_objectSpread({}, mapGlassPoint(point, session.rect)), {}, {
+        pressed: true
+      }));
+    },
+    glassEnd: function glassEnd(key) {
+      if (this._glassSessions) delete this._glassSessions[key];
+      if (this.glassTouches[key]) this.$set(this.glassTouches, key, _objectSpread(_objectSpread({}, this.glassTouches[key]), {}, {
+        pressed: false
+      }));
+    },
+    glassReset: function glassReset() {
+      this._glassSessions = {};
+      this.glassTouches = {};
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+
+/***/ 88:
+/*!***********************************************************************!*\
+  !*** /Users/e/Desktop/程序设计/扫码微信点餐小程序_副本/点餐小程序的用户端/common/user-api.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, uniCloud) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getSessionUser = getSessionUser;
+exports.refreshSessionUser = refreshSessionUser;
+exports.userApi = userApi;
+exports.userDatabase = userDatabase;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 28));
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 31));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function getSessionUser() {
+  var token = uni.getStorageSync('sessionToken');
+  var user = uni.getStorageSync('userInfo');
+  return typeof token === 'string' && /^[a-f0-9]{64}$/.test(token) && user && user.openid ? user : null;
+}
+
+// Validate remembered sessions before showing account details. Network errors
+// hide unverified details for this visit but do not discard a valid login.
+function refreshSessionUser() {
+  return _refreshSessionUser.apply(this, arguments);
+}
+function _refreshSessionUser() {
+  _refreshSessionUser = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee6() {
+    var token, result, user;
+    return _regenerator.default.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            if (getSessionUser()) {
+              _context6.next = 2;
+              break;
+            }
+            return _context6.abrupt("return", null);
+          case 2:
+            token = uni.getStorageSync('sessionToken');
+            _context6.prev = 3;
+            _context6.next = 6;
+            return userApi('read', {
+              collection: 'wx_users'
+            });
+          case 6:
+            result = _context6.sent;
+            if (!(uni.getStorageSync('sessionToken') !== token)) {
+              _context6.next = 9;
+              break;
+            }
+            return _context6.abrupt("return", null);
+          case 9:
+            user = result && result.data && result.data[0];
+            if (!(!user || !user.openid)) {
+              _context6.next = 12;
+              break;
+            }
+            return _context6.abrupt("return", null);
+          case 12:
+            uni.setStorageSync('userInfo', user);
+            return _context6.abrupt("return", user);
+          case 16:
+            _context6.prev = 16;
+            _context6.t0 = _context6["catch"](3);
+            return _context6.abrupt("return", null);
+          case 19:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6, null, [[3, 16]]);
+  }));
+  return _refreshSessionUser.apply(this, arguments);
+}
+function userApi(_x) {
+  return _userApi.apply(this, arguments);
+} // Keep existing page result shapes while moving private collections behind cloud authentication.
+function _userApi() {
+  _userApi = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee7(action) {
+    var data,
+      token,
+      response,
+      result,
+      _args7 = arguments;
+    return _regenerator.default.wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            data = _args7.length > 1 && _args7[1] !== undefined ? _args7[1] : {};
+            token = uni.getStorageSync('sessionToken');
+            if (token) {
+              _context7.next = 4;
+              break;
+            }
+            throw new Error('请先重新登录');
+          case 4:
+            _context7.next = 6;
+            return uniCloud.callFunction({
+              name: 'user-service',
+              data: _objectSpread(_objectSpread({}, data), {}, {
+                action: action,
+                token: token
+              })
+            });
+          case 6:
+            response = _context7.sent;
+            result = response.result || {};
+            if (result.success) {
+              _context7.next = 11;
+              break;
+            }
+            if (result.code === 'UNAUTHORIZED' && uni.getStorageSync('sessionToken') === token) {
+              uni.removeStorageSync('sessionToken');
+              uni.removeStorageSync('userInfo');
+            }
+            throw new Error(result.message || '操作失败，请重试');
+          case 11:
+            return _context7.abrupt("return", result.result);
+          case 12:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7);
+  }));
+  return _userApi.apply(this, arguments);
+}
+function userDatabase() {
+  return {
+    collection: function collection(name) {
+      if (!['order', 'wx_users', 'user_coupons'].includes(name)) return uniCloud.database().collection(name);
+      var id = '',
+        filter = {},
+        _limit = 1000;
+      var query = {
+        doc: function doc(value) {
+          id = value;
+          return query;
+        },
+        where: function where(value) {
+          filter = value;
+          return query;
+        },
+        orderBy: function orderBy() {
+          return query;
+        },
+        limit: function limit(value) {
+          _limit = value;
+          return query;
+        },
+        get: function get() {
+          return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+            return _regenerator.default.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return userApi('read', {
+                      collection: name,
+                      id: id,
+                      filter: filter,
+                      limit: _limit
+                    });
+                  case 2:
+                    _context.t0 = _context.sent;
+                    return _context.abrupt("return", {
+                      result: _context.t0
+                    });
+                  case 4:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee);
+          }))();
+        },
+        count: function count() {
+          return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+            var result;
+            return _regenerator.default.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
+                    return userApi('read', {
+                      collection: name,
+                      filter: filter
+                    });
+                  case 2:
+                    result = _context2.sent;
+                    return _context2.abrupt("return", {
+                      result: {
+                        total: result.data.length
+                      }
+                    });
+                  case 4:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2);
+          }))();
+        },
+        add: function add(data) {
+          return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+            return _regenerator.default.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    _context3.next = 2;
+                    return userApi(name === 'order' ? 'createOrder' : 'claimCoupon', {
+                      data: data
+                    });
+                  case 2:
+                    _context3.t0 = _context3.sent;
+                    return _context3.abrupt("return", {
+                      result: _context3.t0
+                    });
+                  case 4:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3);
+          }))();
+        },
+        update: function update(data) {
+          return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4() {
+            return _regenerator.default.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.next = 2;
+                    return userApi(name === 'wx_users' ? 'updateAvatar' : 'updateOrder', {
+                      id: id,
+                      data: data
+                    });
+                  case 2:
+                    _context4.t0 = _context4.sent;
+                    return _context4.abrupt("return", {
+                      result: _context4.t0
+                    });
+                  case 4:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4);
+          }))();
+        },
+        remove: function remove() {
+          return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5() {
+            return _regenerator.default.wrap(function _callee5$(_context5) {
+              while (1) {
+                switch (_context5.prev = _context5.next) {
+                  case 0:
+                    _context5.next = 2;
+                    return userApi('hideOrder', {
+                      id: id
+                    });
+                  case 2:
+                    _context5.t0 = _context5.sent;
+                    return _context5.abrupt("return", {
+                      result: _context5.t0
+                    });
+                  case 4:
+                  case "end":
+                    return _context5.stop();
+                }
+              }
+            }, _callee5);
+          }))();
+        }
+      };
+      return query;
+    }
+  };
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 27)["uniCloud"]))
 
 /***/ }),
 

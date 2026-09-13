@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "yier-art": "/components/yier-art/yier-art"
+  }
+}

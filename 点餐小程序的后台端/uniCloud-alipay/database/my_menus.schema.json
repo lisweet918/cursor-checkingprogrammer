@@ -1,37 +1,39 @@
 {
-	"bsonType": "object",
-	"required": ["title"],
-	"permission": {
-		"read": true,
-		"create": true,
-		"update": true,
-		"delete": true
-	},
-	"properties": {
-		"_id": {
-			"description": "ID，系统自动生成"
-		},
-		"title": {
-			"bsonType": "string",
-			"description": "菜单名称",
-			"title": "菜单名称"
-		},
-		"page_path": {
-			"bsonType": "string",
-			"description": "页面路径，例如 /pages/xxx/xxx",
-			"title": "页面路径"
-		},
-		"is_show": {
-			"bsonType": "bool",
-			"description": "是否显示",
-			"title": "是否显示",
-			"defaultValue": true
-		},
-		"sort": {
-			"bsonType": "int",
-			"description": "排序值（值越小越靠前）",
-			"title": "排序",
-			"defaultValue": 100
-		}
-	}
+  "bsonType": "object",
+  "required": [
+    "title"
+  ],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "title": {
+      "bsonType": "string",
+      "description": "菜单名称",
+      "title": "菜单名称"
+    },
+    "page_path": {
+      "bsonType": "string",
+      "description": "页面路径，例如 /pages/xxx/xxx",
+      "title": "页面路径"
+    },
+    "is_show": {
+      "bsonType": "bool",
+      "description": "是否显示",
+      "title": "是否显示",
+      "defaultValue": true
+    },
+    "sort": {
+      "bsonType": "int",
+      "description": "排序值（值越小越靠前）",
+      "title": "排序",
+      "defaultValue": 100
+    }
+  }
 }

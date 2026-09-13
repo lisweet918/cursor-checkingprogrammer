@@ -1,0 +1,22 @@
+// Blur stays stationary; release animates transform and opacity only.
+@mixin glass-touch-motion {
+	transition: transform .62s cubic-bezier(.18, 1.55, .3, 1);
+	transform-origin: center;
+	&.glass-motion--pressed {
+		transform: scale(.966) rotate(var(--glass-rotate, 0deg));
+		transition-duration: .12s;
+		transition-timing-function: ease-out;
+	}
+	.glass-shimmer {
+		position: absolute; top: 2rpx; right: 2rpx; bottom: 2rpx; left: 2rpx;
+		border-radius: inherit; pointer-events: none; z-index: 0;
+		background: radial-gradient(ellipse at var(--glass-x, 50%) var(--glass-y, 50%), rgba(255,255,255,.88), rgba(230,255,250,.28) 24%, transparent 61%), linear-gradient(115deg, rgba(188,229,255,.28), transparent 38%, rgba(255,210,226,.28) 75%, rgba(249,241,187,.2));
+		opacity: 0; transition: opacity .48s ease-out;
+	}
+	&.glass-motion--pressed .glass-shimmer { opacity: .68; transition-duration: .1s; }
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+		&.glass-motion--pressed { transform: none; }
+		.glass-shimmer { transition: none; background: rgba(255,255,255,.14); }
+	}
+}

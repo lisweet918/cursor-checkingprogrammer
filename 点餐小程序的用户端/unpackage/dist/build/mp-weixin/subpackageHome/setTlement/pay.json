@@ -1,7 +1,9 @@
 {
   "navigationBarTitleText": "结算订单",
   "usingComponents": {
+    "yier-feedback": "/components/yier-feedback/yier-feedback",
     "u-icon": "/uni_modules/vk-uview-ui/components/u-icon/u-icon",
+    "yier-art": "/components/yier-art/yier-art",
     "u-image": "/uni_modules/vk-uview-ui/components/u-image/u-image",
     "list-cell": "/components/list-cell/list-cell",
     "u-input": "/uni_modules/vk-uview-ui/components/u-input/u-input",

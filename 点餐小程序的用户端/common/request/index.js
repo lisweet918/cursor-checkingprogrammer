@@ -52,8 +52,8 @@ export default async (name, loading = true) => {
 						safeImages = safeImages.map(img => {
 							return { ...img, url: urlMap[img.url] || img.url };
 						});
-						return { 
-							...p, 
+						return {
+							...p,
 							id: p._id,
 							labels: p.labels || [],
 							materials: p.materials || [],
@@ -70,16 +70,16 @@ export default async (name, loading = true) => {
 			}).filter(cat => cat.products.length > 0) // Optionally hide empty categories
 
 			uni.hideLoading()
-			
+
 			// 如果数据库是空的，使用默认静态数据兜底
 			if (categories.length === 0) {
-				return json[name]
+				return []
 			}
 			return categories
 		} catch (e) {
 			console.error('Fetch menu failed', e)
 			uni.hideLoading()
-			return json[name] // 报错兜底
+			return [] // 云端失败时不展示可下单的测试菜品
 		}
 	}
 

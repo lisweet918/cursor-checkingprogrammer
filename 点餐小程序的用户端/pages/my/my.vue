@@ -1,77 +1,65 @@
 <template>
-	<view class="wrap">
-		<view class="wrap__background">
-			<view class="wrap__background__bubble wrap__background__bubble--one"></view>
-			<view class="wrap__background__bubble wrap__background__bubble--two"></view>
-			<view class="wrap__background__bubble wrap__background__bubble--three"></view>
-		</view>
-
+	<view class="wrap glass-my">
+		<glass-tabbar ref="glassTabbar" :selected="2" class="page-glass-nav" />
 		<!-- 自定义导航栏：u-navbar 保留顶部安全区 -->
 		<view class="wrap__nav">
 			<u-navbar :background="background" :border-bottom="false" :is-back="false"></u-navbar>
 		</view>
 
 		<view class="wrap__content">
-			<!-- 我的小窝主题头 -->
+			<!-- 我的小餐桌主题头 -->
 			<view class="wrap__hero">
 				<view class="wrap__hero__copy">
-					<view class="wrap__hero__eyebrow">YIER · BUBU</view>
-					<view class="wrap__hero__title">我的快乐小窝</view>
-					<view class="wrap__hero__subtitle">把好吃的和好心情都收进来</view>
+					<view class="wrap__hero__eyebrow">YIER & BUBU · MEMBER</view>
+					<view class="wrap__hero__title">我的美食小窝</view>
+					<view class="wrap__hero__subtitle">把喜欢的美味和好心情都存进来 ~</view>
 				</view>
 				<view class="wrap__hero__art">
-					<yier-art character="pair" :size="250" />
+					<yier-art character="pair" :size="200" radius="24" />
 				</view>
 			</view>
 
-			<!-- 用户会员卡 -->
+			<!-- 用户会员名牌 -->
 			<view class="wrap__userinfo" @click="handleUserInfo">
 				<view class="wrap__userinfo__avatar">
 					<u-avatar :src="displayAvatar" size="108"></u-avatar>
-					<view class="wrap__userinfo__avatar__badge">♥</view>
+					<view class="wrap__userinfo__avatar__badge">🐾</view>
 				</view>
 				<view class="wrap__userinfo__main">
-					<view class="wrap__userinfo__hello">{{ userinfo.nickname ? '欢迎回来' : '你好呀，新朋友' }}</view>
-					<view class="wrap__userinfo__name">{{ userinfo.nickname || '点击登录快乐小窝' }}</view>
+					<view class="wrap__userinfo__hello">{{ userinfo.nickname ? '欢迎回来' : '你好呀，新来的小吃货' }}</view>
+					<view class="wrap__userinfo__name">{{ userinfo.nickname || '点击登录小餐桌' }}</view>
 					<view class="wrap__userinfo__tag">
 						<text class="wrap__userinfo__tag__dot"></text>
-						<text>{{ userinfo.nickname ? '快乐小窝会员' : '登录后查看会员权益' }}</text>
+						<text>{{ userinfo.nickname ? '超级饭搭子认证' : '登录后查看吃货权益' }}</text>
 					</view>
 				</view>
 				<view class="wrap__userinfo__arrow">
-					<u-icon name="arrow-right" size="28" color="#815B49"></u-icon>
+					<u-icon name="arrow-right" size="28" color="#7D533C"></u-icon>
 				</view>
 			</view>
 
-			<!-- 积分和优惠券小票 -->
+			<!-- 积分和优惠券双子马卡龙卡片 -->
 			<view class="wrap__myasset">
-				<view class="wrap__myasset__stamp wrap__myasset__stamp--left"></view>
-				<view class="wrap__myasset__points">
+				<view class="wrap__myasset__tile wrap__myasset__tile--points">
 					<view class="wrap__myasset__label">
 						<view class="wrap__myasset__icon wrap__myasset__icon--points">★</view>
 						<text>会员积分</text>
 					</view>
 					<view class="wrap__myasset__value">
 						<text>{{ userinfo.points || 0 }}</text>
-						<text>分</text>
+						<text class="wrap__myasset__unit">分</text>
 					</view>
 				</view>
-				<view class="wrap__myasset__group">
-					<view class="wrap__myasset__group__notch wrap__myasset__group__notch--top"></view>
-					<view class="wrap__myasset__group__line"></view>
-					<view class="wrap__myasset__group__notch wrap__myasset__group__notch--bottom"></view>
-				</view>
-				<view class="wrap__myasset__coupon" @click.stop="handleMyCoupon">
+				<view class="wrap__myasset__tile wrap__myasset__tile--coupon" @click.stop="handleMyCoupon">
 					<view class="wrap__myasset__label">
-						<view class="wrap__myasset__icon wrap__myasset__icon--coupon">♥</view>
+						<view class="wrap__myasset__icon wrap__myasset__icon--coupon">🏷️</view>
 						<text>优惠券</text>
 					</view>
 					<view class="wrap__myasset__value">
 						<text>{{ couponCount }}</text>
-						<text>张</text>
+						<text class="wrap__myasset__unit">张</text>
 					</view>
 				</view>
-				<view class="wrap__myasset__stamp wrap__myasset__stamp--right"></view>
 			</view>
 
 			<!-- 订单快捷入口 -->
@@ -79,74 +67,73 @@
 				<view class="wrap__order__head">
 					<view>
 						<view class="wrap__order__head__title">我的订单</view>
-						<view class="wrap__order__head__caption">ORDER NOTES</view>
+						<view class="wrap__order__head__caption">ORDER STATUS</view>
 					</view>
 					<view class="wrap__order__head__more" @click="goOrderList">
 						<text>全部订单</text>
-						<u-icon name="arrow-right" size="24" color="#815B49"></u-icon>
+						<u-icon name="arrow-right" size="24" color="#7D533C"></u-icon>
 					</view>
 				</view>
 				<view class="wrap__order__grid">
 					<view class="wrap__order__grid__item" @click="goOrderList">
-						<view class="wrap__order__grid__icon wrap__order__grid__icon--blue">
-							<u-icon name="clock" size="42" color="#65483D"></u-icon>
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--yellow">
+							<u-icon name="clock" size="40" color="#9C6E23"></u-icon>
 						</view>
 						<view>待接单</view>
 					</view>
 					<view class="wrap__order__grid__item" @click="goOrderList">
-						<view class="wrap__order__grid__icon wrap__order__grid__icon--pink">
-							<u-icon name="car" size="42" color="#65483D"></u-icon>
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--peach">
+							<u-icon name="car" size="40" color="#D1523E"></u-icon>
 						</view>
 						<view>进行中</view>
 					</view>
 					<view class="wrap__order__grid__item" @click="goOrderList">
-						<view class="wrap__order__grid__icon wrap__order__grid__icon--cream">
-							<u-icon name="checkmark-circle" size="42" color="#65483D"></u-icon>
+						<view class="wrap__order__grid__icon wrap__order__grid__icon--green">
+							<u-icon name="checkmark-circle" size="40" color="#4D885B"></u-icon>
 						</view>
 						<view>已完成</view>
 					</view>
 					<view class="wrap__order__grid__item" @click="handleMyCoupon">
 						<view class="wrap__order__grid__icon wrap__order__grid__icon--brown">
-							<u-icon name="coupon" size="42" color="#FFFDF7"></u-icon>
+							<u-icon name="coupon" size="40" color="#7D533C"></u-icon>
 						</view>
 						<view>优惠券</view>
 					</view>
 				</view>
 			</view>
 
-			<!-- 动态工具入口 -->
+			<!-- 常用工具入口 -->
 			<view class="wrap__cell" v-if="dynamicMenus.length || userinfo.nickname">
 				<view class="wrap__cell__head">
-					<text class="wrap__cell__head__title">小窝工具箱</text>
-					<text class="wrap__cell__head__caption">MY TOOLS</text>
+					<text class="wrap__cell__head__title">更多服务</text>
+					<text class="wrap__cell__head__caption">SERVICES</text>
 				</view>
 				<view class="wrap__cell__item" v-for="(item, index) in dynamicMenus" :key="index"
 					@click="handleDynamicMenu(item.page_path)">
 					<view class="wrap__cell__item__icon">
-						<u-icon name="grid" size="30" color="#815B49"></u-icon>
+						<u-icon name="grid" size="30" color="#7D533C"></u-icon>
 					</view>
 					<text class="wrap__cell__item__title">{{ item.title }}</text>
-					<u-icon name="arrow-right" size="25" color="#B99F94"></u-icon>
+					<u-icon name="arrow-right" size="25" color="#B89F93"></u-icon>
 				</view>
 				<view class="wrap__cell__item wrap__cell__item--logout" v-if="userinfo.nickname" @click="logout">
 					<view class="wrap__cell__item__icon wrap__cell__item__icon--pink">
-						<u-icon name="minus-circle" size="30" color="#815B49"></u-icon>
+						<u-icon name="minus-circle" size="30" color="#C25648"></u-icon>
 					</view>
 					<text class="wrap__cell__item__title">退出登录</text>
-					<u-icon name="arrow-right" size="25" color="#B99F94"></u-icon>
+					<u-icon name="arrow-right" size="25" color="#B89F93"></u-icon>
 				</view>
 			</view>
 
 			<!-- 底部角色寄语 -->
 			<view class="wrap__footer">
 				<view class="wrap__footer__art">
-					<yier-art character="pair" :size="300" />
+					<yier-art character="pair" :size="140" radius="24" />
 				</view>
 				<view class="wrap__footer__message">
-					<text>今天也要和一二布布</text>
-					<text>一起好好吃饭呀 ♥</text>
+					<text>一二布布陪你认真吃好每一餐</text>
+					<text class="wrap__footer__sub">好好吃饭，小尾巴摇摇 🐾</text>
 				</view>
-				<view class="wrap__footer__dots">· · ·</view>
 			</view>
 		</view>
 	</view>
@@ -155,6 +142,8 @@
 
 
 <script>
+import GlassTabbar from '@/components/glass-tabbar/glass-tabbar.vue';
+import { userDatabase, refreshSessionUser } from '@/common/user-api.js'
 	import YierArt from '@/components/yier-art/yier-art.vue';
 
 		// 定义订单状态常量，方便维护
@@ -177,6 +166,7 @@
 
 		export default {
 			components: {
+				GlassTabbar,
 				YierArt
 			},
 
@@ -192,26 +182,24 @@
 				dynamicMenus: [],
 
 					background: {
-
-						backgroundColor: '#F5FCFC'
-
-				},
-
-				titleStyle: {
-
-					fontSize: '29rpx',
-
-						color: '#65483D'
-
-				}
+						backgroundColor: '#FCF9F2'
+					},
+					titleStyle: {
+						fontSize: '29rpx',
+						color: '#5A3F33'
+					}
 
 			}
 
 		},
 
-		onShow() {
+		async onShow() {
+			this.$nextTick(() => { if (this.$refs.glassTabbar) this.$refs.glassTabbar.reveal(); });
 
-			const userInfo = uni.getStorageSync('userInfo');
+			this.userinfo = {};
+			this.displayAvatar = '/static/logo.jpg';
+			this.couponCount = 0;
+			const userInfo = await refreshSessionUser();
 
 			if (userInfo) {
 
@@ -219,7 +207,6 @@
 
 				this.resolveAvatar();
 
-				this.syncLatestPoints();
 				this.loadCouponCount();
 
 			} else {
@@ -275,7 +262,7 @@
 
 				try {
 
-					const db = uniCloud.database();
+					const db = userDatabase();
 
 					const res = await db.collection('wx_users').doc(this.userinfo._id).get();
 
@@ -301,7 +288,7 @@
 
 				try {
 
-					const db = uniCloud.database();
+					const db = userDatabase();
 
 					const res = await db.collection('my_menus').where({ is_show: true }).orderBy('sort', 'asc').get();
 
@@ -344,10 +331,10 @@
 			async loadCouponCount() {
 				if (!this.userinfo.openid) { this.couponCount = 0; return; }
 				try {
-					const db = uniCloud.database();
+					const db = userDatabase();
 					const now = Date.now();
 					const res = await db.collection('user_coupons')
-						.where(`user_id == "${this.userinfo.openid}" && status == 0 && expire_time > ${now}`)
+						.where({ status: 0, unexpired: true })
 						.count();
 					this.couponCount = res.result.total || 0;
 				} catch (e) {
@@ -399,6 +386,9 @@
 						if (res.confirm) {
 
 							uni.removeStorageSync('userInfo');
+ uni.removeStorageSync('sessionToken');
+ uni.removeStorageSync('cart');
+ this.$store.commit('SET_ADDRESS', {});
 
 							this.userinfo = {};
 
@@ -415,10 +405,9 @@
 
 
 			handleMyOrder(status) {
+ uni.switchTab({
 
-				uni.navigateTo({
-
-					url: `/subpackageMy/myOrder/my-order?status=${status}`
+					url: '/pages/order/order'
 
 				});
 
@@ -435,5 +424,7 @@
 <style lang="scss" scoped>
 
 	@import '@/common/scss/my/my.scss';
+	@import '@/common/scss/liquid-glass-pages.scss';
+	@include glass-my-page;
 
 </style>

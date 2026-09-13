@@ -1,27 +1,33 @@
 <template>
 	<view class="yier-art" :class="'yier-art--' + character" :style="frameStyle" aria-hidden="true">
-		<image class="yier-art__image" src="/static/img/backgrounds/yier-bubu-original-bg.jpg"
+		<image class="yier-art__image" :src="character === 'peek' ? '/static/img/home/yier-bubu-banner.jpg' : '/static/img/backgrounds/yier-bubu-original-bg.jpg'"
 			mode="scaleToFill" :style="imageStyle"></image>
 	</view>
 </template>
 
 <script>
-// Display windows reuse the original illustration without changing the source image.
 export default {
 	name: 'YierArt',
 	props: {
 		character: { type: String, default: 'pair' },
-		size: { type: Number, default: 240 }
+		size: { type: Number, default: 240 },
+		radius: { type: [Number, String], default: '' }
 	},
 	computed: {
 		frameStyle() {
-			// WeChat requires a serialized style string for computed style bindings.
-			return `width:${this.size}rpx;height:${this.size * (this.character === 'pair' ? 0.5 : 1)}rpx;`;
+			const isPair = this.character === 'pair';
+			const h = isPair ? this.size * 0.56 : this.size;
+			const r = this.radius !== '' ? `${this.radius}rpx` : (isPair ? '32rpx' : '50%');
+			return `width:${this.size}rpx;height:${h}rpx;border-radius:${r};`;
 		},
 		imageStyle() {
+			// Reuse the original eager-expression artwork without changing the image.
+			if (this.character === 'peek') return `width:${this.size}rpx;height:${this.size * 1022 / 981}rpx;top:0;left:0;`;
 			const scale = this.character === 'pair' ? this.size / 700 : this.size / 350;
-			const left = this.character === 'bubu' ? -350 * scale : 0;
-			return `width:${700 * scale}rpx;height:${1515 * scale}rpx;top:${-930 * scale}rpx;left:${left}rpx;`;
+			// In original image: Left half is Bubu (white bear), Right half is Yier (brown bear)
+			const left = this.character === 'yier' ? -350 * scale : 0;
+			const top = this.character === 'pair' ? -910 * scale : -920 * scale;
+			return `width:${700 * scale}rpx;height:${1515 * scale}rpx;top:${top}rpx;left:${left}rpx;`;
 		}
 	}
 };
@@ -32,10 +38,23 @@ export default {
 	position: relative;
 	flex-shrink: 0;
 	overflow: hidden;
-	background: #B2F1FA;
-	border-radius: 28rpx;
+	background: #8ED6EF;
 	pointer-events: none;
-	&--yier, &--bubu { border-radius: 50%; }
-	&__image { position: absolute; max-width: none; }
+	box-shadow: 0 6rpx 16rpx rgba(125, 83, 60, 0.08);
+
+	&--pair {
+		border: 4rpx solid #FFFFFF;
+	}
+
+	&--yier,
+	&--bubu,
+	&--peek {
+		border: 4rpx solid #FFFFFF;
+	}
+
+	&__image {
+		position: absolute;
+		max-width: none;
+	}
 }
 </style>

@@ -6,12 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
 		orderType: 'takein',
-		addressInfo: {
-			address:'北京市东城区王府井大街',
-			house_number:'88号',
-			name:'Kaiyuan_Q',
-			phone:'18888888888'
-		},
+		addressInfo: {},
 		remark: '',
 		tableInfo: {
 			tableNumber: '',

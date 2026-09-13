@@ -42,24 +42,32 @@
 							fail: err => reject(err)
 						});
 					});
-					
-					const res = await uniCloud.callFunction({
+
+					let avatar = this.avatarUrl
+ if (avatar && !avatar.startsWith('/static/') && !avatar.startsWith('cloud://') && !avatar.startsWith('https://')) {
+  const upload = await uniCloud.uploadFile({ filePath: avatar, cloudPath: 'avatar/' + Date.now() + '-' + Math.random().toString(36).slice(2) + '.jpg' })
+  avatar = upload.fileID
+ }
+ const res = await uniCloud.callFunction({
 						name: 'wx-login',
 						data: {
 							code: loginRes.code,
 							nickname: this.nickname,
-							avatar: this.avatarUrl
+							avatar
 						}
 					});
-					
-					if (res.result && res.result.success) {
+
+					if (res.result && res.result.success && res.result.token) {
 						uni.setStorageSync('userInfo', res.result.user);
+ uni.setStorageSync('sessionToken', res.result.token);
 						uni.showToast({ title: '登录成功' });
 						setTimeout(() => {
 							uni.navigateBack();
 						}, 1000);
 					} else {
-						throw new Error(res.result.msg || '登录失败');
+						throw new Error((res.result && res.result.success)
+							? '云端登录服务尚未更新，暂时无法下单'
+							: ((res.result && res.result.msg) || '登录失败'));
 					}
 				} catch (e) {
 					console.error(e);

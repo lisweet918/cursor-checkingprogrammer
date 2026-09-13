@@ -1,8 +1,12 @@
 'use strict';
 const db = uniCloud.database();
+const DEFAULT_NOTIFICATION_TOKEN = 'order_notification_secret_token_2026';
 
 exports.main = async (event, context) => {
-	const { orderData } = event;
+	const expectedToken = process.env.ORDER_NOTIFICATION_TOKEN || DEFAULT_NOTIFICATION_TOKEN;
+	if (!event.internalToken || event.internalToken !== expectedToken) return {success:false,msg:'无权发送通知'};
+ const orderRes = await db.collection('order').doc(String(event.orderId || '')).get();
+ const orderData = orderRes.data && orderRes.data[0];
 	if (!orderData) return { success: false, msg: '无订单数据' };
 
 	try {
@@ -39,7 +43,7 @@ exports.main = async (event, context) => {
 		}
 
 		// 3. 发送 HTTP 请求到 PushPlus
-		const res = await uniCloud.httpclient.request('http://www.pushplus.plus/send', {
+		const res = await uniCloud.httpclient.request('https://www.pushplus.plus/send', {
 			method: 'POST',
 			contentType: 'json',
 			data: {

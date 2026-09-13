@@ -1,6 +1,7 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
+    "glass-tabbar": "/components/glass-tabbar/glass-tabbar",
     "u-navbar": "/uni_modules/vk-uview-ui/components/u-navbar/u-navbar",
     "yier-art": "/components/yier-art/yier-art",
     "u-avatar": "/uni_modules/vk-uview-ui/components/u-avatar/u-avatar",

@@ -40,13 +40,13 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "倚品美食馆",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#FCF9F2",
+    "backgroundColor": "#FCF9F2"
   },
   "tabBar": {
-    "color": "#9A887D",
-    "selectedColor": "#815B49",
-    "backgroundColor": "#FFFDF7",
+    "color": "#A89285",
+    "selectedColor": "#7D533C",
+    "backgroundColor": "#FFFFFF",
     "list": [
       {
         "iconPath": "/static/tabbar/home.png",

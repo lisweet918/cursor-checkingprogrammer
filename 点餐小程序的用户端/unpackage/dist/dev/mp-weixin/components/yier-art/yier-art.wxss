@@ -53,12 +53,15 @@
   position: relative;
   flex-shrink: 0;
   overflow: hidden;
-  background: #B2F1FA;
-  border-radius: 28rpx;
+  background: #8ED6EF;
   pointer-events: none;
+  box-shadow: 0 6rpx 16rpx rgba(125, 83, 60, 0.08);
 }
-.yier-art--yier.data-v-38e4c764, .yier-art--bubu.data-v-38e4c764 {
-  border-radius: 50%;
+.yier-art--pair.data-v-38e4c764 {
+  border: 4rpx solid #FFFFFF;
+}
+.yier-art--yier.data-v-38e4c764, .yier-art--bubu.data-v-38e4c764, .yier-art--peek.data-v-38e4c764 {
+  border: 4rpx solid #FFFFFF;
 }
 .yier-art__image.data-v-38e4c764 {
   position: absolute;

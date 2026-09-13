@@ -140,35 +140,36 @@
 	</view>
 </template>
 
-<script setup>
-	import {
-		ref
-	} from 'vue';
+<script>
+export default {
+ data() {
 
-	const current = ref(0);
+
+
+	const current = 0;
 	const tabsList = [{
 		name: '配送中'
 	}, {
 		name: '已完成'
 	}];
-	const popupShow = ref(false);
-	const deliveryShow = ref(false);
+	const popupShow = false;
+	const deliveryShow = false;
 
 	// --- 2. 固定模拟数据 ---
 
 	// 骑手信息
-	const riderInfo = ref({
+	const riderInfo = {
 		nickname: 'Kaiyuan_Q',
 		phone: '13888888888'
-	});
+	};
 
 	// 统计数据
-	const statistics = ref({
+	const statistics = {
 		total_order: 156,
 		today_order: 12,
 		yesterday_order: 18,
 		month_order: 142
-	});
+	};
 
 	const imgUrls = [
 		'/static/img/home/icon-1.jpg',
@@ -176,7 +177,7 @@
 		'/static/img/home/icon-1.jpg'
 	];
 
-	const deliveringOrders = ref([{
+	const deliveringOrders = [{
 			id: 1024,
 			status: '1',
 			createtime: '2026-03-31 12:30',
@@ -225,10 +226,10 @@
 				materials_text: '鸡肉, 土豆, 青椒'
 			}]
 		}
-	]);
+	];
 
 	// 已完成订单列表
-	const completedOrders = ref([{
+	const completedOrders = [{
 		id: 1020,
 		status: '1',
 		sendreach_time: '2026-03-31 11:20',
@@ -237,50 +238,54 @@
 		phone: '137****9012',
 		delivery_images: imgUrls[0] + ',' + imgUrls[1],
 		delivery_remark: '放在门口鞋柜上了，顾客没开门，已拍照留证。'
-	}]);
+	}];
 
-	const currentOrderList = ref(deliveringOrders.value);
+	const currentOrderList = deliveringOrders;
 
-	const currentOrder = ref({});
-	const currentDeliveryOrder = ref({});
-	
-	const fileList = ref([]);
-	const deliveryRemark = ref('');
-	const canSubmit = ref(false);
+	const currentOrder = {};
+	const currentDeliveryOrder = {};
 
-	const change = (index) => {
-		current.value = index;
-		currentOrderList.value = index === 0 ? deliveringOrders.value : completedOrders.value;
-	};
+	const fileList = [];
+	const deliveryRemark = '';
+	const canSubmit = false;
 
-	const previewImage = (current, urls) => {
+
+return { current, tabsList, popupShow, deliveryShow, riderInfo, statistics, imgUrls, deliveringOrders, completedOrders, currentOrderList, currentOrder, currentDeliveryOrder, fileList, deliveryRemark, canSubmit };
+},
+methods: {
+change(index) {
+		this.current = index;
+		this.currentOrderList = index === 0 ? this.deliveringOrders : this.completedOrders;
+	},
+
+	previewImage(current, urls) {
 		uni.previewImage({
 			current,
 			urls
 		});
-	};
+	},
 
-	const navigation = (item) => {
+	navigation(item) {
 		uni.showToast({
 			title: '正在打开地图导航至: ' + item.address,
 			icon: 'none'
 		});
-	};
+	},
 
 	// 模拟联系顾客
-	const contactCustomers = (item) => {
+	contactCustomers(item) {
 		uni.showToast({
 			title: '正在拨打: ' + item.phone,
 			icon: 'none'
 		});
-	};
+	},
 
 	// 打开订单详情
-	const popupModal = (item) => {
+	popupModal(item) {
 		if (item.commodity_list) {
-			currentOrder.value = item;
+			this.currentOrder = item;
 		} else {
-			currentOrder.value = {
+			this.currentOrder = {
 				...item,
 				shop_num: 1,
 				price: '20.00',
@@ -288,26 +293,26 @@
 					name: '随机商品',
 					price: '20.00',
 					number: 1,
-					image: imgUrls[0],
+					image: this.imgUrls[0],
 					materials_text: ''
 				}]
 			};
 		}
-		popupShow.value = true;
-	};
+		this.popupShow = true;
+	},
 
-	const confirmDelivery = (item) => {
-		currentDeliveryOrder.value = item;
-		resetUploadData();
-		deliveryShow.value = true;
-	};
+	confirmDelivery(item) {
+		this.currentDeliveryOrder = item;
+		this.resetUploadData();
+		this.deliveryShow = true;
+	},
 
-	const onListChange = (lists) => {
-		canSubmit.value = lists && lists.length > 0;
-	};
+	onListChange(lists) {
+		this.canSubmit = lists && lists.length > 0;
+	},
 
-	const handleSubmitDelivery = () => {
-		if (!canSubmit.value) {
+	handleSubmitDelivery() {
+		if (!this.canSubmit) {
 			uni.showToast({
 				title: '请至少上传一张送达图片',
 				icon: 'none'
@@ -327,23 +332,26 @@
 			});
 
 			const newCompleted = {
-				...currentDeliveryOrder.value,
+				...this.currentDeliveryOrder,
 				sendreach_time: '2026-03-31 ' + new Date().getHours() + ':' + new Date().getMinutes(),
-				delivery_images: imgUrls[0],
-				delivery_remark: deliveryRemark.value
+				delivery_images: this.imgUrls[0],
+				delivery_remark: this.deliveryRemark
 			};
-			
-			completedOrders.value.unshift(newCompleted);
 
-			deliveryShow.value = false;
+			this.completedOrders.unshift(newCompleted);
+
+			this.deliveryShow = false;
 		}, 1000);
-	};
+	},
 
-	const resetUploadData = () => {
-		fileList.value = [];
-		deliveryRemark.value = '';
-		canSubmit.value = false;
-	};
+	resetUploadData() {
+		this.fileList = [];
+		this.deliveryRemark = '';
+		this.canSubmit = false;
+	},
+
+}
+}
 </script>
 
 <style lang="scss" scoped>

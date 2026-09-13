@@ -1,5 +1,5 @@
 <template>
-	<view v-if="isShow" ref="ani" class="uni-transition" :class="[ani.in]" :style="'transform:' +transform+';'+stylesObject"
+	<view v-if="isShow" ref="ani" class="uni-transition" :class="[ani.in, glass ? 'uni-transition--glass' : '']" :style="'transform:' +transform+';'+stylesObject"
 	 @click="change">
 		 <slot></slot>
 	</view>
@@ -28,6 +28,11 @@
 	export default {
 		name: 'uniTransition',
 		props: {
+			// Opt-in surface; popup masks and other transitions stay unchanged.
+			glass: {
+				type: Boolean,
+				default: false
+			},
 			show: {
 				type: Boolean,
 				default: false
@@ -215,7 +220,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.uni-transition {
 		transition-timing-function: ease;
 		transition-duration: 0.3s;
@@ -275,5 +280,11 @@
 
 	.zoom-out-in {
 		transform: scale(1.2);
+	}
+
+	@import '@/common/scss/liquid-glass.scss';
+
+	.uni-transition.uni-transition--glass {
+		@include glass-panel(.8, 18px);
 	}
 </style>

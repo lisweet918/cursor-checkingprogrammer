@@ -1,18 +1,17 @@
 	<template>
-		<view class="wrap">
-			<image class="wrap__background" src="/static/img/backgrounds/yier-bubu-original-bg.jpg" mode="widthFix"></image>
-
+	<view class="wrap glass-orders">
+		<glass-tabbar ref="glassTabbar" :selected="1" class="page-glass-nav" />
 			<view class="wrap__theme">
 				<view class="wrap__theme__copy">
 					<view class="wrap__theme__eyebrow">
 						<text class="wrap__theme__eyebrow__dot"></text>
-						一二布布陪你好好吃饭
+						一二布布 · 美味小餐单
 					</view>
-					<view class="wrap__theme__title">美味小记录</view>
-					<view class="wrap__theme__subtitle">每一顿喜欢，都值得被记住</view>
+					<view class="wrap__theme__title">吃饱是头等大事</view>
+					<view class="wrap__theme__subtitle">记录舌尖上的每一个治愈瞬间 ~</view>
 				</view>
 				<view class="wrap__theme__sticker">
-					<yier-art character="pair" :size="250" />
+					<yier-art character="pair" :size="180" radius="24" />
 				</view>
 			</view>
 
@@ -24,7 +23,10 @@
 				</view>
 			</view>
 
-		<view v-if="current === 0" class="wrap__content">
+		<view v-if="loading" class="wrap__feedback">
+			<yier-feedback kind="loading" title="一起翻翻小餐单" description="一二和布布正在找你的美味记录…" />
+		</view>
+		<view v-else-if="current === 0" class="wrap__content">
 				<view v-for="(item,index) in pickupList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 					<view class="wrap__list__top">
 						<view class="wrap__list__store">
@@ -66,16 +68,13 @@
 						<text>备注：{{item.remark}}</text>
 				</view>
 				<view class='wrap__list__bottom'>
+					<view class="wrap__list__bottom__delete" @click.stop="deleteOrder(item)">删除订单</view>
 					<view v-if="item.status == 0" class="wrap__list__bottom__cancel" @click.stop="cancelOrder(item)">取消订单</view>
 					<view @click.stop="reorder(item)">再来一单</view>
 				</view>
 				</view>
 				<view v-if="!pickupList.length" class="wrap__empty">
-					<view class="wrap__empty__sticker">
-						<yier-art character="yier" :size="220" />
-					</view>
-					<view class="wrap__empty__title">还没有自取订单呀</view>
-					<view class="wrap__empty__text">点一份喜欢的美味，一二陪你等待出餐</view>
+					<yier-feedback style="width: 100%;" title="小餐单还是空白的呀" description="还没有自取订单，选份喜欢的，一起等开饭" />
 					<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
 				</view>
 		</view>
@@ -122,16 +121,13 @@
 						<text>备注：{{item.remark}}</text>
 				</view>
 				<view class='wrap__list__bottom'>
+					<view class="wrap__list__bottom__delete" @click.stop="deleteOrder(item)">删除订单</view>
 					<view v-if="item.status == 0" class="wrap__list__bottom__cancel" @click.stop="cancelOrder(item)">取消订单</view>
 					<view @click.stop="reorder(item)">再来一单</view>
 				</view>
 				</view>
 				<view v-if="!takeoutList.length" class="wrap__empty">
-					<view class="wrap__empty__sticker">
-						<yier-art character="bubu" :size="220" />
-					</view>
-					<view class="wrap__empty__title">还没有外卖订单呢</view>
-					<view class="wrap__empty__text">布布已经准备好，等你选一份好吃的</view>
+					<yier-feedback style="width: 100%;" title="今天的美味还没出发呢" description="还没有外卖订单，布布陪你选一份好吃的" />
 					<view class="wrap__empty__btn" @click="goOrder">去点餐</view>
 				</view>
 		</view>
@@ -164,15 +160,11 @@
 				</view>
 					<view class="wrap__list__couponBottom">
 						<view v-if="item.status == '0'" @click="checkCoupon(item)">查看券码</view>
-						<view>删除订单</view>
+						<view class="wrap__list__bottom__delete" @click.stop="deleteOrder(item)">删除订单</view>
 					</view>
 				</view>
 				<view v-if="!couponList.length" class="wrap__empty wrap__empty--coupon">
-					<view class="wrap__empty__sticker wrap__empty__sticker--pair">
-						<yier-art character="pair" :size="280" />
-					</view>
-					<view class="wrap__empty__title">暂无券码记录</view>
-					<view class="wrap__empty__text">券码订单功能还在准备中，以后的记录会放在这里</view>
+					<yier-feedback style="width: 100%;" title="这页小本本还空着" description="暂无券码记录，券码订单功能还在准备中" />
 					<view class="wrap__empty__btn wrap__empty__btn--soft" @click="goOrder">回首页看看</view>
 				</view>
 			</view>
@@ -180,14 +172,17 @@
 </template>
 
 	<script>
+import GlassTabbar from '@/components/glass-tabbar/glass-tabbar.vue';
+import { userDatabase } from '@/common/user-api.js'
 		import YierArt from '@/components/yier-art/yier-art.vue'
+		import YierFeedback from '@/components/yier-feedback/yier-feedback.vue'
 
-		const db = uniCloud.database()
-	// 管理员 OpenID (请替换为你自己的真实 OpenID)
-	const ADMIN_OPENID = 'oID5R3QYVhXfjOEvGCUfnu4F_Qoo'
+		const db = userDatabase()
 
 		export default {
 			components: {
+				GlassTabbar,
+				YierFeedback,
 				YierArt
 			},
 			data() {
@@ -206,6 +201,7 @@
 			}
 		},
 		onShow() {
+			this.$nextTick(() => { if (this.$refs.glassTabbar) this.$refs.glassTabbar.reveal(); });
 			this.loadStoreSettings()
 			this.loadOrders()
 		},
@@ -233,8 +229,8 @@
 			},
 			async loadStoreSettings() {
 				try {
-					const db = uniCloud.database()
-					const res = await db.collection('store_settings').get()
+					const db = userDatabase()
+					const res = await db.collection('store_settings').field('store_name,business_hours,packing_fee,delivery_fee,free_delivery_threshold,min_order_amount').get()
 					if (res.result.data && res.result.data.length > 0) {
 						this.storeName = res.result.data[0].store_name || '七香嫂包子铺'
 					}
@@ -247,27 +243,15 @@
 			},
 			async loadOrders() {
 				this.loading = true
-				uni.showLoading({ title: '加载中...' })
 				try {
+
+
 					const userInfo = uni.getStorageSync('userInfo')
-					const _ = db.command
-					
-					// 基础查询条件：排除被后台关闭显示的订单
-					// 使用字符串形式的查询条件 (JQL) 更加直观且兼容性好
-					let whereStr = 'is_show != false'
-					
-					if (userInfo && userInfo.openid) {
-						if (userInfo.openid !== ADMIN_OPENID) {
-							// 普通用户：只能看自己的订单
-							whereStr += ` && user_id == "${userInfo.openid}"`
-						} else {
-							// 管理员：可以看到所有人的订单，但依然遵循 is_show 过滤
-							// 保持 whereStr = 'is_show != false' 即可
-						}
-					} else {
-						// 未登录：不显示任何订单（或者跳转到登录）
-						whereStr = '1 == 2' 
-					}
+					if (!userInfo || !uni.getStorageSync('sessionToken')) {
+ this.pickupList = []; this.takeoutList = []; this.couponList = []; return
+}
+const whereStr = { user_id: userInfo.openid }
+
 					
 					const res = await db.collection('order')
 						.where(whereStr)
@@ -284,7 +268,6 @@
 					uni.showToast({ title: '加载失败', icon: 'none' })
 				} finally {
 					this.loading = false
-					uni.hideLoading()
 				}
 			},
 			orderDetail(item) {
@@ -335,6 +318,29 @@
 					}
 				})
 			},
+			deleteOrder(item) {
+				uni.showModal({
+					title: '删除订单',
+					content: '从您的订单列表中移除此记录？商家订单仍会保留。',
+					confirmText: '删除',
+					confirmColor: '#D9534F',
+					cancelText: '取消',
+					success: async (res) => {
+						if (!res.confirm) return
+						uni.showLoading({ title: '正在删除...' })
+						try {
+							await db.collection('order').doc(item._id).remove()
+							uni.hideLoading()
+							uni.showToast({ title: '已成功删除', icon: 'success' })
+							this.loadOrders()
+						} catch (e) {
+							console.error('Delete order error:', e)
+							uni.hideLoading()
+							uni.showToast({ title: e.message || '删除失败', icon: 'none' })
+						}
+					}
+				})
+			},
 			checkCoupon(param) {
 				uni.navigateTo({
 					url: `/subpackageOrder/order/coupon-detail?id=${param.id}`
@@ -346,4 +352,13 @@
 
 <style lang="scss" scoped>
 	@import '@/common/scss/order/order.scss';
+	@import '@/common/scss/liquid-glass-pages.scss';
+	@include glass-orders-page;
+	.wrap__feedback { margin: 28rpx 24rpx; }
+	.wrap__empty {
+		min-height: 0;
+		padding: 0 0 32rpx;
+		background: transparent;
+		box-shadow: none;
+	}
 </style>

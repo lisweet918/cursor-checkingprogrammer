@@ -79,8 +79,9 @@
 
 
 <script>
+import { userDatabase } from '@/common/user-api.js'
 
-	const db = uniCloud.database()
+	const db = userDatabase()
 
 
 
@@ -176,7 +177,7 @@
 
 					const res = await db.collection('user_coupons')
 
-						.where(`user_id == "${userInfo.openid}"`)
+						.where({})
 
 						.orderBy('create_time', 'desc')
 
@@ -244,7 +245,7 @@
 
 					const exist = await db.collection('user_coupons')
 
-						.where(`user_id == "${userInfo.openid}" && source == "newbie"`)
+						.where({ source: "newbie" })
 
 						.count()
 

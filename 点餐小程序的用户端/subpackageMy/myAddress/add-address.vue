@@ -15,7 +15,7 @@
 			</u-form-item>
 		</u-form>
 
-		<view class="container__btn">保存</view>
+		<view class="container__btn" @click="save">保存</view>
 	</view>
 </template>
 
@@ -23,6 +23,7 @@
 	export default {
 		data() {
 			return {
+				storageKey: '', editId: '',
 				form: {
 					name: '',
 					phone: '',
@@ -31,6 +32,28 @@
 					latitude: '',
 					house_number: ''
 				}
+			}
+		},
+		onLoad(options) {
+			const user = uni.getStorageSync('userInfo') || {}
+			this.storageKey = 'addresses:' + (user.openid || 'guest')
+			this.editId = options.id || ''
+			const item = (uni.getStorageSync(this.storageKey) || []).find(a => a.id === this.editId)
+			if (item) this.form = { ...item }
+		},
+		methods: {
+			save() {
+				const item = { ...this.form, name: this.form.name.trim(), phone: this.form.phone.trim(), address: this.form.address.trim() }
+				if (!item.name || !item.address || !/^1\d{10}$/.test(item.phone)) {
+					uni.showToast({ title: '请填写联系人、详细地址和有效手机号', icon: 'none' }); return
+				}
+				const list = uni.getStorageSync(this.storageKey) || []
+				item.id = this.editId || Date.now() + '-' + Math.random().toString(36).slice(2)
+				const index = list.findIndex(a => a.id === item.id)
+				if (index >= 0) list.splice(index, 1, item); else list.push(item)
+				uni.setStorageSync(this.storageKey, list)
+				this.$store.commit('SET_ADDRESS', item)
+				uni.navigateBack()
 			}
 		}
 	}

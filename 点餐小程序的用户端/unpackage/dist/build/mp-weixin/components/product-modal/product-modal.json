@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "modal": "/components/modal/modal",
+    "yier-art": "/components/yier-art/yier-art",
     "actions": "/components/actions/actions"
   }
 }

@@ -1,15 +1,16 @@
 <template>
-	<view class="wrap">
+	<view class="wrap glass-detail">
 		<view v-if="type && orderData._id">
-			<view class="order-status-section" style="padding: 40rpx; background: #fff; margin-bottom: 20rpx; border-radius: 0 0 30rpx 30rpx; text-align: center;">
-				<view class="status-title" style="font-size: 40rpx; font-weight: bold; color: #0A3D28; margin-bottom: 10rpx;">
+			<view class="meal-progress">
+				<view class="meal-progress__art" aria-hidden="true"><yier-art :character="orderStatus === 3 ? 'pair' : 'peek'" :size="orderStatus === 3 ? 200 : 120" :radius="24" /></view>
+				<view class="meal-progress__eyebrow">一二布布 · 开饭进度卡</view>
+				<view class="meal-progress__title">
 					{{ getStatusText(orderData.status) }}
 				</view>
-				<view class="status-subtitle" style="font-size: 24rpx; color: #999;" v-if="orderData.type == 'takein' && orderData.status != 2">
-					{{ orderData.status == 3 ? '订单已送达，祝您用餐愉快' : '取餐号：' + orderData.torder }}
-				</view>
-				<view class="status-subtitle" style="font-size: 24rpx; color: #999;" v-else-if="orderData.type == 'takeout'">
-					{{ orderData.status == 0 ? '商家正在快马加鞭为您准备' : orderData.status == 1 ? '配送员 Kaiyuan_Q 正在赶路' : orderData.status == 2 ? '期待您的再次光临' : '订单已送达' }}
+				<view class="meal-progress__caption">{{ progressCaption }}</view>
+				<view v-if="orderData.type === 'takein' && orderData.torder && progressIndex >= 0" class="meal-progress__ticket">取餐号 · {{ orderData.torder }}</view>
+				<view v-if="progressIndex >= 0" class="meal-progress__steps">
+					<view v-for="(step, index) in ['已提交', '已接单', '已完成']" :key="index" class="meal-progress__step" :class="{ 'meal-progress__step--done': index <= progressIndex }"><view class="meal-progress__dot">{{ index < progressIndex ? '✓' : index + 1 }}</view><text>{{ step }}</text></view>
 				</view>
 			</view>
 
@@ -107,11 +108,19 @@
 </template>
 
 <script>
-	const db = uniCloud.database()
-	// 管理员 OpenID (请替换为你自己的真实 OpenID)
-	const ADMIN_OPENID = 'oID5R3QYVhXfjOEvGCUfnu4F_Qoo'
+import { userDatabase } from '@/common/user-api.js'
+import YierArt from '@/components/yier-art/yier-art.vue'
+	const db = userDatabase()
 
 	export default {
+		components: { YierArt },
+		computed: {
+			orderStatus() { const value = this.orderData.status; return value == null || value === '' ? -1 : Number(value) },
+			progressIndex() { return [0, 1, 3].indexOf(this.orderStatus) },
+			progressCaption() {
+				return { 0: '餐单已递出，等小厨房接单呀', 1: '小厨房已接单，请留意后续状态', 2: '这次的餐单先收好，下次再一起开饭', 3: '这一餐圆满收尾，好好吃饭的一天 ♡' }[this.orderStatus] || '请以订单最新状态为准';
+			}
+		},
 		data() {
 			return {
 				type: '',
@@ -134,13 +143,13 @@
 		},
 		methods: {
 			getStatusText(status) {
-				const s = parseInt(status);
+				const s = status == null || status === '' ? -1 : Number(status);
 				switch (s) {
 					case 0: return '待接单';
 					case 1: return '已接单';
 					case 2: return '已退款';
 					case 3: return '已完成';
-					default: return '已支付';
+					default: return '状态更新中';
 				}
 			},
 			async loadOrderDetail() {
@@ -149,8 +158,8 @@
 					const res = await db.collection('order').doc(this.orderId).get()
 					if (res.result.data && res.result.data.length > 0) {
 						const data = res.result.data[0]
-						const userInfo = uni.getStorageSync('userInfo')
-						const isAdmin = userInfo && userInfo.openid === ADMIN_OPENID
+						const userInfo = uni.getStorageSync('userInfo') || {}
+						const isAdmin = false
 						
 						// 权限校验：如果订单被隐藏，或者非本人/非管理员访问
 						// 注意：is_show !== false 表示默认显示
@@ -457,4 +466,20 @@
 			}
 		}
 	}
+</style>
+
+<style lang="scss" scoped>
+.meal-progress { background: #fffaf1; border: 2rpx solid #eedfca; border-radius: 28rpx; margin: 24rpx; padding: 30rpx 24rpx; text-align: center; color: #735139; }
+.meal-progress__art { display: flex; justify-content: center; transform: rotate(-4deg); pointer-events: none; margin-bottom: 18rpx; }
+.meal-progress__eyebrow { font-size: 20rpx; letter-spacing: 3rpx; color: #aa886c; }
+.meal-progress__title { font-size: 38rpx; font-weight: 700; margin-top: 10rpx; }
+.meal-progress__caption { margin-top: 12rpx; font-size: 24rpx; color: #9b7d63; line-height: 1.7; }
+.meal-progress__ticket { display: inline-block; margin-top: 20rpx; padding: 12rpx 26rpx; background: #f3e5ce; border-radius: 14rpx; color: #795333; font-size: 27rpx; font-weight: 600; }
+.meal-progress__steps { display: flex; margin-top: 28rpx; padding-top: 24rpx; border-top: 2rpx dashed #e8d8c0; }
+.meal-progress__step { flex: 1; font-size: 22rpx; color: #b4a18e; }
+.meal-progress__dot { display: flex; align-items: center; justify-content: center; width: 44rpx; height: 44rpx; border-radius: 50%; margin: 0 auto 12rpx; background: #efe7db; color: #af9c85; }
+.meal-progress__step--done { color: #876142; }
+.meal-progress__step--done .meal-progress__dot { background: #a87956; color: #fffaf1; }
+@import '@/common/scss/liquid-glass-pages.scss';
+@include glass-detail-page;
 </style>

@@ -2,7 +2,7 @@
 	<view @touchmove.stop.prevent>
 		<!-- 移除缩放相关的 modal-scale 类，只保留滑动动画的控制 -->
 		<view class="modal-box" :style="{width:width,padding:padding,borderRadius:radius}"
-			:class="[show?'modal-show':'']">
+			:class="[show?'modal-show':'', transparent ? 'modal-box--transparent' : '']">
 			<view v-if="custom">
 				<slot></slot>
 			</view>
@@ -25,7 +25,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="modal-mask" :class="[show?'mask-show':'']" @tap="handleClickCancel"></view>
+		<view class="modal-mask" :class="[show?'mask-show':'', transparent?'modal-mask--light':'']" @tap="handleClickCancel"></view>
 	</view>
 </template>
 
@@ -38,6 +38,11 @@
 				default: false
 			},
 			custom: {
+				type: Boolean,
+				default: false
+			},
+			// Opt-in appearance only; normal dialogs retain their opaque background.
+			transparent: {
 				type: Boolean,
 				default: false
 			},
@@ -130,6 +135,14 @@
 		visibility: hidden;
 		/* 初始状态：隐藏在屏幕底部 */
 		transform: translateX(-50%) translateY(100%);
+	}
+
+	.modal-box.modal-box--transparent {
+		background: transparent;
+	}
+
+	.modal-mask.modal-mask--light {
+		background: rgba(39, 56, 55, .28);
 	}
 
 	/* 显示状态：滑入到屏幕底部（水平居中） */
