@@ -120,6 +120,7 @@
 	import util from '@/common/util.js'
 	import YierFeedback from '@/components/yier-feedback/yier-feedback.vue'
 	import { prepareProduct } from '@/common/product-preferences.js'
+	import { STORE_NAME } from '@/common/brand.js'
 
 	export default {
 		components: {
@@ -132,7 +133,7 @@
 		},
 		data() {
 			return {
-				storeName: '',
+				storeName: STORE_NAME,
 				businessHours: '',
 				util,
 				categories: [],
@@ -237,7 +238,7 @@
 					const db = uniCloud.database();
 					const res = await db.collection('store_settings').field('store_name,business_hours,packing_fee,delivery_fee,free_delivery_threshold,min_order_amount').get();
 					if (res.result.data && res.result.data.length > 0) {
-						this.storeName = res.result.data[0].store_name || '七香嫂包子铺';
+						this.storeName = res.result.data[0].store_name || STORE_NAME;
 						this.businessHours = res.result.data[0].business_hours || '早5:00 - 晚18:00';
 					}
 				} catch (e) {

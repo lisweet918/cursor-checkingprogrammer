@@ -2,7 +2,7 @@
 	<view class="wrap">
 		<view class="wrap__riderInfo">
 			<view>
-				<u-avatar src="/static/logo.jpg" size="80"></u-avatar>
+				<u-avatar src="/static/img/home/yier-bubu-banner.jpg" size="80"></u-avatar>
 			</view>
 			<view class="wrap__riderInfo__user">
 				<view class="wrap__riderInfo__user__left">
@@ -35,7 +35,7 @@
 		</view>
 
 		<view>
-			<u-tabs :list="tabsList" :is-scroll="false" :current="current" @change="change" active-color="#0A3D28"
+			<u-tabs :list="tabsList" :is-scroll="false" :current="current" @change="change" active-color="#7D533C"
 				bar-width="90" duration="0" inactive-color="#9A9A9A"></u-tabs>
 		</view>
 
@@ -616,7 +616,7 @@ change(index) {
 
 			view:nth-child(4) {
 				color: white;
-				background-color: #0A3D28;
+				background-color: #7D533C;
 				width: 100%;
 				margin-top: 50rpx;
 				text-align: center;

@@ -1,14 +1,14 @@
 <template>
 	<view class="wrap">
 		<view class="wrap__img">
-			<u-image src="/static/img/home/registration-img.jpg" width="100%" height="800" lazy-load></u-image>
+			<u-image src="/static/img/home/yier-bubu-banner.jpg" width="100%" height="800" lazy-load></u-image>
 
 			<view class="wrap__img__info">
 				<view>
 					<u-avatar src=""></u-avatar>
 				</view>
 				<view>
-					QXS_chjh3j23
+					一二布布食堂
 				</view>
 			</view>
 		</view>

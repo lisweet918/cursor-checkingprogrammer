@@ -64,7 +64,7 @@
 		padding: 30rpx;
 
 		&__btn {
-			background-color: #0A3D28;
+			background-color: #7D533C;
 			color: white;
 			border-radius: 18rpx;
 			text-align: center;

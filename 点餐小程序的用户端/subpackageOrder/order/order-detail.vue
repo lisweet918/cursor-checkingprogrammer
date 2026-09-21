@@ -264,7 +264,7 @@ import YierArt from '@/components/yier-art/yier-art.vue'
 				}
 
 				view:nth-child(2) {
-					background-color: #0A3D28;
+					background-color: #7D533C;
 					color: white;
 					border-radius: 30rpx;
 					padding: 5rpx 20rpx;
@@ -450,8 +450,8 @@ import YierArt from '@/components/yier-art/yier-art.vue'
 			}
 			.share-btn {
 				background-color: transparent;
-				border: 1px solid #0A3D28;
-				color: #0A3D28;
+				border: 1px solid #7D533C;
+				color: #7D533C;
 				border-radius: 30rpx;
 				padding: 0;
 				margin: 0;

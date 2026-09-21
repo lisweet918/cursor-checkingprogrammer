@@ -64,7 +64,7 @@ export default {
       recordId: '',
       loading: false,
       formData: {
-        store_name: '七香嫂包子铺',
+        store_name: '一二布布食堂',
         business_hours: '早5:00 - 晚18:00',
         pushplus_token: '',
         packing_fee: '',
@@ -85,7 +85,7 @@ export default {
         if (res.result.data && res.result.data.length > 0) {
           const setting = res.result.data[0]
           this.recordId = setting._id
-          this.formData.store_name = setting.store_name || '七香嫂包子铺'
+          this.formData.store_name = setting.store_name || '一二布布食堂'
           this.formData.business_hours = setting.business_hours || '早5:00 - 晚18:00'
           this.formData.pushplus_token = setting.pushplus_token || ''
           this.formData.packing_fee = setting.packing_fee != null ? String(setting.packing_fee) : ''

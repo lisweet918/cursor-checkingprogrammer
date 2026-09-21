@@ -20,11 +20,11 @@
 				</uni-tr>
 				<uni-tr v-for="(item, index) in tableData" :key="index">
 					<uni-td align="center">
-						<image :src="item.avatar || '/static/logo.jpg'" style="width:40px;height:40px;border-radius:50%"></image>
+						<image :src="item.avatar || ''" style="width:40px;height:40px;border-radius:50%"></image>
 					</uni-td>
 					<uni-td align="center">{{item.nickname || '微信用户'}}</uni-td>
 					<uni-td align="center">
-						<text style="color:#0A3D28;font-weight:bold">{{item.points || 0}}</text>
+						<text style="color:#7D533C;font-weight:bold">{{item.points || 0}}</text>
 					</uni-td>
 					<uni-td align="center">{{formatDate(item.createTime)}}</uni-td>
 					<uni-td align="center">

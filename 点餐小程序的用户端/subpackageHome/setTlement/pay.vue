@@ -69,7 +69,7 @@
 			<view class="receipt-tape" aria-hidden="true"></view>
 			<view class="receipt-heading">
 				<view class="receipt-heading__copy">
-					<view class="receipt-brand">一二布布的私人小食堂</view>
+					<view class="receipt-brand">一二布布食堂</view>
 					<view class="receipt-title">今天的小餐单</view>
 					<view class="receipt-caption">把喜欢的味道，装进小票里</view>
 				</view>

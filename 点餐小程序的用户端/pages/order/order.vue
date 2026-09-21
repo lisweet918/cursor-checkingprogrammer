@@ -30,7 +30,7 @@
 				<view v-for="(item,index) in pickupList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 					<view class="wrap__list__top">
 						<view class="wrap__list__store">
-							<text class="wrap__list__store__name">{{ storeName || '我的小餐桌' }}</text>
+							<text class="wrap__list__store__name">{{ storeName || '一二布布食堂' }}</text>
 							<text v-if="item.name" class="wrap__list__store__customer">下单用户：{{item.name}} {{item.phone || ''}}</text>
 						</view>
 						<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
@@ -83,7 +83,7 @@
 				<view v-for="(item,index) in takeoutList" :key="item._id" class="wrap__list" @click="orderDetail(item)">
 					<view class="wrap__list__top">
 						<view class="wrap__list__store">
-							<text class="wrap__list__store__name">{{ storeName || '我的小餐桌' }}</text>
+							<text class="wrap__list__store__name">{{ storeName || '一二布布食堂' }}</text>
 							<text v-if="item.name" class="wrap__list__store__customer">下单用户：{{item.name}} {{item.phone || ''}}</text>
 						</view>
 						<view :class="'status-' + item.status">{{ getStatusText(item.status) }}</view>
@@ -174,6 +174,7 @@
 	<script>
 import GlassTabbar from '@/components/glass-tabbar/glass-tabbar.vue';
 import { userDatabase } from '@/common/user-api.js'
+		import { STORE_NAME } from '@/common/brand.js'
 		import YierArt from '@/components/yier-art/yier-art.vue'
 		import YierFeedback from '@/components/yier-feedback/yier-feedback.vue'
 
@@ -188,7 +189,7 @@ import { userDatabase } from '@/common/user-api.js'
 			data() {
 			return {
 				current: 0,
-				storeName: '',
+				storeName: STORE_NAME,
 				tabsList: [
 					{ name: '自取订单' },
 					{ name: '外卖订单' },
@@ -232,7 +233,7 @@ import { userDatabase } from '@/common/user-api.js'
 					const db = userDatabase()
 					const res = await db.collection('store_settings').field('store_name,business_hours,packing_fee,delivery_fee,free_delivery_threshold,min_order_amount').get()
 					if (res.result.data && res.result.data.length > 0) {
-						this.storeName = res.result.data[0].store_name || '七香嫂包子铺'
+						this.storeName = res.result.data[0].store_name || STORE_NAME
 					}
 				} catch (e) {
 					console.error('Failed to load store settings:', e)

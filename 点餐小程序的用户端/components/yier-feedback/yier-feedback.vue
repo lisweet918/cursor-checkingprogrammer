@@ -44,7 +44,7 @@ export default {
 		artCharacter() { return this.artScene === 'celebrate' ? 'pair' : this.artScene === 'choosing' ? 'peek' : 'bubu'; },
 		artSize() { return this.compact ? 110 : this.artCharacter === 'pair' ? 260 : 166; },
 		sceneCaption() {
-			return { celebrate: '一二布布 · 开心碰杯', waiting: '布布的等待时间', choosing: '一二陪你选美味', empty: '你的饭搭子一直在' }[this.artScene] || '一二布布的小食堂';
+			return { celebrate: '一二布布 · 开心碰杯', waiting: '布布的等待时间', choosing: '一二陪你选美味', empty: '你的饭搭子一直在' }[this.artScene] || '一二布布食堂';
 		}
 	}
 };

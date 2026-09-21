@@ -478,7 +478,7 @@
 			font-weight: bold;
 			border-bottom: 1px solid white;
 			background-color: white;
-			color: #0A3D28;
+			color: #7D533C;
 		}
 	}
 
@@ -502,7 +502,7 @@
 
 		.hbxw-timepicker-time-item-active {
 			.hbxw-timepicker-time-val {
-				color: #0A3D28;
+				color: #7D533C;
 			}
 
 			.hbxw-timepicker-time-icon {

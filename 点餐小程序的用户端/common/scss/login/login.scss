@@ -1,9 +1,20 @@
 .wrap {
+	min-height: 100vh;
+	background: #FCF9F2;
+
+	&__brand {
+		padding-top: 12%;
+		text-align: center;
+		font-size: 36rpx;
+		font-weight: 800;
+		color: #7D533C;
+		letter-spacing: 2rpx;
+	}
 
 	&__image {
 		display: flex;
 		justify-content: center;
-		margin-top: 30%;
+		margin-top: 40rpx;
 	}
 
 	&__title {
@@ -22,7 +33,7 @@
 	}
 
 	&__btn {
-		background-color: #0A3D28;
+		background-color: #7D533C;
 		color: white;
 		width: 80%;
 		border-radius: 18rpx;

@@ -4,7 +4,7 @@
 
 		<view class="wrap__tabs">
 
-			<u-tabs :list="tabsList" :is-scroll="false" v-model="current" @change="change" active-color="#0A3D28"
+			<u-tabs :list="tabsList" :is-scroll="false" v-model="current" @change="change" active-color="#7D533C"
 
 				bar-width="100" duration="0" inactive-color="#9A9A9A"></u-tabs>
 
@@ -541,7 +541,7 @@ import { userDatabase } from '@/common/user-api.js'
 
 			font-size: 24rpx;
 
-			color: #0A3D28;
+			color: #7D533C;
 
 		}
 

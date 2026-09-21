@@ -114,7 +114,7 @@
 		border-radius: 18rpx;
 		text-align: center;
 		padding: 30rpx 0;
-		background-color: #0A3D28;
+		background-color: #7D533C;
 		color: white;
 		font-size: 30rpx;
 	}

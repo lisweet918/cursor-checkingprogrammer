@@ -7,8 +7,8 @@
 		<!-- 顶部品牌与营业状态 -->
 		<view class="wrap__topbar">
 			<view class="wrap__topbar__brand">
-				<view class="wrap__topbar__brand__badge">小食堂</view>
-				<text class="wrap__topbar__brand__name">一二布布 · 饭饭日常</text>
+				<view class="wrap__topbar__brand__badge">食堂</view>
+				<text class="wrap__topbar__brand__name">一二布布食堂</text>
 			</view>
 			<view class="wrap__topbar__status">
 				<text class="wrap__topbar__status__dot"></text>
@@ -101,7 +101,7 @@
 					</view>
 				</view>
 				<view class="wrap__menu__card__body">
-					<view class="wrap__menu__card__title">外卖自提</view>
+					<view class="wrap__menu__card__title">外卖配送</view>
 					<view class="wrap__menu__card__desc">布布打包便当送身边</view>
 				</view>
 				<view class="wrap__menu__card__foot wrap__menu__card__foot--peach">
@@ -116,7 +116,7 @@
 			<view class="wrap__footer__badge">
 				<yier-art character="pair" :size="110" radius="22" />
 				<view class="wrap__footer__info">
-					<view class="wrap__footer__name">一二布布的美食小铺</view>
+					<view class="wrap__footer__name">一二布布食堂</view>
 					<view class="wrap__footer__sub">好好吃饭，小尾巴摇摇 🐾</view>
 				</view>
 			</view>
@@ -156,6 +156,7 @@
 	import glassMotion from '@/common/glass-motion.js';
 	import GlassTabbar from '@/components/glass-tabbar/glass-tabbar.vue';
 	import { refreshSessionUser } from '@/common/user-api.js';
+	import { DEFAULT_AVATAR } from '@/common/brand.js';
 	import YierArt from '@/components/yier-art/yier-art.vue';
 	import {
 		mapMutations,
@@ -175,7 +176,7 @@
 				statusBarHeight: 20,
 				userinfo: {},
 				swiperList: [{ image: '/static/img/home/yier-bubu-banner.jpg' }],
-				displayAvatar: '/static/logo.jpg',
+				displayAvatar: DEFAULT_AVATAR,
 				tablePopupVisible: false,
 				currentTableNumber: '',
 				selectedDiningCount: 0,
@@ -196,7 +197,7 @@
 			this.$nextTick(() => { if (this.$refs.glassTabbar) this.$refs.glassTabbar.reveal(); });
 			// The original banner is local so it stays visible without network access.
 			this.userinfo = {};
-			this.displayAvatar = '/static/logo.jpg';
+			this.displayAvatar = DEFAULT_AVATAR;
 			const userInfo = await refreshSessionUser();
 			this.userinfo = userInfo || {};
 			this.resolveAvatar();
@@ -212,10 +213,10 @@
 							this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
 						}
 					} catch (e) {
-						this.displayAvatar = '/static/logo.jpg';
+						this.displayAvatar = DEFAULT_AVATAR;
 					}
 				} else {
-					this.displayAvatar = this.userinfo.avatar || '/static/logo.jpg';
+					this.displayAvatar = this.userinfo.avatar || DEFAULT_AVATAR;
 				}
 			},
 			...mapMutations(['SET_ORDER_TYPE', 'SET_TABLE_INFO']),
