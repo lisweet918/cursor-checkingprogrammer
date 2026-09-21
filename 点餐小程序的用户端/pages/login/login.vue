@@ -1,5 +1,6 @@
 <template>
 	<view class="wrap">
+		<view class="wrap__brand">一二布布食堂</view>
 		<view class="wrap__image">
 			<button class="avatar-wrapper" open-type="chooseAvatar" @chooseavatar="onChooseAvatar">
 				<u-image :src="avatarUrl" width="150" height="150" border-radius="500"></u-image>
@@ -14,10 +15,11 @@
 </template>
 
 <script>
+	import { DEFAULT_AVATAR } from '@/common/brand.js'
 	export default {
 		data() {
 			return {
-				avatarUrl: '/static/logo.jpg',
+				avatarUrl: DEFAULT_AVATAR,
 				nickname: ''
 			}
 		},

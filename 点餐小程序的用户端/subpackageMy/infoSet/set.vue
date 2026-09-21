@@ -5,7 +5,7 @@
 				<button class="avatar-button" open-type="chooseAvatar" @chooseavatar="onChooseAvatar" style="padding: 0; background: none; line-height: 0; border: none; overflow: visible;">
 					<view class="wrap__box__top__span" style="display: block;">
 						<u-avatar :src="displayAvatar" size="140"></u-avatar>
-						<view class="edit-badge" style="position: absolute; bottom: 0; right: 0; background: #0A3D28; color: #fff; padding: 4rpx 10rpx; border-radius: 20rpx; font-size: 20rpx;">修改</view>
+						<view class="edit-badge" style="position: absolute; bottom: 0; right: 0; background: #7D533C; color: #fff; padding: 4rpx 10rpx; border-radius: 20rpx; font-size: 20rpx;">修改</view>
 					</view>
 				</button>
 			</view>
@@ -44,12 +44,13 @@
 
 <script>
 import { userDatabase } from '@/common/user-api.js'
+import { DEFAULT_AVATAR } from '@/common/brand.js'
 	export default {
 		data() {
 			return {
 				userInfo: {},
 				orders: [],
-				displayAvatar: '/static/logo.jpg'
+				displayAvatar: DEFAULT_AVATAR
 			}
 		},
 		onShow() {
@@ -70,10 +71,10 @@ import { userDatabase } from '@/common/user-api.js'
 							this.displayAvatar = res.fileList[0].tempFileURL || res.fileList[0].download_url;
 						}
 					} catch (e) {
-						this.displayAvatar = '/static/logo.jpg';
+						this.displayAvatar = DEFAULT_AVATAR;
 					}
 				} else {
-					this.displayAvatar = this.userInfo.avatar || '/static/logo.jpg';
+					this.displayAvatar = this.userInfo.avatar || DEFAULT_AVATAR;
 				}
 			},
 			async onChooseAvatar(e) {

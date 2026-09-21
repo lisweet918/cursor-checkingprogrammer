@@ -101,7 +101,7 @@
 		padding: 40rpx;
 
 		button {
-			background-color: #0A3D28;
+			background-color: #7D533C;
 			color: white;
 		}
 	}
@@ -121,8 +121,8 @@
 			margin-top: 10rpx;
 
 			&.active {
-				color: #0A3D28;
-				border-color: #0A3D28;
+				color: #7D533C;
+				border-color: #7D533C;
 			}
 		}
 	}

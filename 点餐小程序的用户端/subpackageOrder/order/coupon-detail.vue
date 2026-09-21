@@ -14,7 +14,7 @@
 	export default {
 		data() {
 			return {
-				ImageData:'/static/logo.jpg'
+				ImageData:'/static/img/home/yier-bubu-banner.jpg'
 			}
 		}
 	}

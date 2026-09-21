@@ -23,7 +23,7 @@ assert.equal(prepareProduct({materials:[null,{values:[]},{group_name:'配菜',va
 function loadComponent(relative, injected={}) {
  const source = fs.readFileSync(path.join(root, relative), 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
  const context = {module:{exports:{}}, prepareProduct, selectedMaterials, Modal:{}, Actions:{}, YierArt:{},
-  YierFeedback:{}, CartBar:{}, ProductModal:{}, cartPopup:{}, Search:{}, util:{},
+  YierFeedback:{}, CartBar:{}, ProductModal:{}, cartPopup:{}, Search:{}, util:{}, STORE_NAME:'一二布布食堂',
   mapState:()=>({}), mapMutations:()=>({}), ...injected};
  vm.runInNewContext(source.replace(/import[\s\S]*?from\s*['"][^'"]+['"];?/g, '').replace('export default','module.exports ='), context);
  return context.module.exports;

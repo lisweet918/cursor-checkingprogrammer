@@ -144,6 +144,7 @@
 <script>
 import GlassTabbar from '@/components/glass-tabbar/glass-tabbar.vue';
 import { userDatabase, refreshSessionUser } from '@/common/user-api.js'
+	import { DEFAULT_AVATAR } from '@/common/brand.js';
 	import YierArt from '@/components/yier-art/yier-art.vue';
 
 		// 定义订单状态常量，方便维护
@@ -176,7 +177,7 @@ import { userDatabase, refreshSessionUser } from '@/common/user-api.js'
 
 				userinfo: {},
 
-				displayAvatar: '/static/logo.jpg',
+				displayAvatar: DEFAULT_AVATAR,
 				couponCount: 0,
 
 				dynamicMenus: [],
@@ -197,7 +198,7 @@ import { userDatabase, refreshSessionUser } from '@/common/user-api.js'
 			this.$nextTick(() => { if (this.$refs.glassTabbar) this.$refs.glassTabbar.reveal(); });
 
 			this.userinfo = {};
-			this.displayAvatar = '/static/logo.jpg';
+			this.displayAvatar = DEFAULT_AVATAR;
 			this.couponCount = 0;
 			const userInfo = await refreshSessionUser();
 
@@ -213,7 +214,7 @@ import { userDatabase, refreshSessionUser } from '@/common/user-api.js'
 
 				this.userinfo = {};
 
-				this.displayAvatar = '/static/logo.jpg';
+				this.displayAvatar = DEFAULT_AVATAR;
 				this.couponCount = 0;
 
 			}
@@ -244,13 +245,13 @@ import { userDatabase, refreshSessionUser } from '@/common/user-api.js'
 
 					} catch (e) {
 
-						this.displayAvatar = '/static/logo.jpg';
+						this.displayAvatar = DEFAULT_AVATAR;
 
 					}
 
 				} else {
 
-					this.displayAvatar = this.userinfo.avatar || '/static/logo.jpg';
+					this.displayAvatar = this.userinfo.avatar || DEFAULT_AVATAR;
 
 				}
 
